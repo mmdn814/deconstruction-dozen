@@ -63,7 +63,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: "中文常省略系动词'是'（苹果红了），英文必须有 be 动词作为句子主心骨。",
-      workplace: 'The financial report is ready.'
+      workplace: 'The financial report is ready.',
+      workplaceCn: '财务报告已经准备好了。'
     },
     {
       id: 2,
@@ -77,7 +78,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: "名词所有格 ('s)，中文常省略'的'，英文需严格标明归属。",
-      workplace: "It is the client's final decision."
+      workplace: "It is the client's final decision.",
+      workplaceCn: '这是客户的最终决定。'
     },
     {
       id: 3,
@@ -92,7 +94,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 2 }
       ],
       trap: "双宾语语序 (give sb sth)，中文习惯先说'把苹果'，英文直接先放接收人再放物。",
-      workplace: 'I send HR the updated resume.'
+      workplace: 'I send HR the updated resume.',
+      workplaceCn: '我把更新后的简历发给HR。'
     },
     {
       id: 4,
@@ -107,7 +110,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 2 }
       ],
       trap: "代词宾格 (him) 变化，中文主宾格都是'他'，英文处于宾语位置必须变形。",
-      workplace: 'We show them the Q3 data.'
+      workplace: 'We show them the Q3 data.',
+      workplaceCn: '我们向他们展示第三季度的数据。'
     },
     {
       id: 5,
@@ -122,7 +126,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 3 }
       ],
       trap: '第三人称单数动词加 -s，以及当物是代词 it 时，必须用 give it to sb 结构。',
-      workplace: 'She forwards it to the manager.'
+      workplace: 'She forwards it to the manager.',
+      workplaceCn: '她把这个转发给经理。'
     },
     {
       id: 6,
@@ -137,7 +142,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 3 }
       ],
       trap: '性别代词区分 (She/him)，口语中极易混淆 he 和 she 的发音与指代。',
-      workplace: 'He hands it to her.'
+      workplace: 'He hands it to her.',
+      workplaceCn: '他亲手把它交给了她。'
     },
     {
       id: 7,
@@ -152,7 +158,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '疑问句语序倒装，中文只需句尾加“吗”，英文必须把系动词/助动词提到句首。',
-      workplace: 'Is the contract ready?'
+      workplace: 'Is the contract ready?',
+      workplaceCn: '合同准备好了吗？'
     },
     {
       id: 8,
@@ -166,7 +173,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '名词复数与主谓一致 (apples -> are)，中文无此变形联动。',
-      workplace: 'The new features are live.'
+      workplace: 'The new features are live.',
+      workplaceCn: '新功能已经上线启用了。'
     },
     {
       id: 9,
@@ -182,7 +190,8 @@ export const sentencesByLang = {
         { enIdx: 5, litIdx: 5, natIdx: 4 }
       ],
       trap: '情态动词 (must) 后接动词原形，不随人称变化。',
-      workplace: 'I must submit it to him today.'
+      workplace: 'I must submit it to him today.',
+      workplaceCn: '我今天必须把它提交给他。'
     },
     {
       id: 10,
@@ -199,7 +208,8 @@ export const sentencesByLang = {
         { enIdx: 6, litIdx: 6, natIdx: 4 }
       ],
       trap: '动词不定式 (to do)，英文两个动词不能直接连用，中间必须用 to 连接。',
-      workplace: 'I want to present it to her.'
+      workplace: 'I want to present it to her.',
+      workplaceCn: '我想向她做方案汇报展示。'
     },
     {
       id: 11,
@@ -217,7 +227,8 @@ export const sentencesByLang = {
         { enIdx: 7, litIdx: 7, natIdx: 1 }
       ],
       trap: '将来时结构 (be going to) 及时间状语 (tomorrow) 习惯后置，与中文语序相反！',
-      workplace: "I'm going to pitch it to them tomorrow."
+      workplace: "I'm going to pitch it to them tomorrow.",
+      workplaceCn: '我打算明天向他们推介提案。'
     },
     {
       id: 12,
@@ -232,7 +243,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 4 }
       ],
       trap: '否定结构，否定词 not 必须依附在情态动词或助动词上。',
-      workplace: "I can't accept this offer."
+      workplace: "I can't accept this offer.",
+      workplaceCn: '我无法接受这份录取意向/报价。'
     }
   ],
   ja: [
@@ -247,7 +259,8 @@ export const sentencesByLang = {
         { enIdx: 1, litIdx: 1, natIdx: 2 }
       ],
       trap: '日语靠助词「は (读wa)」标记主题，礼貌肯定词「です」永远放在句尾。',
-      workplace: '財務報告書は 準備できています。'
+      workplace: '財務報告書は 準備できています。',
+      workplaceCn: '财务报告已经准备好了。'
     },
     {
       id: 2,
@@ -260,7 +273,8 @@ export const sentencesByLang = {
         { enIdx: 2, litIdx: 2, natIdx: 2 }
       ],
       trap: '助词「の」完全对应中文的“的”，连接两个名词表归属。',
-      workplace: 'それは クライアントの 最終決定です。'
+      workplace: 'それは クライアントの 最終決定です。',
+      workplaceCn: '那是客户的最终决定。'
     },
     {
       id: 3,
@@ -275,7 +289,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 3 }
       ],
       trap: '日语核心铁律 SOV：动词「あげます(给)」必须放句尾！用「に」标接收人，「を」标物品。',
-      workplace: '私は 人事に 履歴書を 送ります。'
+      workplace: '私は 人事に 履歴書を 送ります。',
+      workplaceCn: '我向人事发送简历。'
     },
     {
       id: 4,
@@ -290,7 +305,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 3 }
       ],
       trap: '日语代词本身不变格，全靠后面的助词（彼に = 给他，彼は = 他是）决定语法角色。',
-      workplace: '私たちは 彼らに データを 見せます。'
+      workplace: '私たちは 彼らに データを 見せます。',
+      workplaceCn: '我们向他们展示数据。'
     },
     {
       id: 5,
@@ -304,7 +320,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '只要助词「を」和「に」跟着正确的词，中间的“把它”和“向约翰”调换顺序意思完全不变！',
-      workplace: '彼女は それを マネージャーに 転送します。'
+      workplace: '彼女は それを マネージャーに 転送します。',
+      workplaceCn: '她把那个转发给经理。'
     },
     {
       id: 6,
@@ -318,7 +335,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '日语没有三单现动词变化，不管主语是我、你、他，动词都是「あげます」。',
-      workplace: '彼は それを 彼女に 渡します。'
+      workplace: '彼は それを 彼女に 渡します。',
+      workplaceCn: '他把那个交给她。'
     },
     {
       id: 7,
@@ -331,7 +349,8 @@ export const sentencesByLang = {
         { enIdx: 1, litIdx: 1, natIdx: 2 }
       ],
       trap: '日语变疑问句极其简单：不需要像英语那样倒装语序，直接在句尾加「か (ka)」即可！',
-      workplace: '契約書は 準備できていますか？'
+      workplace: '契約書は 準備できていますか？',
+      workplaceCn: '合同准备好了吗？'
     },
     {
       id: 8,
@@ -344,7 +363,8 @@ export const sentencesByLang = {
         { enIdx: 1, litIdx: 1, natIdx: 2 }
       ],
       trap: '日语连形容词都有过去时变位：赤い (现在红) → 赤かった (过去红)。',
-      workplace: '昨日の会議は 有意義でしたか？'
+      workplace: '昨日の会議は 有意義でしたか？',
+      workplaceCn: '昨天的会议有收获吗？'
     },
     {
       id: 9,
@@ -359,7 +379,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 3 }
       ],
       trap: '日语没有独立的 must 单词，而是把句尾动词变成双重否定「～なければなりません（不做不行）」。',
-      workplace: '今日 それを 彼に 提出しなければなりません。'
+      workplace: '今日 それを 彼に 提出しなければなりません。',
+      workplaceCn: '今天必须把它提交给他。'
     },
     {
       id: 10,
@@ -374,7 +395,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 3 }
       ],
       trap: '表达“想要做某事”无需加额外动词，直接把句尾动词词尾变成「～たいです (tai desu)」。',
-      workplace: '私は 彼女に それを 提案したいです。'
+      workplace: '私は 彼女に それを 提案したいです。',
+      workplaceCn: '我想向她做方案汇报。'
     },
     {
       id: 11,
@@ -390,7 +412,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 4 }
       ],
       trap: '日语时间词「明日」和中文一样放前面；“打算做”是在动词原形后加「つもりです」。',
-      workplace: '明日 彼らに それを プレゼンするつもりです。'
+      workplace: '明日 彼らに それを プレゼンするつもりです。',
+      workplaceCn: '我打算明天向他们推介提案。'
     },
     {
       id: 12,
@@ -404,7 +427,8 @@ export const sentencesByLang = {
         { enIdx: 2, litIdx: 2, natIdx: 2 }
       ],
       trap: '日语的“不能做”全部浓缩在句尾动词的可能态否定形「～られません」里。',
-      workplace: '私は このオファーを 受け入れられません。'
+      workplace: '私は このオファーを 受け入れられません。',
+      workplaceCn: '我无法接受这份录取意向/报价。'
     }
   ],
   es: [
@@ -420,7 +444,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '西语名词分阴阳性：manzana 是阴性名词，因此定冠词必须用 La，形容词也必须配合变为以 -a 结尾的 roja。',
-      workplace: 'El informe financiero está listo.'
+      workplace: 'El informe financiero está listo.',
+      workplaceCn: '财务报告已经准备好了。'
     },
     {
       id: 2,
@@ -435,7 +460,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 1 }
       ],
       trap: "西语没有英语的 's 所有格，必须用「de + 人名」后置修饰（字面语序：苹果 的 胡安），且主语 it 常省略。",
-      workplace: 'Es la decisión final del cliente.'
+      workplace: 'Es la decisión final del cliente.',
+      workplaceCn: '这是客户的最终决定。'
     },
     {
       id: 3,
@@ -452,7 +478,8 @@ export const sentencesByLang = {
         { enIdx: 5, litIdx: 5, natIdx: 4 }
       ],
       trap: '西语宾语代词前置与冗余：即使后面有 a Juan，动词 doy 前通常也要先放间接宾语代词 Le。',
-      workplace: 'Le envío el currículum actualizado a RRHH.'
+      workplace: 'Le envío el currículum actualizado a RRHH.',
+      workplaceCn: '我把更新后的简历发给HR。'
     },
     {
       id: 4,
@@ -467,7 +494,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '动词变位自带人称：damos 词尾 -mos 已经表明主语是“我们”，所以主语 nosotros 直接省略，代词 Le 放在动词前。',
-      workplace: 'Les mostramos los datos del tercer trimestre.'
+      workplace: 'Les mostramos los datos del tercer trimestre.',
+      workplaceCn: '我们向他们展示第三季度的数据。'
     },
     {
       id: 5,
@@ -483,7 +511,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 3 }
       ],
       trap: '双代词前置与音变：当间接代词 le 遇到直接代词 la（指代阴性苹果）时，为避免绕口，le 必须变成 Se！',
-      workplace: 'Se lo reenvía al gerente.'
+      workplace: 'Se lo reenvía al gerente.',
+      workplaceCn: '她把它转发给经理。'
     },
     {
       id: 6,
@@ -497,7 +526,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '西语把“给他 (se)”和“把它 (la)”全部打包放在变位动词 da 的前面！',
-      workplace: 'Él se lo entrega a ella.'
+      workplace: 'Él se lo entrega a ella.',
+      workplaceCn: '他亲手把它交给了她。'
     },
     {
       id: 7,
@@ -512,7 +542,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 0 }
       ],
       trap: '西语疑问句首尾必须加倒问号 ¿ 和正问号 ?，且常把谓语 Es roja 提到主语前面。',
-      workplace: '¿Está listo el contrato?'
+      workplace: '¿Está listo el contrato?',
+      workplaceCn: '合同准备好了吗？'
     },
     {
       id: 8,
@@ -526,7 +557,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 2 }
       ],
       trap: '西语四重联动变形：一旦名词变复数，冠词(Las)、名词(manzanas)、系动词(son)、形容词(rojas)全部要变复数！',
-      workplace: 'Las nuevas funciones están activas.'
+      workplace: 'Las nuevas funciones están activas.',
+      workplaceCn: '新功能已经上线启用了。'
     },
     {
       id: 9,
@@ -540,7 +572,8 @@ export const sentencesByLang = {
         { enIdx: 1, litIdx: 1, natIdx: 3 }
       ],
       trap: 'Tim Ferriss 最推崇的西语测试点：当出现动词原形 dar 时，代词 se 和 la 可以直接粘在动词原形词尾合成一个词 dársela！',
-      workplace: 'Debo entregárselo hoy.'
+      workplace: 'Debo entregárselo hoy.',
+      workplaceCn: '我今天必须提交给它/他。'
     },
     {
       id: 10,
@@ -556,7 +589,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 4 }
       ],
       trap: 'Quiero (我想要) 后直接跟动词原形，ไม่ต้อง加 to；为明确性别可加 a ella (向她)。',
-      workplace: 'Quiero presentárselo a ella.'
+      workplace: 'Quiero presentárselo a ella.',
+      workplaceCn: '我想向她做汇报展示。'
     },
     {
       id: 11,
@@ -572,7 +606,8 @@ export const sentencesByLang = {
         { enIdx: 3, litIdx: 3, natIdx: 1 }
       ],
       trap: '西语将来计划结构「ir a + 动词原形」(Voy a...)，结构与英语 be going to 完全对应！',
-      workplace: 'Voy a enviárselo mañana.'
+      workplace: 'Voy a enviárselo mañana.',
+      workplaceCn: '我打算明天发送给他们。'
     },
     {
       id: 12,
@@ -588,7 +623,8 @@ export const sentencesByLang = {
         { enIdx: 4, litIdx: 4, natIdx: 4 }
       ],
       trap: '西语否定极简：永远直接把 No 放在变位动词（puedo）正前方即可。',
-      workplace: 'No puedo aceptar esta oferta.'
+      workplace: 'No puedo aceptar esta oferta.',
+      workplaceCn: '我无法接受这份录取意向/报价。'
     }
   ]
 };

@@ -132,49 +132,58 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                       <p className="text-slate-600 leading-relaxed text-[11.5px]">{item.trap}</p>
                     </div>
 
-                    <div className="flex items-center justify-between gap-2 bg-slate-50/80 rounded-lg px-2 py-1.5 border border-slate-200/60">
-                      <div className="flex items-center flex-wrap gap-1 min-w-0">
-                        <span className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200/70 font-bold text-[10.5px] shrink-0 mr-1">
-                          职场
-                        </span>
+                    <div className="bg-slate-50/80 rounded-lg p-2 border border-slate-200/60 space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center flex-wrap gap-1 min-w-0">
+                          <span className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200/70 font-bold text-[10.5px] shrink-0 mr-1">
+                            职场
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => speakText(item.workplace, 0.95, 1.0, null, langConfig.speechLang)}
+                            className="text-emerald-600 hover:text-emerald-700 p-0.5 shrink-0"
+                            title="朗读职场例句"
+                          >
+                            <Volume2 className="w-3.5 h-3.5" />
+                          </button>
+                          {workplaceWords.map((w, idx) => (
+                            <WordWithTooltip key={idx} word={w} targetLang={targetLang} />
+                          ))}
+                          <button
+                            type="button"
+                            onClick={() => speakText(item.workplace, 0.62, 1.0, null, langConfig.speechLang)}
+                            className="px-1.5 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold ml-1 shrink-0"
+                          >
+                            🐢 慢速
+                          </button>
+                        </div>
+
                         <button
                           type="button"
-                          onClick={() => speakText(item.workplace, 0.95, 1.0, null, langConfig.speechLang)}
-                          className="text-emerald-600 hover:text-emerald-700 p-0.5 shrink-0"
-                          title="朗读职场例句"
+                          onClick={() =>
+                            onToggleSaveSentence({
+                              en: item.workplace,
+                              cn: item.workplaceCn || `对应第 ${item.id} 句职场高频表达`,
+                              skeletonId: item.id,
+                              tag: '职场例句'
+                            })
+                          }
+                          className={`px-2 py-0.5 rounded-md text-[10.5px] font-bold border shrink-0 transition-all ${
+                            saved
+                              ? 'bg-amber-50 text-amber-700 border-amber-300'
+                              : 'bg-white hover:bg-slate-100 text-slate-500 border-slate-200'
+                          }`}
                         >
-                          <Volume2 className="w-3.5 h-3.5" />
-                        </button>
-                        {workplaceWords.map((w, idx) => (
-                          <WordWithTooltip key={idx} word={w} targetLang={targetLang} />
-                        ))}
-                        <button
-                          type="button"
-                          onClick={() => speakText(item.workplace, 0.62, 1.0, null, langConfig.speechLang)}
-                          className="px-1.5 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold ml-1 shrink-0"
-                        >
-                          🐢 慢速
+                          {saved ? '★ 已收藏' : '☆ 收藏'}
                         </button>
                       </div>
 
-                      <button
-                        type="button"
-                        onClick={() =>
-                          onToggleSaveSentence({
-                            en: item.workplace,
-                            cn: `对应第 ${item.id} 句职场高频表达`,
-                            skeletonId: item.id,
-                            tag: '职场例句'
-                          })
-                        }
-                        className={`px-2 py-0.5 rounded-md text-[10.5px] font-bold border shrink-0 transition-all ${
-                          saved
-                            ? 'bg-amber-50 text-amber-700 border-amber-300'
-                            : 'bg-white hover:bg-slate-100 text-slate-500 border-slate-200'
-                        }`}
-                      >
-                        {saved ? '★ 已收藏' : '☆ 收藏'}
-                      </button>
+                      {item.workplaceCn && (
+                        <div className="text-[11.5px] text-slate-600 pl-6 flex items-baseline gap-1.5 border-t border-slate-200/50 pt-1">
+                          <span className="text-[10px] font-semibold text-slate-400 bg-slate-200/70 px-1 py-0.2 rounded shrink-0">译</span>
+                          <span className="text-slate-600">{item.workplaceCn}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
