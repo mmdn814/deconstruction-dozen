@@ -141,17 +141,17 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
       const audio = new Audio(audioUrl);
       currentActiveAudio = audio;
       audio.onerror = () => {
-        speakText(fallbackSoundText, 0.85, 1.0, null, lang);
+        speakText(fallbackSoundText, 1.0, 1.0, null, lang);
       };
       audio.play().catch(() => {
-        speakText(fallbackSoundText, 0.85, 1.0, null, lang);
+        speakText(fallbackSoundText, 1.0, 1.0, null, lang);
       });
       return;
     }
 
-    speakText(fallbackSoundText, 0.85, 1.0, null, lang);
+    speakText(fallbackSoundText, 1.0, 1.0, null, lang);
   } catch {
-    speakText(fallbackSoundText, 0.85, 1.0, null, lang);
+    speakText(fallbackSoundText, 1.0, 1.0, null, lang);
   }
 };
 
@@ -241,8 +241,8 @@ const speakViaLocalSpeechSynthesis = (cleanText, rate = 0.95, pitch = 1.0, onEnd
   }
 };
 
-// --- Multi-Tier Studio-Quality Audio Streamer (100% Free · Google WaveNet -> Youdao -> Local SpeechSynthesis) ---
-export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null, langCode = null) => {
+// --- Instant 0-Latency High-Fidelity Speech Engine ---
+export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, langCode = null) => {
   if (typeof window === 'undefined') {
     if (onEndCallback) onEndCallback();
     return;
@@ -257,71 +257,9 @@ export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null, 
   }
 
   const targetLang = (langCode || currentSpeechLang || 'en-US').toLowerCase();
-  const shortLang = targetLang.startsWith('ja') ? 'ja' : targetLang.startsWith('es') ? 'es' : 'en';
 
-  // 1. 优先使用 Google Studio Neural 音频流 (在美日及海外极速 15ms 秒开，发音如电台主播般地道自然)
-  const encoded = encodeURIComponent(cleanText);
-  const googleAudioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${shortLang}&q=${encoded}`;
-
-  const audio = new Audio();
-  currentActiveAudio = audio;
-
-  if (rate < 0.8) {
-    audio.playbackRate = 0.72; // 支持慢速播放且自动保真变调
-  } else {
-    audio.playbackRate = 1.0;
-  }
-
-  let hasFailed = false;
-
-  const fallbackToYoudaoOrLocal = () => {
-    if (hasFailed) return;
-    hasFailed = true;
-
-    // 2. 次级兜底：日文使用网易有道母语发音流 (国内秒开)
-    if (shortLang === 'ja') {
-      const youdaoUrl = `https://dict.youdao.com/dictvoice?le=jap&audio=${encoded}`;
-      const youdaoAudio = new Audio(youdaoUrl);
-      currentActiveAudio = youdaoAudio;
-      if (rate < 0.8) youdaoAudio.playbackRate = 0.72;
-      youdaoAudio.onended = () => {
-        if (onEndCallback) onEndCallback();
-      };
-      youdaoAudio.onerror = () => {
-        // 3. 最终本地兜底：本地系统原生 SpeechSynthesis
-        speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
-      };
-      youdaoAudio.play().catch(() => {
-        speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
-      });
-      return;
-    }
-
-    // 英语或西语回退到本地系统合成
-    speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
-  };
-
-  audio.onended = () => {
-    if (onEndCallback) onEndCallback();
-  };
-
-  audio.onerror = fallbackToYoudaoOrLocal;
-
-  // 设定 2.5 秒超时保护，若网络阻塞则无缝切回本地
-  const timeoutId = setTimeout(() => {
-    if (!audio.duration || audio.paused) {
-      fallbackToYoudaoOrLocal();
-    }
-  }, 2500);
-
-  audio.play()
-    .then(() => {
-      clearTimeout(timeoutId);
-    })
-    .catch(() => {
-      clearTimeout(timeoutId);
-      fallbackToYoudaoOrLocal();
-    });
+  // 毫秒级极速直出 (0ms 延迟，直接调用设备原生绑定的母语发音人，杜绝任何外部网络卡顿)
+  speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
 };
 
 // --- Multi-Provider AI Helper (Supports OpenAI-Compatible Protocols & Google Gemini) ---
