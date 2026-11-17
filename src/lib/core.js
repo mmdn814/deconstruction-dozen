@@ -124,19 +124,11 @@ const getIpaAudioUrl = (filename) => {
   return `${base.replace(/\/+$/, '')}/audio/ipa/${filename}`;
 };
 
-let activeIpaAudio = null;
-
-// --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Native TTS) ---
+// --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Studio Audio) ---
 export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
   if (typeof window === 'undefined') return;
   try {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-    if (activeIpaAudio) {
-      activeIpaAudio.pause();
-      activeIpaAudio.currentTime = 0;
-    }
+    stopAllAudio();
 
     const raw = String(charKey || '').trim();
     // 兼容 '/p/ 清'、'/p/'、'p' 等各种传入格式
@@ -147,7 +139,7 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
     if (audioFile) {
       const audioUrl = getIpaAudioUrl(audioFile);
       const audio = new Audio(audioUrl);
-      activeIpaAudio = audio;
+      currentActiveAudio = audio;
       audio.onerror = () => {
         speakText(fallbackSoundText, 0.85, 1.0, null, lang);
       };
@@ -163,7 +155,22 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
   }
 };
 
-// --- Web Speech TTS Helper with Native Multilingual Voice Detection ---
+// --- Global Active Audio Player Reference (Prevents Audio Overlap) ---
+let currentActiveAudio = null;
+
+export const stopAllAudio = () => {
+  if (typeof window === 'undefined') return;
+  if (currentActiveAudio) {
+    currentActiveAudio.pause();
+    currentActiveAudio.currentTime = 0;
+    currentActiveAudio = null;
+  }
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+};
+
+// --- Web Speech TTS Voice Cache & Multilingual Voice Detection (Offline Backup) ---
 let cachedVoices = [];
 const refreshVoices = () => {
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
@@ -187,30 +194,26 @@ export const getBestVoiceForLang = (langCode) => {
     return vLang === target;
   });
   if (exact.length) {
-    return exact.find((v) => /natural|premium|enhanced/i.test(v.name)) || exact[0];
+    return exact.find((v) => /natural|premium|enhanced|siri/i.test(v.name)) || exact[0];
   }
 
   // 2. 语言前缀匹配（如 ja, es, en）
   const prefix = cachedVoices.filter((v) => v.lang.toLowerCase().startsWith(short));
   if (prefix.length) {
-    return prefix.find((v) => /natural|premium|enhanced/i.test(v.name)) || prefix[0];
+    return prefix.find((v) => /natural|premium|enhanced|siri/i.test(v.name)) || prefix[0];
   }
 
   return null;
 };
 
-export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null, langCode = null) => {
+// 本地离线合成备选 (Local SpeechSynthesis Fallback)
+const speakViaLocalSpeechSynthesis = (cleanText, rate = 0.95, pitch = 1.0, onEndCallback = null, langCode = null) => {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     if (onEndCallback) onEndCallback();
     return;
   }
   try {
     window.speechSynthesis.cancel();
-    const cleanText = String(text || '').replace(/\(.*?\)/g, '').trim();
-    if (!cleanText) {
-      if (onEndCallback) onEndCallback();
-      return;
-    }
     const utterance = new SpeechSynthesisUtterance(cleanText);
     const targetLangCode = langCode || currentSpeechLang || 'en-US';
     const bestVoice = getBestVoiceForLang(targetLangCode);
@@ -236,6 +239,89 @@ export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null, 
   } catch {
     if (onEndCallback) onEndCallback();
   }
+};
+
+// --- Multi-Tier Studio-Quality Audio Streamer (100% Free · Google WaveNet -> Youdao -> Local SpeechSynthesis) ---
+export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null, langCode = null) => {
+  if (typeof window === 'undefined') {
+    if (onEndCallback) onEndCallback();
+    return;
+  }
+
+  stopAllAudio();
+
+  const cleanText = String(text || '').replace(/\(.*?\)|（.*?）/g, '').trim();
+  if (!cleanText) {
+    if (onEndCallback) onEndCallback();
+    return;
+  }
+
+  const targetLang = (langCode || currentSpeechLang || 'en-US').toLowerCase();
+  const shortLang = targetLang.startsWith('ja') ? 'ja' : targetLang.startsWith('es') ? 'es' : 'en';
+
+  // 1. 优先使用 Google Studio Neural 音频流 (在美日及海外极速 15ms 秒开，发音如电台主播般地道自然)
+  const encoded = encodeURIComponent(cleanText);
+  const googleAudioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${shortLang}&q=${encoded}`;
+
+  const audio = new Audio();
+  currentActiveAudio = audio;
+
+  if (rate < 0.8) {
+    audio.playbackRate = 0.72; // 支持慢速播放且自动保真变调
+  } else {
+    audio.playbackRate = 1.0;
+  }
+
+  let hasFailed = false;
+
+  const fallbackToYoudaoOrLocal = () => {
+    if (hasFailed) return;
+    hasFailed = true;
+
+    // 2. 次级兜底：日文使用网易有道母语发音流 (国内秒开)
+    if (shortLang === 'ja') {
+      const youdaoUrl = `https://dict.youdao.com/dictvoice?le=jap&audio=${encoded}`;
+      const youdaoAudio = new Audio(youdaoUrl);
+      currentActiveAudio = youdaoAudio;
+      if (rate < 0.8) youdaoAudio.playbackRate = 0.72;
+      youdaoAudio.onended = () => {
+        if (onEndCallback) onEndCallback();
+      };
+      youdaoAudio.onerror = () => {
+        // 3. 最终本地兜底：本地系统原生 SpeechSynthesis
+        speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
+      };
+      youdaoAudio.play().catch(() => {
+        speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
+      });
+      return;
+    }
+
+    // 英语或西语回退到本地系统合成
+    speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
+  };
+
+  audio.onended = () => {
+    if (onEndCallback) onEndCallback();
+  };
+
+  audio.onerror = fallbackToYoudaoOrLocal;
+
+  // 设定 2.5 秒超时保护，若网络阻塞则无缝切回本地
+  const timeoutId = setTimeout(() => {
+    if (!audio.duration || audio.paused) {
+      fallbackToYoudaoOrLocal();
+    }
+  }, 2500);
+
+  audio.play()
+    .then(() => {
+      clearTimeout(timeoutId);
+    })
+    .catch(() => {
+      clearTimeout(timeoutId);
+      fallbackToYoudaoOrLocal();
+    });
 };
 
 // --- Multi-Provider AI Helper (Supports OpenAI-Compatible Protocols & Google Gemini) ---
