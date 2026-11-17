@@ -43,22 +43,22 @@ export const zeroToOneDataByLang = {
         name: '③ 清浊成对辅音 (16个: 口型相同，声带震动不同)',
         desc: '每对清浊辅音口型100%一样！点击【🔊纯单音】对比：左边清音只有纯粹气流摩擦/爆破（绝无元音尾巴），右边浊音叠加声带共鸣震动：',
         items: [
-          { char: '/p/ 清', sound: 'p', sub: 'p', tip: '双唇爆破送气(无声带震动)', sample: 'pay', sampleCn: '支付' },
-          { char: '/b/ 浊', sound: 'b', sub: 'b', tip: '双唇爆破震动声带', sample: 'buy', sampleCn: '买' },
-          { char: '/t/ 清', sound: 't', sub: 't', tip: '舌尖抵上齿龈爆破送气', sample: 'tea', sampleCn: '茶' },
-          { char: '/d/ 浊', sound: 'd', sub: 'd', tip: '舌尖抵上齿龈震声带', sample: 'day', sampleCn: '日子/天' },
-          { char: '/k/ 清', sound: 'k', sub: 'k / c / ck', tip: '舌根软腭爆破送气', sample: 'key', sampleCn: '钥匙' },
-          { char: '/ɡ/ 浊', sound: 'g', sub: 'g', tip: '舌根软腭震声带', sample: 'give', sampleCn: '给' },
-          { char: '/f/ 清', sound: 'fff', sub: 'f / ph', tip: '上齿轻咬下唇纯吹气', sample: 'free', sampleCn: '免费的' },
-          { char: '/v/ 浊', sound: 'vvv', sub: 'v', tip: '上齿咬下唇吹气+震声带', sample: 'very', sampleCn: '非常' },
-          { char: '/θ/ 清', sound: 'th', sub: 'th (清)', tip: '舌尖轻放上下齿间纯吹气', sample: 'think', sampleCn: '思考' },
-          { char: '/ð/ 浊', sound: 'the', sub: 'th (浊)', tip: '舌尖轻放上下齿间震声带', sample: 'this', sampleCn: '这个' },
-          { char: '/s/ 清', sound: 'sss', sub: 's / c', tip: '舌尖平舌摩擦纯吹气', sample: 'see', sampleCn: '看见' },
-          { char: '/z/ 浊', sound: 'zzz', sub: 'z / s', tip: '舌尖平舌摩擦+震声带', sample: 'zoo', sampleCn: '动物园' },
-          { char: '/ʃ/ 清', sound: 'shh', sub: 'sh / -tion', tip: '双唇微翘送气摩擦(“嘘”)', sample: 'she', sampleCn: '她' },
-          { char: '/ʒ/ 浊', sound: 'zh', sub: 's / ge', tip: '双唇微翘摩擦+震声带', sample: 'decision', sampleCn: '决定' },
-          { char: '/tʃ/ 清', sound: 'ch', sub: 'ch / tch', tip: '短促破擦送气清音', sample: 'cheap', sampleCn: '便宜的' },
-          { char: '/dʒ/ 浊', sound: 'j', sub: 'j / g / dge', tip: '短促破擦震动声带浊音', sample: 'job', sampleCn: '工作' }
+          { char: '/p/ 清', sound: 'pay', sub: 'p', tip: '双唇爆破送气(无声带震动)', sample: 'pay', sampleCn: '支付' },
+          { char: '/b/ 浊', sound: 'buy', sub: 'b', tip: '双唇爆破震动声带', sample: 'buy', sampleCn: '买' },
+          { char: '/t/ 清', sound: 'tea', sub: 't', tip: '舌尖抵上齿龈爆破送气', sample: 'tea', sampleCn: '茶' },
+          { char: '/d/ 浊', sound: 'day', sub: 'd', tip: '舌尖抵上齿龈震声带', sample: 'day', sampleCn: '日子/天' },
+          { char: '/k/ 清', sound: 'key', sub: 'k / c / ck', tip: '舌根软腭爆破送气', sample: 'key', sampleCn: '钥匙' },
+          { char: '/ɡ/ 浊', sound: 'give', sub: 'g', tip: '舌根软腭震声带', sample: 'give', sampleCn: '给' },
+          { char: '/f/ 清', sound: 'free', sub: 'f / ph', tip: '上齿轻咬下唇纯吹气', sample: 'free', sampleCn: '免费的' },
+          { char: '/v/ 浊', sound: 'very', sub: 'v', tip: '上齿咬下唇吹气+震声带', sample: 'very', sampleCn: '非常' },
+          { char: '/θ/ 清', sound: 'think', sub: 'th (清)', tip: '舌尖轻放上下齿间纯吹气', sample: 'think', sampleCn: '思考' },
+          { char: '/ð/ 浊', sound: 'this', sub: 'th (浊)', tip: '舌尖轻放上下齿间震声带', sample: 'this', sampleCn: '这个' },
+          { char: '/s/ 清', sound: 'see', sub: 's / c', tip: '舌尖平舌摩擦纯吹气', sample: 'see', sampleCn: '看见' },
+          { char: '/z/ 浊', sound: 'zoo', sub: 'z / s', tip: '舌尖平舌摩擦+震声带', sample: 'zoo', sampleCn: '动物园' },
+          { char: '/ʃ/ 清', sound: 'she', sub: 'sh / -tion', tip: '双唇微翘送气摩擦(“嘘”)', sample: 'she', sampleCn: '她' },
+          { char: '/ʒ/ 浊', sound: 'decision', sub: 's / ge', tip: '双唇微翘摩擦+震声带', sample: 'decision', sampleCn: '决定' },
+          { char: '/tʃ/ 清', sound: 'cheap', sub: 'ch / tch', tip: '短促破擦送气清音', sample: 'cheap', sampleCn: '便宜的' },
+          { char: '/dʒ/ 浊', sound: 'job', sub: 'j / g / dge', tip: '短促破擦震动声带浊音', sample: 'job', sampleCn: '工作' }
         ]
       },
       {
@@ -66,14 +66,14 @@ export const zeroToOneDataByLang = {
         name: '④ 鼻音、舌侧音与半元音 (8个)',
         desc: '决定英语连贯度与地道尾音的关键辅音：',
         items: [
-          { char: '/m/', sound: 'mmm', sub: 'm', tip: '双唇紧闭鼻腔共鸣', sample: 'money', sampleCn: '钱' },
-          { char: '/n/', sound: 'nnn', sub: 'n / kn', tip: '舌尖抵上齿龈鼻音', sample: 'need', sampleCn: '需要' },
-          { char: '/ŋ/', sound: 'ing', sub: 'ng / nk', tip: '舌根抵软腭后鼻音', sample: 'thing', sampleCn: '事物' },
-          { char: '/h/', sound: 'huh', sub: 'h / wh', tip: '气流顺畅通过声门', sample: 'help', sampleCn: '帮助' },
-          { char: '/l/', sound: 'luh', sub: 'l / ll', tip: '词首清晰，词尾舌尖顶上齿龈', sample: 'feel', sampleCn: '感觉' },
-          { char: '/r/', sound: 'ruh', sub: 'r / wr', tip: '舌尖向上卷起不碰上颚', sample: 'red', sampleCn: '红色的' },
-          { char: '/w/', sound: 'wuh', sub: 'w / wh', tip: '双唇嘟圆快速滑开', sample: 'want', sampleCn: '想要' },
-          { char: '/j/', sound: 'yuh', sub: 'y', tip: '舌面抬高快速发“耶”', sample: 'yes', sampleCn: '是的' }
+          { char: '/m/', sound: 'money', sub: 'm', tip: '双唇紧闭鼻腔共鸣', sample: 'money', sampleCn: '钱' },
+          { char: '/n/', sound: 'need', sub: 'n / kn', tip: '舌尖抵上齿龈鼻音', sample: 'need', sampleCn: '需要' },
+          { char: '/ŋ/', sound: 'thing', sub: 'ng / nk', tip: '舌根抵软腭后鼻音', sample: 'thing', sampleCn: '事物' },
+          { char: '/h/', sound: 'help', sub: 'h / wh', tip: '气流顺畅通过声门', sample: 'help', sampleCn: '帮助' },
+          { char: '/l/', sound: 'feel', sub: 'l / ll', tip: '词首清晰，词尾舌尖顶上齿龈', sample: 'feel', sampleCn: '感觉' },
+          { char: '/r/', sound: 'red', sub: 'r / wr', tip: '舌尖向上卷起不碰上颚', sample: 'red', sampleCn: '红色的' },
+          { char: '/w/', sound: 'want', sub: 'w / wh', tip: '双唇嘟圆快速滑开', sample: 'want', sampleCn: '想要' },
+          { char: '/j/', sound: 'yes', sub: 'y', tip: '舌面抬高快速发“耶”', sample: 'yes', sampleCn: '是的' }
         ]
       }
     ],
@@ -386,7 +386,7 @@ export const zeroToOneDataByLang = {
           { char: 'ろ / ロ', sound: 'ろ', sub: 'ro (lo)', tip: '源于汉字“呂”', sample: 'ろく', sampleCn: '六 (6)' },
           // わ行 + ん
           { char: 'わ / ワ', sound: 'わ', sub: 'wa', tip: '源于汉字“和”', sample: 'わたし', sampleCn: '我' },
-          { char: 'を / ヲ', sound: 'を', sub: 'o (wo)', tip: '仅作宾语助词，读音同 お(o)', sample: 'みずを', sampleCn: '把水(宾语)' },
+          { char: 'を / ヲ', sound: 'お', sub: 'o (wo)', tip: '现代日语仅作宾语助词，发音与「お(o)」完全一致', sample: 'みずを', sampleCn: '把水(宾语)' },
           { char: 'ん / ン', sound: 'ん', sub: 'n (拨音)', tip: '独立占满一拍的鼻音共鸣', sample: 'にほん', sampleCn: '日本' }
         ]
       },
@@ -433,16 +433,16 @@ export const zeroToOneDataByLang = {
         name: '③ 拗音与特殊节拍符号 (い段假名 + 小号 ゃ/ゅ/ょ 拼成1拍)',
         desc: '右下角跟小号 ゃ/ゅ/ょ 时，两个假名快速连拼成 1 拍！加上促音「っ」与长音「ー」即构成完整日语发音：',
         items: [
-          { char: 'きゃ / きゅ / きょ', sound: 'きゃ、きゅ、きょ', sub: 'kya / kyu / kyo', tip: 'き + 小号やゆよ连拼', sample: 'きょう', sampleCn: '今天' },
-          { char: 'しゃ / しゅ / しょ', sound: 'しゃ、しゅ、しょ', sub: 'sha / shu / sho', tip: 'し + 小号やゆよ连拼', sample: 'しゃしん', sampleCn: '照片' },
-          { char: 'ちゃ / ちゅ / ちょ', sound: 'ちゃ、ちゅ、ちょ', sub: 'cha / chu / cho', tip: 'ち + 小号やゆよ连拼', sample: 'おちゃ', sampleCn: '茶' },
-          { char: 'にゃ / にゅ / にょ', sound: 'にゃ、にゅ、にょ', sub: 'nya / nyu / nyo', tip: 'に + 小号やゆよ连拼', sample: 'ぎゅうにゅう', sampleCn: '牛奶' },
-          { char: 'ひゃ / ひゅ / ひょ', sound: 'ひゃ、ひゅ、ひょ', sub: 'hya / hyu / hyo', tip: 'ひ + 小号やゆよ连拼', sample: 'ひゃく', sampleCn: '一百 (100)' },
-          { char: 'みゃ / みゅ / みょ', sound: 'みゃ、みゅ、みょ', sub: 'mya / myu / myo', tip: 'み + 小号やゆよ连拼', sample: 'みょうじ', sampleCn: '姓氏' },
-          { char: 'りゃ / りゅ / りょ', sound: 'りゃ、りゅ、りょ', sub: 'rya / ryu / ryo', tip: 'り + 小号やゆよ连拼', sample: 'りょこう', sampleCn: '旅行' },
-          { char: 'ぎゃ / ぎゅ / ぎょ', sound: 'ぎゃ、ぎゅ、ぎょ', sub: 'gya / gyu / gyo', tip: 'ぎ + 小号やゆよ连拼', sample: 'ぎんこう', sampleCn: '银行' },
-          { char: 'じゃ / じゅ / じょ', sound: 'じゃ、じゅ、じょ', sub: 'ja / ju / jo', tip: 'じ + 小号やゆよ连拼', sample: 'じゅんび', sampleCn: '准备' },
-          { char: 'びゃ / ぴゃ行', sound: 'びょう、ぴゃく', sub: 'bya / pya', tip: 'び/ぴ + 小号やゆよ连拼', sample: 'びょういん', sampleCn: '医院' },
+          { char: 'きゃ / きゅ / きょ', sound: 'きゃ', sub: 'kya / kyu / kyo', tip: 'き + 小号やゆよ连拼，1拍念出', sample: 'きょう', sampleCn: '今天' },
+          { char: 'しゃ / しゅ / しょ', sound: 'しゃ', sub: 'sha / shu / sho', tip: 'し + 小号やゆよ连拼，1拍念出', sample: 'しゃしん', sampleCn: '照片' },
+          { char: 'ちゃ / ちゅ / ちょ', sound: 'ちゃ', sub: 'cha / chu / cho', tip: 'ち + 小号やゆよ连拼，1拍念出', sample: 'おちゃ', sampleCn: '茶' },
+          { char: 'にゃ / にゅ / にょ', sound: 'にゃ', sub: 'nya / nyu / nyo', tip: 'に + 小号やゆよ连拼，1拍念出', sample: 'ぎゅうにゅう', sampleCn: '牛奶' },
+          { char: 'ひゃ / ひゅ / ひょ', sound: 'ひゃ', sub: 'hya / hyu / hyo', tip: 'ひ + 小号やゆよ连拼，1拍念出', sample: 'ひゃく', sampleCn: '一百 (100)' },
+          { char: 'みゃ / みゅ / みょ', sound: 'みゃ', sub: 'mya / myu / myo', tip: 'み + 小号やゆよ连拼，1拍念出', sample: 'みょうじ', sampleCn: '姓氏' },
+          { char: 'りゃ / りゅ / りょ', sound: 'りゃ', sub: 'rya / ryu / ryo', tip: 'り + 小号やゆよ连拼，1拍念出', sample: 'りょこう', sampleCn: '旅行' },
+          { char: 'ぎゃ / ぎゅ / ぎょ', sound: 'ぎゃ', sub: 'gya / gyu / gyo', tip: 'ぎ + 小号やゆよ连拼，1拍念出', sample: 'ぎんこう', sampleCn: '银行' },
+          { char: 'じゃ / じゅ / じょ', sound: 'じゃ', sub: 'ja / ju / jo', tip: 'じ + 小号やゆよ连拼，1拍念出', sample: 'じゅんび', sampleCn: '准备' },
+          { char: 'びゃ / ぴゃ行', sound: 'びゃ', sub: 'bya / pya', tip: 'び/ぴ + 小号やゆよ连拼，1拍念出', sample: 'びょういん', sampleCn: '医院' },
           { char: 'っ (促音)', sound: 'きって', sub: '憋气停顿 1 拍', tip: '停顿一拍后再爆破下一音', sample: 'きって', sampleCn: '邮票' },
           { char: 'ー (长音)', sound: 'コーヒー', sub: '拖长元音 1 拍', tip: '把前一个元音拉长一倍', sample: 'コーヒー', sampleCn: '咖啡' }
         ]
@@ -706,11 +706,11 @@ export const zeroToOneDataByLang = {
           { char: 'I i', sound: 'i', sub: '/i/ (衣)', tip: '永远发微笑“衣”', sample: 'isla', sampleCn: '岛屿' },
           { char: 'O o', sound: 'o', sub: '/o/ (哦)', tip: '圆唇固定发“哦”', sample: 'hola', sampleCn: '你好' },
           { char: 'U u', sound: 'u', sub: '/u/ (乌)', tip: '圆唇发“乌” (qu/gu中静音)', sample: 'uno', sampleCn: '一 (1)' },
-          { char: 'ia / ie', sound: 'ia, ie', sub: '呀 / 耶', tip: 'i 快速滑向 a/e', sample: 'quiero', sampleCn: '我想要' },
-          { char: 'io / iu', sound: 'io, iu', sub: '哟 / 优', tip: 'i 快速滑向 o/u', sample: 'precio', sampleCn: '价格' },
-          { char: 'ua / ue', sound: 'ua, ue', sub: '哇 / 威', tip: 'u 快速滑向 a/e', sample: 'bueno', sampleCn: '好的' },
-          { char: 'ai / ei', sound: 'ai, ei', sub: '爱 / 欸', tip: 'a/e 滑向 i', sample: 'aire', sampleCn: '空气' },
-          { char: 'au / eu', sound: 'au, eu', sub: '奥 / 欧', tip: 'a/e 滑向 u', sample: 'auto', sampleCn: '汽车' }
+          { char: 'ia / ie', sound: 'ia', sub: '呀 / 耶', tip: 'i 快速滑向 a/e', sample: 'quiero', sampleCn: '我想要' },
+          { char: 'io / iu', sound: 'io', sub: '哟 / 优', tip: 'i 快速滑向 o/u', sample: 'precio', sampleCn: '价格' },
+          { char: 'ua / ue', sound: 'ua', sub: '哇 / 威', tip: 'u 快速滑向 a/e', sample: 'bueno', sampleCn: '好的' },
+          { char: 'ai / ei', sound: 'ai', sub: '爱 / 欸', tip: 'a/e 滑向 i', sample: 'aire', sampleCn: '空气' },
+          { char: 'au / eu', sound: 'au', sub: '奥 / 欧', tip: 'a/e 滑向 u', sample: 'auto', sampleCn: '汽车' }
         ]
       },
       {
@@ -718,18 +718,18 @@ export const zeroToOneDataByLang = {
         name: '② 12 个必背特殊辅音与双字母变音规则 (西语拼读灵魂)',
         desc: '西语里唯一跟英语拼音习惯不同的就是这 12 组！记住它们就能 100% 盲读所有西语词：',
         items: [
-          { char: 'H h', sound: 'ola', sub: '永远静音!', tip: '在任何位置都像空气一样不发音', sample: 'hotel', sampleCn: '酒店' },
-          { char: 'J j', sound: 'ja, je', sub: '/x/ (喝)', tip: '永远发中文“喝/哈”的擦喉音', sample: 'Juan', sampleCn: '胡安(人名)' },
-          { char: 'Ñ ñ', sound: 'nya', sub: '/ɲ/ (涅)', tip: '舌面贴硬腭，发“尼亚/涅”', sample: 'mañana', sampleCn: '明天/上午' },
-          { char: 'LL ll', sound: 'ya', sub: '/ʝ/ (耶)', tip: '不读 l，读如英语 yes 的 y', sample: 'ella', sampleCn: '她' },
-          { char: 'RR rr', sound: 'rra, rro', sub: '/r/ 大舌颤音', tip: '双写 rr 或词首 r 需连续弹舌', sample: 'perro', sampleCn: '狗' },
-          { char: 'R r (单)', sound: 'ra, ro', sub: '/ɾ/ 单颤音', tip: '舌尖快速轻弹上齿龈一下', sample: 'pero', sampleCn: '但是' },
-          { char: 'C + a/o/u', sound: 'ka, ko, ku', sub: '/k/ (咔)', tip: '后接 a/o/u 时发清音 k', sample: 'casa', sampleCn: '房子/家' },
-          { char: 'C + e/i', sound: 'ce, ci', sub: '/θ/ 或 /s/', tip: '后接 e/i 时发咬舌音或 s', sample: 'cena', sampleCn: '晚餐' },
-          { char: 'G + a/o/u', sound: 'ga, go, gu', sub: '/ɡ/ (嘎)', tip: '后接 a/o/u 时发浊音 g', sample: 'gato', sampleCn: '猫' },
-          { char: 'G + e/i', sound: 'ge, gi', sub: '/x/ (喝)', tip: '后接 e/i 时与 J 一样发喉音“喝”', sample: 'gente', sampleCn: '人们' },
-          { char: 'QU + e/i', sound: 'ke, ki', sub: 'ke / ki', tip: '中间的 u 静音，直接读 ke / ki', sample: 'queso', sampleCn: '奶酪' },
-          { char: 'GU + e/i', sound: 'gue, gui', sub: 'ge / gi', tip: '中间的 u 静音，读浊音 ge / gi', sample: 'guía', sampleCn: '导游/指南' }
+          { char: 'H h', sound: 'hotel', sub: '永远静音!', tip: '在任何位置都像空气一样不发音 (读如 otel)', sample: 'hotel', sampleCn: '酒店' },
+          { char: 'J j', sound: 'ja', sub: '/x/ (喝)', tip: '永远发中文“喝/哈”的擦喉音', sample: 'Juan', sampleCn: '胡安(人名)' },
+          { char: 'Ñ ñ', sound: 'ña', sub: '/ɲ/ (涅)', tip: '舌面贴硬腭，发“尼亚/涅”', sample: 'mañana', sampleCn: '明天/上午' },
+          { char: 'LL ll', sound: 'lla', sub: '/ʝ/ (耶)', tip: '不读 l，读如英语 yes 的 y', sample: 'ella', sampleCn: '她' },
+          { char: 'RR rr', sound: 'perro', sub: '/r/ 大舌颤音', tip: '双写 rr 或词首 r 需连续弹舌', sample: 'perro', sampleCn: '狗' },
+          { char: 'R r (单)', sound: 'pero', sub: '/ɾ/ 单颤音', tip: '舌尖快速轻弹上齿龈一下', sample: 'pero', sampleCn: '但是' },
+          { char: 'C + a/o/u', sound: 'ca', sub: '/k/ (咔)', tip: '后接 a/o/u 时发清音 k', sample: 'casa', sampleCn: '房子/家' },
+          { char: 'C + e/i', sound: 'ce', sub: '/θ/ 或 /s/', tip: '后接 e/i 时发咬舌音或 s', sample: 'cena', sampleCn: '晚餐' },
+          { char: 'G + a/o/u', sound: 'ga', sub: '/ɡ/ (嘎)', tip: '后接 a/o/u 时发浊音 g', sample: 'gato', sampleCn: '猫' },
+          { char: 'G + e/i', sound: 'ge', sub: '/x/ (喝)', tip: '后接 e/i 时与 J 一样发喉音“喝”', sample: 'gente', sampleCn: '人们' },
+          { char: 'QU + e/i', sound: 'que', sub: 'ke / ki', tip: '中间的 u 静音，直接读 ke / ki', sample: 'queso', sampleCn: '奶酪' },
+          { char: 'GU + e/i', sound: 'gue', sub: 'ge / gi', tip: '中间的 u 静音，读浊音 ge / gi', sample: 'guía', sampleCn: '导游/指南' }
         ]
       },
       {
@@ -737,16 +737,16 @@ export const zeroToOneDataByLang = {
         name: '③ 常规辅音全表 (与英语/汉语拼音直觉基本一致)',
         desc: '注意 B 与 V 在西语中发音完全相同，且 P / T / K 不送气（更像中文的 b / d / g）：',
         items: [
-          { char: 'B b / V v', sound: 'ba, be', sub: '/b/ 同音', tip: '西语 b 和 v 发音完全一样', sample: 'vino', sampleCn: '葡萄酒' },
-          { char: 'CH ch', sound: 'cha, che', sub: '/tʃ/ (切)', tip: '与英语 ch (chat) 发音相同', sample: 'chico', sampleCn: '男孩/小伙' },
-          { char: 'D d', sound: 'da, de', sub: '/d/ 或 /ð/', tip: '词首读 d，元音间轻咬舌', sample: 'donde', sampleCn: '哪里' },
-          { char: 'F f', sound: 'fa, fe', sub: '/f/ (夫)', tip: '上齿轻触下唇吹气', sample: 'foto', sampleCn: '照片' },
-          { char: 'L l', sound: 'la, le', sub: '/l/ (勒)', tip: '舌尖清晰顶住上齿龈', sample: 'listo', sampleCn: '准备好的' },
-          { char: 'M m / N n', sound: 'ma, na', sub: '/m/ /n/', tip: '双唇鼻音与舌尖鼻音', sample: 'mano', sampleCn: '手' },
-          { char: 'P p', sound: 'pa, po', sub: '/p/ 不送气', tip: '双唇不送气清音（接近中文“巴”）', sample: 'papa', sampleCn: '土豆' },
-          { char: 'S s', sound: 'sa, si', sub: '/s/ (丝)', tip: '清脆的平舌音 s', sample: 'sí', sampleCn: '是的' },
-          { char: 'T t', sound: 'ta, to', sub: '/t/ 不送气', tip: '舌尖不送气清音（接近中文“搭”）', sample: 'todo', sampleCn: '全部/一切' },
-          { char: 'Z z', sound: 'za, zo', sub: '/θ/ 或 /s/', tip: '西班牙读咬舌清音，拉美读 s', sample: 'zapato', sampleCn: '鞋子' }
+          { char: 'B b / V v', sound: 'ba', sub: '/b/ 同音', tip: '西语 b 和 v 发音完全一样', sample: 'vino', sampleCn: '葡萄酒' },
+          { char: 'CH ch', sound: 'cha', sub: '/tʃ/ (切)', tip: '与英语 ch (chat) 发音相同', sample: 'chico', sampleCn: '男孩/小伙' },
+          { char: 'D d', sound: 'da', sub: '/d/ 或 /ð/', tip: '词首读 d，元音间轻咬舌', sample: 'donde', sampleCn: '哪里' },
+          { char: 'F f', sound: 'fa', sub: '/f/ (夫)', tip: '上齿轻触下唇吹气', sample: 'foto', sampleCn: '照片' },
+          { char: 'L l', sound: 'la', sub: '/l/ (勒)', tip: '舌尖清晰顶住上齿龈', sample: 'listo', sampleCn: '准备好的' },
+          { char: 'M m / N n', sound: 'ma', sub: '/m/ /n/', tip: '双唇鼻音与舌尖鼻音', sample: 'mano', sampleCn: '手' },
+          { char: 'P p', sound: 'pa', sub: '/p/ 不送气', tip: '双唇不送气清音（接近中文“巴”）', sample: 'papa', sampleCn: '土豆' },
+          { char: 'S s', sound: 'sa', sub: '/s/ (丝)', tip: '清脆的平舌音 s', sample: 'sí', sampleCn: '是的' },
+          { char: 'T t', sound: 'ta', sub: '/t/ 不送气', tip: '舌尖不送气清音（接近中文“搭”）', sample: 'todo', sampleCn: '全部/一切' },
+          { char: 'Z z', sound: 'za', sub: '/θ/ 或 /s/', tip: '西班牙读咬舌清音，拉美读 s', sample: 'zapato', sampleCn: '鞋子' }
         ]
       }
     ],

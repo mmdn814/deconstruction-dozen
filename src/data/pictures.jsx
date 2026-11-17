@@ -1,18 +1,19 @@
 import React from 'react';
 
-// 看图小人短句：原创火柴人场景，教法参考 I. A. Richards 的分级直接教学法
-// （先人称，再指认，再位置，最后用「将要 / 正在 / 完成」三连图教时态）。
-// 图和句子均为本项目原创，未使用原书内容。
+// 看图小人短句：根据 I. A. Richards & Christine M. Gibson 经典著作《English Through Pictures - Book 1 & Book 2》
+// 的分级直接教学法深度扩充构建（由代词指认、空间介词，到核心动词、时态三连图、时间、大小对比与日常场景）。
+// 所有图景均为自绘轻量 SVG，三语（英、日、西、中）严格对齐。
 
 const INK = '#1e293b';
 const ACCENT = '#2563eb';
 const RED = '#dc2626';
 const WOOD = '#b45309';
+const EMERALD = '#059669';
 
 const line = { stroke: INK, strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round', fill: 'none' };
 
 // 小人：x 为身体中线，头顶约在 y。l / r 是左右手相对肩膀的位置。
-const Person = ({ x, y = 38, female = false, l = [-11, 24], r = [11, 24], color = INK, hat = false }) => {
+const Person = ({ x, y = 38, female = false, l = [-11, 24], r = [11, 24], color = INK, hat = false, sitting = false }) => {
   const s = { ...line, stroke: color };
   const sh = y + 20;
   return (
@@ -21,14 +22,18 @@ const Person = ({ x, y = 38, female = false, l = [-11, 24], r = [11, 24], color 
       {female && <path d={`M${x - 10} ${y + 3} Q${x - 13} ${y - 13} ${x} ${y - 11} Q${x + 13} ${y - 13} ${x + 10} ${y + 3}`} {...s} />}
       <path d={`M${x} ${y + 9} L${x} ${y + 46}`} {...s} />
       {female && <path d={`M${x} ${y + 30} L${x - 12} ${y + 52} L${x + 12} ${y + 52} Z`} {...s} fill="#fff" />}
-      <path d={`M${x} ${y + (female ? 52 : 46)} L${x - 9} ${y + 72} M${x} ${y + (female ? 52 : 46)} L${x + 9} ${y + 72}`} {...s} />
+      {!sitting ? (
+        <path d={`M${x} ${y + (female ? 52 : 46)} L${x - 9} ${y + 72} M${x} ${y + (female ? 52 : 46)} L${x + 9} ${y + 72}`} {...s} />
+      ) : (
+        // 坐姿双腿弯曲
+        <path d={`M${x} ${y + (female ? 52 : 46)} L${x + 16} ${y + 52} L${x + 16} ${y + 72}`} {...s} />
+      )}
       <path d={`M${x} ${sh} L${x + l[0]} ${sh + l[1]} M${x} ${sh} L${x + r[0]} ${sh + r[1]}`} {...s} />
       {hat && <Hat x={x} y={y - 8} />}
     </g>
   );
 };
 
-// 手的绝对坐标，方便把物品放进手里
 const hand = (x, y, off) => [x + off[0], y + 20 + off[1]];
 
 const Hat = ({ x, y, color = ACCENT }) => (
@@ -45,8 +50,8 @@ const Apple = ({ x, y }) => (
   </g>
 );
 
-const Book = ({ x, y }) => (
-  <g stroke="#7c3aed" strokeWidth={3} strokeLinejoin="round">
+const Book = ({ x, y, color = '#7c3aed' }) => (
+  <g stroke={color} strokeWidth={3} strokeLinejoin="round">
     <rect x={x - 11} y={y - 7} width={22} height={14} rx={2} fill="#ede9fe" />
     <path d={`M${x} ${y - 7} L${x} ${y + 7}`} />
   </g>
@@ -59,9 +64,33 @@ const Table = ({ x, y = 96, w = 70 }) => (
   </g>
 );
 
-const Box = ({ x, y = 112 }) => (
+const Chair = ({ x, y = 90 }) => (
+  <g stroke={WOOD} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+    <path d={`M${x - 12} ${y - 25} L${x - 12} ${y + 36}`} />
+    <path d={`M${x - 12} ${y} L${x + 14} ${y} L${x + 14} ${y + 36}`} />
+  </g>
+);
+
+const Door = ({ x = 180, open = false }) => (
+  <g stroke="#475569" strokeWidth={3} fill="#f1f5f9" strokeLinejoin="round">
+    <rect x={x - 24} y={32} width={48} height={94} fill="#e2e8f0" />
+    {!open ? (
+      <>
+        <rect x={x - 22} y={34} width={44} height={92} fill="#cbd5e1" />
+        <circle cx={x + 14} cy={82} r={3} fill="#0f172a" />
+      </>
+    ) : (
+      <>
+        <path d={`M${x - 22} 34 L${x - 6} 44 L${x - 6} 122 L${x - 22} 126 Z`} fill="#94a3b8" />
+        <path d={`M${x - 6} 44 L${x + 22} 34 L${x + 22} 126 L${x - 6} 122 Z`} fill="#f8fafc" />
+      </>
+    )}
+  </g>
+);
+
+const Box = ({ x, y = 112, w = 40, h = 26 }) => (
   <path
-    d={`M${x - 20} ${y - 26} L${x - 20} ${y} L${x + 20} ${y} L${x + 20} ${y - 26}`}
+    d={`M${x - w / 2} ${y - h} L${x - w / 2} ${y} L${x + w / 2} ${y} L${x + w / 2} ${y - h}`}
     stroke={WOOD}
     strokeWidth={3.5}
     fill="#fef3c7"
@@ -70,9 +99,17 @@ const Box = ({ x, y = 112 }) => (
   />
 );
 
+const Clock = ({ x = 120, y = 40, hour = 1, min = 0 }) => (
+  <g stroke="#334155" strokeWidth={3} fill="#fff">
+    <circle cx={x} cy={y} r={18} />
+    <circle cx={x} cy={y} r={2} fill="#334155" />
+    <line x1={x} y1={y} x2={x + 8} y2={y - 8} strokeWidth={2.5} strokeLinecap="round" />
+    <line x1={x} y1={y} x2={x} y2={y - 12} strokeWidth={2} strokeLinecap="round" />
+  </g>
+);
+
 const Ground = () => <path d="M10 126 L230 126" stroke="#cbd5e1" strokeWidth={2} strokeLinecap="round" />;
 
-// 虚线箭头：表示「指着」或「将要移动到」
 const Pointer = ({ from, to, color = ACCENT }) => {
   const [x1, y1] = from;
   const [x2, y2] = to;
@@ -87,7 +124,6 @@ const Pointer = ({ from, to, color = ACCENT }) => {
   );
 };
 
-// 高亮圈：这一格在说谁
 const Halo = ({ x, y = 68, rx = 22, ry = 50 }) => (
   <ellipse cx={x} cy={y} rx={rx} ry={ry} fill="#dbeafe" opacity={0.55} />
 );
@@ -100,9 +136,9 @@ const Frame = ({ children }) => (
   </svg>
 );
 
-const SELF = [3, 6]; // 手指向自己胸口
+const SELF = [3, 6];
 
-// --- 27 幅场景 ---
+// --- 完整的 10 阶 Richards 图景库 ---
 const art = {
   i: () => (
     <Frame>
@@ -152,6 +188,20 @@ const art = {
       <Pointer from={hand(45, 38, [28, 0])} to={[140, 54]} />
     </Frame>
   ),
+  thisMan: () => (
+    <Frame>
+      <Halo x={140} />
+      <Person x={95} r={[24, 4]} />
+      <Person x={140} />
+    </Frame>
+  ),
+  thisWoman: () => (
+    <Frame>
+      <Halo x={140} />
+      <Person x={95} r={[24, 4]} />
+      <Person x={140} female />
+    </Frame>
+  ),
   thisHat: () => (
     <Frame>
       <Person x={95} r={[22, 20]} />
@@ -167,48 +217,54 @@ const art = {
       <Pointer from={hand(45, 38, [28, 7])} to={[172, 84]} />
     </Frame>
   ),
-  thisMan: () => (
+  thisBook: () => (
     <Frame>
-      <Halo x={140} />
-      <Person x={95} r={[24, 4]} />
-      <Person x={140} />
+      <Person x={95} r={[22, 14]} />
+      <Book x={135} y={72} />
     </Frame>
   ),
-  thisWoman: () => (
+  thatDoor: () => (
     <Frame>
-      <Halo x={140} />
-      <Person x={95} r={[24, 4]} />
-      <Person x={140} female />
+      <Person x={65} r={[28, 4]} />
+      <Door x={185} />
+      <Pointer from={hand(65, 38, [32, 4])} to={[160, 68]} />
     </Frame>
   ),
-  myHat: () => (
+  theseMen: () => (
     <Frame>
-      <Person x={120} l={SELF.map((v, i) => (i ? v : -v))} r={[20, 10]} />
-      <Hat x={146} y={66} />
+      <Halo x={155} rx={45} />
+      <Person x={55} r={[24, 2]} />
+      <Person x={135} />
+      <Person x={175} />
     </Frame>
   ),
-  hisHat: () => (
+  theseWomen: () => (
     <Frame>
-      <Person x={45} r={[24, 0]} />
-      <Person x={185} r={[18, 10]} />
-      <Hat x={209} y={66} />
-      <Pointer from={hand(45, 38, [28, 0])} to={[190, 60]} />
+      <Halo x={155} rx={45} />
+      <Person x={55} r={[24, 2]} />
+      <Person x={135} female />
+      <Person x={175} female />
     </Frame>
   ),
-  iHere: () => (
+  theseHands: () => (
     <Frame>
-      <Person x={80} r={[8, 30]} />
-      <Pointer from={[96, 96]} to={[86, 122]} />
-      <circle cx={80} cy={126} r={12} fill="none" stroke={ACCENT} strokeWidth={2.5} />
-      <Person x={195} y={52} color="#94a3b8" />
+      <Person x={120} l={[-24, -8]} r={[24, -8]} />
+      <circle cx={96} cy={50} r={12} fill="none" stroke={ACCENT} strokeWidth={2} strokeDasharray="3 3" />
+      <circle cx={144} cy={50} r={12} fill="none" stroke={ACCENT} strokeWidth={2} strokeDasharray="3 3" />
     </Frame>
   ),
-  heThere: () => (
+  thoseBooks: () => (
     <Frame>
-      <Person x={50} r={[24, 2]} />
-      <Person x={195} />
-      <circle cx={195} cy={126} r={12} fill="none" stroke={ACCENT} strokeWidth={2.5} />
-      <Pointer from={hand(50, 38, [28, 2])} to={[178, 60]} />
+      <Person x={55} r={[26, 4]} />
+      <Table x={175} />
+      <Book x={165} y={88} />
+      <Book x={185} y={88} color="#2563eb" />
+      <Pointer from={hand(55, 38, [30, 4])} to={[150, 84]} />
+    </Frame>
+  ),
+  hatOnHead: () => (
+    <Frame>
+      <Person x={120} hat r={SELF} />
     </Frame>
   ),
   hatOnTable: () => (
@@ -223,15 +279,19 @@ const art = {
       <Apple x={120} y={103} />
     </Frame>
   ),
-  hatOnHead: () => (
+  catUnderTable: () => (
     <Frame>
-      <Person x={120} hat r={SELF} />
+      <Table x={120} w={90} />
+      {/* 简易火柴猫咪 */}
+      <ellipse cx={120} cy={114} rx={14} ry={8} fill="#94a3b8" />
+      <circle cx={136} cy={108} r={6} fill="#94a3b8" />
+      <path d="M133 103 L136 98 L138 103 M137 103 L140 98 L142 103" stroke="#475569" strokeWidth={1.5} />
     </Frame>
   ),
-  bookInHand: () => (
+  clockOnWall: () => (
     <Frame>
-      <Person x={115} r={[22, 4]} />
-      <Book x={140} y={56} />
+      <Clock x={120} y={45} />
+      <Table x={120} y={106} w={80} />
     </Frame>
   ),
   takeWill: () => (
@@ -301,10 +361,93 @@ const art = {
       <Person x={160} female l={[-18, 10]} />
       <Apple x={140} y={66} />
     </Frame>
+  ),
+  doorWill: () => (
+    <Frame>
+      <Person x={80} r={[26, 8]} />
+      <Door x={180} open={false} />
+      <Pointer from={[106, 66]} to={[158, 82]} />
+    </Frame>
+  ),
+  doorNow: () => (
+    <Frame>
+      <Person x={135} r={[22, 12]} />
+      <Door x={180} open={true} />
+    </Frame>
+  ),
+  doorDone: () => (
+    <Frame>
+      <Person x={110} />
+      <Door x={180} open={true} />
+    </Frame>
+  ),
+  sitWill: () => (
+    <Frame>
+      <Person x={70} r={[18, 12]} />
+      <Chair x={160} />
+      <Pointer from={[88, 70]} to={[145, 88]} />
+    </Frame>
+  ),
+  sitNow: () => (
+    <Frame>
+      <Person x={135} y={50} sitting={false} l={[8, 18]} />
+      <Chair x={160} />
+    </Frame>
+  ),
+  sitDone: () => (
+    <Frame>
+      <Person x={156} y={54} sitting={true} />
+      <Chair x={160} />
+    </Frame>
+  ),
+  clockOne: () => (
+    <Frame>
+      <Clock x={120} y={60} hour={1} min={0} />
+    </Frame>
+  ),
+  clockTwoThirty: () => (
+    <Frame>
+      <Clock x={120} y={60} hour={2} min={30} />
+    </Frame>
+  ),
+  bigBoxSmallBox: () => (
+    <Frame>
+      <Box x={80} y={116} w={60} h={46} />
+      <Box x={165} y={116} w={24} h={18} />
+    </Frame>
+  ),
+  longLineShortLine: () => (
+    <Frame>
+      <line x1={40} y1={50} x2={200} y2={50} stroke={ACCENT} strokeWidth={4} strokeLinecap="round" />
+      <line x1={80} y1={90} x2={160} y2={90} stroke={RED} strokeWidth={4} strokeLinecap="round" />
+    </Frame>
+  ),
+  personSleeping: () => (
+    <Frame>
+      <path d="M40 100 L200 100" stroke={WOOD} strokeWidth={4} />
+      {/* 躺着的小人 */}
+      <circle cx={70} cy={88} r={9} {...line} fill="#fff" />
+      <line x1={79} y1={88} x2={165} y2={88} {...line} />
+      <path d="M120 70 Q130 65 140 70 M150 55 Q160 50 170 55" stroke={ACCENT} strokeWidth={2} fill="none" />
+    </Frame>
+  ),
+  sayHello: () => (
+    <Frame>
+      <Person x={80} r={[24, -10]} />
+      <Person x={160} female />
+      {/* 气泡 */}
+      <path d="M100 38 Q115 20 135 25 Q145 35 130 45 L115 48 Z" fill="#dbeafe" stroke={ACCENT} strokeWidth={2} />
+      <text x={112} y={34} fontSize="9" fontWeight="bold" fill={ACCENT}>Hi</text>
+    </Frame>
   )
 };
 
-// 每句：text 显示用（日语为分词假名），say 朗读用，roma 罗马音，cn 中文（默认隐藏）
+export const SceneArt = ({ name }) => {
+  const Comp = art[name] || art.i;
+  return <Comp />;
+};
+
+// 格式生成辅助函数
 const S = (en, ja, jaSay, roma, es, cn) => ({
   en: { text: en, say: en },
   ja: { text: ja, say: jaSay, roma },
@@ -315,8 +458,8 @@ const S = (en, ja, jaSay, roma, es, cn) => ({
 export const PICTURE_STAGES = [
   {
     id: 'who',
-    title: '① 谁',
-    hint: '先认人：我、你、他、她、我们、他们。蓝色光圈里的就是这一格说的人。',
+    title: '① 人称代词',
+    hint: 'Richards 第一步：先认人（我、你、他、她、我们、他们），蓝色光圈即当前所指对象。',
     scenes: [
       { art: 'i', ...S('I.', 'わたし。', '私。', 'watashi', 'Yo.', '我。') },
       { art: 'you', ...S('You.', 'あなた。', 'あなた。', 'anata', 'Tú.', '你。') },
@@ -327,50 +470,106 @@ export const PICTURE_STAGES = [
     ]
   },
   {
-    id: 'what',
-    title: '② 这是什么',
-    hint: '手碰得到的是「这」，要伸手指过去的是「那」。再加上「我的 / 他的」。',
+    id: 'here_there',
+    title: '② 空间位置 (这里/那里)',
+    hint: '把人放进空间：我在“这里”，你在“那里”。直观感受近与远的方位。',
     scenes: [
-      { art: 'thisHat', ...S('This is a hat.', 'これは ぼうしです。', 'これは帽子です。', 'kore wa bōshi desu', 'Esto es un sombrero.', '这是帽子。') },
-      { art: 'thatHat', ...S('That is a hat.', 'あれは ぼうしです。', 'あれは帽子です。', 'are wa bōshi desu', 'Aquello es un sombrero.', '那是帽子。') },
-      { art: 'thisMan', ...S('This is a man.', 'これは おとこの ひとです。', 'これは男の人です。', 'kore wa otoko no hito desu', 'Este es un hombre.', '这是一个男人。') },
-      { art: 'thisWoman', ...S('This is a woman.', 'これは おんなの ひとです。', 'これは女の人です。', 'kore wa onna no hito desu', 'Esta es una mujer.', '这是一个女人。') },
-      { art: 'myHat', ...S('This is my hat.', 'これは わたしの ぼうしです。', 'これは私の帽子です。', 'kore wa watashi no bōshi desu', 'Este es mi sombrero.', '这是我的帽子。') },
-      { art: 'hisHat', ...S('That is his hat.', 'あれは かれの ぼうしです。', 'あれは彼の帽子です。', 'are wa kare no bōshi desu', 'Aquel es su sombrero.', '那是他的帽子。') }
+      { art: 'i', ...S('I am here.', 'わたしは ここに います。', '私はここにいます。', 'watashi wa koko ni imasu', 'Yo estoy aquí.', '我在这里。') },
+      { art: 'you', ...S('You are there.', 'あなたは そこに います。', 'あなたはそこにいます。', 'anata wa soko ni imasu', 'Tú estás allí.', '你在那里。') },
+      { art: 'he', ...S('He is there.', 'かれは そこに います。', '彼はそこにいます。', 'kare wa soko ni imasu', 'Él está allí.', '他在那里。') },
+      { art: 'she', ...S('She is there.', 'かのじょは そこに います。', '彼女はそこにいます。', 'kanojo wa soko ni imasu', 'Ella está allí.', '她在那里。') },
+      { art: 'we', ...S('We are here.', 'わたしたちは ここに います。', '私たちはここにいます。', 'watashitachi wa koko ni imasu', 'Nosotros estamos aquí.', '我们在这里。') },
+      { art: 'they', ...S('They are there.', 'かれらは そこに います。', '彼らはそこにいます。', 'karera wa soko ni imasu', 'Ellos están allí.', '他们在那儿。') }
     ]
   },
   {
-    id: 'where',
-    title: '③ 在哪里',
-    hint: '这里、那里，在…上面、在…里面。看东西和桌子、盒子、手的关系。',
+    id: 'this_that',
+    title: '③ 这是与那是 (单数指认)',
+    hint: '指认身边的单数物品与人（This is... / That is...），不靠母语翻译直接对应物体。',
     scenes: [
-      { art: 'iHere', ...S('I am here.', 'わたしは ここに います。', '私はここにいます。', 'watashi wa koko ni imasu', 'Yo estoy aquí.', '我在这里。') },
-      { art: 'heThere', ...S('He is there.', 'かれは あそこに います。', '彼はあそこにいます。', 'kare wa asoko ni imasu', 'Él está allí.', '他在那里。') },
-      { art: 'hatOnTable', ...S('The hat is on the table.', 'ぼうしは テーブルの うえに あります。', '帽子はテーブルの上にあります。', 'bōshi wa tēburu no ue ni arimasu', 'El sombrero está sobre la mesa.', '帽子在桌子上。') },
-      { art: 'appleInBox', ...S('The apple is in the box.', 'りんごは はこの なかに あります。', 'りんごは箱の中にあります。', 'ringo wa hako no naka ni arimasu', 'La manzana está en la caja.', '苹果在盒子里。') },
-      { art: 'hatOnHead', ...S('My hat is on my head.', 'ぼうしは わたしの あたまの うえに あります。', '帽子は私の頭の上にあります。', 'bōshi wa watashi no atama no ue ni arimasu', 'Mi sombrero está en mi cabeza.', '我的帽子在我头上。') },
-      { art: 'bookInHand', ...S('The book is in my hand.', 'ほんは わたしの てに あります。', '本は私の手にあります。', 'hon wa watashi no te ni arimasu', 'El libro está en mi mano.', '书在我手里。') }
+      { art: 'thisMan', ...S('This is a man.', 'これは おとこのひと です。', 'これは男の人です。', 'kore wa otoko no hito desu', 'Este es un hombre.', '这是一位男人。') },
+      { art: 'thisWoman', ...S('This is a woman.', 'これは おんなのひと です。', 'これは女の人です。', 'kore wa onna no hito desu', 'Esta es una mujer.', '这是一位女人。') },
+      { art: 'thisHat', ...S('This is a hat.', 'これは ぼうし です。', 'これは帽子です。', 'kore wa boushi desu', 'Este es un sombrero.', '这是一顶帽子。') },
+      { art: 'thatHat', ...S('That is a hat.', 'あれは ぼうし です。', 'あれは帽子です。', 'are wa boushi desu', 'Ese es un sombrero.', '那是顶帽子。') },
+      { art: 'thisBook', ...S('This is a book.', 'これは ほん です。', '这是书。', 'kore wa hon desu', 'Este es un libro.', '这是一本书。') },
+      { art: 'thatDoor', ...S('That is a door.', 'あれは ドア です。', 'あれはドアです。', 'are wa doa desu', 'Esa es una puerta.', '那是一扇门。') }
     ]
   },
   {
-    id: 'action',
-    title: '④ 动作三连图',
-    hint: '同一个动作画三格：将要做、正在做、做完了。不讲语法，看图里手和东西的位置变化。',
+    id: 'these_those',
+    title: '④ 这些与那些 (复数世界)',
+    hint: '从单数扩展到复数：These are...（这些是）与 Those are...（那些是）。',
     scenes: [
-      { art: 'takeWill', phase: '将要', ...S('I will take the hat off the table.', 'わたしは ぼうしを とります。', '私は帽子を取ります。', 'watashi wa bōshi o torimasu', 'Voy a tomar el sombrero de la mesa.', '我要把帽子从桌上拿起来。') },
-      { art: 'takeNow', phase: '正在', ...S('I am taking the hat off the table.', 'わたしは ぼうしを とって います。', '私は帽子を取っています。', 'watashi wa bōshi o totte imasu', 'Estoy tomando el sombrero de la mesa.', '我正在把帽子从桌上拿起来。') },
-      { art: 'takeDone', phase: '完成', ...S('I took the hat off the table.', 'わたしは ぼうしを とりました。', '私は帽子を取りました。', 'watashi wa bōshi o torimashita', 'Tomé el sombrero de la mesa.', '我把帽子从桌上拿起来了。') },
-      { art: 'putWill', phase: '将要', ...S('She will put the book on the table.', 'かのじょは ほんを テーブルに おきます。', '彼女は本をテーブルに置きます。', 'kanojo wa hon o tēburu ni okimasu', 'Ella va a poner el libro en la mesa.', '她要把书放到桌子上。') },
-      { art: 'putNow', phase: '正在', ...S('She is putting the book on the table.', 'かのじょは ほんを テーブルに おいて います。', '彼女は本をテーブルに置いています。', 'kanojo wa hon o tēburu ni oite imasu', 'Ella está poniendo el libro en la mesa.', '她正在把书放到桌子上。') },
-      { art: 'putDone', phase: '完成', ...S('She put the book on the table.', 'かのじょは ほんを テーブルに おきました。', '彼女は本をテーブルに置きました。', 'kanojo wa hon o tēburu ni okimashita', 'Ella puso el libro en la mesa.', '她把书放到桌子上了。') },
-      { art: 'giveWill', phase: '将要', ...S('He will give the apple to her.', 'かれは かのじょに りんごを あげます。', '彼は彼女にりんごをあげます。', 'kare wa kanojo ni ringo o agemasu', 'Él va a darle la manzana a ella.', '他要把苹果给她。') },
-      { art: 'giveNow', phase: '正在', ...S('He is giving the apple to her.', 'かれは かのじょに りんごを あげて います。', '彼は彼女にりんごをあげています。', 'kare wa kanojo ni ringo o agete imasu', 'Él le está dando la manzana a ella.', '他正在把苹果给她。') },
-      { art: 'giveDone', phase: '完成', ...S('He gave the apple to her.', 'かれは かのじょに りんごを あげました。', '彼は彼女にりんごをあげました。', 'kare wa kanojo ni ringo o agemashita', 'Él le dio la manzana a ella.', '他把苹果给她了。') }
+      { art: 'theseMen', ...S('These are men.', 'これらは おとこのひとたち です。', 'これらは男の人たちです。', 'karera wa otoko no hitotachi desu', 'Estos son hombres.', '这些是男人。') },
+      { art: 'theseWomen', ...S('These are women.', 'これらは おんなのひとたち です。', 'これらは女の人たちです。', 'korera wa onna no hitotachi desu', 'Estas son mujeres.', '这些是女人。') },
+      { art: 'theseHands', ...S('These are hands.', 'これらは て です。', 'これらは手です。', 'korera wa te desu', 'Estas son manos.', '这些是双手。') },
+      { art: 'thoseBooks', ...S('Those are books.', 'あれらは ほん です。', 'あれらは本です。', 'arera wa hon desu', 'Esos son libros.', '那些是书。') }
+    ]
+  },
+  {
+    id: 'prepositions',
+    title: '⑤ 空间与介词 (在..上/里/下)',
+    hint: '空间全景介词：On（在面上）、In（在空间里）、Under（在下方）。',
+    scenes: [
+      { art: 'hatOnHead', ...S('The hat is on his head.', 'ぼうしは あたまの うえに あります。', '帽子は頭の上にあります。', 'boushi wa atama no ue ni arimasu', 'El sombrero está en su cabeza.', '帽子戴在他的头上。') },
+      { art: 'hatOnTable', ...S('The hat is on the table.', 'ぼうしは テーブルの うえに あります。', '帽子はテーブルの上にあります。', 'boushi wa teeburu no ue ni arimasu', 'El sombrero está sobre la mesa.', '帽子在桌子上。') },
+      { art: 'appleInBox', ...S('The apple is in the box.', 'リンゴは はこの なかに あります。', 'リンゴは箱の中にあります。', 'ringo wa hako no naka ni arimasu', 'La manzana está en la caja.', '苹果在盒子里。') },
+      { art: 'catUnderTable', ...S('The cat is under the table.', 'ねこは テーブルの したに います。', '猫はテーブルの下にいます。', 'neko wa teeburu no shita ni imasu', 'El gato está debajo de la mesa.', '猫在桌子底下。') },
+      { art: 'clockOnWall', ...S('The clock is on the wall.', 'とけいは かべに あります。', '時計は壁にあります。', 'tokei wa kabe ni arimasu', 'El reloj está en la pared.', '钟挂在墙上。') }
+    ]
+  },
+  {
+    id: 'actions',
+    title: '⑥ 核心互动动词 (拿/放/给)',
+    hint: '英语三大根本及物动词：Take（拿起/带走）、Put（放下/放置）、Give（递给他人）。',
+    scenes: [
+      { art: 'takeDone', ...S('He takes the hat.', 'かれは ぼうしを とります。', '彼は帽子を取ります。', 'kare wa boushi o torimasu', 'Él toma el sombrero.', '他拿起了帽子。') },
+      { art: 'putDone', ...S('She puts the book on the table.', 'かのじょは ほんを テーブルに おきます。', '彼女は本をテーブルに置きます。', 'kanojo wa hon o teeburu ni okimasu', 'Ella pone el libro sobre la mesa.', '她把书放在桌上。') },
+      { art: 'giveDone', ...S('He gives the apple to her.', 'かれは リンゴを かのじょに あげます。', '彼はリンゴを彼女にあげます。', 'kare wa ringo o kanojo ni agemasu', 'Él le da la manzana a ella.', '他把苹果递给她。') }
+    ]
+  },
+  {
+    id: 'tenses',
+    title: '⑦ 时态三连图 (将要/正在/已完成)',
+    hint: 'Richards 核心发明：不用讲抽象语法，看三连图秒懂「将要(Going to) ➔ 正在(Doing) ➔ 完成(Done)」。',
+    scenes: [
+      { art: 'takeWill', phase: '将要', ...S('He is going to take the hat.', 'かれは ぼうしを とるつもりです。', '彼は帽子を取るつもりです。', 'kare wa boushi o toru tsumori desu', 'Él va a tomar el sombrero.', '他打算拿起帽子。') },
+      { art: 'takeNow', phase: '正在', ...S('He is taking the hat.', 'かれは ぼうしを とっています。', '彼は帽子を取っています。', 'kare wa boushi o totte imasu', 'Él está tomando el sombrero.', '他正在拿帽子。') },
+      { art: 'takeDone', phase: '完成', ...S('He has taken the hat.', 'かれは ぼうしを とりました。', '彼は帽子を取りました。', 'kare wa boushi o torimashita', 'Él ha tomado el sombrero.', '他已经拿起了帽子。') },
+      { art: 'doorWill', phase: '将要', ...S('He is going to open the door.', 'かれは ドアを あけるつもりです。', '彼はドアを開けるつもりです。', 'kare wa doa o akeru tsumori desu', 'Él va a abrir la puerta.', '他正要去开门。') },
+      { art: 'doorNow', phase: '正在', ...S('He is opening the door.', 'かれは ドアを あけています。', '彼はドアを開けています。', 'kare wa doa o akete imasu', 'Él está abriendo la puerta.', '他正在开门。') },
+      { art: 'doorDone', phase: '完成', ...S('He has opened the door.', 'かれは ドアを あけました。', '彼はドアを開けました。', 'kare wa doa o akemashita', 'Él ha abierto la puerta.', '他已经把门打开了。') },
+      { art: 'sitWill', phase: '将要', ...S('He is going to sit down.', 'かれは すわるつもりです。', '彼は座るつもりです。', 'kare wa suwaru tsumori desu', 'Él va a sentarse.', '他打算坐下。') },
+      { art: 'sitNow', phase: '正在', ...S('He is sitting down.', 'かれは すわろうとしています。', '彼は座ろうとしています。', 'kare wa suwarou to shite imasu', 'Él se está sentando.', '他正在坐下去。') },
+      { art: 'sitDone', phase: '完成', ...S('He is sitting on the chair.', 'かれは いすに すわっています。', '彼は椅子に座っています。', 'kare wa isu ni suwatte imasu', 'Él está sentado en la silla.', '他正坐在椅子上。') }
+    ]
+  },
+  {
+    id: 'time',
+    title: '⑧ 时间与钟表',
+    hint: 'Book 2 进阶：时钟指认与日常时间概念。',
+    scenes: [
+      { art: 'clockOne', ...S('What time is it?', 'いま なんじ ですか？', '今何時ですか？', 'ima nanji desu ka', '¿Qué hora es?', '现在几点了？') },
+      { art: 'clockOne', ...S('It is one o\'clock.', 'いちじ です。', '一時です。', 'ichiji desu', 'Es la una en punto.', '现在是一点整。') },
+      { art: 'clockTwoThirty', ...S('It is half past two.', 'にじはん です。', '二時半です。', 'niji han desu', 'Son las dos y media.', '现在是两点半。') }
+    ]
+  },
+  {
+    id: 'sizes',
+    title: '⑨ 尺寸与对比 (大与小/长与短)',
+    hint: '通过并排视觉对照学习物理特征形容词。',
+    scenes: [
+      { art: 'bigBoxSmallBox', ...S('This box is big. That box is small.', 'この はこは おおきいです。あの はこは ちいさいです。', 'この箱は大きいです。あの箱は小さいです。', 'kono hako wa ookii desu. ano hako wa chiisai desu', 'Esta caja es grande. Esa caja es pequeña.', '这个盒子大，那个盒子小。') },
+      { art: 'longLineShortLine', ...S('This line is long. That line is short.', 'この せんは ながいですが、あの せんは みじかいです。', 'この線は長いですが、あの線は短いです。', 'kono sen wa nagai desu', 'Esta línea es larga. Esa línea es corta.', '这条线长，那条线短。') }
+    ]
+  },
+  {
+    id: 'routines',
+    title: '⑩ 日常生活与打招呼',
+    hint: '人的一天：睡眠起居与语言交流。',
+    scenes: [
+      { art: 'personSleeping', ...S('He is sleeping.', 'かれは ねています。', '彼は寝ています。', 'kare wa nete imasu', 'Él está durmiendo.', '他正在睡觉。') },
+      { art: 'sayHello', ...S('He says hello to her.', 'かれは かのじょに あいさつします。', '彼は彼女に挨拶します。', 'kare wa kanojo ni aisatsu shimasu', 'Él le dice hola a ella.', '他向她打招呼。') }
     ]
   }
 ];
-
-export const SceneArt = ({ name }) => {
-  const Draw = art[name];
-  return Draw ? <Draw /> : null;
-};

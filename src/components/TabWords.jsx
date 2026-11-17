@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Check, ChevronLeft, ChevronRight, Loader2, Sparkles } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight, Loader2, Sparkles, ChevronDown, ChevronUp, Layers } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText, playPurePhoneme, callGemini, loadFromStorage, saveToStorage, STORAGE_KEYS } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { WORD_THEMES, CORE_THEME_ID, parseWordFile } from '../data/wordThemes.js';
@@ -28,6 +28,7 @@ export const TabWords = ({ targetLang }) => {
   const builtInTotal = Object.values(counts).reduce((a, b) => a + b, 0);
 
   const [themeId, setThemeId] = useState(CORE_THEME_ID);
+  const [showAllThemes, setShowAllThemes] = useState(false);
   const [page, setPage] = useState(0);
   const [loaded, setLoaded] = useState({}); // `${lang}/${theme}` -> words
   const [readMap, setReadMap] = useState(() => loadFromStorage(READ_KEY, {}));
@@ -232,9 +233,37 @@ export const TabWords = ({ targetLang }) => {
         )}
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
-        {themeChip(CORE_THEME_ID, '⭐ 第0关 核心词砖', coreWords.length)}
-        {WORD_THEMES.filter((t) => builtInTotal === 0 || counts[t.id]).map((t) => themeChip(t.id, `${t.emoji} ${themeName(t)}`, counts[t.id] || 0))}
+      {/* Theme Cabin Selector Header & Expandable Grid */}
+      <div className="bg-white border border-slate-200/90 rounded-xl p-2.5 space-y-2 shadow-2xs">
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs font-black text-slate-900 flex items-center gap-1">
+              <Layers className="w-3.5 h-3.5 text-emerald-600" />
+              <span>当前主题舱:</span>
+            </span>
+            <span className="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 font-bold text-xs border border-emerald-200">
+              {isCore ? '⭐ 第0关 核心词砖' : `${theme.emoji} ${themeName(theme)}`} ({words.length}词)
+            </span>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setShowAllThemes((prev) => !prev)}
+            className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center gap-1 transition-colors"
+          >
+            <span>{showAllThemes ? '收起主题舱列表' : `切换主题舱 (${WORD_THEMES.length + 1}个)`}</span>
+            {showAllThemes ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+          </button>
+        </div>
+
+        {showAllThemes && (
+          <div className="pt-2 border-t border-slate-100 flex flex-wrap gap-1.5 animate-in fade-in duration-150">
+            {themeChip(CORE_THEME_ID, '⭐ 第0关 核心词砖', coreWords.length)}
+            {WORD_THEMES.filter((t) => builtInTotal === 0 || counts[t.id]).map((t) =>
+              themeChip(t.id, `${t.emoji} ${themeName(t)}`, counts[t.id] || 0)
+            )}
+          </div>
+        )}
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-2 px-1">

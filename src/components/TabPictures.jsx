@@ -37,13 +37,13 @@ export const TabPictures = ({ targetLang, getReadCount, onIncrementReadCount }) 
         <p className="text-[11px] text-slate-600">
           先看图猜意思，再听、再跟读。中文默认藏起来，实在猜不出再点「看中文」。
         </p>
-        <div className="flex flex-wrap items-center gap-1.5 bg-white/90 p-1 rounded-xl border border-amber-200/80">
+        <div className="flex items-center gap-1.5 bg-white/90 p-1 rounded-xl border border-amber-200/80 overflow-x-auto scrollbar-none max-w-full">
           {PICTURE_STAGES.map((s, i) => (
             <button
               key={s.id}
               type="button"
               onClick={() => setStageIdx(i)}
-              className={`px-2.5 py-1.5 rounded-lg text-xs font-extrabold transition-all ${
+              className={`px-2.5 py-1.5 rounded-lg text-xs font-extrabold transition-all whitespace-nowrap shrink-0 ${
                 i === stageIdx ? 'bg-amber-600 text-white shadow-2xs' : 'text-slate-600 hover:bg-slate-100'
               }`}
             >
