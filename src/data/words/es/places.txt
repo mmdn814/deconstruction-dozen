@@ -1,0 +1,125 @@
+la ciudad||城市
+el pueblo||城镇
+la aldea||村庄
+la capital||首都
+el país||国家
+el campo||乡下
+la región||地区
+el estado||州 / 国家
+la provincia||省
+el barrio||街区
+el centro||市中心
+las afueras||郊区
+el mundo||世界
+el continente||洲
+Asia||亚洲
+Europa||欧洲
+América||美洲
+África||非洲
+China||中国
+Japón||日本
+España||西班牙
+México||墨西哥
+Estados Unidos||美国
+Inglaterra||英格兰
+Francia||法国
+Alemania||德国
+el edificio||建筑
+la casa||房子
+el hogar||家
+el apartamento||公寓
+la oficina||办公室
+la empresa||公司
+la fábrica||工厂
+la escuela||学校
+la universidad||大学
+el hospital||医院
+la clínica||诊所
+la oficina de correos||邮局
+la comisaría||警察局
+la estación de bomberos||消防站
+el ayuntamiento||市政厅
+la embajada||大使馆
+la biblioteca||图书馆
+el museo||博物馆
+la galería||画廊
+el teatro||剧院
+el cine||电影院
+el parque||公园
+la plaza||广场
+el zoológico||动物园
+el acuario||水族馆
+el parque de atracciones||游乐园
+el estadio||体育场
+el gimnasio||健身房
+la piscina||游泳池
+la iglesia||教堂
+el templo||寺庙
+el castillo||城堡
+el palacio||宫殿
+la torre||塔
+el monumento||纪念碑
+el hotel||酒店
+el albergue||青年旅舍
+la peluquería||理发店
+la lavandería||洗衣店
+la granja||农场
+el jardín||花园
+la playa||海滩
+el mar||海
+el océano||海洋
+la montaña||山
+la colina||小山
+el río||河
+el lago||湖
+la isla||岛
+el bosque||森林
+el desierto||沙漠
+el valle||山谷
+la costa||海岸
+el prado||田野
+la cueva||洞穴
+la cascada||瀑布
+la recepción||前台
+el vestíbulo||大厅
+las escaleras||楼梯
+el pasillo||走廊
+la planta||楼层
+la planta baja||一楼
+el sótano||地下室
+el tejado||屋顶
+la salida de emergencia||紧急出口
+los servicios||厕所
+el punto de referencia||地标
+la atracción turística||旅游景点
+la vista||景色
+el paisaje||风景
+la frontera||边境
+la zona||区域
+el espacio||空间
+la ubicación||位置
+la ciudad natal||家乡
+Italia||意大利
+Portugal||葡萄牙
+Rusia||俄罗斯
+la India||印度
+Corea||韩国
+Brasil||巴西
+Argentina||阿根廷
+Canadá||加拿大
+Australia||澳大利亚
+Londres||伦敦
+Madrid||马德里
+Nueva York||纽约
+Tokio||东京
+Pekín||北京
+el quiosco||报刊亭
+el parque infantil||儿童游乐场
+el cementerio||墓地
+la plaza del mercado||集市广场
+el muelle||码头
+el faro||灯塔
+la fuente||喷泉
+la estatua||雕像
+las ruinas||遗迹
+el casco antiguo||老城区

@@ -1,0 +1,113 @@
+body|el cuerpo|身体
+head|la cabeza|头
+face|la cara|脸
+hair|el pelo|头发
+eye|el ojo|眼睛
+ear|la oreja|耳朵
+nose|la nariz|鼻子
+mouth|la boca|嘴
+lip|el labio|嘴唇
+tooth|el diente|牙齿
+tongue|la lengua|舌头
+neck|el cuello|脖子
+throat|la garganta|喉咙
+shoulder|el hombro|肩膀
+chest|el pecho|胸
+back (body)|la espalda|后背
+stomach|el estómago|胃 / 肚子
+belly|la barriga|肚子
+waist|la cintura|腰
+arm|el brazo|手臂
+elbow|el codo|手肘
+hand|la mano|手
+finger|el dedo|手指
+nail|la uña|指甲
+leg|la pierna|腿
+knee|la rodilla|膝盖
+foot|el pie|脚
+toe|el dedo del pie|脚趾
+skin|la piel|皮肤
+bone|el hueso|骨头
+blood|la sangre|血
+heart|el corazón|心脏
+brain|el cerebro|大脑
+lung|el pulmón|肺
+muscle|el músculo|肌肉
+voice|la voz|嗓音
+breath|el aliento|呼吸
+sweat|el sudor|汗
+tear|la lágrima|眼泪
+beard|la barba|胡子
+feeling|el sentimiento|感情
+emotion|la emoción|情绪
+mood|el humor|心情
+mind|la mente|头脑
+soul|el alma|灵魂
+health|la salud|健康
+strength|la fuerza|力气
+energy|la energía|精力
+happy|feliz|幸福的
+glad|contento|高兴的
+sad|triste|伤心的
+angry|enfadado|生气的
+afraid|asustado|害怕的
+worried|preocupado|担心的
+nervous|nervioso|紧张的
+calm|tranquilo|平静的
+tired|cansado|累的
+sleepy|con sueño|困的
+hungry|con hambre|饿的
+thirsty|con sed|渴的
+sick|enfermo|生病的
+healthy|sano|健康的
+strong|fuerte|强壮的
+weak|débil|虚弱的
+surprised|sorprendido|惊讶的
+excited|emocionado|兴奋的
+bored|aburrido|无聊的
+lonely|solitario|孤独的
+proud|orgulloso|骄傲的
+ashamed|avergonzado|羞愧的
+jealous|celoso|嫉妒的
+confused|confundido|困惑的
+disappointed|decepcionado|失望的
+satisfied|satisfecho|满意的
+relaxed|relajado|放松的
+stressed|estresado|有压力的
+comfortable|cómodo|舒服的
+painful|doloroso|疼的
+love|el amor|爱
+hate|el odio|恨
+fear|el miedo|恐惧
+joy|la alegría|喜悦
+sadness|la tristeza|悲伤
+anger|la ira|愤怒
+hope|la esperanza|希望
+dream|el sueño|梦 / 梦想
+pain|el dolor|疼痛
+stress|el estrés|压力
+smile|la sonrisa|微笑
+laugh|reír|笑
+cry|llorar|哭
+feel|sentir|感觉
+love (v.)|amar|爱
+like|gustar|喜欢
+hate (v.)|odiar|讨厌
+fear (v.)|temer|害怕
+worry|preocuparse|担心
+get angry|enfadarse|生气
+get tired|cansarse|累了
+rest|descansar|休息
+breathe|respirar|呼吸
+hurt|doler|疼
+tall|alto|高的
+short (height)|bajo|矮的
+fat|gordo|胖的
+thin|delgado|瘦的
+young|joven|年轻的
+old|viejo|老的
+beautiful|hermoso|美丽的
+handsome|guapo|帅的
+ugly|feo|丑的
+personality|la personalidad|性格
+appearance|la apariencia|外表

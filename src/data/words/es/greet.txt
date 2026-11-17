@@ -1,0 +1,75 @@
+hola||你好
+buenas||嗨
+buenos días||早上好
+buenas tardes||下午好
+buenas noches||晚上好 / 晚安
+adiós||再见
+chao||拜拜
+hasta luego||回头见
+hasta mañana||明天见
+hasta pronto||一会儿见
+gracias||谢谢
+muchas gracias||非常感谢
+de nada||不客气
+por favor||请
+perdón||对不起
+lo siento||很抱歉
+disculpe||劳驾 / 打扰一下
+no hay problema||没问题
+sí||是
+no||不
+vale||好的
+claro||当然
+quizás||也许
+así es||对的
+ya veo||原来如此
+de verdad||真的
+entiendo||我明白
+no entiendo||我不明白
+no sé||我不知道
+mucho gusto||很高兴认识你
+cómo estás||你好吗
+estoy bien||我很好
+y tú||你呢
+cómo te llamas||你叫什么名字
+me llamo||我叫…
+bienvenido||欢迎
+adelante||请进
+felicidades||恭喜
+feliz cumpleaños||生日快乐
+buena suerte||祝你好运
+salud||干杯
+buen provecho||用餐愉快
+cuídate||保重
+ten cuidado||小心
+que te mejores||早日康复
+socorro||救命
+un momento||等一下
+otra vez||再一次
+más despacio por favor||请慢一点
+puede ayudarme||能帮我吗
+cuánto cuesta||多少钱
+dónde está||在哪里
+qué es esto||这是什么
+qué hora es||几点了
+quisiera||我想要
+necesito||我需要
+me gusta||我喜欢
+no me gusta||我不喜欢
+está bien||可以 / 没事
+no importa||没关系
+vamos||走吧
+ven aquí||过来
+mira||你看
+oye||听着 / 喂
+bueno (pues)||嗯 / 那么
+vaya||哇
+genial||太棒了
+qué lástima||真遗憾
+cuánto tiempo||好久不见
+que descanses||晚安（睡前）
+que tengas un buen día||祝你今天愉快
+yo también||我也是
+yo tampoco||我也不
+hablas inglés||你会说英语吗
+hablo un poco||我会说一点

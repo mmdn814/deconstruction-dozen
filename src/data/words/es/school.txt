@@ -1,0 +1,113 @@
+el estudio (aprendizaje)||学习
+la educación||教育
+la guardería||幼儿园
+la escuela primaria||小学
+el instituto||中学
+la facultad||学院
+la academia de idiomas||语言学校
+el aula||教室
+la clase||课
+la lección||一课
+el curso||课程
+los deberes||作业
+el examen||考试
+la prueba||小测验
+la nota||成绩
+la puntuación||分数
+aprobar||及格
+suspender||不及格
+la pregunta||问题
+la respuesta||答案
+el ejercicio (de clase)||练习题
+el repaso||复习
+la investigación||研究
+la tesis||论文
+el ensayo||短文
+la graduación||毕业
+el título||学位
+el diploma||文凭
+la beca||奖学金
+la matrícula||学费
+el estudiante de intercambio||交换生
+el alumno||学生（中小学）
+el catedrático||教授
+el director de escuela||校长
+el semestre||学期
+el año escolar||学年
+el horario de clases||课程表
+la asistencia||出勤
+la ausencia||缺席
+el libro de texto||教科书
+el diccionario||词典
+el libro||书
+la novela||小说
+el cómic||漫画
+la página||页
+el capítulo||章
+la frase||句子
+el párrafo||段落
+el texto||文本
+la gramática||语法
+el vocabulario||词汇
+la palabra||单词
+la letra||字母
+el alfabeto||字母表
+el idioma||语言
+el significado||意思
+la pronunciación||发音
+el acento||口音 / 重音
+la ortografía||拼写
+la conversación||对话
+la redacción||作文
+la traducción||翻译
+el intérprete||口译员
+el dialecto||方言
+el inglés||英语
+el español||西班牙语
+el chino||中文
+el japonés||日语
+la lengua extranjera||外语
+la lengua materna||母语
+la asignatura||科目
+las matemáticas||数学
+la ciencia||科学
+la física||物理
+la química||化学
+la biología||生物
+la historia||历史
+la geografía||地理
+la literatura||文学
+el arte||艺术
+la música||音乐
+la educación física||体育
+la cultura||文化
+el conocimiento||知识
+la información||信息
+la explicación||解释
+el ejemplo||例子
+el contenido||内容
+el método||方法
+la razón||理由
+el propósito||目的
+la teoría||理论
+el nivel||水平
+el principiante||初学者
+intermedio||中级
+avanzado||高级
+la pizarra||黑板
+la tiza||粉笔
+la regla||尺子
+la mochila escolar||书包
+el recreo||课间休息
+el club||社团
+hacer un examen||参加考试
+tomar apuntes||记笔记
+memorizar||背诵
+repasar||复习
+graduarse||毕业
+matricularse||注册入学
+faltar a clase||逃课
+levantar la mano||举手
+consultar||查阅
+subrayar||划线
+resumir||总结

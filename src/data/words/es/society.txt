@@ -1,0 +1,118 @@
+la política||政治
+el gobierno||政府
+la ley||法律
+la norma||规定
+el derecho||权利
+el deber||义务
+las elecciones||选举
+el presidente||总统
+el primer ministro||首相
+el alcalde||市长
+el rey||国王
+la reina||女王
+la población||人口
+la paz||和平
+la guerra||战争
+el ejército||军队
+el delito||犯罪
+el ladrón||小偷
+el robo||抢劫
+la estafa||诈骗
+la policía||警方
+el tribunal||法院
+el juez||法官
+la cárcel||监狱
+la víctima||受害者
+el testigo||证人
+el artículo de prensa||新闻报道
+los medios de comunicación||媒体
+la emisión||广播
+el tema||话题
+el rumor||谣言
+el hecho||事实
+la verdad||真相
+la mentira||谎言
+el secreto||秘密
+la influencia||影响
+el cambio social||变化
+la crisis||危机
+el coste de la vida||物价
+la inflación||通货膨胀
+las acciones||股票
+la inversión||投资
+la pensión||养老金
+el seguro||保险
+el bienestar social||福利
+la pobreza||贫困
+la riqueza||财富
+el trámite||手续
+el formulario||表格
+el formulario de solicitud||申请表
+el certificado||证明
+el documento de identidad||身份证
+el permiso de residencia||居留许可
+el permiso de trabajo||工作许可
+el registro||登记
+la fecha de caducidad||到期日
+válido||有效的
+caducado||过期的
+los datos personales||个人信息
+la fecha de nacimiento||出生日期
+el nombre completo||全名
+el código postal||邮编
+el correo||邮件
+el correo certificado||挂号信
+la transferencia bancaria||银行转账
+la comisión||手续费
+el saldo||余额
+la declaración de la renta||报税
+la infracción||违规
+la prohibición||禁止
+el permiso oficial||许可
+la advertencia||警告
+prohibido el paso||禁止入内
+prohibido fumar||禁止吸烟
+los modales||礼貌
+la costumbre||习俗
+el hábito||习惯
+la tradición||传统
+la religión||宗教
+el dios||神
+el voluntario||志愿者
+la organización||组织
+la asociación||协会
+el representante||代表
+la mayoría de la gente||多数人
+la minoría||少数
+la libertad||自由
+la igualdad||平等
+la justicia||正义
+la seguridad||安全
+la violencia||暴力
+la protesta||抗议
+la manifestación||游行示威
+el inmigrante||移民
+el refugiado||难民
+la época||时代
+rellenar (un formulario)||填写
+presentar (documentos)||提交
+renovar||续办
+inscribirse||登记
+denunciar un robo||报案
+pagar impuestos||纳税
+el voto||选票
+el partido político||政党
+la democracia||民主
+el parlamento||议会
+el ministro||部长
+el embajador||大使
+la nación||国家 / 民族
+la bandera||旗帜
+el himno||国歌
+el control fronterizo||边境检查
+el número de emergencias||紧急电话
+los objetos extraviados||遗失物品
+la organización benéfica||慈善机构
+la donación||捐款
+la persona sin hogar||无家可归者
+la huelga general||大罢工

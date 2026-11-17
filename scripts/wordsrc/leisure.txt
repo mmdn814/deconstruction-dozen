@@ -1,0 +1,90 @@
+hobby|la afición|爱好
+free time|el tiempo libre|空闲时间
+trip|el viaje|旅行
+tourism|el turismo|旅游
+journey|el trayecto|旅途
+tour|la excursión|游览
+guide|el guía|导游
+guidebook|la guía de viaje|旅游指南
+accommodation|el alojamiento|住宿
+check-in|el registro de entrada|入住登记
+check-out|la salida del hotel|退房
+single room|la habitación individual|单人间
+double room|la habitación doble|双人间
+breakfast included|desayuno incluido|含早餐
+vacancy|la habitación libre|空房
+admission|la entrada (precio)|门票
+souvenir shop|la tienda de recuerdos|纪念品店
+festival|la fiesta|节日 / 派对
+fireworks|los fuegos artificiales|烟花
+event|el evento|活动
+concert|el concierto|音乐会
+show (n.)|el espectáculo|演出
+movie|la película|电影
+series|la serie|电视剧
+cartoon|los dibujos animados|动画片
+program (TV)|el programa de televisión|电视节目
+news|las noticias|新闻
+game|el juego|游戏
+video game|el videojuego|电子游戏
+song|la canción|歌
+karaoke|el karaoke|卡拉 OK
+dance (n.)|el baile|舞蹈
+piano|el piano|钢琴
+guitar|la guitarra|吉他
+instrument|el instrumento|乐器
+reading|la lectura|阅读
+painting|la pintura|绘画
+photography|la fotografía|摄影
+exhibition|la exposición|展览
+sport|el deporte|运动
+match|el partido|比赛
+player|el jugador|运动员
+soccer|el fútbol|足球
+basketball|el baloncesto|篮球
+tennis|el tenis|网球
+baseball|el béisbol|棒球
+volleyball|el voleibol|排球
+swimming|la natación|游泳
+running|correr (deporte)|跑步
+cycling|el ciclismo|骑行
+yoga|el yoga|瑜伽
+skiing|el esquí|滑雪
+hiking|el senderismo|徒步
+camping|la acampada|露营
+fishing|la pesca|钓鱼
+climbing|la escalada|攀岩
+walk (n.)|el paseo|散步
+picnic|el pícnic|野餐
+party|la fiesta (reunión)|聚会
+date (romantic)|la cita romántica|约会
+break|el descanso|休息
+nap|la siesta|午睡
+fun|la diversión|乐趣
+memory (remembrance)|el recuerdo (memoria)|回忆
+champion|el campeón|冠军
+fan (supporter)|el aficionado|粉丝
+rule|la regla del juego|规则
+referee|el árbitro|裁判
+coach (trainer)|el entrenador|教练
+musician|el músico|音乐家
+painter|el pintor|画家
+character|el personaje|角色
+story|el cuento|故事
+joke|el chiste|笑话
+chess|el ajedrez|国际象棋
+cards|las cartas (baraja)|扑克牌
+lottery|la lotería|彩票
+go for a walk|dar un paseo|去散步
+go on a trip|ir de viaje|去旅行
+take a vacation|tomar vacaciones|度假
+book a room|reservar una habitación|订房间
+sightsee|hacer turismo|观光
+have fun|divertirse|玩得开心
+relax|relajarse|放松
+play sports|hacer deporte|做运动
+play an instrument|tocar un instrumento|演奏乐器
+watch TV|ver la televisión|看电视
+go to the movies|ir al cine|去看电影
+hang out|salir con amigos|和朋友出去玩
+collect (hobby)|coleccionar sellos|集邮

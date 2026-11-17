@@ -1,0 +1,113 @@
+family|/ˈfæməliː/|家庭
+parents|/ˈperənts/|父母
+father|/ˈfɑːðər/|父亲
+mother|/ˈmʌðər/|母亲
+dad|/dæd/|爸爸
+mom|/mɑːm/|妈妈
+son|/sʌn/|儿子
+daughter|/ˈdɔːtər/|女儿
+children|/ˈtʃɪldrən/|孩子们
+brother|/ˈbrʌðər/|兄弟
+sister|/ˈsɪstər/|姐妹
+older brother|/oʊldər ˈbrʌðər/|哥哥
+younger sister|/jəŋgər ˈsɪstər/|妹妹
+grandfather|/ˈgrændˌfɑːðər/|祖父
+grandmother|/ˈgrændˌmʌðər/|祖母
+grandparents|/ˈgrændˌperənts/|祖父母
+grandson|/ˈgrændˌsʌn/|孙子
+granddaughter|/ˈgrænˌdɔːtər/|孙女
+uncle|/ˈʌŋkəl/|叔叔 / 舅舅
+aunt|/ænt/|阿姨 / 姑姑
+cousin|/ˈkʌzn/|堂表兄弟姐妹
+nephew|/ˈnefjuː/|侄子 / 外甥
+niece|/niːs/|侄女 / 外甥女
+husband|/ˈhʌzbənd/|丈夫
+wife|/waɪf/|妻子
+couple|/ˈkʌpəl/|夫妻 / 一对
+boyfriend|/ˈbɔɪˌfrend/|男朋友
+girlfriend|/ˈgɜːrlˌfrend/|女朋友
+fiancé|/ˌfiːˌɑːnˈseɪ/|未婚夫
+relative|/ˈrelətɪv/|亲戚
+father-in-law|/ˈfɑːðər ɪn lɔː/|岳父 / 公公
+mother-in-law|/ˈmʌðər ɪn lɔː/|岳母 / 婆婆
+twin|/twɪn/|双胞胎
+baby|/ˈbeɪbiː/|婴儿
+child|/tʃaɪld/|小孩
+boy|/bɔɪ/|男孩
+girl|/gɜːrl/|女孩
+teenager|/ˈtiːˌneɪdʒər/|青少年
+young person|/jʌŋ ˈpɜːrsən/|年轻人
+adult|/əˈdʌlt/|成年人
+old person|/oʊld ˈpɜːrsən/|老人
+man|/mæn/|男人
+woman|/ˈwʊmən/|女人
+gentleman|/ˈdʒentəlmən/|先生
+lady|/ˈleɪdiː/|女士
+miss|/mɪs/|小姐
+person|/ˈpɜːrsən/|人
+people|/ˈpiːpəl/|人们
+human|/ˈhjuːmən/|人类
+friend|/frend/|朋友
+best friend|/best frend/|最好的朋友
+neighbor|/ˈneɪbər/|邻居
+classmate|/ˈklæsˌmeɪt/|同学
+roommate|/ˈruːmˌmeɪt/|室友
+partner|/ˈpɑːrtnər/|伙伴
+stranger|/ˈstreɪndʒər/|陌生人
+guest|/gest/|客人
+host|/hoʊst/|主人
+customer|/ˈkʌstəmər/|顾客
+foreigner|/ˈfɔːrənər/|外国人
+tourist|/ˈtʊrəst/|游客
+citizen|/ˈsɪtəzən/|公民
+teacher|/ˈtiːtʃər/|老师
+student|/ˈstuːdənt/|学生
+doctor|/ˈdɑːktər/|医生
+nurse|/nɜːrs/|护士
+police officer|/pəˈliːs ˈɔːfəsər/|警察
+firefighter|/ˈfaɪərˌfaɪtər/|消防员
+driver|/ˈdraɪvər/|司机
+waiter|/ˈweɪtər/|服务员
+cook|/kʊk/|厨师
+shop assistant|/ʃɑːp əˈsɪstnt/|店员
+farmer|/ˈfɑːrmər/|农民
+engineer|/ˌendʒəˈnɪr/|工程师
+lawyer|/ˈlɔɪər/|律师
+artist|/ˈɑːrtəst/|艺术家
+singer|/ˈsɪŋər/|歌手
+actor|/ˈæktər/|演员
+writer|/ˈraɪtər/|作家
+journalist|/ˈdʒɜːrnələst/|记者
+scientist|/ˈsaɪəntəst/|科学家
+soldier|/ˈsoʊldʒər/|士兵
+worker|/ˈwɜːrkər/|工人
+boss|/bɔːs/|老板
+owner|/ˈoʊnər/|主人 / 业主
+landlord|/ˈlændˌlɔːrd/|房东
+name|/neɪm/|名字
+surname|/ˈsɜːrˌneɪm/|姓
+nickname|/ˈnɪkˌneɪm/|外号
+gender|/ˈdʒendər/|性别
+nationality|/ˌnæʃəˈnælətiː/|国籍
+address|/ˈæˌdres/|地址
+birthplace|/ˈbɜːrθˌpleɪs/|出生地
+single (unmarried)|/ˈsɪŋgəl/|单身
+married|/ˈmeriːd/|已婚
+divorced|/dəˈvɔːrst/|离婚的
+wedding|/ˈwedɪŋ/|婚礼
+marriage|/ˈmerɪdʒ/|婚姻
+relationship|/rəˈleɪʃənˌʃɪp/|关系
+friendship|/ˈfrendˌʃɪp/|友谊
+generation|/ˌdʒenəˈreɪʃən/|一代
+ancestor|/ˈænˌsestər/|祖先
+orphan|/ˈɔːrfən/|孤儿
+widow|/ˈwɪdoʊ/|寡妇
+group|/gruːp/|群体
+crowd|/kraʊd/|人群
+member|/ˈmembər/|成员
+society|/səˈsaɪətiː/|社会
+community|/kəˈmjuːnətiː/|社区
+Mr.|/ˈmɪstər/|先生（尊称）
+together|/təˈgeðər/|一起
+alone|/əˈloʊn/|独自
+each other|/iːtʃ ˈʌðər/|彼此

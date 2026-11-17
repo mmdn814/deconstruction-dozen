@@ -1,0 +1,113 @@
+la familia||家庭
+los padres||父母
+el padre||父亲
+la madre||母亲
+el papá||爸爸
+la mamá||妈妈
+el hijo||儿子
+la hija||女儿
+los hijos||孩子们
+el hermano||兄弟
+la hermana||姐妹
+el hermano mayor||哥哥
+la hermana menor||妹妹
+el abuelo||祖父
+la abuela||祖母
+los abuelos||祖父母
+el nieto||孙子
+la nieta||孙女
+el tío||叔叔 / 舅舅
+la tía||阿姨 / 姑姑
+el primo||堂表兄弟姐妹
+el sobrino||侄子 / 外甥
+la sobrina||侄女 / 外甥女
+el marido||丈夫
+la esposa||妻子
+la pareja||夫妻 / 一对
+el novio||男朋友
+la novia||女朋友
+el prometido||未婚夫
+el pariente||亲戚
+el suegro||岳父 / 公公
+la suegra||岳母 / 婆婆
+el gemelo||双胞胎
+el bebé||婴儿
+el niño||小孩
+el chico||男孩
+la chica||女孩
+el adolescente||青少年
+el joven||年轻人
+el adulto||成年人
+el anciano||老人
+el hombre||男人
+la mujer||女人
+el señor||先生
+la señora||女士
+la señorita||小姐
+la persona||人
+la gente||人们
+el ser humano||人类
+el amigo||朋友
+el mejor amigo||最好的朋友
+el vecino||邻居
+el compañero de clase||同学
+el compañero de piso||室友
+el compañero||伙伴
+el desconocido||陌生人
+el invitado||客人
+el anfitrión||主人
+el cliente||顾客
+el extranjero||外国人
+el turista||游客
+el ciudadano||公民
+el profesor||老师
+el estudiante||学生
+el médico||医生
+la enfermera||护士
+el policía||警察
+el bombero||消防员
+el conductor||司机
+el camarero||服务员
+el cocinero||厨师
+el dependiente||店员
+el agricultor||农民
+el ingeniero||工程师
+el abogado||律师
+el artista||艺术家
+el cantante||歌手
+el actor||演员
+el escritor||作家
+el periodista||记者
+el científico||科学家
+el soldado||士兵
+el trabajador||工人
+el jefe||老板
+el dueño||主人 / 业主
+el casero||房东
+el nombre||名字
+el apellido||姓
+el apodo||外号
+el género||性别
+la nacionalidad||国籍
+la dirección||地址
+el lugar de nacimiento||出生地
+soltero||单身
+casado||已婚
+divorciado||离婚的
+la boda||婚礼
+el matrimonio||婚姻
+la relación||关系
+la amistad||友谊
+la generación||一代
+el antepasado||祖先
+el huérfano||孤儿
+la viuda||寡妇
+el grupo||群体
+la multitud||人群
+el miembro||成员
+la sociedad||社会
+la comunidad||社区
+don||先生（尊称）
+juntos||一起
+a solas||独自
+el uno al otro||彼此

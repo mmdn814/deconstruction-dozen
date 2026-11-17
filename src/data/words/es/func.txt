@@ -1,0 +1,147 @@
+yo||我
+tú||你
+él||他
+ella||她
+ello||它
+nosotros||我们
+ellos||他们
+ustedes||你们
+me||我（宾格）
+lo||他（宾格）
+la||她（宾格）
+nos||我们（宾格）
+los||他们（宾格）
+mi||我的
+tu||你的
+su||他的 / 她的
+nuestro||我们的
+suyo||他们的
+mío||我的（东西）
+tuyo||你的（东西）
+mí mismo||我自己
+todos||大家
+alguien||某人
+nadie||没有人
+algo||某物
+nada||什么都没有
+todo||一切
+cualquier cosa||任何东西
+esto||这个
+eso||那个
+estos||这些
+esos||那些
+aquí||这里
+allí||那里
+allá||那边
+en algún lugar||某处
+en todas partes||到处
+en ninguna parte||哪里都不
+qué||什么
+quién||谁
+dónde||哪里
+cuándo||什么时候
+por qué||为什么
+cómo||怎么
+cuál||哪个
+de quién||谁的
+cuánto||多少
+cuántos||多少个
+el||定冠词（那个）
+un||不定冠词（一个）
+algunos||一些
+alguno||任何
+cada||每个
+cada uno||每一个
+ambos||两个都
+todo el||全部的
+otro||其他的
+otro más||另一个
+mismo||同样的
+tal||这样的
+y||和
+o||或者
+pero||但是
+porque||因为
+así que||所以
+si||如果
+cuando||当…的时候
+mientras||当… / 而
+aunque||虽然
+que||比
+como||像 / 作为
+que (conj.)||…这件事（连接句子）
+entonces||那么 / 然后
+también||也
+además||也 / 而且
+tampoco||也不
+no (adv.)||不
+nunca||从不
+solo||只
+justo||刚刚 / 只是
+incluso||甚至
+todavía||仍然
+ya||已经
+aún||还
+de nuevo||又 / 再
+en||在…里
+sobre||在…上
+a||在（某点）
+hacia||往
+desde||从
+de||…的
+con||和 / 用
+sin||没有
+para||为了 / 给
+por||由 / 乘
+acerca de||关于
+entre||在…之间
+en medio de||在…当中
+antes de||在…之前
+después de||在…之后
+durante||在…期间
+hasta||直到
+desde que||自从
+contra||反对 / 靠着
+a través de||穿过
+al otro lado de||横过 / 在对面
+dentro de||进入…里面
+fuera de||从…出来
+arriba||向上
+abajo||向下
+encima de||在…上方
+debajo de||在…下面
+cerca de||靠近
+lejos de||离…远
+al lado de||在…旁边
+delante de||在…前面
+detrás de||在…后面
+dentro||里面
+fuera||外面
+alrededor de||在…周围
+a lo largo de||沿着
+en dirección a||朝着
+según||根据
+en lugar de||代替
+a causa de||由于
+ser||是
+estar||在 / 处于
+tener||有
+hacer||做
+poder||能
+deber||必须
+querer||想要
+necesitar||需要
+hay||有（存在）
+la cosa||东西 / 事情
+la manera||方式
+el lugar||地方
+la parte||部分
+el tipo||种类
+el lado||边
+la cima||顶部
+el fondo||底部
+el medio||中间
+el frente||前面
+la parte de atrás||后面
+la izquierda||左
+la derecha||右

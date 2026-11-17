@@ -1,0 +1,81 @@
+clothes|/kloʊz/|衣服
+uniform|/ˈjuːnəˌfɔːrm/|制服
+suit|/suːt/|西装
+shirt|/ʃɜːrt/|衬衫
+T-shirt|/tiː ʃɜːrt/|T 恤
+blouse|/blaʊs/|女式衬衫
+sweater|/ˈswetər/|毛衣
+hoodie|/ˈhʊdiː/|卫衣
+jacket|/ˈdʒækət/|夹克
+coat|/koʊt/|大衣
+raincoat|/ˈreɪnˌkoʊt/|雨衣
+vest|/vest/|背心
+underwear|/ˈʌndərˌwer/|内衣
+pajamas|/pəˈdʒɑːməz/|睡衣
+pants|/pænts/|裤子
+jeans|/dʒiːnz/|牛仔裤
+shorts|/ʃɔːrts/|短裤
+skirt|/skɜːrt/|裙子
+dress|/dres/|连衣裙
+swimsuit|/ˈswɪmˌsuːt/|泳衣
+shoes|/ʃuːz/|鞋子
+socks|/sɑːks/|袜子
+sneakers|/ˈsniːkərz/|运动鞋
+sandals|/ˈsændəlz/|凉鞋
+boots|/buːts/|靴子
+slippers|/ˈslɪpərz/|拖鞋
+high heels|/haɪ hiːlz/|高跟鞋
+hat|/hæt/|帽子
+cap|/kæp/|鸭舌帽
+gloves|/glʌvz/|手套
+scarf|/skɑːrf/|围巾
+tie (n.)|/taɪ/|领带
+belt|/belt/|腰带
+ring (n.)|/rɪŋ/|戒指
+necklace|/ˈnekləs/|项链
+earrings|/ˈɪrˌrɪŋz/|耳环
+bracelet|/ˈbreɪslət/|手镯
+jewelry|/ˈdʒuːəlriː/|首饰
+pocket|/ˈpɑːkət/|口袋
+sleeve|/sliːv/|袖子
+collar|/ˈkɑːlər/|衣领
+zipper|/ˈzɪpər/|拉链
+long sleeve|/lɔːŋ sliːv/|长袖
+short sleeve|/ʃɔːrt sliːv/|短袖
+fabric|/ˈfæbrɪk/|布料
+cotton|/ˈkɑːtn/|棉
+silk|/sɪlk/|丝绸
+wool|/wʊl/|羊毛
+leather|/ˈleðər/|皮革
+pattern|/ˈpætərn/|花纹
+striped|/straɪpt/|条纹的
+plain|/pleɪn/|纯色的
+style|/staɪl/|风格
+fashion|/ˈfæʃən/|时尚
+size S|/saɪz es/|小号
+size M|/saɪz em/|中号
+size L|/saɪz el/|大号
+red|/red/|红色
+blue|/bluː/|蓝色
+white|/waɪt/|白色
+black|/blæk/|黑色
+yellow|/ˈjeloʊ/|黄色
+green|/griːn/|绿色
+brown|/braʊn/|棕色
+purple|/ˈpɜːrpəl/|紫色
+gray|/greɪ/|灰色
+pink|/pɪŋk/|粉色
+orange (color)|/ˈɔːrəndʒ/|橙色
+gold|/goʊld/|金色
+silver|/ˈsɪlvər/|银色
+beige|/beɪʒ/|米色
+navy blue|/ˈneɪviː bluː/|藏青色
+light blue|/laɪt bluː/|浅蓝色
+dark color|/dɑːrk ˈkʌlər/|深色
+light color|/laɪt ˈkʌlər/|浅色
+colorful|/ˈkʌlərfəl/|彩色的
+elegant|/ˈeləgənt/|优雅的
+casual|/ˈkæʒuːəl/|休闲的
+formal|/ˈfɔːrməl/|正式的
+suit (v.)|/suːt/|合适 / 相称
+change clothes|/tʃeɪndʒ kloʊz/|换衣服

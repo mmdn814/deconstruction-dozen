@@ -1,0 +1,119 @@
+zero|/ˈzɪroʊ/|零
+one|/wʌn/|一
+two|/tuː/|二
+three|/θriː/|三
+four|/fɔːr/|四
+five|/faɪv/|五
+six|/sɪks/|六
+seven|/ˈsevən/|七
+eight|/eɪt/|八
+nine|/naɪn/|九
+ten|/ten/|十
+eleven|/əˈlevən/|十一
+twelve|/twelv/|十二
+thirteen|/ˌθɜːrˈtiːn/|十三
+fourteen|/ˌfɔːrˈtiːn/|十四
+fifteen|/ˌfɪfˈtiːn/|十五
+sixteen|/ˌsɪkˈstiːn/|十六
+seventeen|/ˌsevənˈtiːn/|十七
+eighteen|/ˌeɪˈtiːn/|十八
+nineteen|/ˌnaɪnˈtiːn/|十九
+twenty|/ˈtwentiː/|二十
+twenty-one|/ˈtwentiː wʌn/|二十一
+thirty|/ˈθɜːrtiː/|三十
+forty|/ˈfɔːrtiː/|四十
+fifty|/ˈfɪftiː/|五十
+sixty|/ˈsɪkstiː/|六十
+seventy|/ˈsevəntiː/|七十
+eighty|/ˈeɪtiː/|八十
+ninety|/ˈnaɪntiː/|九十
+hundred|/ˈhʌndrəd/|一百
+two hundred|/tuː ˈhʌndrəd/|两百
+five hundred|/faɪv ˈhʌndrəd/|五百
+thousand|/ˈθaʊzənd/|一千
+ten thousand|/ten ˈθaʊzənd/|一万
+million|/ˈmɪljən/|百万
+billion|/ˈbɪljən/|十亿
+first|/fɜːrst/|第一
+second|/ˈsekənd/|第二
+third|/θɜːrd/|第三
+fourth|/fɔːrθ/|第四
+fifth|/fɪfθ/|第五
+sixth|/sɪksθ/|第六
+seventh|/ˈsevəntθ/|第七
+eighth|/eɪtθ/|第八
+ninth|/naɪntθ/|第九
+tenth|/tentθ/|第十
+last|/læst/|最后
+next|/nekst/|下一个
+number|/ˈnʌmbər/|数字 / 号码
+amount|/əˈmaʊnt/|数量
+total|/ˈtoʊtəl/|总计
+half|/hæf/|一半
+quarter|/ˈkwɔːrtər/|四分之一
+double|/ˈdʌbəl/|两倍
+pair|/per/|一对
+dozen|/ˈdʌzən/|一打
+percent|/pərˈsent/|百分之
+piece|/piːs/|块 / 片
+slice|/slaɪs/|一片（面包）
+cup|/kʌp/|杯
+glass|/glæs/|玻璃杯
+bottle|/ˈbɑːtəl/|瓶
+can (container)|/kæn/|罐
+box|/bɑːks/|盒
+bag|/bæg/|袋
+pack|/pæk/|包
+kilo|/ˈkiːloʊ/|公斤
+gram|/græm/|克
+liter|/ˈliːtər/|升
+meter|/ˈmiːtər/|米
+kilometer|/kəˈlɑːmətər/|公里
+centimeter|/ˈsentəˌmiːtər/|厘米
+mile|/maɪl/|英里
+size|/saɪz/|大小 / 尺寸
+weight|/weɪt/|重量
+length|/leŋθ/|长度
+height|/haɪt/|高度
+width|/wɪdθ/|宽度
+distance|/ˈdɪstənts/|距离
+speed|/spiːd/|速度
+temperature|/ˈtempətʃər/|温度
+degree|/dəˈgriː/|度
+many|/ˈmeniː/|许多（可数）
+much|/mʌtʃ/|许多（不可数）
+few|/fjuː/|很少（可数）
+little|/ˈlɪtəl/|很少（不可数）
+a little|/ə ˈlɪtəl/|一点
+a lot|/ə lɑːt/|很多
+more|/mɔːr/|更多
+less|/les/|更少
+most|/moʊst/|大多数
+least|/liːst/|最少
+enough|/ɪˈnʌf/|足够
+too much|/tuː mʌtʃ/|太多
+several|/ˈsevərəl/|几个
+whole|/hoʊl/|整个
+both of them|/boʊθ əv ðem/|两个都
+none|/nʌn/|一个也没有
+single|/ˈsɪŋgəl/|单一的
+plus|/plʌs/|加
+minus|/ˈmaɪnəs/|减
+times|/taɪmz/|乘
+divided by|/dəˈvaɪdəd baɪ/|除以
+equals|/ˈiːkwəlz/|等于
+count|/kaʊnt/|数数
+add|/æd/|加
+calculate|/ˈkælkjəˌleɪt/|计算
+measure|/ˈmeʒər/|测量
+weigh|/weɪ/|称重
+once|/wʌns/|一次
+twice|/twaɪs/|两次
+price|/praɪs/|价格
+dollar|/ˈdɑːlər/|美元
+euro|/ˈjʊroʊ/|欧元
+cent|/sent/|分
+peso|/ˈpeɪsoʊ/|比索
+coin|/kɔɪn/|硬币
+bill|/bɪl/|纸币
+change|/tʃeɪndʒ/|零钱

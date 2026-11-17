@@ -1,0 +1,75 @@
+hello|/həˈloʊ/|你好
+hi|/haɪ/|嗨
+good morning|/gʊd ˈmɔːrnɪŋ/|早上好
+good afternoon|/gʊd ˌæftərˈnuːn/|下午好
+good evening|/gʊd ˈiːvnɪŋ/|晚上好 / 晚安
+goodbye|/ˌgʊdˈbaɪ/|再见
+bye|/baɪ/|拜拜
+see you later|/siː juː ˈleɪtər/|回头见
+see you tomorrow|/siː juː təˈmɔːroʊ/|明天见
+see you soon|/siː juː suːn/|一会儿见
+thank you|/θæŋk juː/|谢谢
+thanks a lot|/θæŋks ə lɑːt/|非常感谢
+you're welcome|/jʊr ˈwelkəm/|不客气
+please|/pliːz/|请
+sorry|/ˈsɔːriː/|对不起
+I'm sorry|/aɪm ˈsɔːriː/|很抱歉
+excuse me|/ɪkˈskjuːz miː/|劳驾 / 打扰一下
+no problem|/noʊ ˈprɑːbləm/|没问题
+yes|/jes/|是
+no|/noʊ/|不
+okay|/ˈˌoʊˈkeɪ/|好的
+of course|/əv kɔːrs/|当然
+maybe|/ˈmeɪbiː/|也许
+that's right|/ðæts raɪt/|对的
+I see|/aɪ siː/|原来如此
+really|/ˈriːəliː/|真的
+I understand|/aɪ ˌʌndərˈstænd/|我明白
+I don't understand|/aɪ doʊnt ˌʌndərˈstænd/|我不明白
+I don't know|/aɪ doʊnt noʊ/|我不知道
+nice to meet you|/naɪs tuː miːt juː/|很高兴认识你
+how are you|/haʊ ɑːr juː/|你好吗
+I'm fine|/aɪm faɪn/|我很好
+and you|/ænd juː/|你呢
+what's your name|/wʌts jʊr neɪm/|你叫什么名字
+my name is|/maɪ neɪm ɪz/|我叫…
+welcome|/ˈwelkəm/|欢迎
+come in|/kʌm ɪn/|请进
+congratulations|/kənˌgrætʃəˈleɪʃənz/|恭喜
+happy birthday|/ˈhæpiː ˈbɜːrθˌdeɪ/|生日快乐
+good luck|/gʊd lʌk/|祝你好运
+cheers|/tʃɪrz/|干杯
+enjoy your meal|/ɪnˈdʒɔɪ jʊr miːl/|用餐愉快
+take care|/teɪk ker/|保重
+be careful|/biː ˈkerfəl/|小心
+get well soon|/get wel suːn/|早日康复
+help|/help/|救命
+wait a moment|/weɪt ə ˈmoʊmənt/|等一下
+one more time|/wʌn mɔːr taɪm/|再一次
+slowly please|/ˈsloʊliː pliːz/|请慢一点
+can you help me|/kæn juː help miː/|能帮我吗
+how much is it|/haʊ mʌtʃ ɪz ɪt/|多少钱
+where is it|/wer ɪz ɪt/|在哪里
+what is this|/wʌt ɪz ðɪs/|这是什么
+what time is it|/wʌt taɪm ɪz ɪt/|几点了
+I would like|/aɪ wʊd laɪk/|我想要
+I need|/aɪ niːd/|我需要
+I like it|/aɪ laɪk ɪt/|我喜欢
+I don't like it|/aɪ doʊnt laɪk ɪt/|我不喜欢
+it's fine|/ɪts faɪn/|可以 / 没事
+it doesn't matter|/ɪt ˈdʌznt ˈmætər/|没关系
+let's go|/lets goʊ/|走吧
+come here|/kʌm hɪr/|过来
+look|/lʊk/|你看
+hey|/heɪ/|听着 / 喂
+well|/wel/|嗯 / 那么
+wow|/waʊ/|哇
+great|/greɪt/|太棒了
+what a pity|/wʌt ə ˈpɪtiː/|真遗憾
+long time no see|/lɔːŋ taɪm noʊ siː/|好久不见
+good night|/gʊd naɪt/|晚安（睡前）
+have a nice day|/hæv ə naɪs deɪ/|祝你今天愉快
+me too|/miː tuː/|我也是
+me neither|/miː ˈniːðər/|我也不
+do you speak English|/duː juː spiːk ˈɪŋlɪʃ/|你会说英语吗
+I speak a little|/aɪ spiːk ə ˈlɪtəl/|我会说一点

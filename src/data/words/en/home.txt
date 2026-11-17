@@ -1,0 +1,107 @@
+room|/ruːm/|房间
+flat (n.)|/flæt/|公寓（套房）
+studio|/ˈstuːdiːoʊ/|单间公寓
+rent (n.)|/rent/|房租
+tenant|/ˈtenənt/|租客
+contract|/ˈkɑːnˌtrækt/|合同
+deposit (rental)|/dəˈpɑːzət/|押金
+real estate agency|/riːəl əˈsteɪt ˈeɪdʒənsiː/|房产中介
+furnished|/ˈfɜːrnɪʃt/|带家具的
+utilities|/juːˈtɪlətiːz/|水电煤
+moving|/ˈmuːvɪŋ/|搬家
+living room|/ˈlɪvɪŋ ruːm/|客厅
+bedroom|/ˈbedˌruːm/|卧室
+dining room|/ˈdaɪnɪŋ ruːm/|餐厅（家里）
+bathroom|/ˈbæθˌruːm/|浴室
+balcony|/ˈbælkəniː/|阳台
+garage|/gəˈrɑːʒ/|车库
+yard|/jɑːrd/|院子
+attic|/ˈætɪk/|阁楼
+door|/dɔːr/|门
+window|/ˈwɪndoʊ/|窗户
+wall|/wɔːl/|墙
+floor|/flɔːr/|地板
+ceiling|/ˈsiːlɪŋ/|天花板
+key|/kiː/|钥匙
+lock (n.)|/lɑːk/|锁
+doorbell|/ˈdɔːrˌbel/|门铃
+mailbox|/ˈmeɪlˌbɑːks/|信箱
+furniture|/ˈfɜːrnətʃər/|家具
+desk|/desk/|书桌
+chair|/tʃer/|椅子
+sofa|/ˈsoʊfə/|沙发
+armchair|/ˈɑːrmˌtʃer/|扶手椅
+bed|/bed/|床
+mattress|/ˈmætrəs/|床垫
+pillow|/ˈpɪloʊ/|枕头
+blanket|/ˈblæŋkət/|毯子
+sheet|/ʃiːt/|床单
+wardrobe|/ˈwɔːrˌdroʊb/|衣柜
+drawer|/drɔːr/|抽屉
+shelf|/ʃelf/|架子
+bookshelf|/ˈbʊkˌʃelf/|书架
+mirror|/ˈmɪrər/|镜子
+lamp|/læmp/|灯
+light (n.)|/laɪt/|灯光 / 电
+curtain|/ˈkɜːrtn/|窗帘
+carpet|/ˈkɑːrpət/|地毯
+picture|/ˈpɪktʃər/|画
+vase|/veɪs/|花瓶
+switch|/swɪtʃ/|开关
+socket|/ˈsɑːkət/|插座
+battery|/ˈbætəriː/|电池
+appliance|/əˈplaɪəns/|家电
+refrigerator|/rəˈfrɪdʒəˌreɪtər/|冰箱
+freezer|/ˈfriːzər/|冷冻柜
+oven|/ˈʌvən/|烤箱
+stove|/stoʊv/|炉灶
+washing machine|/ˈwɔːʃɪŋ məˈʃiːn/|洗衣机
+dryer|/ˈdraɪər/|烘干机
+dishwasher|/ˈdɪʃˌwɔːʃər/|洗碗机
+vacuum cleaner|/ˈvækˌjuːm ˈkliːnər/|吸尘器
+air conditioner|/er kənˈdɪʃənər/|空调
+heating|/ˈhiːtɪŋ/|暖气
+fan|/fæn/|电风扇
+television|/ˈteləˌvɪʒən/|电视
+hair dryer|/her ˈdraɪər/|吹风机
+iron (n.)|/ˈaɪərn/|熨斗
+sink|/sɪŋk/|水槽
+tap|/tæp/|水龙头
+bathtub|/ˈbæθˌtʌb/|浴缸
+shower (n.)|/ˈʃaʊər/|淋浴
+toilet bowl|/ˈtɔɪlət boʊl/|马桶
+gas|/gæs/|煤气
+electricity|/əˌlekˈtrɪsətiː/|电
+water bill|/ˈwɔːtər bɪl/|水费单
+garbage|/ˈgɑːrbɪdʒ/|垃圾
+trash can|/træʃ kæn/|垃圾桶
+recycling|/riːˈsaɪkəlɪŋ/|回收
+housework|/ˈhaʊsˌwɜːrk/|家务
+cleaning|/ˈkliːnɪŋ/|清洁
+laundry (clothes)|/ˈlɔːndriː/|待洗衣物
+dust|/dʌst/|灰尘
+noise|/nɔɪz/|噪音
+leak|/liːk/|漏水
+breakdown|/ˈbreɪkˌdaʊn/|故障
+power cut|/ˈpaʊər kʌt/|停电
+fire|/ˈfaɪər/|火灾
+earthquake|/ˈɜːrθˌkweɪk/|地震
+plumber|/ˈplʌmər/|水管工
+electrician|/əˌlekˈtrɪʃən/|电工
+doorman|/ˈdɔːrmən/|门卫
+building manager|/ˈbɪldɪŋ ˈmænɪdʒər/|物业管理员
+upstairs neighbor|/ˌʌpˈsterz ˈneɪbər/|楼上邻居
+live alone|/lɪv əˈloʊn/|独居
+share a flat|/ʃer ə flæt/|合租
+move in|/muːv ɪn/|搬进
+sweep|/swiːp/|扫地
+mop|/mɑːp/|拖地
+wash the dishes|/wɔːʃ ðə dɪʃɪz/|洗碗
+do the laundry|/duː ðə ˈlɔːndriː/|洗衣服
+hang out clothes|/hæŋ aʊt kloʊz/|晾衣服
+make the bed|/meɪk ðə bed/|铺床
+take out the trash|/teɪk aʊt ðə træʃ/|倒垃圾
+cozy|/ˈkoʊziː/|温馨的
+spacious|/ˈspeɪʃəs/|宽敞的
+noisy|/ˈnɔɪziː/|吵闹的
+sunny (room)|/ˈsʌniː/|采光好的

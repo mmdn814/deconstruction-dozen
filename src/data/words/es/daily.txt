@@ -1,0 +1,89 @@
+el jabón||肥皂
+el champú||洗发水
+el acondicionador||护发素
+el gel de ducha||沐浴露
+el cepillo de dientes||牙刷
+la pasta de dientes||牙膏
+la toalla||毛巾
+el pañuelo de papel||纸巾
+el papel higiénico||卫生纸
+la toallita húmeda||湿巾
+el pañuelo||手帕
+la mascarilla||口罩
+la maquinilla de afeitar||剃须刀
+el peine||梳子
+el cepillo||发刷
+el cortaúñas||指甲刀
+el bastoncillo||棉签
+los cosméticos||化妆品
+el maquillaje||彩妆
+el pintalabios||口红
+la crema facial||面霜
+el protector solar||防晒霜
+la loción||乳液
+el perfume||香水
+el desodorante||止汗剂
+el detergente||洗涤剂
+la lejía||漂白剂
+la esponja||海绵
+el trapo||抹布
+la escoba||扫帚
+el cubo||水桶
+la percha||衣架
+la pinza||晾衣夹
+el paraguas||雨伞
+el bolso||手提包
+las gafas||眼镜
+las gafas de sol||太阳镜
+las lentillas||隐形眼镜
+el reloj de pulsera||手表
+la cantimplora||水壶
+la fiambrera||饭盒
+la olla||锅
+la sartén||平底锅
+el hervidor||烧水壶
+la tabla de cortar||砧板
+el abrelatas||开罐器
+el sacacorchos||开瓶器
+el papel de aluminio||锡纸
+el film transparente||保鲜膜
+la cerilla||火柴
+la vela||蜡烛
+la bombilla||灯泡
+el cargador||充电器
+el alargador||接线板
+las tijeras||剪刀
+la cinta adhesiva||胶带
+el pegamento||胶水
+la cuerda||绳子
+la goma elástica||橡皮筋
+la aguja||针
+el hilo||线
+el botón||纽扣 / 按钮
+el lápiz||铅笔
+el bolígrafo||圆珠笔
+la goma de borrar||橡皮
+el cuaderno||笔记本
+el papel||纸
+el sobre||信封
+la postal||明信片
+la carta||信
+la tarjeta de visita||名片
+la herramienta||工具
+el martillo||锤子
+el destornillador||螺丝刀
+el clavo||钉子
+la escalera de mano||梯子
+el juguete||玩具
+la muñeca||娃娃
+la foto||照片
+el álbum||相册
+el cenicero||烟灰缸
+el pañal||尿布
+la compresa||卫生巾
+el repelente de insectos||驱虫剂
+el botiquín||急救箱
+la linterna||手电筒
+el despertador||闹钟
+las cosas||东西（杂物）
+el objeto||物体

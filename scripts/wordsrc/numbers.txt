@@ -1,0 +1,119 @@
+zero|cero|零
+one|uno|一
+two|dos|二
+three|tres|三
+four|cuatro|四
+five|cinco|五
+six|seis|六
+seven|siete|七
+eight|ocho|八
+nine|nueve|九
+ten|diez|十
+eleven|once|十一
+twelve|doce|十二
+thirteen|trece|十三
+fourteen|catorce|十四
+fifteen|quince|十五
+sixteen|dieciséis|十六
+seventeen|diecisiete|十七
+eighteen|dieciocho|十八
+nineteen|diecinueve|十九
+twenty|veinte|二十
+twenty-one|veintiuno|二十一
+thirty|treinta|三十
+forty|cuarenta|四十
+fifty|cincuenta|五十
+sixty|sesenta|六十
+seventy|setenta|七十
+eighty|ochenta|八十
+ninety|noventa|九十
+hundred|cien|一百
+two hundred|doscientos|两百
+five hundred|quinientos|五百
+thousand|mil|一千
+ten thousand|diez mil|一万
+million|el millón|百万
+billion|mil millones|十亿
+first|primero|第一
+second|segundo|第二
+third|tercero|第三
+fourth|cuarto|第四
+fifth|quinto|第五
+sixth|sexto|第六
+seventh|séptimo|第七
+eighth|octavo|第八
+ninth|noveno|第九
+tenth|décimo|第十
+last|último|最后
+next|siguiente|下一个
+number|el número|数字 / 号码
+amount|la cantidad|数量
+total|el total|总计
+half|la mitad|一半
+quarter|el cuarto|四分之一
+double|el doble|两倍
+pair|el par|一对
+dozen|la docena|一打
+percent|por ciento|百分之
+piece|el trozo|块 / 片
+slice|la rebanada|一片（面包）
+cup|la taza|杯
+glass|el vaso|玻璃杯
+bottle|la botella|瓶
+can (container)|la lata|罐
+box|la caja|盒
+bag|la bolsa|袋
+pack|el paquete|包
+kilo|el kilo|公斤
+gram|el gramo|克
+liter|el litro|升
+meter|el metro|米
+kilometer|el kilómetro|公里
+centimeter|el centímetro|厘米
+mile|la milla|英里
+size|el tamaño|大小 / 尺寸
+weight|el peso|重量
+length|la longitud|长度
+height|la altura|高度
+width|la anchura|宽度
+distance|la distancia|距离
+speed|la velocidad|速度
+temperature|la temperatura|温度
+degree|el grado|度
+many|muchos|许多（可数）
+much|mucho|许多（不可数）
+few|pocos|很少（可数）
+little|poco|很少（不可数）
+a little|un poco|一点
+a lot|un montón|很多
+more|más|更多
+less|menos|更少
+most|la mayoría|大多数
+least|lo mínimo|最少
+enough|suficiente|足够
+too much|demasiado|太多
+several|varios|几个
+whole|entero|整个
+both of them|los dos|两个都
+none|ninguno|一个也没有
+single|único|单一的
+plus|más (suma)|加
+minus|menos (resta)|减
+times|por (veces)|乘
+divided by|dividido por|除以
+equals|igual a|等于
+count|contar|数数
+add|sumar|加
+calculate|calcular|计算
+measure|medir|测量
+weigh|pesar|称重
+once|una vez|一次
+twice|dos veces|两次
+price|el precio|价格
+dollar|el dólar|美元
+euro|el euro|欧元
+cent|el céntimo|分
+peso|el peso (moneda)|比索
+coin|la moneda|硬币
+bill|el billete|纸币
+change|el cambio|零钱

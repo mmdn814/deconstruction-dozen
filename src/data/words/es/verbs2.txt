@@ -1,0 +1,128 @@
+ir||去
+venir||来
+volver||回来
+regresar||回去
+llegar||到达
+irse||离开
+salir||出去
+entrar||进入
+subir||上去
+bajar||下去
+pasar||经过
+cruzar||穿过
+girar||转弯
+seguir||跟随
+mover||移动
+mudarse||搬家
+quedarse||留下
+permanecer||保持
+viajar||旅行
+conducir||开车
+montar||骑
+volar||飞
+navegar||航行
+subirse a||上车
+bajarse de||下车
+hacer transbordo||换乘
+escalar||爬
+caer||掉落
+dejar caer||弄掉
+resbalar||滑倒
+escapar||逃跑
+perseguir||追
+apresurarse||赶快
+perderse||迷路
+acercarse||靠近
+alejarse||远离
+reunir||聚集
+separar||分开
+cambiar||改变
+convertirse en||变成
+aumentar||增加
+disminuir||减少
+crecer||成长
+encoger||缩小
+aparecer||出现
+desaparecer||消失
+nacer||出生
+morir||死
+ocurrir||发生
+existir||存在
+perdurar||持久
+acabar||结束
+perder||丢失 / 输
+ganar||赢 / 赚
+perder (el tren)||错过
+alcanzar||够到 / 达到
+levantar||举起
+descender||降低
+subir (precios)||提高
+agitar||摇
+dar vueltas||旋转
+rodar||滚动
+fluir||流动
+flotar||漂浮
+hundirse||下沉
+quemar||燃烧
+derretir||融化
+congelar||结冰
+secar||弄干
+mojarse||弄湿
+ensuciarse||弄脏
+derramar||洒出
+rasgar||撕
+doblarse||弯曲
+estirar||伸展
+extender||展开
+cubrir||盖住
+esconder||藏
+brillar||发光
+llover||下雨
+nevar||下雪
+soplar||吹
+mejorar||改善
+empeorar||恶化
+reparar||修复
+destruir||破坏
+dañar||损坏
+fallar||失败 / 出故障
+tener éxito||成功
+caber||装得下 / 合适
+combinar||相配
+diferenciarse||不同
+parecerse a||像
+pertenecer||属于
+contener||包含
+incluir||包括
+faltar||缺少
+bastar||足够
+sobrar||剩下
+costar||花费
+tardar||花时间
+depender||取决于
+parecer||看起来
+sonar a||听起来
+transformarse||转变
+desarrollar||发展
+avanzar||前进
+retroceder||后退
+detenerse||停下
+aparcar||停车
+entregar||送达
+coleccionar||收集
+cargar (el coche)||装载
+descargar (el coche)||卸下
+unir||连接 / 加入
+pegar||粘贴
+quitar||去掉
+reemplazar||替换
+intercambiar||交换
+compartir||分享
+dividir||分
+ahorrar||节省 / 存
+malgastar||浪费
+gastar||花（钱）
+ganar dinero||挣钱
+adeudar||欠
+alquilar||租
+poseer||拥有

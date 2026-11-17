@@ -1,0 +1,100 @@
+las compras||购物
+la tienda||商店
+los grandes almacenes||百货商场
+el centro comercial||购物中心
+el mercado||市场
+la farmacia||药店
+la librería||书店
+la floristería||花店
+la carnicería||肉店
+la pescadería||鱼店
+la frutería||蔬果店
+la tienda de ropa||服装店
+la zapatería||鞋店
+la joyería||珠宝店
+la ferretería||五金店
+la máquina expendedora||自动售货机
+el coste||费用
+la tarifa||收费
+el impuesto||税
+el descuento||折扣
+las rebajas||促销
+la oferta||优惠
+el cupón||优惠券
+la ganga||便宜货
+a mitad de precio||半价
+el dinero||钱
+la cartera||钱包
+la tarjeta de crédito||信用卡
+el pago||支付
+el plazo||分期
+el reembolso||退款
+el intercambio||换货
+el tipo de cambio||汇率
+el banco||银行
+la cuenta bancaria||账户
+los ahorros||存款
+el sueldo||工资
+los ingresos||收入
+el gasto||开销
+la deuda||债务
+el préstamo||贷款
+el presupuesto||预算
+el producto||产品
+la mercancía||商品
+el artículo||物品
+la marca||品牌
+la calidad||质量
+la cantidad (de producto)||数量
+las existencias||库存
+agotado||售罄
+la novedad||新品
+de segunda mano||二手的
+la muestra||样品
+el modelo||型号
+el color||颜色
+la forma||形状
+el material||材料
+el probador||试衣间
+probarse||试穿
+la garantía||保修
+el regalo||礼物
+el recuerdo||纪念品
+el envoltorio||包装
+la cesta||篮子
+el carrito||购物车
+la escalera mecánica||自动扶梯
+el ascensor||电梯
+la entrada||入口
+la salida||出口
+el cajero||收银员
+el vendedor||卖家
+el comprador||买家
+la cola||排队
+las compras en línea||网购
+el envío||运送
+los gastos de envío||运费
+el paquete (envío)||包裹
+el bulto||邮包
+el equipaje||行李
+el lujo||奢侈
+la atención al cliente||客服
+la queja||投诉
+la etiqueta||标签
+el código de barras||条形码
+la factura||发票
+el beneficio||利润
+al por mayor||批发
+al por menor||零售
+la baratija||廉价品
+en oferta||特价中
+de regalo||赠送
+valer||值
+permitirse||买得起
+regatear||讨价还价
+comparar precios||比价
+pagar en efectivo||付现金
+pagar con tarjeta||刷卡
+sacar dinero||取钱
+ingresar dinero||存钱
+cambiar dinero||换钱

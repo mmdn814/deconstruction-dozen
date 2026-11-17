@@ -1,0 +1,107 @@
+room|la habitación|房间
+flat (n.)|el piso|公寓（套房）
+studio|el estudio|单间公寓
+rent (n.)|el alquiler|房租
+tenant|el inquilino|租客
+contract|el contrato|合同
+deposit (rental)|la fianza|押金
+real estate agency|la inmobiliaria|房产中介
+furnished|amueblado|带家具的
+utilities|los suministros|水电煤
+moving|la mudanza|搬家
+living room|el salón|客厅
+bedroom|el dormitorio|卧室
+dining room|el comedor (de casa)|餐厅（家里）
+bathroom|el cuarto de baño|浴室
+balcony|el balcón|阳台
+garage|el garaje|车库
+yard|el patio|院子
+attic|el ático|阁楼
+door|la puerta|门
+window|la ventana|窗户
+wall|la pared|墙
+floor|el suelo|地板
+ceiling|el techo|天花板
+key|la llave|钥匙
+lock (n.)|la cerradura|锁
+doorbell|el timbre|门铃
+mailbox|el buzón|信箱
+furniture|los muebles|家具
+desk|el escritorio|书桌
+chair|la silla|椅子
+sofa|el sofá|沙发
+armchair|el sillón|扶手椅
+bed|la cama|床
+mattress|el colchón|床垫
+pillow|la almohada|枕头
+blanket|la manta|毯子
+sheet|la sábana|床单
+wardrobe|el armario|衣柜
+drawer|el cajón|抽屉
+shelf|el estante|架子
+bookshelf|la estantería|书架
+mirror|el espejo|镜子
+lamp|la lámpara|灯
+light (n.)|la luz|灯光 / 电
+curtain|la cortina|窗帘
+carpet|la alfombra|地毯
+picture|el cuadro|画
+vase|el jarrón|花瓶
+switch|el interruptor|开关
+socket|el enchufe|插座
+battery|la pila|电池
+appliance|el electrodoméstico|家电
+refrigerator|la nevera|冰箱
+freezer|el congelador|冷冻柜
+oven|el horno|烤箱
+stove|la estufa|炉灶
+washing machine|la lavadora|洗衣机
+dryer|la secadora|烘干机
+dishwasher|el lavavajillas|洗碗机
+vacuum cleaner|la aspiradora|吸尘器
+air conditioner|el aire acondicionado|空调
+heating|la calefacción|暖气
+fan|el ventilador|电风扇
+television|la televisión|电视
+hair dryer|el secador de pelo|吹风机
+iron (n.)|la plancha|熨斗
+sink|el fregadero|水槽
+tap|el grifo|水龙头
+bathtub|la bañera|浴缸
+shower (n.)|la ducha|淋浴
+toilet bowl|el inodoro|马桶
+gas|el gas|煤气
+electricity|la electricidad|电
+water bill|la factura del agua|水费单
+garbage|la basura|垃圾
+trash can|el cubo de basura|垃圾桶
+recycling|el reciclaje|回收
+housework|las tareas domésticas|家务
+cleaning|la limpieza|清洁
+laundry (clothes)|la colada|待洗衣物
+dust|el polvo|灰尘
+noise|el ruido|噪音
+leak|la fuga|漏水
+breakdown|la avería|故障
+power cut|el apagón|停电
+fire|el incendio|火灾
+earthquake|el terremoto|地震
+plumber|el fontanero|水管工
+electrician|el electricista|电工
+doorman|el portero|门卫
+building manager|el administrador|物业管理员
+upstairs neighbor|el vecino de arriba|楼上邻居
+live alone|vivir solo|独居
+share a flat|compartir piso|合租
+move in|instalarse|搬进
+sweep|barrer|扫地
+mop|fregar|拖地
+wash the dishes|lavar los platos|洗碗
+do the laundry|hacer la colada|洗衣服
+hang out clothes|tender la ropa|晾衣服
+make the bed|hacer la cama|铺床
+take out the trash|sacar la basura|倒垃圾
+cozy|acogedor|温馨的
+spacious|espacioso|宽敞的
+noisy|ruidoso (lugar)|吵闹的
+sunny (room)|luminoso|采光好的

@@ -1,0 +1,113 @@
+el cuerpo||身体
+la cabeza||头
+la cara||脸
+el pelo||头发
+el ojo||眼睛
+la oreja||耳朵
+la nariz||鼻子
+la boca||嘴
+el labio||嘴唇
+el diente||牙齿
+la lengua||舌头
+el cuello||脖子
+la garganta||喉咙
+el hombro||肩膀
+el pecho||胸
+la espalda||后背
+el estómago||胃 / 肚子
+la barriga||肚子
+la cintura||腰
+el brazo||手臂
+el codo||手肘
+la mano||手
+el dedo||手指
+la uña||指甲
+la pierna||腿
+la rodilla||膝盖
+el pie||脚
+el dedo del pie||脚趾
+la piel||皮肤
+el hueso||骨头
+la sangre||血
+el corazón||心脏
+el cerebro||大脑
+el pulmón||肺
+el músculo||肌肉
+la voz||嗓音
+el aliento||呼吸
+el sudor||汗
+la lágrima||眼泪
+la barba||胡子
+el sentimiento||感情
+la emoción||情绪
+el humor||心情
+la mente||头脑
+el alma||灵魂
+la salud||健康
+la fuerza||力气
+la energía||精力
+feliz||幸福的
+contento||高兴的
+triste||伤心的
+enfadado||生气的
+asustado||害怕的
+preocupado||担心的
+nervioso||紧张的
+tranquilo||平静的
+cansado||累的
+con sueño||困的
+con hambre||饿的
+con sed||渴的
+enfermo||生病的
+sano||健康的
+fuerte||强壮的
+débil||虚弱的
+sorprendido||惊讶的
+emocionado||兴奋的
+aburrido||无聊的
+solitario||孤独的
+orgulloso||骄傲的
+avergonzado||羞愧的
+celoso||嫉妒的
+confundido||困惑的
+decepcionado||失望的
+satisfecho||满意的
+relajado||放松的
+estresado||有压力的
+cómodo||舒服的
+doloroso||疼的
+el amor||爱
+el odio||恨
+el miedo||恐惧
+la alegría||喜悦
+la tristeza||悲伤
+la ira||愤怒
+la esperanza||希望
+el sueño||梦 / 梦想
+el dolor||疼痛
+el estrés||压力
+la sonrisa||微笑
+reír||笑
+llorar||哭
+sentir||感觉
+amar||爱
+gustar||喜欢
+odiar||讨厌
+temer||害怕
+preocuparse||担心
+enfadarse||生气
+cansarse||累了
+descansar||休息
+respirar||呼吸
+doler||疼
+alto||高的
+bajo||矮的
+gordo||胖的
+delgado||瘦的
+joven||年轻的
+viejo||老的
+hermoso||美丽的
+guapo||帅的
+feo||丑的
+la personalidad||性格
+la apariencia||外表

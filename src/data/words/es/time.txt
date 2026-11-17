@@ -1,0 +1,121 @@
+ahora||现在
+hoy||今天
+mañana||明天
+ayer||昨天
+pasado mañana||后天
+anteayer||前天
+esta noche||今晚
+la mañana||早上
+el mediodía||中午
+la tarde||下午
+el atardecer||傍晚
+la noche||夜晚
+la medianoche||午夜
+el amanecer||黎明
+el día||天
+la semana||周
+el mes||月
+el año||年
+el fin de semana||周末
+el día laborable||工作日
+esta semana||这周
+la próxima semana||下周
+la semana pasada||上周
+este mes||这个月
+el próximo mes||下个月
+el mes pasado||上个月
+este año||今年
+el próximo año||明年
+el año pasado||去年
+todos los días||每天
+lunes||星期一
+martes||星期二
+miércoles||星期三
+jueves||星期四
+viernes||星期五
+sábado||星期六
+domingo||星期日
+enero||一月
+febrero||二月
+marzo||三月
+abril||四月
+mayo||五月
+junio||六月
+julio||七月
+agosto||八月
+septiembre||九月
+octubre||十月
+noviembre||十一月
+diciembre||十二月
+la primavera||春天
+el verano||夏天
+el otoño||秋天
+el invierno||冬天
+la estación del año||季节
+la hora||小时
+el minuto||分钟
+el segundo (tiempo)||秒
+el momento||片刻
+el tiempo||时间
+en punto||…点整
+y media||…点半
+y cuarto||…点一刻
+el reloj||钟表
+el calendario||日历
+la fecha||日期
+el cumpleaños||生日
+el día festivo||节日
+las vacaciones||假期
+el aniversario||纪念日
+la Navidad||圣诞节
+el Año Nuevo||新年
+el horario||时间表
+la cita||预约 / 约会
+la fecha límite||截止日期
+el pasado||过去
+el presente||现在
+el futuro||将来
+el siglo||世纪
+la edad||年龄
+el período||时期
+el principio||开始
+el final||结束
+temprano||早
+tarde||晚
+pronto||很快
+más tarde||待会儿
+antes||以前
+después||之后
+recientemente||最近
+hace mucho||很久以前
+hace un momento||刚才
+ahora mismo||马上
+siempre||总是
+normalmente||通常
+a menudo||经常
+a veces||有时
+rara vez||很少
+a diario||每天地
+cada semana||每周
+cada mes||每月
+cada año||每年
+para siempre||永远
+hace||…之前
+por mucho tiempo||很长时间
+todo el día||一整天
+a tiempo||准时
+con prisa||匆忙
+al mismo tiempo||同时
+mientras tanto||与此同时
+por fin||终于
+de repente||突然
+inmediatamente||立刻
+poco a poco||渐渐
+empezar||开始
+terminar||结束
+durar||持续
+esperar||等
+llegar tarde||迟到
+darse prisa||赶紧
+pasar (tiempo)||度过
+aplazar||推迟

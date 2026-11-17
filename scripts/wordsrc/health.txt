@@ -1,0 +1,81 @@
+illness|la enfermedad|疾病
+cold (illness)|el resfriado|感冒
+flu|la gripe|流感
+fever|la fiebre|发烧
+cough|la tos|咳嗽
+sneeze|el estornudo|喷嚏
+headache|el dolor de cabeza|头痛
+stomachache|el dolor de estómago|胃痛
+toothache|el dolor de muelas|牙痛
+sore throat|el dolor de garganta|喉咙痛
+diarrhea|la diarrea|腹泻
+nausea|las náuseas|恶心
+dizziness|el mareo|头晕
+injury|la lesión|受伤
+wound|la herida|伤口
+burn (n.)|la quemadura|烧伤
+fracture|la fractura|骨折
+allergy (medical)|la reacción alérgica|过敏反应
+virus|el virus|病毒
+infection|la infección|感染
+symptom|el síntoma|症状
+condition|el estado de salud|身体状况
+blood pressure|la presión arterial|血压
+thermometer|el termómetro|体温计
+checkup|el chequeo|体检
+examination|el examen médico|检查
+X-ray|la radiografía|X 光
+injection|la inyección|打针
+surgery|la operación|手术
+treatment|el tratamiento|治疗
+prevention|la prevención|预防
+vaccine|la vacuna|疫苗
+medicine|el medicamento|药
+pill|la pastilla|药片
+painkiller|el analgésico|止痛药
+antibiotic|el antibiótico|抗生素
+ointment|la pomada|药膏
+bandage|la venda|绷带
+band-aid|la tirita|创可贴
+prescription|la receta médica|处方
+side effect|el efecto secundario|副作用
+dose|la dosis|剂量
+health insurance|el seguro médico|医疗保险
+emergency|la emergencia|紧急情况
+emergency room|las urgencias|急诊
+ambulance|la ambulancia|救护车
+patient (n.)|el paciente|病人
+dentist|el dentista|牙医
+surgeon|el cirujano|外科医生
+pharmacist|el farmacéutico|药剂师
+waiting room|la sala de espera|候诊室
+appointment (medical)|la cita médica|就诊预约
+pregnancy|el embarazo|怀孕
+disability|la discapacidad|残疾
+life|la vida|生命 / 生活
+death|la muerte|死亡
+cancer|el cáncer|癌症
+diabetes|la diabetes|糖尿病
+depression|la depresión|抑郁症
+insomnia|el insomnio|失眠
+fatigue|la fatiga|疲劳
+diet|la dieta|饮食
+vitamin|la vitamina|维生素
+exercise|el ejercicio|锻炼
+sleep (n.)|el sueño (dormir)|睡眠
+get sick|enfermarse|生病
+catch a cold|resfriarse|感冒
+cough (v.)|toser|咳嗽
+sneeze (v.)|estornudar|打喷嚏
+vomit|vomitar|呕吐
+bleed|sangrar|流血
+swell|hincharse|肿
+recover|recuperarse|康复
+cure|curar|治愈
+take medicine|tomar medicina|吃药
+see a doctor|ir al médico|看医生
+be hospitalized|estar ingresado|住院
+lose weight|adelgazar|减肥
+gain weight|engordar|发胖
+feel dizzy|estar mareado|头晕
+it hurts here|me duele aquí|我这里疼

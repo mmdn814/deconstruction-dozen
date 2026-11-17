@@ -1,0 +1,113 @@
+family|la familia|家庭
+parents|los padres|父母
+father|el padre|父亲
+mother|la madre|母亲
+dad|el papá|爸爸
+mom|la mamá|妈妈
+son|el hijo|儿子
+daughter|la hija|女儿
+children|los hijos|孩子们
+brother|el hermano|兄弟
+sister|la hermana|姐妹
+older brother|el hermano mayor|哥哥
+younger sister|la hermana menor|妹妹
+grandfather|el abuelo|祖父
+grandmother|la abuela|祖母
+grandparents|los abuelos|祖父母
+grandson|el nieto|孙子
+granddaughter|la nieta|孙女
+uncle|el tío|叔叔 / 舅舅
+aunt|la tía|阿姨 / 姑姑
+cousin|el primo|堂表兄弟姐妹
+nephew|el sobrino|侄子 / 外甥
+niece|la sobrina|侄女 / 外甥女
+husband|el marido|丈夫
+wife|la esposa|妻子
+couple|la pareja|夫妻 / 一对
+boyfriend|el novio|男朋友
+girlfriend|la novia|女朋友
+fiancé|el prometido|未婚夫
+relative|el pariente|亲戚
+father-in-law|el suegro|岳父 / 公公
+mother-in-law|la suegra|岳母 / 婆婆
+twin|el gemelo|双胞胎
+baby|el bebé|婴儿
+child|el niño|小孩
+boy|el chico|男孩
+girl|la chica|女孩
+teenager|el adolescente|青少年
+young person|el joven|年轻人
+adult|el adulto|成年人
+old person|el anciano|老人
+man|el hombre|男人
+woman|la mujer|女人
+gentleman|el señor|先生
+lady|la señora|女士
+miss|la señorita|小姐
+person|la persona|人
+people|la gente|人们
+human|el ser humano|人类
+friend|el amigo|朋友
+best friend|el mejor amigo|最好的朋友
+neighbor|el vecino|邻居
+classmate|el compañero de clase|同学
+roommate|el compañero de piso|室友
+partner|el compañero|伙伴
+stranger|el desconocido|陌生人
+guest|el invitado|客人
+host|el anfitrión|主人
+customer|el cliente|顾客
+foreigner|el extranjero|外国人
+tourist|el turista|游客
+citizen|el ciudadano|公民
+teacher|el profesor|老师
+student|el estudiante|学生
+doctor|el médico|医生
+nurse|la enfermera|护士
+police officer|el policía|警察
+firefighter|el bombero|消防员
+driver|el conductor|司机
+waiter|el camarero|服务员
+cook|el cocinero|厨师
+shop assistant|el dependiente|店员
+farmer|el agricultor|农民
+engineer|el ingeniero|工程师
+lawyer|el abogado|律师
+artist|el artista|艺术家
+singer|el cantante|歌手
+actor|el actor|演员
+writer|el escritor|作家
+journalist|el periodista|记者
+scientist|el científico|科学家
+soldier|el soldado|士兵
+worker|el trabajador|工人
+boss|el jefe|老板
+owner|el dueño|主人 / 业主
+landlord|el casero|房东
+name|el nombre|名字
+surname|el apellido|姓
+nickname|el apodo|外号
+gender|el género|性别
+nationality|la nacionalidad|国籍
+address|la dirección|地址
+birthplace|el lugar de nacimiento|出生地
+single (unmarried)|soltero|单身
+married|casado|已婚
+divorced|divorciado|离婚的
+wedding|la boda|婚礼
+marriage|el matrimonio|婚姻
+relationship|la relación|关系
+friendship|la amistad|友谊
+generation|la generación|一代
+ancestor|el antepasado|祖先
+orphan|el huérfano|孤儿
+widow|la viuda|寡妇
+group|el grupo|群体
+crowd|la multitud|人群
+member|el miembro|成员
+society|la sociedad|社会
+community|la comunidad|社区
+Mr.|don|先生（尊称）
+together|juntos|一起
+alone|a solas|独自
+each other|el uno al otro|彼此

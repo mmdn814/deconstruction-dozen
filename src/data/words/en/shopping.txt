@@ -1,0 +1,100 @@
+shopping|/ˈʃɑːpɪŋ/|购物
+shop|/ʃɑːp/|商店
+department store|/dəˈpɑːrtmənt stɔːr/|百货商场
+mall|/mɔːl/|购物中心
+market|/ˈmɑːrkət/|市场
+pharmacy|/ˈfɑːrməsiː/|药店
+bookstore|/ˈbʊkˌstɔːr/|书店
+florist|/ˈflɔːrəst/|花店
+butcher shop|/ˈbʊtʃər ʃɑːp/|肉店
+fish shop|/fɪʃ ʃɑːp/|鱼店
+greengrocer|/ˈgriːnˌgroʊsər/|蔬果店
+clothing store|/ˈkloʊðɪŋ stɔːr/|服装店
+shoe store|/ʃuː stɔːr/|鞋店
+jewelry store|/ˈdʒuːəlriː stɔːr/|珠宝店
+hardware store|/ˈhɑːrdˌwer stɔːr/|五金店
+vending machine|/ˈvendɪŋ məˈʃiːn/|自动售货机
+cost (n.)|/kɔːst/|费用
+fee|/fiː/|收费
+tax|/tæks/|税
+discount|/ˈdɪsˌkaʊnt/|折扣
+sale|/seɪl/|促销
+offer (n.)|/ˈɔːfər/|优惠
+coupon|/ˈkuːˌpɑːn/|优惠券
+bargain|/ˈbɑːrgən/|便宜货
+half price|/hæf praɪs/|半价
+money|/ˈmʌniː/|钱
+wallet|/ˈwɑːlət/|钱包
+credit card|/ˈkredət kɑːrd/|信用卡
+payment|/ˈpeɪmənt/|支付
+installment|/ɪnˈstɔːlmənt/|分期
+refund|/rəˈfʌnd/|退款
+exchange (n.)|/ɪksˈtʃeɪndʒ/|换货
+exchange rate|/ɪksˈtʃeɪndʒ reɪt/|汇率
+bank|/bæŋk/|银行
+account|/əˈkaʊnt/|账户
+savings|/ˈseɪvɪŋz/|存款
+salary|/ˈsæləriː/|工资
+income|/ˈɪnˌkʌm/|收入
+expense|/ɪkˈspens/|开销
+debt|/det/|债务
+loan|/loʊn/|贷款
+budget|/ˈbʌdʒət/|预算
+product|/ˈprɑːˌdʌkt/|产品
+goods|/gʊdz/|商品
+item|/ˈaɪtəm/|物品
+brand|/brænd/|品牌
+quality|/ˈkwɑːlətiː/|质量
+quantity|/ˈkwɑːntətiː/|数量
+stock|/stɑːk/|库存
+sold out|/soʊld aʊt/|售罄
+new arrival|/nuː əˈraɪvəl/|新品
+second-hand|/ˈsekənd hænd/|二手的
+sample|/ˈsæmpəl/|样品
+model|/ˈmɑːdəl/|型号
+color|/ˈkʌlər/|颜色
+shape|/ʃeɪp/|形状
+material|/məˈtɪriːəl/|材料
+fitting room|/ˈfɪtɪŋ ruːm/|试衣间
+try on|/traɪ ɔːn/|试穿
+warranty|/ˈwɔːrəntiː/|保修
+gift|/gɪft/|礼物
+souvenir|/ˌsuːvəˈnɪr/|纪念品
+wrapping|/ˈræpɪŋ/|包装
+basket|/ˈbæskət/|篮子
+cart|/kɑːrt/|购物车
+escalator|/ˈeskəˌleɪtər/|自动扶梯
+elevator|/ˈeləˌveɪtər/|电梯
+entrance|/ˈentrənts/|入口
+exit|/ˈegzət/|出口
+cashier|/kæˈʃɪr/|收银员
+seller|/ˈselər/|卖家
+buyer|/ˈbaɪər/|买家
+queue|/kjuː/|排队
+online shopping|/ˌɑːnˈlaɪn ˈʃɑːpɪŋ/|网购
+shipping|/ˈʃɪpɪŋ/|运送
+shipping fee|/ˈʃɪpɪŋ fiː/|运费
+package|/ˈpækɪdʒ/|包裹
+parcel|/ˈpɑːrsəl/|邮包
+luggage|/ˈlʌgɪdʒ/|行李
+luxury|/ˈlʌkʃəriː/|奢侈
+customer service|/ˈkʌstəmər ˈsɜːrvəs/|客服
+complaint|/kəmˈpleɪnt/|投诉
+label|/ˈleɪbəl/|标签
+barcode|/ˈbɑːrˌkoʊd/|条形码
+invoice|/ˈɪnˌvɔɪs/|发票
+profit|/ˈprɑːfət/|利润
+wholesale|/ˈhoʊlˌseɪl/|批发
+retail|/ˈriːˌteɪl/|零售
+cheap goods|/tʃiːp gʊdz/|廉价品
+on sale|/ɔːn seɪl/|特价中
+for free|/fɔːr friː/|赠送
+worth|/wɜːrθ/|值
+afford|/əˈfɔːrd/|买得起
+bargain (v.)|/ˈbɑːrgən/|讨价还价
+compare prices|/kəmˈper praɪsɪz/|比价
+pay in cash|/peɪ ɪn kæʃ/|付现金
+pay by card|/peɪ baɪ kɑːrd/|刷卡
+withdraw money|/wɪðˈdrɔː ˈmʌniː/|取钱
+deposit|/dəˈpɑːzət/|存钱
+change money|/tʃeɪndʒ ˈmʌniː/|换钱

@@ -1,0 +1,169 @@
+eat|comer|吃
+drink|beber|喝
+see|ver|看见
+look at|mirar|看
+watch|observar|观看
+hear|oír|听见
+listen|escuchar|听
+read|leer|读
+write|escribir|写
+speak|hablar|说话
+say|decir|说
+tell|contar (decir)|告诉
+ask|preguntar|问
+answer|responder|回答
+buy|comprar|买
+sell|vender|卖
+pay|pagar|付钱
+use|usar|用
+make|fabricar|制作
+sleep|dormir|睡觉
+wake up|despertarse|醒来
+get up|levantarse|起床
+sit|sentarse|坐
+stand|estar de pie|站
+walk|caminar|走路
+run|correr|跑
+jump|saltar|跳
+swim|nadar|游泳
+play|jugar|玩
+work|trabajar|工作
+study|estudiar|学习
+live|vivir|生活 / 住
+wash|lavar|洗
+clean|limpiar|打扫
+cook (v.)|cocinar|做饭
+wear|llevar puesto|穿着
+put on|ponerse|穿上
+take off|quitarse|脱下
+get dressed|vestirse|穿衣服
+shower|ducharse|洗澡
+brush|cepillar|刷
+comb|peinar|梳
+shave|afeitarse|刮胡子
+hold|sostener|拿着
+take|tomar|拿 / 取
+put|poner|放
+give|dar|给
+receive|recibir|收到
+get|conseguir|得到
+bring|traer|带来
+carry|cargar|搬 / 提
+send|enviar|寄 / 发送
+lend|prestar|借出
+borrow|pedir prestado|借入
+return (give back)|devolver|归还
+keep|guardar|保留
+open (v.)|abrir|打开
+close|cerrar|关上
+turn on|encender|打开（电器）
+turn off|apagar|关掉（电器）
+push|empujar|推
+pull|tirar de|拉
+press|presionar|按
+cut|cortar|切 / 剪
+break (v.)|romper|打破
+fix|arreglar|修理
+build|construir|建造
+draw|dibujar|画
+paint|pintar|涂色 / 油漆
+sing|cantar|唱歌
+dance|bailar|跳舞
+wait for|aguardar|等候
+meet|encontrarse con|见面
+visit|visitar|拜访 / 参观
+call|llamar|打电话 / 叫
+invite|invitar|邀请
+help (v.)|ayudar|帮助
+teach|enseñar|教
+learn|aprender|学
+practice|practicar|练习
+remember|recordar|记得
+forget|olvidar|忘记
+look for|buscar|寻找
+find|encontrar|找到
+show|mostrar|展示
+try|intentar|尝试
+choose|elegir|选择
+decide|decidir|决定
+begin|comenzar|开始
+stop|parar|停止
+continue|continuar|继续
+order|pedir|点餐 / 订购
+reserve|reservar|预订
+prepare|preparar|准备
+check|comprobar|检查
+explain|explicar|解释
+introduce|presentar|介绍
+greet|saludar|打招呼
+thank|agradecer|感谢
+apologize|disculparse|道歉
+smoke|fumar|抽烟
+bite|morder|咬
+touch|tocar|摸
+hug|abrazar|拥抱
+kiss|besar|亲吻
+throw|tirar|扔
+catch|atrapar|接住
+pick up|recoger|捡起 / 接人
+wrap|envolver|包
+tie|atar|系
+hang|colgar|挂
+fold|doblar|折叠
+fill|llenar|装满
+empty (v.)|vaciar|倒空
+pour|verter|倒
+mix|mezclar|搅拌
+boil|hervir|煮开
+fry|freír|煎 / 炸
+bake|hornear|烘烤
+heat (v.)|calentar|加热
+cool|enfriar|冷却
+taste|probar|尝
+smell|oler|闻
+feed|dar de comer|喂
+water (v.)|regar|浇水
+plant (v.)|plantar|种植
+grow (plants)|cultivar|种
+raise|criar|养育
+take care of|cuidar|照顾
+tidy up|ordenar|整理
+iron|planchar|熨
+sew|coser|缝
+lock|cerrar con llave|锁上
+knock|llamar a la puerta|敲门
+ring|sonar|响
+shout|gritar|喊
+whisper|susurrar|低声说
+lie down|acostarse|躺下
+stand up|ponerse de pie|站起来
+sit down|tomar asiento|坐下
+go to bed|irse a la cama|上床睡觉
+have breakfast|desayunar|吃早饭
+have lunch|almorzar|吃午饭
+have dinner|cenar|吃晚饭
+go shopping|ir de compras|去购物
+take a shower|darse una ducha|冲澡
+brush your teeth|cepillarse los dientes|刷牙
+wash your hands|lavarse las manos|洗手
+set the table|poner la mesa|摆餐具
+peel|pelar|削皮
+chop|picar|切碎
+stir|remover|搅动
+serve|servir|上菜 / 服务
+swallow|tragar|吞
+chew|masticar|嚼
+lick|lamer|舔
+yawn|bostezar|打哈欠
+snore|roncar|打鼾
+dream of|soñar con|梦见
+stare|mirar fijamente|盯着看
+point|señalar|指
+wave (v.)|saludar con la mano|挥手
+nod|asentir|点头
+clap|aplaudir|鼓掌
+kick|dar una patada|踢
+hit|golpear|打
+squeeze|apretar|挤 / 捏
+scratch|rascar|挠
+rub|frotar|擦 / 揉

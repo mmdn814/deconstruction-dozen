@@ -1,0 +1,128 @@
+el tiempo (clima)||天气
+el pronóstico del tiempo||天气预报
+el sol||太阳
+la lluvia||雨
+la nieve||雪
+el viento||风
+la nube||云
+la tormenta||暴风雨
+el trueno||雷
+el relámpago||闪电
+la niebla||雾
+el arcoíris||彩虹
+el huracán||飓风
+la inundación||洪水
+la sequía||干旱
+el clima||气候
+la humedad||湿度
+soleado||晴朗的
+nublado||多云的
+lluvioso||下雨的
+ventoso||刮风的
+húmedo||潮湿的
+el cielo||天空
+la luna||月亮
+la estrella||星星
+el planeta||行星
+la tierra||地球 / 土地
+el universo||宇宙
+el aire||空气
+el fuego||火
+el humo||烟
+el suelo (tierra)||土壤
+la piedra||石头
+la roca||岩石
+la arena||沙子
+la ola||波浪
+la naturaleza||自然
+el medio ambiente||环境
+la contaminación||污染
+la planta (vegetal)||植物
+el árbol||树
+la flor||花
+la hierba||草
+la hoja||叶子
+la rama||树枝
+la raíz||根
+la semilla||种子
+la rosa||玫瑰
+el pino||松树
+el bambú||竹子
+el animal||动物
+el perro||狗
+el gato||猫
+el pájaro||鸟
+el caballo||马
+la vaca||奶牛
+el cerdo (animal)||猪
+la oveja||绵羊
+la cabra||山羊
+la gallina||母鸡
+el pato||鸭子
+el conejo||兔子
+el ratón (animal)||老鼠
+el mono||猴子
+el oso||熊
+el lobo||狼
+el zorro||狐狸
+el ciervo||鹿
+el elefante||大象
+el león||狮子
+el tigre||老虎
+el oso panda||熊猫
+la serpiente||蛇
+la rana||青蛙
+la tortuga||乌龟
+la ballena||鲸鱼
+el delfín||海豚
+el tiburón||鲨鱼
+el insecto||昆虫
+el mosquito||蚊子
+la mosca||苍蝇
+la abeja||蜜蜂
+la mariposa||蝴蝶
+la hormiga||蚂蚁
+la araña||蜘蛛
+la cucaracha||蟑螂
+la mascota||宠物
+el ala||翅膀
+la cola (de animal)||尾巴
+florecer||开花
+marchitarse||枯萎
+ladrar||（狗）叫
+el desastre||灾害
+la energía (recurso)||能源
+el metal||金属
+el hierro||铁
+el oro||金
+la plata||银
+el vidrio||玻璃
+el plástico||塑料
+la madera||木头
+la salida del sol||日出
+la puesta de sol||日落
+la sombra||影子
+el calor||炎热
+el frío||寒冷
+el hielo natural||冰（自然）
+la escarcha||霜
+el granizo||冰雹
+la brisa||微风
+la marea||潮汐
+el volcán||火山
+la selva||丛林
+el pantano||沼泽
+el arroyo||小溪
+el estanque||池塘
+el acantilado||悬崖
+el pico||山峰
+el barro||泥
+la pluma||羽毛
+el pelaje||毛皮
+el cuerno||角
+el nido||鸟巢
+la jaula||笼子
+el árbol frutal||果树
+el arbusto||灌木
+la espina||刺
+la cosecha||收成

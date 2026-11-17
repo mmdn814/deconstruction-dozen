@@ -1,0 +1,146 @@
+la comida||食物
+la bebida||饮料
+el plato de comida||一顿饭
+el desayuno||早餐
+el almuerzo||午餐
+la cena||晚餐
+la merienda||点心
+el arroz||米饭
+el pan||面包
+los fideos||面条
+la pasta||意大利面
+la carne||肉
+la carne de res||牛肉
+el cerdo||猪肉
+el pollo||鸡肉
+el cordero||羊肉
+el pescado||鱼
+los mariscos||海鲜
+la gamba||虾
+el cangrejo||螃蟹
+el huevo||鸡蛋
+el jamón||火腿
+la salchicha||香肠
+el tocino||培根
+la verdura||蔬菜
+la fruta||水果
+la patata||土豆
+el tomate||番茄
+la cebolla||洋葱
+el ajo||大蒜
+la zanahoria||胡萝卜
+el pepino||黄瓜
+la lechuga||生菜
+el repollo||卷心菜
+la espinaca||菠菜
+el pimiento||青椒
+el chile||辣椒
+el maíz||玉米
+el frijol||豆子
+el guisante||豌豆
+el champiñón||蘑菇
+la calabaza||南瓜
+la berenjena||茄子
+la manzana||苹果
+la naranja||橙子
+el plátano||香蕉
+la uva||葡萄
+la fresa||草莓
+el limón||柠檬
+el melocotón||桃子
+la pera||梨
+la sandía||西瓜
+el melón||甜瓜
+la piña||菠萝
+el mango||芒果
+la cereza||樱桃
+el aguacate||牛油果
+el coco||椰子
+la nuez||坚果
+la leche||牛奶
+el queso||奶酪
+la mantequilla||黄油
+el yogur||酸奶
+la nata||奶油
+el agua||水
+el té||茶
+el café||咖啡
+el zumo||果汁
+el refresco||汽水
+la cerveza||啤酒
+el vino||葡萄酒
+el alcohol||酒精
+el hielo||冰
+el azúcar||糖
+la sal||盐
+la pimienta||胡椒
+el aceite||油
+el vinagre||醋
+la salsa||酱
+la salsa de soja||酱油
+la miel||蜂蜜
+la mermelada||果酱
+la harina||面粉
+la especia||香料
+la sopa||汤
+la ensalada||沙拉
+el bocadillo||三明治
+la hamburguesa||汉堡
+la pizza||披萨
+el filete||牛排
+el pollo frito||炸鸡
+las patatas fritas||薯条
+la tortilla||煎蛋饼
+el guiso||炖菜
+la empanadilla||饺子
+el pastel||蛋糕
+la galleta||饼干
+el chocolate||巧克力
+el helado||冰淇淋
+el caramelo||糖果
+el postre||甜点
+la tarta||派
+el sabor||味道
+el olor||气味
+el apetito||食欲
+el ingrediente||配料
+la receta||食谱
+la ración||一份
+vegetariano||素食的
+congelado||冷冻的
+asado||烤的
+hervido||水煮的
+frito||油炸的
+a la plancha||铁板烤的
+los cereales||麦片
+la tostada||吐司
+el atún||金枪鱼
+el salmón||三文鱼
+el calamar||鱿鱼
+el pulpo||章鱼
+el pavo||火鸡
+la carne de pato||鸭肉
+la costilla||排骨
+la albóndiga||肉丸
+el tofu||豆腐
+la aceituna||橄榄
+el aceite de oliva||橄榄油
+la mostaza||芥末酱
+el kétchup||番茄酱
+la mayonesa||蛋黄酱
+la canela||肉桂
+el jengibre||生姜
+el perejil||欧芹
+la almendra||杏仁
+el cacahuete||花生
+la pasa||葡萄干
+el flan||布丁
+la rosquilla||甜甜圈
+el panqueque||松饼
+las palomitas||爆米花
+las patatas de bolsa||薯片
+el batido||奶昔
+el chocolate caliente||热巧克力
+la limonada||柠檬水
+el agua mineral||矿泉水
+el cubito de hielo||冰块

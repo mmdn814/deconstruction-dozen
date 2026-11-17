@@ -1,0 +1,3011 @@
+good
+bad
+big
+small
+long
+short
+high
+low
+wide
+narrow
+thick
+slim
+heavy
+light
+new
+used
+fast
+slow
+near (adj.)
+far
+hot
+cold
+warm
+cool (adj.)
+bright
+dark
+loud
+quiet
+clean (adj.)
+dirty
+pretty
+cute
+delicious
+tasty
+sweet
+spicy
+bitter
+sour
+salty
+hard
+soft
+round
+square
+flat
+deep
+shallow
+full
+empty
+dry (adj.)
+wet
+sharp
+smooth
+rough
+difficult
+easy
+simple
+complicated
+convenient
+busy
+free
+important
+necessary
+possible
+impossible
+dangerous
+safe
+correct (adj.)
+wrong
+true
+false
+strange
+normal
+special
+famous
+popular
+kind (adj.)
+polite
+rude
+serious
+honest
+funny
+interesting
+boring
+smart
+stupid
+lazy
+hardworking
+brave
+shy
+friendly
+strict
+gentle
+patient
+careful
+rich
+poor
+cheap
+expensive
+free (no cost)
+wonderful
+terrible
+excellent
+perfect
+ordinary
+modern
+traditional
+ancient
+fresh
+rotten
+raw
+ripe
+alive
+dead
+real
+fake
+public
+private
+main
+different
+similar
+equal
+opposite
+various
+common
+rare
+general
+specific
+clear
+obvious
+certain
+ready
+available
+useful
+useless
+lucky
+fair
+tight
+loose
+crowded
+tidy
+messy
+fashionable
+national
+international
+local
+foreign
+huge
+tiny
+giant
+medium-sized
+double (adj.)
+extra large
+whole (adj.)
+broken
+closed (adj.)
+open (adj.)
+lost
+missing
+hidden
+visible
+silent
+awake
+asleep
+pregnant
+naked
+blind
+deaf
+curious
+generous
+selfish
+stubborn
+cheerful
+grumpy
+sensitive
+responsible
+independent
+creative
+talented
+professional
+official
+legal
+illegal
+guilty
+innocent
+urgent (adj.)
+temporary
+permanent
+recent
+previous
+following
+final
+very
+quite
+really (adv.)
+so much
+too (excess)
+almost
+nearly
+about (approx.)
+exactly
+at least
+at most
+especially
+mainly
+generally
+probably
+perhaps
+certainly
+definitely
+absolutely
+actually
+in fact
+for example
+first of all
+secondly
+at last
+in the end
+at first
+afterwards
+quickly
+slowly
+carefully
+easily
+well (adv.)
+badly
+better
+worse
+best
+worst
+together (adv.)
+separately
+alone (adv.)
+directly
+straight
+clearly
+simply
+naturally
+freely
+completely
+partly
+hardly
+not at all
+not yet
+no longer
+anymore
+as usual
+on purpose
+by chance
+by the way
+anyway
+however
+therefore
+in addition
+besides
+otherwise
+instead
+on the other hand
+in other words
+in short
+even if
+as soon as
+as long as
+in case
+so that
+unless
+whether
+whenever
+wherever
+whatever
+whoever
+somehow
+sometime
+once more
+little by little
+more or less
+so-so
+luckily
+unfortunately
+honestly
+seriously
+personally
+normally
+originally
+basically
+obviously
+apparently
+indeed
+abroad
+at home
+upstairs
+downstairs
+ahead
+backwards
+forward
+nearby
+far away
+aside
+in the middle
+on foot
+by heart
+out loud
+in a low voice
+body
+head
+face
+hair
+eye
+ear
+nose
+mouth
+lip
+tooth
+tongue
+neck
+throat
+shoulder
+chest
+back (body)
+stomach
+belly
+waist
+arm
+elbow
+hand
+finger
+nail
+leg
+knee
+foot
+toe
+skin
+bone
+blood
+heart
+brain
+lung
+muscle
+voice
+breath
+sweat
+tear
+beard
+feeling
+emotion
+mood
+mind
+soul
+health
+strength
+energy
+happy
+glad
+sad
+angry
+afraid
+worried
+nervous
+calm
+tired
+sleepy
+hungry
+thirsty
+sick
+healthy
+strong
+weak
+surprised
+excited
+bored
+lonely
+proud
+ashamed
+jealous
+confused
+disappointed
+satisfied
+relaxed
+stressed
+comfortable
+painful
+love
+hate
+fear
+joy
+sadness
+anger
+hope
+dream
+pain
+stress
+smile
+laugh
+cry
+feel
+love (v.)
+like
+hate (v.)
+fear (v.)
+worry
+get angry
+get tired
+rest
+breathe
+hurt
+tall
+short (height)
+fat
+thin
+young
+old
+beautiful
+handsome
+ugly
+personality
+appearance
+clothes
+uniform
+suit
+shirt
+T-shirt
+blouse
+sweater
+hoodie
+jacket
+coat
+raincoat
+vest
+underwear
+pajamas
+pants
+jeans
+shorts
+skirt
+dress
+swimsuit
+shoes
+socks
+sneakers
+sandals
+boots
+slippers
+high heels
+hat
+cap
+gloves
+scarf
+tie (n.)
+belt
+ring (n.)
+necklace
+earrings
+bracelet
+jewelry
+pocket
+sleeve
+collar
+zipper
+long sleeve
+short sleeve
+fabric
+cotton
+silk
+wool
+leather
+pattern
+striped
+plain
+style
+fashion
+size S
+size M
+size L
+red
+blue
+white
+black
+yellow
+green
+brown
+purple
+gray
+pink
+orange (color)
+gold
+silver
+beige
+navy blue
+light blue
+dark color
+light color
+colorful
+elegant
+casual
+formal
+suit (v.)
+change clothes
+soap
+shampoo
+conditioner
+shower gel
+toothbrush
+toothpaste
+towel
+tissue
+toilet paper
+wet wipe
+handkerchief
+mask
+razor
+comb (n.)
+hairbrush
+nail clipper
+cotton swab
+cosmetics
+makeup
+lipstick
+face cream
+sunscreen
+lotion
+perfume
+deodorant
+detergent
+bleach
+sponge
+cloth
+broom
+bucket
+hanger
+clothespin
+umbrella
+handbag
+glasses
+sunglasses
+contact lenses
+watch (n.)
+water bottle
+lunch box
+pot
+frying pan
+kettle
+cutting board
+can opener
+corkscrew
+aluminum foil
+plastic wrap
+match (fire)
+candle
+light bulb
+charger
+extension cord
+scissors
+tape
+glue
+string
+rubber band
+needle
+thread
+button
+pencil
+pen
+eraser
+notebook
+paper
+envelope
+postcard
+letter
+business card
+tool
+hammer
+screwdriver
+nail (metal)
+ladder
+toy
+doll
+photo
+album
+ashtray
+diaper
+sanitary pad
+insect repellent
+first-aid kit
+flashlight
+alarm clock
+stuff
+object
+food
+drink (n.)
+meal
+breakfast
+lunch
+dinner
+snack
+rice
+bread
+noodles
+pasta
+meat
+beef
+pork
+chicken
+lamb
+fish
+seafood
+shrimp
+crab
+egg
+ham
+sausage
+bacon
+vegetable
+fruit
+potato
+tomato
+onion
+garlic
+carrot
+cucumber
+lettuce
+cabbage
+spinach
+pepper (vegetable)
+chili
+corn
+bean
+pea
+mushroom
+pumpkin
+eggplant
+apple
+orange
+banana
+grape
+strawberry
+lemon
+peach
+pear
+watermelon
+melon
+pineapple
+mango
+cherry
+avocado
+coconut
+nut
+milk
+cheese
+butter
+yogurt
+cream
+water
+tea
+coffee
+juice
+soda
+beer
+wine
+alcohol
+ice
+sugar
+salt
+pepper (spice)
+oil
+vinegar
+sauce
+soy sauce
+honey
+jam
+flour
+spice
+soup
+salad
+sandwich
+hamburger
+pizza
+steak
+fried chicken
+french fries
+omelet
+stew
+dumpling
+cake
+cookie
+chocolate
+ice cream
+candy
+dessert
+pie
+flavor
+smell (n.)
+appetite
+ingredient
+recipe
+portion
+vegetarian
+frozen
+roasted
+boiled
+fried
+grilled
+cereal
+toast
+tuna
+salmon
+squid
+octopus
+turkey
+duck meat
+rib
+meatball
+tofu
+olive
+olive oil
+mustard
+ketchup
+mayonnaise
+cinnamon
+ginger
+parsley
+almond
+peanut
+raisin
+pudding
+donut
+pancake
+popcorn
+chips
+milkshake
+hot chocolate
+lemonade
+mineral water
+ice cube
+I
+you
+he
+she
+it
+we
+they
+you all
+me
+him
+her
+us
+them
+my
+your
+his
+our
+their
+mine
+yours
+myself
+everyone
+someone
+nobody
+something
+nothing
+everything
+anything
+this
+that
+these
+those
+here
+there
+over there
+somewhere
+everywhere
+nowhere
+what
+who
+where
+when
+why
+how
+which
+whose
+how much
+how many
+the
+a
+some
+any
+each
+every
+both
+all
+other
+another
+same
+such
+and
+or
+but
+because
+so
+if
+when (conj.)
+while
+although
+than
+as
+that (conj.)
+then
+also
+too
+either
+not
+never
+only
+just
+even
+still
+already
+yet
+again
+in
+on
+at
+to
+from
+of
+with
+without
+for
+by
+about
+between
+among
+before
+after
+during
+until
+since
+against
+through
+across
+into
+out of
+up
+down
+over
+under
+near
+far from
+next to
+in front of
+behind
+inside
+outside
+around
+along
+toward
+according to
+instead of
+because of
+be
+be (state)
+have
+do
+can
+must
+want
+need
+there is
+thing
+way
+place
+part
+kind
+side
+top
+bottom
+middle
+front
+back
+left
+right
+hello
+hi
+good morning
+good afternoon
+good evening
+goodbye
+bye
+see you later
+see you tomorrow
+see you soon
+thank you
+thanks a lot
+you're welcome
+please
+sorry
+I'm sorry
+excuse me
+no problem
+yes
+no
+okay
+of course
+maybe
+that's right
+I see
+really
+I understand
+I don't understand
+I don't know
+nice to meet you
+how are you
+I'm fine
+and you
+what's your name
+my name is
+welcome
+come in
+congratulations
+happy birthday
+good luck
+cheers
+enjoy your meal
+take care
+be careful
+get well soon
+help
+wait a moment
+one more time
+slowly please
+can you help me
+how much is it
+where is it
+what is this
+what time is it
+I would like
+I need
+I like it
+I don't like it
+it's fine
+it doesn't matter
+let's go
+come here
+look
+hey
+well
+wow
+great
+what a pity
+long time no see
+good night
+have a nice day
+me too
+me neither
+do you speak English
+I speak a little
+illness
+cold (illness)
+flu
+fever
+cough
+sneeze
+headache
+stomachache
+toothache
+sore throat
+diarrhea
+nausea
+dizziness
+injury
+wound
+burn (n.)
+fracture
+allergy (medical)
+virus
+infection
+symptom
+condition
+blood pressure
+thermometer
+checkup
+examination
+X-ray
+injection
+surgery
+treatment
+prevention
+vaccine
+medicine
+pill
+painkiller
+antibiotic
+ointment
+bandage
+band-aid
+prescription
+side effect
+dose
+health insurance
+emergency
+emergency room
+ambulance
+patient (n.)
+dentist
+surgeon
+pharmacist
+waiting room
+appointment (medical)
+pregnancy
+disability
+life
+death
+cancer
+diabetes
+depression
+insomnia
+fatigue
+diet
+vitamin
+exercise
+sleep (n.)
+get sick
+catch a cold
+cough (v.)
+sneeze (v.)
+vomit
+bleed
+swell
+recover
+cure
+take medicine
+see a doctor
+be hospitalized
+lose weight
+gain weight
+feel dizzy
+it hurts here
+room
+flat (n.)
+studio
+rent (n.)
+tenant
+contract
+deposit (rental)
+real estate agency
+furnished
+utilities
+moving
+living room
+bedroom
+dining room
+bathroom
+balcony
+garage
+yard
+attic
+door
+window
+wall
+floor
+ceiling
+key
+lock (n.)
+doorbell
+mailbox
+furniture
+desk
+chair
+sofa
+armchair
+bed
+mattress
+pillow
+blanket
+sheet
+wardrobe
+drawer
+shelf
+bookshelf
+mirror
+lamp
+light (n.)
+curtain
+carpet
+picture
+vase
+switch
+socket
+battery
+appliance
+refrigerator
+freezer
+oven
+stove
+washing machine
+dryer
+dishwasher
+vacuum cleaner
+air conditioner
+heating
+fan
+television
+hair dryer
+iron (n.)
+sink
+tap
+bathtub
+shower (n.)
+toilet bowl
+gas
+electricity
+water bill
+garbage
+trash can
+recycling
+housework
+cleaning
+laundry (clothes)
+dust
+noise
+leak
+breakdown
+power cut
+fire
+earthquake
+plumber
+electrician
+doorman
+building manager
+upstairs neighbor
+live alone
+share a flat
+move in
+sweep
+mop
+wash the dishes
+do the laundry
+hang out clothes
+make the bed
+take out the trash
+cozy
+spacious
+noisy
+sunny (room)
+restaurant
+cafe
+bar
+fast food
+bakery
+food stand
+canteen
+menu
+dish
+starter
+main course
+daily special
+set meal
+specialty
+order (n.)
+table
+seat
+reservation
+table for two
+waitress
+chef
+bill (check)
+tip
+receipt
+cash
+card
+to go
+to eat here
+delivery
+fork
+knife
+spoon
+chopsticks
+plate
+bowl
+napkin
+straw
+tray
+toothpick
+hot drink
+cold drink
+with ice
+without ice
+with milk
+sugar-free
+black coffee
+latte
+tap water
+sparkling water
+still water
+red wine
+white wine
+draft beer
+cocktail
+whisky
+soft drink
+refill
+large
+medium
+small (size)
+extra
+half portion
+rare (meat)
+medium (meat)
+well done
+allergy
+gluten-free
+vegan
+recommend (dish)
+smoking area
+non-smoking
+terrace
+counter
+kitchen
+open
+closed
+opening hours
+full (no seats)
+waiting list
+happy hour
+toast (cheers)
+hangover
+drunk
+split the bill
+my treat
+keep the change
+supermarket
+convenience store
+checkout
+plastic bag
+microwave
+ready meal
+canned food
+instant noodles
+chewing gum
+cigarette
+lighter
+newspaper
+magazine
+stamp
+ATM
+restroom
+hobby
+free time
+trip
+tourism
+journey
+tour
+guide
+guidebook
+accommodation
+check-in
+check-out
+single room
+double room
+breakfast included
+vacancy
+admission
+souvenir shop
+festival
+fireworks
+event
+concert
+show (n.)
+movie
+series
+cartoon
+program (TV)
+news
+game
+video game
+song
+karaoke
+dance (n.)
+piano
+guitar
+instrument
+reading
+painting
+photography
+exhibition
+sport
+match
+player
+soccer
+basketball
+tennis
+baseball
+volleyball
+swimming
+running
+cycling
+yoga
+skiing
+hiking
+camping
+fishing
+climbing
+walk (n.)
+picnic
+party
+date (romantic)
+break
+nap
+fun
+memory (remembrance)
+champion
+fan (supporter)
+rule
+referee
+coach (trainer)
+musician
+painter
+character
+story
+joke
+chess
+cards
+lottery
+go for a walk
+go on a trip
+take a vacation
+book a room
+sightsee
+have fun
+relax
+play sports
+play an instrument
+watch TV
+go to the movies
+hang out
+collect (hobby)
+weather
+weather forecast
+sun
+rain
+snow
+wind
+cloud
+storm
+thunder
+lightning
+fog
+rainbow
+hurricane
+flood
+drought
+climate
+humidity
+sunny
+cloudy
+rainy
+windy
+humid
+sky
+moon
+star
+planet
+earth
+universe
+air
+fire (n.)
+smoke (n.)
+soil
+stone
+rock
+sand
+wave
+nature
+environment
+pollution
+plant
+tree
+flower
+grass
+leaf
+branch (tree)
+root
+seed
+rose
+pine
+bamboo
+animal
+dog
+cat
+bird
+horse
+cow
+pig
+sheep
+goat
+chicken (animal)
+duck
+rabbit
+mouse (animal)
+monkey
+bear
+wolf
+fox
+deer
+elephant
+lion
+tiger
+panda
+snake
+frog
+turtle
+whale
+dolphin
+shark
+insect
+mosquito
+fly (insect)
+bee
+butterfly
+ant
+spider
+cockroach
+pet
+wing
+tail
+bloom
+wither
+bark
+disaster
+energy (resource)
+metal
+iron (metal)
+gold (metal)
+silver (metal)
+glass (material)
+plastic
+wood
+sunrise
+sunset
+shadow
+heat
+cold (n.)
+ice (nature)
+frost
+hail
+breeze
+tide
+volcano
+jungle
+swamp
+stream
+pond
+cliff
+peak
+mud
+feather
+fur
+horn
+nest
+cage
+fruit tree
+bush
+thorn
+harvest
+zero
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+twelve
+thirteen
+fourteen
+fifteen
+sixteen
+seventeen
+eighteen
+nineteen
+twenty
+twenty-one
+thirty
+forty
+fifty
+sixty
+seventy
+eighty
+ninety
+hundred
+two hundred
+five hundred
+thousand
+ten thousand
+million
+billion
+first
+second
+third
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+tenth
+last
+next
+number
+amount
+total
+half
+quarter
+double
+pair
+dozen
+percent
+piece
+slice
+cup
+glass
+bottle
+can (container)
+box
+bag
+pack
+kilo
+gram
+liter
+meter
+kilometer
+centimeter
+mile
+size
+weight
+length
+height
+width
+distance
+speed
+temperature
+degree
+many
+much
+few
+little
+a little
+a lot
+more
+less
+most
+least
+enough
+too much
+several
+whole
+both of them
+none
+single
+plus
+minus
+times
+divided by
+equals
+count
+add
+calculate
+measure
+weigh
+once
+twice
+price
+dollar
+euro
+cent
+peso
+coin
+bill
+change
+family
+parents
+father
+mother
+dad
+mom
+son
+daughter
+children
+brother
+sister
+older brother
+younger sister
+grandfather
+grandmother
+grandparents
+grandson
+granddaughter
+uncle
+aunt
+cousin
+nephew
+niece
+husband
+wife
+couple
+boyfriend
+girlfriend
+fiancé
+relative
+father-in-law
+mother-in-law
+twin
+baby
+child
+boy
+girl
+teenager
+young person
+adult
+old person
+man
+woman
+gentleman
+lady
+miss
+person
+people
+human
+friend
+best friend
+neighbor
+classmate
+roommate
+partner
+stranger
+guest
+host
+customer
+foreigner
+tourist
+citizen
+teacher
+student
+doctor
+nurse
+police officer
+firefighter
+driver
+waiter
+cook
+shop assistant
+farmer
+engineer
+lawyer
+artist
+singer
+actor
+writer
+journalist
+scientist
+soldier
+worker
+boss
+owner
+landlord
+name
+surname
+nickname
+gender
+nationality
+address
+birthplace
+single (unmarried)
+married
+divorced
+wedding
+marriage
+relationship
+friendship
+generation
+ancestor
+orphan
+widow
+group
+crowd
+member
+society
+community
+Mr.
+together
+alone
+each other
+city
+town
+village
+capital
+country
+countryside
+region
+state
+province
+neighborhood
+downtown
+suburb
+world
+continent
+Asia
+Europe
+America
+Africa
+China
+Japan
+Spain
+Mexico
+United States
+England
+France
+Germany
+building
+house
+home
+apartment
+office
+company
+factory
+school
+university
+hospital
+clinic
+post office
+police station
+fire station
+city hall
+embassy
+library
+museum
+gallery
+theater
+cinema
+park
+square (plaza)
+zoo
+aquarium
+amusement park
+stadium
+gym
+swimming pool
+church
+temple
+castle
+palace
+tower
+monument
+hotel
+hostel
+hair salon
+laundry
+farm
+garden
+beach
+sea
+ocean
+mountain
+hill
+river
+lake
+island
+forest
+desert
+valley
+coast
+field
+cave
+waterfall
+reception
+lobby
+stairs
+hallway
+floor (level)
+ground floor
+basement
+roof
+emergency exit
+toilet
+landmark
+tourist attraction
+view
+landscape
+border
+area
+space
+location
+hometown
+Italy
+Portugal
+Russia
+India
+Korea
+Brazil
+Argentina
+Canada
+Australia
+London
+Madrid
+New York
+Tokyo
+Beijing
+bookshop corner
+playground
+cemetery
+market square
+harbor
+lighthouse
+fountain
+statue
+ruins
+old town
+study (n.)
+education
+kindergarten
+primary school
+secondary school
+college
+language school
+classroom
+class
+lesson
+course
+homework
+exam
+quiz
+grade
+score
+pass an exam
+fail (exam)
+question
+answer (n.)
+exercise (study)
+review
+research (n.)
+thesis
+essay
+graduation
+degree (academic)
+diploma
+scholarship
+tuition
+exchange student
+pupil
+professor
+principal
+semester
+school year
+timetable (school)
+attendance
+absence
+textbook
+dictionary
+book
+novel
+comic
+page
+chapter
+sentence
+paragraph
+text
+grammar
+vocabulary
+word
+letter (alphabet)
+alphabet
+language
+meaning
+pronunciation
+accent
+spelling
+conversation
+composition
+translation
+interpreter
+dialect
+English
+Spanish
+Chinese
+Japanese
+foreign language
+mother tongue
+subject
+mathematics
+science
+physics
+chemistry
+biology
+history
+geography
+literature
+art
+music
+physical education
+culture
+knowledge
+information
+explanation
+example
+content
+method
+reason
+purpose
+theory
+level
+beginner
+intermediate
+advanced
+blackboard
+chalk
+ruler
+schoolbag
+recess
+club
+take an exam
+take notes
+memorize
+review (v.)
+graduate
+enroll
+skip class
+raise your hand
+look up
+underline
+summarize
+shopping
+shop
+department store
+mall
+market
+pharmacy
+bookstore
+florist
+butcher shop
+fish shop
+greengrocer
+clothing store
+shoe store
+jewelry store
+hardware store
+vending machine
+cost (n.)
+fee
+tax
+discount
+sale
+offer (n.)
+coupon
+bargain
+half price
+money
+wallet
+credit card
+payment
+installment
+refund
+exchange (n.)
+exchange rate
+bank
+account
+savings
+salary
+income
+expense
+debt
+loan
+budget
+product
+goods
+item
+brand
+quality
+quantity
+stock
+sold out
+new arrival
+second-hand
+sample
+model
+color
+shape
+material
+fitting room
+try on
+warranty
+gift
+souvenir
+wrapping
+basket
+cart
+escalator
+elevator
+entrance
+exit
+cashier
+seller
+buyer
+queue
+online shopping
+shipping
+shipping fee
+package
+parcel
+luggage
+luxury
+customer service
+complaint
+label
+barcode
+invoice
+profit
+wholesale
+retail
+cheap goods
+on sale
+for free
+worth
+afford
+bargain (v.)
+compare prices
+pay in cash
+pay by card
+withdraw money
+deposit
+change money
+politics
+government
+law
+rule (regulation)
+right (n.)
+duty
+election
+president
+prime minister
+mayor
+king
+queen
+population
+peace
+war
+army
+crime
+thief
+robbery
+fraud
+police
+court
+judge (n.)
+prison
+victim
+witness
+news article
+media
+broadcast
+topic
+rumor
+fact
+truth
+lie (n.)
+secret
+influence
+change (n.)
+crisis
+price level
+inflation
+stock (shares)
+investment
+pension
+insurance
+welfare
+poverty
+wealth
+procedure
+form
+application form
+certificate
+ID card
+residence permit
+work permit
+registration
+expiration date
+valid
+expired
+personal data
+date of birth
+full name
+zip code
+mail
+registered mail
+bank transfer
+commission
+balance
+tax return
+violation
+prohibition
+permission
+warning
+no entry
+no smoking
+manners
+custom
+habit
+tradition
+religion
+god
+volunteer
+organization
+association
+representative
+majority
+minority
+freedom
+equality
+justice
+safety
+violence
+protest
+demonstration
+immigrant
+refugee
+era
+fill out
+submit
+renew
+register
+report a theft
+pay taxes
+vote (n.)
+party (political)
+democracy
+parliament
+minister
+ambassador
+nation
+flag
+anthem
+border control
+emergency number
+lost property
+charity
+donation
+homeless person
+strike (n.)
+phone
+cell phone
+smartphone
+computer
+laptop
+tablet
+screen
+keyboard
+mouse
+printer
+camera
+headphones
+speaker
+microphone
+cable
+power
+internet
+network
+wifi
+signal
+website
+web page
+app
+software
+program
+system
+account (online)
+username
+password
+PIN
+settings
+search
+link
+download
+update
+backup
+storage
+memory
+folder
+text message
+notification
+phone number
+email address
+contact (n.)
+video
+image
+audio
+recording
+social media
+post
+comment
+follower
+blog
+online
+offline
+QR code
+error
+bug
+function
+machine
+robot
+artificial intelligence
+digital
+wireless
+SIM card
+data plan
+call (v.)
+hang up
+text (v.)
+charge
+turn on (device)
+restart
+log in
+log out
+sign up
+search (v.)
+click
+type
+save (file)
+delete
+download (v.)
+upload
+install
+update (v.)
+connect
+disconnect
+scan
+record
+take a photo
+share a link
+it doesn't work
+now
+today
+tomorrow
+yesterday
+day after tomorrow
+day before yesterday
+tonight
+morning
+noon
+afternoon
+evening
+night
+midnight
+dawn
+day
+week
+month
+year
+weekend
+weekday
+this week
+next week
+last week
+this month
+next month
+last month
+this year
+next year
+last year
+every day
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+spring
+summer
+autumn
+winter
+season
+hour
+minute
+second (time)
+moment
+time
+o'clock
+half past
+quarter past
+clock
+calendar
+date
+birthday
+holiday
+vacation
+anniversary
+Christmas
+New Year
+schedule
+appointment
+deadline
+past
+present
+future
+century
+age
+period
+beginning
+end
+early
+late
+soon
+later
+before (adv.)
+after (adv.)
+recently
+long ago
+just now
+right now
+always
+usually
+often
+sometimes
+rarely
+daily
+weekly
+monthly
+yearly
+forever
+ago
+for a long time
+all day
+on time
+in a hurry
+at the same time
+meanwhile
+finally
+suddenly
+immediately
+gradually
+start
+finish
+last (v.)
+wait
+be late
+hurry
+spend (time)
+postpone
+station
+train
+subway
+high-speed train
+bus
+coach
+tram
+taxi
+car
+bicycle
+motorcycle
+truck
+airplane
+ship
+ferry
+airport
+port
+bus stop
+platform
+track
+ticket
+ticket office
+ticket machine
+one-way
+round trip
+pass
+fare
+reserved seat
+window seat
+aisle seat
+first class
+timetable
+departure
+arrival
+delay
+cancellation
+transfer (n.)
+line
+route
+direction
+destination
+terminal
+next stop
+last train
+rush hour
+passenger
+conductor
+pilot
+flight
+boarding
+boarding pass
+gate
+passport
+visa
+customs
+immigration
+baggage claim
+hand luggage
+suitcase
+backpack
+locker
+lost and found
+road
+street
+avenue
+highway
+intersection
+traffic light
+crosswalk
+corner
+bridge
+tunnel
+sidewalk
+parking lot
+gas station
+map
+north
+south
+east
+west
+straight ahead
+turn left
+turn right
+at the end
+shortcut
+on the way
+traffic
+traffic jam
+accident
+driver's license
+seat belt
+rental car
+gasoline
+wheel
+engine
+brake
+helmet
+pedestrian
+speed limit
+fine
+how do I get to
+is it far
+get in (car)
+take a taxi
+miss the bus
+eat
+drink
+see
+look at
+watch
+hear
+listen
+read
+write
+speak
+say
+tell
+ask
+answer
+buy
+sell
+pay
+use
+make
+sleep
+wake up
+get up
+sit
+stand
+walk
+run
+jump
+swim
+play
+work
+study
+live
+wash
+clean
+cook (v.)
+wear
+put on
+take off
+get dressed
+shower
+brush
+comb
+shave
+hold
+take
+put
+give
+receive
+get
+bring
+carry
+send
+lend
+borrow
+return (give back)
+keep
+open (v.)
+close
+turn on
+turn off
+push
+pull
+press
+cut
+break (v.)
+fix
+build
+draw
+paint
+sing
+dance
+wait for
+meet
+visit
+call
+invite
+help (v.)
+teach
+learn
+practice
+remember
+forget
+look for
+find
+show
+try
+choose
+decide
+begin
+stop
+continue
+order
+reserve
+prepare
+check
+explain
+introduce
+greet
+thank
+apologize
+smoke
+bite
+touch
+hug
+kiss
+throw
+catch
+pick up
+wrap
+tie
+hang
+fold
+fill
+empty (v.)
+pour
+mix
+boil
+fry
+bake
+heat (v.)
+cool
+taste
+smell
+feed
+water (v.)
+plant (v.)
+grow (plants)
+raise
+take care of
+tidy up
+iron
+sew
+lock
+knock
+ring
+shout
+whisper
+lie down
+stand up
+sit down
+go to bed
+have breakfast
+have lunch
+have dinner
+go shopping
+take a shower
+brush your teeth
+wash your hands
+set the table
+peel
+chop
+stir
+serve
+swallow
+chew
+lick
+yawn
+snore
+dream of
+stare
+point
+wave (v.)
+nod
+clap
+kick
+hit
+squeeze
+scratch
+rub
+go
+come
+return
+go back
+arrive
+leave
+go out
+enter
+go up
+go down
+pass (v.)
+cross
+turn
+follow
+move
+move (house)
+stay
+remain
+travel
+drive
+ride
+fly
+sail
+get on
+get off
+transfer
+climb
+fall
+drop
+slip
+escape
+chase
+hurry up
+get lost
+approach
+go away
+gather
+separate
+change (v.)
+become
+increase
+decrease
+grow
+shrink
+appear
+disappear
+be born
+die
+happen
+exist
+last (continue)
+end (v.)
+lose
+win
+miss (a train)
+reach
+lift
+lower
+raise (prices)
+shake
+spin
+roll
+flow
+float
+sink (v.)
+burn
+melt
+freeze
+dry
+get wet
+get dirty
+spill
+tear (v.)
+bend
+stretch
+spread
+cover
+hide
+shine
+rain (v.)
+snow (v.)
+blow
+improve
+get worse
+repair
+destroy
+damage
+fail
+succeed
+fit
+match (v.)
+differ
+resemble
+belong
+contain
+include
+lack
+be enough
+be left
+cost
+take (time)
+depend
+seem
+sound
+turn into
+develop
+advance
+go backward
+stop (moving)
+park (v.)
+deliver
+collect
+load
+unload
+join
+attach
+remove
+replace
+exchange
+share
+divide
+save
+waste
+spend
+earn
+owe
+rent
+own
+think
+believe
+know
+know (someone)
+understand
+realize
+notice
+imagine
+guess
+doubt
+suppose
+expect
+hope (v.)
+wish
+dream (v.)
+plan
+intend
+prefer
+compare
+judge
+agree
+disagree
+accept
+refuse
+allow
+forbid
+promise
+swear
+lie
+cheat
+trust
+respect
+admire
+forgive
+blame
+praise
+scold
+complain
+argue
+fight
+talk
+chat
+discuss
+suggest
+recommend
+advise
+warn
+remind
+inform
+announce
+report
+describe
+mention
+repeat
+translate
+pronounce
+spell
+mean
+express
+communicate
+contact
+reply
+request
+demand
+offer
+propose
+persuade
+encourage
+support
+cooperate
+compete
+attend
+participate
+organize
+manage
+lead
+obey
+solve
+discover
+invent
+create
+design
+research
+analyze
+test
+prove
+confirm
+correct
+make a mistake
+succeed in
+give up
+try hard
+challenge
+achieve
+experience
+enjoy
+suffer
+bear (v.)
+regret
+miss (someone)
+care
+mind (v.)
+bother
+surprise
+scare
+amuse
+get used to
+pay attention
+concentrate
+ignore
+pretend
+behave
+treat
+protect
+defend
+attack
+punish
+vote
+pray
+celebrate
+job
+work (n.)
+career
+profession
+workplace
+headquarters
+branch
+department
+sales
+marketing
+human resources
+accounting
+employee
+employer
+colleague
+manager
+director
+secretary
+assistant
+intern
+team
+client
+supplier
+part-time job
+full-time
+meeting
+conference
+presentation
+project
+task
+document
+report (n.)
+proposal
+plan (n.)
+strategy
+goal
+result
+cause
+problem
+solution
+decision
+opinion
+idea
+progress
+situation
+schedule (work)
+shift
+overtime
+business trip
+day off
+leave (n.)
+commute
+remote work
+job interview
+résumé
+application
+hiring
+training
+experience (n.)
+skill
+ability
+responsibility
+role
+position
+promotion
+raise (n.)
+bonus
+wage
+retirement
+unemployment
+resignation
+dismissal
+strike
+union
+signature
+copy
+file
+data
+email
+attachment
+phone call
+message
+urgent
+business
+industry
+economy
+trade
+export
+import
+production
+development
+technology
+competition
+success
+failure
+advantage
+disadvantage
+opportunity
+risk
+effort
+hire
+fire (v.)
+resign
+retire
+apply for
+sign
+print
+copy (v.)
+send an email
+attend a meeting
+be in charge
+work overtime
+take a break
+negotiate
+invest
+produce
+launch
+schedule (v.)
+deadline (work)
+budget (work)
+quote
+agreement
+partner (business)
+shareholder
+customer satisfaction
+workload
+performance
+feedback

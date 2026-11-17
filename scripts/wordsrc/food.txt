@@ -1,0 +1,146 @@
+food|la comida|食物
+drink (n.)|la bebida|饮料
+meal|el plato de comida|一顿饭
+breakfast|el desayuno|早餐
+lunch|el almuerzo|午餐
+dinner|la cena|晚餐
+snack|la merienda|点心
+rice|el arroz|米饭
+bread|el pan|面包
+noodles|los fideos|面条
+pasta|la pasta|意大利面
+meat|la carne|肉
+beef|la carne de res|牛肉
+pork|el cerdo|猪肉
+chicken|el pollo|鸡肉
+lamb|el cordero|羊肉
+fish|el pescado|鱼
+seafood|los mariscos|海鲜
+shrimp|la gamba|虾
+crab|el cangrejo|螃蟹
+egg|el huevo|鸡蛋
+ham|el jamón|火腿
+sausage|la salchicha|香肠
+bacon|el tocino|培根
+vegetable|la verdura|蔬菜
+fruit|la fruta|水果
+potato|la patata|土豆
+tomato|el tomate|番茄
+onion|la cebolla|洋葱
+garlic|el ajo|大蒜
+carrot|la zanahoria|胡萝卜
+cucumber|el pepino|黄瓜
+lettuce|la lechuga|生菜
+cabbage|el repollo|卷心菜
+spinach|la espinaca|菠菜
+pepper (vegetable)|el pimiento|青椒
+chili|el chile|辣椒
+corn|el maíz|玉米
+bean|el frijol|豆子
+pea|el guisante|豌豆
+mushroom|el champiñón|蘑菇
+pumpkin|la calabaza|南瓜
+eggplant|la berenjena|茄子
+apple|la manzana|苹果
+orange|la naranja|橙子
+banana|el plátano|香蕉
+grape|la uva|葡萄
+strawberry|la fresa|草莓
+lemon|el limón|柠檬
+peach|el melocotón|桃子
+pear|la pera|梨
+watermelon|la sandía|西瓜
+melon|el melón|甜瓜
+pineapple|la piña|菠萝
+mango|el mango|芒果
+cherry|la cereza|樱桃
+avocado|el aguacate|牛油果
+coconut|el coco|椰子
+nut|la nuez|坚果
+milk|la leche|牛奶
+cheese|el queso|奶酪
+butter|la mantequilla|黄油
+yogurt|el yogur|酸奶
+cream|la nata|奶油
+water|el agua|水
+tea|el té|茶
+coffee|el café|咖啡
+juice|el zumo|果汁
+soda|el refresco|汽水
+beer|la cerveza|啤酒
+wine|el vino|葡萄酒
+alcohol|el alcohol|酒精
+ice|el hielo|冰
+sugar|el azúcar|糖
+salt|la sal|盐
+pepper (spice)|la pimienta|胡椒
+oil|el aceite|油
+vinegar|el vinagre|醋
+sauce|la salsa|酱
+soy sauce|la salsa de soja|酱油
+honey|la miel|蜂蜜
+jam|la mermelada|果酱
+flour|la harina|面粉
+spice|la especia|香料
+soup|la sopa|汤
+salad|la ensalada|沙拉
+sandwich|el bocadillo|三明治
+hamburger|la hamburguesa|汉堡
+pizza|la pizza|披萨
+steak|el filete|牛排
+fried chicken|el pollo frito|炸鸡
+french fries|las patatas fritas|薯条
+omelet|la tortilla|煎蛋饼
+stew|el guiso|炖菜
+dumpling|la empanadilla|饺子
+cake|el pastel|蛋糕
+cookie|la galleta|饼干
+chocolate|el chocolate|巧克力
+ice cream|el helado|冰淇淋
+candy|el caramelo|糖果
+dessert|el postre|甜点
+pie|la tarta|派
+flavor|el sabor|味道
+smell (n.)|el olor|气味
+appetite|el apetito|食欲
+ingredient|el ingrediente|配料
+recipe|la receta|食谱
+portion|la ración|一份
+vegetarian|vegetariano|素食的
+frozen|congelado|冷冻的
+roasted|asado|烤的
+boiled|hervido|水煮的
+fried|frito|油炸的
+grilled|a la plancha|铁板烤的
+cereal|los cereales|麦片
+toast|la tostada|吐司
+tuna|el atún|金枪鱼
+salmon|el salmón|三文鱼
+squid|el calamar|鱿鱼
+octopus|el pulpo|章鱼
+turkey|el pavo|火鸡
+duck meat|la carne de pato|鸭肉
+rib|la costilla|排骨
+meatball|la albóndiga|肉丸
+tofu|el tofu|豆腐
+olive|la aceituna|橄榄
+olive oil|el aceite de oliva|橄榄油
+mustard|la mostaza|芥末酱
+ketchup|el kétchup|番茄酱
+mayonnaise|la mayonesa|蛋黄酱
+cinnamon|la canela|肉桂
+ginger|el jengibre|生姜
+parsley|el perejil|欧芹
+almond|la almendra|杏仁
+peanut|el cacahuete|花生
+raisin|la pasa|葡萄干
+pudding|el flan|布丁
+donut|la rosquilla|甜甜圈
+pancake|el panqueque|松饼
+popcorn|las palomitas|爆米花
+chips|las patatas de bolsa|薯片
+milkshake|el batido|奶昔
+hot chocolate|el chocolate caliente|热巧克力
+lemonade|la limonada|柠檬水
+mineral water|el agua mineral|矿泉水
+ice cube|el cubito de hielo|冰块

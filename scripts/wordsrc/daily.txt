@@ -1,0 +1,89 @@
+soap|el jabón|肥皂
+shampoo|el champú|洗发水
+conditioner|el acondicionador|护发素
+shower gel|el gel de ducha|沐浴露
+toothbrush|el cepillo de dientes|牙刷
+toothpaste|la pasta de dientes|牙膏
+towel|la toalla|毛巾
+tissue|el pañuelo de papel|纸巾
+toilet paper|el papel higiénico|卫生纸
+wet wipe|la toallita húmeda|湿巾
+handkerchief|el pañuelo|手帕
+mask|la mascarilla|口罩
+razor|la maquinilla de afeitar|剃须刀
+comb (n.)|el peine|梳子
+hairbrush|el cepillo|发刷
+nail clipper|el cortaúñas|指甲刀
+cotton swab|el bastoncillo|棉签
+cosmetics|los cosméticos|化妆品
+makeup|el maquillaje|彩妆
+lipstick|el pintalabios|口红
+face cream|la crema facial|面霜
+sunscreen|el protector solar|防晒霜
+lotion|la loción|乳液
+perfume|el perfume|香水
+deodorant|el desodorante|止汗剂
+detergent|el detergente|洗涤剂
+bleach|la lejía|漂白剂
+sponge|la esponja|海绵
+cloth|el trapo|抹布
+broom|la escoba|扫帚
+bucket|el cubo|水桶
+hanger|la percha|衣架
+clothespin|la pinza|晾衣夹
+umbrella|el paraguas|雨伞
+handbag|el bolso|手提包
+glasses|las gafas|眼镜
+sunglasses|las gafas de sol|太阳镜
+contact lenses|las lentillas|隐形眼镜
+watch (n.)|el reloj de pulsera|手表
+water bottle|la cantimplora|水壶
+lunch box|la fiambrera|饭盒
+pot|la olla|锅
+frying pan|la sartén|平底锅
+kettle|el hervidor|烧水壶
+cutting board|la tabla de cortar|砧板
+can opener|el abrelatas|开罐器
+corkscrew|el sacacorchos|开瓶器
+aluminum foil|el papel de aluminio|锡纸
+plastic wrap|el film transparente|保鲜膜
+match (fire)|la cerilla|火柴
+candle|la vela|蜡烛
+light bulb|la bombilla|灯泡
+charger|el cargador|充电器
+extension cord|el alargador|接线板
+scissors|las tijeras|剪刀
+tape|la cinta adhesiva|胶带
+glue|el pegamento|胶水
+string|la cuerda|绳子
+rubber band|la goma elástica|橡皮筋
+needle|la aguja|针
+thread|el hilo|线
+button|el botón|纽扣 / 按钮
+pencil|el lápiz|铅笔
+pen|el bolígrafo|圆珠笔
+eraser|la goma de borrar|橡皮
+notebook|el cuaderno|笔记本
+paper|el papel|纸
+envelope|el sobre|信封
+postcard|la postal|明信片
+letter|la carta|信
+business card|la tarjeta de visita|名片
+tool|la herramienta|工具
+hammer|el martillo|锤子
+screwdriver|el destornillador|螺丝刀
+nail (metal)|el clavo|钉子
+ladder|la escalera de mano|梯子
+toy|el juguete|玩具
+doll|la muñeca|娃娃
+photo|la foto|照片
+album|el álbum|相册
+ashtray|el cenicero|烟灰缸
+diaper|el pañal|尿布
+sanitary pad|la compresa|卫生巾
+insect repellent|el repelente de insectos|驱虫剂
+first-aid kit|el botiquín|急救箱
+flashlight|la linterna|手电筒
+alarm clock|el despertador|闹钟
+stuff|las cosas|东西（杂物）
+object|el objeto|物体

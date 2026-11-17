@@ -1,0 +1,91 @@
+el teléfono||电话
+el móvil||手机
+el teléfono inteligente||智能手机
+el ordenador||电脑
+el portátil||笔记本电脑
+la tableta||平板
+la pantalla||屏幕
+el teclado||键盘
+el ratón||鼠标
+la impresora||打印机
+la cámara||相机
+los auriculares||耳机
+el altavoz||音箱
+el micrófono||麦克风
+el cable||数据线
+la corriente||电源
+el internet||互联网
+la red||网络
+el wifi||无线网
+la señal||信号
+el sitio web||网站
+la página web||网页
+la aplicación (app)||应用
+el software||软件
+el programa||程序
+el sistema||系统
+la cuenta de usuario||账号
+el nombre de usuario||用户名
+la contraseña||密码
+el código PIN||数字密码
+los ajustes||设置
+la búsqueda||搜索
+el enlace||链接
+la descarga||下载
+la actualización||更新
+la copia de seguridad||备份
+el almacenamiento||存储
+la memoria||内存
+la carpeta||文件夹
+el mensaje de texto||短信
+la notificación||通知
+el número de teléfono||电话号码
+la dirección de correo||邮箱地址
+el contacto||联系人
+el vídeo||视频
+la imagen||图片
+el audio||音频
+la grabación||录音
+las redes sociales||社交媒体
+la publicación||帖子
+el comentario||评论
+el seguidor||粉丝
+el blog||博客
+en línea||在线
+sin conexión||离线
+el código QR||二维码
+el error||错误
+el fallo||程序错误
+la función||功能
+la máquina||机器
+el robot||机器人
+la inteligencia artificial||人工智能
+digital||数字的
+inalámbrico||无线的
+la tarjeta SIM||SIM 卡
+el plan de datos||流量套餐
+telefonear||打电话
+colgar (el teléfono)||挂电话
+enviar un mensaje||发消息
+cargar (batería)||充电
+encender (aparato)||开机
+reiniciar||重启
+iniciar sesión||登录
+cerrar sesión||登出
+registrarse||注册
+buscar en internet||搜索
+hacer clic||点击
+teclear||打字
+guardar (archivo)||保存
+borrar||删除
+descargar||下载
+subir (archivo)||上传
+instalar||安装
+actualizar||更新
+conectar||连接
+desconectar||断开
+escanear||扫描
+grabar||录制
+sacar una foto||拍照
+compartir un enlace||分享链接
+no funciona||它坏了 / 不能用

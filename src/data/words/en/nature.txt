@@ -1,0 +1,128 @@
+weather|/ˈweðər/|天气
+weather forecast|/ˈweðər ˈfɔːrˌkæst/|天气预报
+sun|/sʌn/|太阳
+rain|/reɪn/|雨
+snow|/snoʊ/|雪
+wind|/wɪnd/|风
+cloud|/klaʊd/|云
+storm|/stɔːrm/|暴风雨
+thunder|/ˈθʌndər/|雷
+lightning|/ˈlaɪtnɪŋ/|闪电
+fog|/fɔːg/|雾
+rainbow|/ˈreɪnˌboʊ/|彩虹
+hurricane|/ˈhɜːrəˌkeɪn/|飓风
+flood|/flʌd/|洪水
+drought|/draʊt/|干旱
+climate|/ˈklaɪmət/|气候
+humidity|/hjuːˈmɪdətiː/|湿度
+sunny|/ˈsʌniː/|晴朗的
+cloudy|/ˈklaʊdiː/|多云的
+rainy|/ˈreɪniː/|下雨的
+windy|/ˈwɪndiː/|刮风的
+humid|/ˈhjuːməd/|潮湿的
+sky|/skaɪ/|天空
+moon|/muːn/|月亮
+star|/stɑːr/|星星
+planet|/ˈplænət/|行星
+earth|/ɜːrθ/|地球 / 土地
+universe|/ˈjuːnəvərs/|宇宙
+air|/er/|空气
+fire (n.)|/ˈfaɪər/|火
+smoke (n.)|/smoʊk/|烟
+soil|/sɔɪl/|土壤
+stone|/stoʊn/|石头
+rock|/rɑːk/|岩石
+sand|/sænd/|沙子
+wave|/weɪv/|波浪
+nature|/ˈneɪtʃər/|自然
+environment|/ənˈvaɪrənmənt/|环境
+pollution|/pəˈluːʃən/|污染
+plant|/plænt/|植物
+tree|/triː/|树
+flower|/ˈflaʊər/|花
+grass|/græs/|草
+leaf|/liːf/|叶子
+branch (tree)|/brænʃ/|树枝
+root|/ruːt/|根
+seed|/siːd/|种子
+rose|/roʊz/|玫瑰
+pine|/paɪn/|松树
+bamboo|/ˌbæmˈbuː/|竹子
+animal|/ˈænəməl/|动物
+dog|/dɔːg/|狗
+cat|/kæt/|猫
+bird|/bɜːrd/|鸟
+horse|/hɔːrs/|马
+cow|/kaʊ/|奶牛
+pig|/pɪg/|猪
+sheep|/ʃiːp/|绵羊
+goat|/goʊt/|山羊
+chicken (animal)|/ˈtʃɪkən/|母鸡
+duck|/dʌk/|鸭子
+rabbit|/ˈræbət/|兔子
+mouse (animal)|/maɪs/|老鼠
+monkey|/ˈmʌŋkiː/|猴子
+bear|/ber/|熊
+wolf|/wʊlf/|狼
+fox|/fɑːks/|狐狸
+deer|/dɪr/|鹿
+elephant|/ˈeləfənt/|大象
+lion|/ˈlaɪən/|狮子
+tiger|/ˈtaɪgər/|老虎
+panda|/ˈpændə/|熊猫
+snake|/sneɪk/|蛇
+frog|/frɔːg/|青蛙
+turtle|/ˈtɜːrtəl/|乌龟
+whale|/weɪl/|鲸鱼
+dolphin|/ˈdɑːlfən/|海豚
+shark|/ʃɑːrk/|鲨鱼
+insect|/ˈɪnˌsekt/|昆虫
+mosquito|/məˈskiːtoʊ/|蚊子
+fly (insect)|/flaɪ/|苍蝇
+bee|/biː/|蜜蜂
+butterfly|/ˈbʌtərˌflaɪ/|蝴蝶
+ant|/ænt/|蚂蚁
+spider|/ˈspaɪdər/|蜘蛛
+cockroach|/ˈkɑːkˌroʊtʃ/|蟑螂
+pet|/pet/|宠物
+wing|/wɪŋ/|翅膀
+tail|/teɪl/|尾巴
+bloom|/bluːm/|开花
+wither|/ˈwɪðər/|枯萎
+bark|/bɑːrk/|（狗）叫
+disaster|/dəˈzæstər/|灾害
+energy (resource)|/ˈenərdʒiː/|能源
+metal|/ˈmetəl/|金属
+iron (metal)|/ˈaɪərn/|铁
+gold (metal)|/goʊld/|金
+silver (metal)|/ˈsɪlvər/|银
+glass (material)|/glæs/|玻璃
+plastic|/ˈplæstɪk/|塑料
+wood|/wʊd/|木头
+sunrise|/ˈsʌnˌraɪz/|日出
+sunset|/ˈsʌnˌset/|日落
+shadow|/ˈʃædoʊ/|影子
+heat|/hiːt/|炎热
+cold (n.)|/koʊld/|寒冷
+ice (nature)|/aɪs/|冰（自然）
+frost|/frɔːst/|霜
+hail|/heɪl/|冰雹
+breeze|/briːz/|微风
+tide|/taɪd/|潮汐
+volcano|/vɑːlˈkeɪnoʊ/|火山
+jungle|/ˈdʒʌŋgəl/|丛林
+swamp|/swɑːmp/|沼泽
+stream|/striːm/|小溪
+pond|/pɑːnd/|池塘
+cliff|/klɪf/|悬崖
+peak|/piːk/|山峰
+mud|/mʌd/|泥
+feather|/ˈfeðər/|羽毛
+fur|/fɜːr/|毛皮
+horn|/hɔːrn/|角
+nest|/nest/|鸟巢
+cage|/keɪdʒ/|笼子
+fruit tree|/fruːt triː/|果树
+bush|/bʊʃ/|灌木
+thorn|/θɔːrn/|刺
+harvest|/ˈhɑːrvəst/|收成

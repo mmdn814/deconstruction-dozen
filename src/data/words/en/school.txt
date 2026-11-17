@@ -1,0 +1,113 @@
+study (n.)|/ˈstʌdiː/|学习
+education|/ˌedʒəˈkeɪʃən/|教育
+kindergarten|/ˈkɪndərˌgɑːrtn/|幼儿园
+primary school|/ˈpraɪˌmeriː skuːl/|小学
+secondary school|/ˈsekənˌderiː skuːl/|中学
+college|/ˈkɑːlɪdʒ/|学院
+language school|/ˈlæŋgwɪdʒ skuːl/|语言学校
+classroom|/ˈklæsˌruːm/|教室
+class|/klæs/|课
+lesson|/ˈlesən/|一课
+course|/kɔːrs/|课程
+homework|/ˈhoʊmˌwɜːrk/|作业
+exam|/ɪgˈzæm/|考试
+quiz|/kwɪz/|小测验
+grade|/greɪd/|成绩
+score|/skɔːr/|分数
+pass an exam|/pæs æn ɪgˈzæm/|及格
+fail (exam)|/feɪl/|不及格
+question|/ˈkwestʃən/|问题
+answer (n.)|/ˈænsər/|答案
+exercise (study)|/ˈeksərˌsaɪz/|练习题
+review|/rəˈvjuː/|复习
+research (n.)|/ˈriːˌsɜːrtʃ/|研究
+thesis|/ˈθiːsəs/|论文
+essay|/ˈeseɪ/|短文
+graduation|/ˌgrædʒʊˈeɪʃən/|毕业
+degree (academic)|/dəˈgriː/|学位
+diploma|/dəˈploʊmə/|文凭
+scholarship|/ˈskɑːlərˌʃɪp/|奖学金
+tuition|/tuːˈɪʃən/|学费
+exchange student|/ɪksˈtʃeɪndʒ ˈstuːdənt/|交换生
+pupil|/ˈpjuːpəl/|学生（中小学）
+professor|/prəˈfesər/|教授
+principal|/ˈprɪnsəpəl/|校长
+semester|/səˈmestər/|学期
+school year|/skuːl jɪr/|学年
+timetable (school)|/ˈtaɪmˌteɪbəl/|课程表
+attendance|/əˈtendənts/|出勤
+absence|/ˈæbsəns/|缺席
+textbook|/ˈtekstˌbʊk/|教科书
+dictionary|/ˈdɪkʃəˌneriː/|词典
+book|/bʊk/|书
+novel|/ˈnɑːvəl/|小说
+comic|/ˈkɑːmɪk/|漫画
+page|/peɪdʒ/|页
+chapter|/ˈtʃæptər/|章
+sentence|/ˈsentnts/|句子
+paragraph|/ˈperəˌgræf/|段落
+text|/tekst/|文本
+grammar|/ˈgræmər/|语法
+vocabulary|/voʊˈkæbjəˌleriː/|词汇
+word|/wɜːrd/|单词
+letter (alphabet)|/ˈletər/|字母
+alphabet|/ˈælfəˌbet/|字母表
+language|/ˈlæŋgwɪdʒ/|语言
+meaning|/ˈmiːnɪŋ/|意思
+pronunciation|/prəˌnʌntsiːˈeɪʃən/|发音
+accent|/ˈækˌsent/|口音 / 重音
+spelling|/ˈspelɪŋ/|拼写
+conversation|/ˌkɑːnvərˈseɪʃən/|对话
+composition|/ˌkɑːmpəˈzɪʃən/|作文
+translation|/trænzˈleɪʃən/|翻译
+interpreter|/ɪnˈtɜːrprətər/|口译员
+dialect|/ˈdaɪəˌlekt/|方言
+English|/ˈɪŋlɪʃ/|英语
+Spanish|/ˈspænɪʃ/|西班牙语
+Chinese|/ˌtʃaɪˈniːz/|中文
+Japanese|/ˌdʒæpəˈniːz/|日语
+foreign language|/ˈfɔːrən ˈlæŋgwɪdʒ/|外语
+mother tongue|/ˈmʌðər tʌŋ/|母语
+subject|/ˈsʌbdʒəkt/|科目
+mathematics|/ˌmæθəˈmætɪks/|数学
+science|/ˈsaɪəns/|科学
+physics|/ˈfɪzɪks/|物理
+chemistry|/ˈkeməstriː/|化学
+biology|/baɪˈɑːlədʒiː/|生物
+history|/ˈhɪstəriː/|历史
+geography|/dʒiːˈɑːgrəfiː/|地理
+literature|/ˈlɪtərətʃər/|文学
+art|/ɑːrt/|艺术
+music|/ˈmjuːzɪk/|音乐
+physical education|/ˈfɪzəkəl ˌedʒəˈkeɪʃən/|体育
+culture|/ˈkʌltʃər/|文化
+knowledge|/ˈnɑːlədʒ/|知识
+information|/ˌɪnfərˈmeɪʃən/|信息
+explanation|/ˌekspləˈneɪʃən/|解释
+example|/ɪgˈzæmpəl/|例子
+content|/kənˈtent/|内容
+method|/ˈmeθəd/|方法
+reason|/ˈriːzən/|理由
+purpose|/ˈpɜːrpəs/|目的
+theory|/ˈθɪriː/|理论
+level|/ˈlevəl/|水平
+beginner|/bəˈgɪnər/|初学者
+intermediate|/ˌɪntərˈmiːdiːət/|中级
+advanced|/ədˈvænst/|高级
+blackboard|/ˈblækˌbɔːrd/|黑板
+chalk|/tʃɔːk/|粉笔
+ruler|/ˈruːlər/|尺子
+schoolbag|/ˈskuːlbæg/|书包
+recess|/ˈriːˌses/|课间休息
+club|/klʌb/|社团
+take an exam|/teɪk æn ɪgˈzæm/|参加考试
+take notes|/teɪk noʊts/|记笔记
+memorize|/ˈmeməˌraɪz/|背诵
+review (v.)|/rəˈvjuː/|复习
+graduate|/ˈgrædʒəwət/|毕业
+enroll|/ɪnˈroʊl/|注册入学
+skip class|/skɪp klæs/|逃课
+raise your hand|/reɪz jʊr hænd/|举手
+look up|/lʊk ʌp/|查阅
+underline|/ˈʌndərˌlaɪn/|划线
+summarize|/ˈsʌməˌraɪz/|总结

@@ -1,0 +1,81 @@
+illness|/ˈɪlnəs/|疾病
+cold (illness)|/koʊld/|感冒
+flu|/fluː/|流感
+fever|/ˈfiːvər/|发烧
+cough|/kɔːf/|咳嗽
+sneeze|/sniːz/|喷嚏
+headache|/ˈhedˌeɪk/|头痛
+stomachache|/ˈstʌməkˌeɪk/|胃痛
+toothache|/ˈtuːθˌeɪk/|牙痛
+sore throat|/sɔːr θroʊt/|喉咙痛
+diarrhea|/ˌdaɪəˈriːə/|腹泻
+nausea|/ˈnɔːziːə/|恶心
+dizziness|/ˈdɪziːnəs/|头晕
+injury|/ˈɪndʒəriː/|受伤
+wound|/wuːnd/|伤口
+burn (n.)|/bɜːrn/|烧伤
+fracture|/ˈfræktʃər/|骨折
+allergy (medical)|/ˈælərdʒiː/|过敏反应
+virus|/ˈvaɪrəs/|病毒
+infection|/ɪnˈfekʃən/|感染
+symptom|/ˈsɪmptəm/|症状
+condition|/kənˈdɪʃən/|身体状况
+blood pressure|/blʌd ˈpreʃər/|血压
+thermometer|/θərˈmɑːmətər/|体温计
+checkup|/ˈtʃekˌʌp/|体检
+examination|/ɪgˌzæməˈneɪʃən/|检查
+X-ray|/eks reɪ/|X 光
+injection|/ɪnˈdʒekʃən/|打针
+surgery|/ˈsɜːrdʒəriː/|手术
+treatment|/ˈtriːtmənt/|治疗
+prevention|/priːˈventʃən/|预防
+vaccine|/vækˈsiːn/|疫苗
+medicine|/ˈmedəsən/|药
+pill|/pɪl/|药片
+painkiller|/ˈpeɪnˌkɪlər/|止痛药
+antibiotic|/ˌæntiːˌbaɪˈɑːtɪk/|抗生素
+ointment|/ˈɔɪntmənt/|药膏
+bandage|/ˈbændɪdʒ/|绷带
+band-aid|/bænd eɪd/|创可贴
+prescription|/priːˈskrɪpʃən/|处方
+side effect|/saɪd əˈfekt/|副作用
+dose|/doʊs/|剂量
+health insurance|/helθ ɪnˈʃʊrəns/|医疗保险
+emergency|/əˈmɜːrdʒənsiː/|紧急情况
+emergency room|/əˈmɜːrdʒənsiː ruːm/|急诊
+ambulance|/ˈæmbjələns/|救护车
+patient (n.)|/ˈpeɪʃənt/|病人
+dentist|/ˈdentəst/|牙医
+surgeon|/ˈsɜːrdʒən/|外科医生
+pharmacist|/ˈfɑːrməsəst/|药剂师
+waiting room|/ˈweɪtɪŋ ruːm/|候诊室
+appointment (medical)|/əˈpɔɪntmənt/|就诊预约
+pregnancy|/ˈpregnənsiː/|怀孕
+disability|/ˌdɪsəˈbɪlətiː/|残疾
+life|/laɪf/|生命 / 生活
+death|/deθ/|死亡
+cancer|/ˈkænsər/|癌症
+diabetes|/ˌdaɪəˈbiːtiːz/|糖尿病
+depression|/dəˈpreʃən/|抑郁症
+insomnia|/ɪnˈsɑːmniːə/|失眠
+fatigue|/fəˈtiːg/|疲劳
+diet|/ˈdaɪət/|饮食
+vitamin|/ˈvaɪtəmən/|维生素
+exercise|/ˈeksərˌsaɪz/|锻炼
+sleep (n.)|/sliːp/|睡眠
+get sick|/get sɪk/|生病
+catch a cold|/ketʃ ə koʊld/|感冒
+cough (v.)|/kɔːf/|咳嗽
+sneeze (v.)|/sniːz/|打喷嚏
+vomit|/ˈvɑːmət/|呕吐
+bleed|/bliːd/|流血
+swell|/swel/|肿
+recover|/rəˈkʌvər/|康复
+cure|/kjʊr/|治愈
+take medicine|/teɪk ˈmedəsən/|吃药
+see a doctor|/siː ə ˈdɑːktər/|看医生
+be hospitalized|/biː ˈhɑːspɪtəlaɪzd/|住院
+lose weight|/luːz weɪt/|减肥
+gain weight|/geɪn weɪt/|发胖
+feel dizzy|/fiːl ˈdɪziː/|头晕
+it hurts here|/ɪt hɜːrts hɪr/|我这里疼

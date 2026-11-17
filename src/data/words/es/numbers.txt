@@ -1,0 +1,119 @@
+cero||零
+uno||一
+dos||二
+tres||三
+cuatro||四
+cinco||五
+seis||六
+siete||七
+ocho||八
+nueve||九
+diez||十
+once||十一
+doce||十二
+trece||十三
+catorce||十四
+quince||十五
+dieciséis||十六
+diecisiete||十七
+dieciocho||十八
+diecinueve||十九
+veinte||二十
+veintiuno||二十一
+treinta||三十
+cuarenta||四十
+cincuenta||五十
+sesenta||六十
+setenta||七十
+ochenta||八十
+noventa||九十
+cien||一百
+doscientos||两百
+quinientos||五百
+mil||一千
+diez mil||一万
+el millón||百万
+mil millones||十亿
+primero||第一
+segundo||第二
+tercero||第三
+cuarto||第四
+quinto||第五
+sexto||第六
+séptimo||第七
+octavo||第八
+noveno||第九
+décimo||第十
+último||最后
+siguiente||下一个
+el número||数字 / 号码
+la cantidad||数量
+el total||总计
+la mitad||一半
+el cuarto||四分之一
+el doble||两倍
+el par||一对
+la docena||一打
+por ciento||百分之
+el trozo||块 / 片
+la rebanada||一片（面包）
+la taza||杯
+el vaso||玻璃杯
+la botella||瓶
+la lata||罐
+la caja||盒
+la bolsa||袋
+el paquete||包
+el kilo||公斤
+el gramo||克
+el litro||升
+el metro||米
+el kilómetro||公里
+el centímetro||厘米
+la milla||英里
+el tamaño||大小 / 尺寸
+el peso||重量
+la longitud||长度
+la altura||高度
+la anchura||宽度
+la distancia||距离
+la velocidad||速度
+la temperatura||温度
+el grado||度
+muchos||许多（可数）
+mucho||许多（不可数）
+pocos||很少（可数）
+poco||很少（不可数）
+un poco||一点
+un montón||很多
+más||更多
+menos||更少
+la mayoría||大多数
+lo mínimo||最少
+suficiente||足够
+demasiado||太多
+varios||几个
+entero||整个
+los dos||两个都
+ninguno||一个也没有
+único||单一的
+más (suma)||加
+menos (resta)||减
+por (veces)||乘
+dividido por||除以
+igual a||等于
+contar||数数
+sumar||加
+calcular||计算
+medir||测量
+pesar||称重
+una vez||一次
+dos veces||两次
+el precio||价格
+el dólar||美元
+el euro||欧元
+el céntimo||分
+el peso (moneda)||比索
+la moneda||硬币
+el billete||纸币
+el cambio||零钱

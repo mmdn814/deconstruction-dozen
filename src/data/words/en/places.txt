@@ -1,0 +1,125 @@
+city|/ˈsɪtiː/|城市
+town|/taʊn/|城镇
+village|/ˈvɪlɪdʒ/|村庄
+capital|/ˈkæpətl/|首都
+country|/ˈkʌntriː/|国家
+countryside|/ˈkʌntriːˌsaɪd/|乡下
+region|/ˈriːdʒən/|地区
+state|/steɪt/|州 / 国家
+province|/ˈprɑːvəns/|省
+neighborhood|/ˈneɪbərˌhʊd/|街区
+downtown|/ˌdaʊnˈtaʊn/|市中心
+suburb|/ˈsʌbərb/|郊区
+world|/wɜːrld/|世界
+continent|/ˈkɑːntənənt/|洲
+Asia|/ˈeɪʒə/|亚洲
+Europe|/ˈjʊrəp/|欧洲
+America|/əˈmerəkə/|美洲
+Africa|/ˈæfrəkə/|非洲
+China|/ˈtʃaɪnə/|中国
+Japan|/dʒəˈpæn/|日本
+Spain|/speɪn/|西班牙
+Mexico|/ˈmeksəkoʊ/|墨西哥
+United States|/juːˈnaɪtəd steɪts/|美国
+England|/ˈɪŋlənd/|英格兰
+France|/fræns/|法国
+Germany|/ˈdʒɜːrməniː/|德国
+building|/ˈbɪldɪŋ/|建筑
+house|/haʊs/|房子
+home|/hoʊm/|家
+apartment|/əˈpɑːrtmənt/|公寓
+office|/ˈɔːfəs/|办公室
+company|/ˈkʌmpəniː/|公司
+factory|/ˈfæktəriː/|工厂
+school|/skuːl/|学校
+university|/ˌjuːnəˈvɜːrsətiː/|大学
+hospital|/ˈhɑːˌspɪtəl/|医院
+clinic|/ˈklɪnɪk/|诊所
+post office|/poʊst ˈɔːfəs/|邮局
+police station|/pəˈliːs ˈsteɪʃən/|警察局
+fire station|/ˈfaɪər ˈsteɪʃən/|消防站
+city hall|/ˈsɪtiː hɔːl/|市政厅
+embassy|/ˈembəsiː/|大使馆
+library|/ˈlaɪˌbreriː/|图书馆
+museum|/mjuːˈziːəm/|博物馆
+gallery|/ˈgæləriː/|画廊
+theater|/ˈθiːətər/|剧院
+cinema|/ˈsɪnəmə/|电影院
+park|/pɑːrk/|公园
+square (plaza)|/skwer/|广场
+zoo|/zuː/|动物园
+aquarium|/əˈkweriːəm/|水族馆
+amusement park|/əˈmjuːzmənt pɑːrk/|游乐园
+stadium|/ˈsteɪdiːəm/|体育场
+gym|/dʒɪm/|健身房
+swimming pool|/ˈswɪmɪŋ puːl/|游泳池
+church|/tʃɜːrtʃ/|教堂
+temple|/ˈtempəl/|寺庙
+castle|/ˈkæsəl/|城堡
+palace|/ˈpæləs/|宫殿
+tower|/ˈtaʊər/|塔
+monument|/ˈmɑːnjəmənt/|纪念碑
+hotel|/hoʊˈtel/|酒店
+hostel|/ˈhɑːstəl/|青年旅舍
+hair salon|/her səˈlɑːn/|理发店
+laundry|/ˈlɔːndriː/|洗衣店
+farm|/fɑːrm/|农场
+garden|/ˈgɑːrdən/|花园
+beach|/biːtʃ/|海滩
+sea|/siː/|海
+ocean|/ˈoʊʃən/|海洋
+mountain|/ˈmaʊntən/|山
+hill|/hɪl/|小山
+river|/ˈrɪvər/|河
+lake|/leɪk/|湖
+island|/ˈaɪlənd/|岛
+forest|/ˈfɔːrəst/|森林
+desert|/dəˈzɜːrt/|沙漠
+valley|/ˈvæliː/|山谷
+coast|/koʊst/|海岸
+field|/fiːld/|田野
+cave|/keɪv/|洞穴
+waterfall|/ˈwɔːtərˌfɔːl/|瀑布
+reception|/rəˈsepʃən/|前台
+lobby|/ˈlɑːbiː/|大厅
+stairs|/sterz/|楼梯
+hallway|/ˈhɔːlˌweɪ/|走廊
+floor (level)|/flɔːr/|楼层
+ground floor|/graʊnd flɔːr/|一楼
+basement|/ˈbeɪsmənt/|地下室
+roof|/ruːf/|屋顶
+emergency exit|/əˈmɜːrdʒənsiː ˈegzət/|紧急出口
+toilet|/ˈtɔɪlət/|厕所
+landmark|/ˈlændˌmɑːrk/|地标
+tourist attraction|/ˈtʊrəst əˈtrækʃən/|旅游景点
+view|/vjuː/|景色
+landscape|/ˈlændˌskeɪp/|风景
+border|/ˈbɔːrdər/|边境
+area|/ˈeriːə/|区域
+space|/speɪs/|空间
+location|/loʊˈkeɪʃən/|位置
+hometown|/ˈhoʊmˌtaʊn/|家乡
+Italy|/ˈɪtəliː/|意大利
+Portugal|/ˈpɔːrtʃəgəl/|葡萄牙
+Russia|/ˈrʌʃə/|俄罗斯
+India|/ˈɪndiːə/|印度
+Korea|/kəˈriːə/|韩国
+Brazil|/brəˈzɪl/|巴西
+Argentina|/ˌɑːrdʒənˈtiːnə/|阿根廷
+Canada|/ˈkænədə/|加拿大
+Australia|/ɔːˈstreɪljə/|澳大利亚
+London|/ˈlʌndən/|伦敦
+Madrid|/məˈdrɪd/|马德里
+New York|/nuː jɔːrk/|纽约
+Tokyo|/ˈtoʊkiːˌoʊ/|东京
+Beijing|/ˌbeɪˈʒɪŋ/|北京
+bookshop corner|/ˈbʊkʃɑːp ˈkɔːrnər/|报刊亭
+playground|/ˈpleɪˌgraʊnd/|儿童游乐场
+cemetery|/ˈseməˌteriː/|墓地
+market square|/ˈmɑːrkət skwer/|集市广场
+harbor|/ˈhɑːrbər/|码头
+lighthouse|/ˈlaɪtˌhaʊs/|灯塔
+fountain|/ˈfaʊntən/|喷泉
+statue|/ˈstætʃuː/|雕像
+ruins|/ˈruːˌɪnz/|遗迹
+old town|/oʊld taʊn/|老城区

@@ -1,0 +1,121 @@
+now|/naʊ/|现在
+today|/təˈdeɪ/|今天
+tomorrow|/təˈmɔːroʊ/|明天
+yesterday|/ˈjestərˌdeɪ/|昨天
+day after tomorrow|/deɪ ˈæftər təˈmɔːroʊ/|后天
+day before yesterday|/deɪ bəˈfɔːr ˈjestərˌdeɪ/|前天
+tonight|/təˈnaɪt/|今晚
+morning|/ˈmɔːrnɪŋ/|早上
+noon|/nuːn/|中午
+afternoon|/ˌæftərˈnuːn/|下午
+evening|/ˈiːvnɪŋ/|傍晚
+night|/naɪt/|夜晚
+midnight|/ˈmɪdˌnaɪt/|午夜
+dawn|/dɔːn/|黎明
+day|/deɪ/|天
+week|/wiːk/|周
+month|/mʌntθ/|月
+year|/jɪr/|年
+weekend|/ˈwiːkˌend/|周末
+weekday|/ˈwiːkˌdeɪ/|工作日
+this week|/ðɪs wiːk/|这周
+next week|/nekst wiːk/|下周
+last week|/læst wiːk/|上周
+this month|/ðɪs mʌntθ/|这个月
+next month|/nekst mʌntθ/|下个月
+last month|/læst mʌntθ/|上个月
+this year|/ðɪs jɪr/|今年
+next year|/nekst jɪr/|明年
+last year|/læst jɪr/|去年
+every day|/ˈevəriː deɪ/|每天
+Monday|/ˈmʌnˌdeɪ/|星期一
+Tuesday|/ˈtuːzˌdeɪ/|星期二
+Wednesday|/ˈwenzˌdeɪ/|星期三
+Thursday|/ˈθɜːrzˌdeɪ/|星期四
+Friday|/ˈfraɪˌdeɪ/|星期五
+Saturday|/ˈsætərˌdeɪ/|星期六
+Sunday|/ˈsʌnˌdeɪ/|星期日
+January|/ˈdʒænjəˌweriː/|一月
+February|/ˈfebjəˌweriː/|二月
+March|/mɑːrtʃ/|三月
+April|/ˈeɪprəl/|四月
+May|/meɪ/|五月
+June|/dʒuːn/|六月
+July|/dʒəˈlaɪ/|七月
+August|/ˈɔːgəst/|八月
+September|/sepˈtembər/|九月
+October|/ɑːkˈtoʊbər/|十月
+November|/noʊˈvembər/|十一月
+December|/diːˈsembər/|十二月
+spring|/sprɪŋ/|春天
+summer|/ˈsʌmər/|夏天
+autumn|/ˈɔːtəm/|秋天
+winter|/ˈwɪntər/|冬天
+season|/ˈsiːzən/|季节
+hour|/ˈaʊər/|小时
+minute|/ˈmɪnət/|分钟
+second (time)|/ˈsekənd/|秒
+moment|/ˈmoʊmənt/|片刻
+time|/taɪm/|时间
+o'clock|/əˈklɑːk/|…点整
+half past|/hæf pæst/|…点半
+quarter past|/ˈkwɔːrtər pæst/|…点一刻
+clock|/klɑːk/|钟表
+calendar|/ˈkæləndər/|日历
+date|/deɪt/|日期
+birthday|/ˈbɜːrθˌdeɪ/|生日
+holiday|/ˈhɑːləˌdeɪ/|节日
+vacation|/veɪˈkeɪʃən/|假期
+anniversary|/ˌænəˈvɜːrsəriː/|纪念日
+Christmas|/ˈkrɪsməs/|圣诞节
+New Year|/nuː jɪr/|新年
+schedule|/ˈskeˌdʒuːl/|时间表
+appointment|/əˈpɔɪntmənt/|预约 / 约会
+deadline|/ˈdedˌlaɪn/|截止日期
+past|/pæst/|过去
+present|/ˈpreznt/|现在
+future|/ˈfjuːtʃər/|将来
+century|/ˈsentʃəriː/|世纪
+age|/eɪdʒ/|年龄
+period|/ˈpɪriːəd/|时期
+beginning|/bəˈgɪnɪŋ/|开始
+end|/end/|结束
+early|/ˈɜːrliː/|早
+late|/leɪt/|晚
+soon|/suːn/|很快
+later|/ˈleɪtər/|待会儿
+before (adv.)|/bəˈfɔːr/|以前
+after (adv.)|/ˈæftər/|之后
+recently|/ˈriːsntliː/|最近
+long ago|/lɔːŋ əˈgoʊ/|很久以前
+just now|/dʒʌst naʊ/|刚才
+right now|/raɪt naʊ/|马上
+always|/ˈɔːlˌweɪz/|总是
+usually|/ˈjuːʒəliː/|通常
+often|/ˈɔːfən/|经常
+sometimes|/ˈsʌmˌtaɪmz/|有时
+rarely|/ˈrerliː/|很少
+daily|/ˈdeɪliː/|每天地
+weekly|/ˈwiːkliː/|每周
+monthly|/ˈmʌntθliː/|每月
+yearly|/ˈjɪrliː/|每年
+forever|/fəˈrevər/|永远
+ago|/əˈgoʊ/|…之前
+for a long time|/fɔːr ə lɔːŋ taɪm/|很长时间
+all day|/ɔːl deɪ/|一整天
+on time|/ɔːn taɪm/|准时
+in a hurry|/ɪn ə ˈhɜːriː/|匆忙
+at the same time|/æt ðə seɪm taɪm/|同时
+meanwhile|/ˈmiːnˌwaɪl/|与此同时
+finally|/ˈfaɪnəliː/|终于
+suddenly|/ˈsʌdənliː/|突然
+immediately|/ɪˈmiːdiːətliː/|立刻
+gradually|/ˈgrædʒəwəliː/|渐渐
+start|/stɑːrt/|开始
+finish|/ˈfɪnəʃ/|结束
+last (v.)|/læst/|持续
+wait|/weɪt/|等
+be late|/biː leɪt/|迟到
+hurry|/ˈhɜːriː/|赶紧
+spend (time)|/spend/|度过
+postpone|/ˌpoʊstˈpoʊn/|推迟

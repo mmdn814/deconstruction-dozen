@@ -1,0 +1,100 @@
+shopping|las compras|购物
+shop|la tienda|商店
+department store|los grandes almacenes|百货商场
+mall|el centro comercial|购物中心
+market|el mercado|市场
+pharmacy|la farmacia|药店
+bookstore|la librería|书店
+florist|la floristería|花店
+butcher shop|la carnicería|肉店
+fish shop|la pescadería|鱼店
+greengrocer|la frutería|蔬果店
+clothing store|la tienda de ropa|服装店
+shoe store|la zapatería|鞋店
+jewelry store|la joyería|珠宝店
+hardware store|la ferretería|五金店
+vending machine|la máquina expendedora|自动售货机
+cost (n.)|el coste|费用
+fee|la tarifa|收费
+tax|el impuesto|税
+discount|el descuento|折扣
+sale|las rebajas|促销
+offer (n.)|la oferta|优惠
+coupon|el cupón|优惠券
+bargain|la ganga|便宜货
+half price|a mitad de precio|半价
+money|el dinero|钱
+wallet|la cartera|钱包
+credit card|la tarjeta de crédito|信用卡
+payment|el pago|支付
+installment|el plazo|分期
+refund|el reembolso|退款
+exchange (n.)|el intercambio|换货
+exchange rate|el tipo de cambio|汇率
+bank|el banco|银行
+account|la cuenta bancaria|账户
+savings|los ahorros|存款
+salary|el sueldo|工资
+income|los ingresos|收入
+expense|el gasto|开销
+debt|la deuda|债务
+loan|el préstamo|贷款
+budget|el presupuesto|预算
+product|el producto|产品
+goods|la mercancía|商品
+item|el artículo|物品
+brand|la marca|品牌
+quality|la calidad|质量
+quantity|la cantidad (de producto)|数量
+stock|las existencias|库存
+sold out|agotado|售罄
+new arrival|la novedad|新品
+second-hand|de segunda mano|二手的
+sample|la muestra|样品
+model|el modelo|型号
+color|el color|颜色
+shape|la forma|形状
+material|el material|材料
+fitting room|el probador|试衣间
+try on|probarse|试穿
+warranty|la garantía|保修
+gift|el regalo|礼物
+souvenir|el recuerdo|纪念品
+wrapping|el envoltorio|包装
+basket|la cesta|篮子
+cart|el carrito|购物车
+escalator|la escalera mecánica|自动扶梯
+elevator|el ascensor|电梯
+entrance|la entrada|入口
+exit|la salida|出口
+cashier|el cajero|收银员
+seller|el vendedor|卖家
+buyer|el comprador|买家
+queue|la cola|排队
+online shopping|las compras en línea|网购
+shipping|el envío|运送
+shipping fee|los gastos de envío|运费
+package|el paquete (envío)|包裹
+parcel|el bulto|邮包
+luggage|el equipaje|行李
+luxury|el lujo|奢侈
+customer service|la atención al cliente|客服
+complaint|la queja|投诉
+label|la etiqueta|标签
+barcode|el código de barras|条形码
+invoice|la factura|发票
+profit|el beneficio|利润
+wholesale|al por mayor|批发
+retail|al por menor|零售
+cheap goods|la baratija|廉价品
+on sale|en oferta|特价中
+for free|de regalo|赠送
+worth|valer|值
+afford|permitirse|买得起
+bargain (v.)|regatear|讨价还价
+compare prices|comparar precios|比价
+pay in cash|pagar en efectivo|付现金
+pay by card|pagar con tarjeta|刷卡
+withdraw money|sacar dinero|取钱
+deposit|ingresar dinero|存钱
+change money|cambiar dinero|换钱

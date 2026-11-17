@@ -1,0 +1,128 @@
+el empleo||工作（职位）
+el trabajo||工作
+la carrera profesional||职业生涯
+la profesión||职业
+el lugar de trabajo||工作场所
+la sede||总部
+la sucursal||分公司
+el departamento||部门
+las ventas||销售
+el marketing||市场营销
+recursos humanos||人力资源
+la contabilidad||会计
+el empleado||员工
+el empleador||雇主
+el colega||同事
+el gerente||经理
+el director||总监 / 主任
+el secretario||秘书
+el asistente||助理
+el becario||实习生
+el equipo||团队
+el cliente (negocio)||客户
+el proveedor||供应商
+el trabajo a tiempo parcial||兼职
+a tiempo completo||全职
+la reunión||会议
+la conferencia||大会
+la presentación||演示
+el proyecto||项目
+la tarea||任务
+el documento||文件
+el informe||报告
+la propuesta||提案
+el plan||计划
+la estrategia||策略
+el objetivo||目标
+el resultado||结果
+la causa||原因
+el problema||问题
+la solución||解决办法
+la decisión||决定
+la opinión||意见
+la idea||主意
+el progreso||进展
+la situación||情况
+la agenda||日程
+el turno||班次
+las horas extra||加班
+el viaje de negocios||出差
+el día libre||休息日
+el permiso||请假
+el trayecto al trabajo||通勤
+el teletrabajo||远程办公
+la entrevista de trabajo||面试
+el currículum||简历
+la solicitud||申请
+la contratación||招聘
+la formación||培训
+la experiencia||经验
+la habilidad||技能
+la capacidad||能力
+la responsabilidad||责任
+el papel (función)||角色
+el puesto||职位
+el ascenso||升职
+el aumento de sueldo||加薪
+la bonificación||奖金
+el salario||薪水
+la jubilación||退休
+el desempleo||失业
+la dimisión||辞职
+el despido||解雇
+la huelga||罢工
+el sindicato||工会
+la firma||签名
+la copia||复印件
+el archivo||文件 / 档案
+los datos||数据
+el correo electrónico||电子邮件
+el archivo adjunto||附件
+la llamada||电话
+el mensaje||留言 / 消息
+urgente||紧急的
+el negocio||生意
+la industria||产业
+la economía||经济
+el comercio||贸易
+la exportación||出口
+la importación||进口
+la producción||生产
+el desarrollo||开发
+la tecnología||技术
+la competencia||竞争
+el éxito||成功
+el fracaso||失败
+la ventaja||优势
+la desventaja||劣势
+la oportunidad||机会
+el riesgo||风险
+el esfuerzo||努力
+contratar||雇用
+despedir||解雇
+dimitir||辞职
+jubilarse||退休
+solicitar (empleo)||申请
+firmar||签字
+imprimir||打印
+copiar||复印
+mandar un correo||发邮件
+asistir a una reunión||开会
+estar a cargo||负责
+hacer horas extra||加班
+tomar un descanso||休息一下
+negociar||谈判
+invertir||投资
+producir||生产
+lanzar||推出
+programar||安排
+el plazo de entrega||交付期限
+el presupuesto del proyecto||项目预算
+la cotización||报价
+el acuerdo||协议
+el socio||合伙人
+el accionista||股东
+la satisfacción del cliente||客户满意度
+la carga de trabajo||工作量
+el rendimiento||业绩
+los comentarios||反馈

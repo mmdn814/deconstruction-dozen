@@ -1,0 +1,102 @@
+el restaurante||餐厅
+la cafetería||咖啡馆
+el bar||酒吧
+la comida rápida||快餐
+la panadería||面包店
+el puesto de comida||小吃摊
+el comedor||食堂
+el menú||菜单
+el plato||菜 / 盘子
+el entrante||前菜
+el plato principal||主菜
+el menú del día||今日套餐
+el combo||套餐
+la especialidad||招牌菜
+el pedido||订单
+la mesa||桌子
+el asiento||座位
+la reserva||预订
+mesa para dos||两人桌
+la camarera||女服务员
+el chef||主厨
+la cuenta||账单
+la propina||小费
+el recibo||收据
+el efectivo||现金
+la tarjeta||卡
+para llevar||外带
+para comer aquí||堂食
+el reparto a domicilio||外卖配送
+el tenedor||叉子
+el cuchillo||刀
+la cuchara||勺子
+los palillos||筷子
+el plato llano||平盘
+el cuenco||碗
+la servilleta||餐巾纸
+la pajita||吸管
+la bandeja||托盘
+el palillo de dientes||牙签
+la bebida caliente||热饮
+la bebida fría||冷饮
+con hielo||加冰
+sin hielo||去冰
+con leche||加奶
+sin azúcar||无糖
+el café solo||黑咖啡
+el café con leche||拿铁
+el agua del grifo||自来水
+el agua con gas||气泡水
+el agua sin gas||无气水
+el vino tinto||红葡萄酒
+el vino blanco||白葡萄酒
+la cerveza de barril||生啤
+el cóctel||鸡尾酒
+el whisky||威士忌
+la gaseosa||软饮料
+rellenar||续杯
+grande (tamaño)||大份
+mediano||中份
+pequeño (tamaño)||小份
+adicional||加量的
+media ración||半份
+poco hecho||三分熟
+al punto||五分熟
+muy hecho||全熟
+la alergia||过敏
+sin gluten||无麸质
+vegano||纯素的
+la recomendación||推荐
+la zona de fumadores||吸烟区
+no fumadores||禁烟
+la terraza||露台座位
+la barra||吧台
+la cocina||厨房
+abierto||营业中
+cerrado||已关门
+el horario de apertura||营业时间
+completo||客满
+la lista de espera||等位名单
+la hora feliz||优惠时段
+el brindis||祝酒
+la resaca||宿醉
+borracho||喝醉的
+dividir la cuenta||分摊账单
+invito yo||我请客
+quédese con el cambio||不用找了
+el supermercado||超市
+la tienda de conveniencia||便利店
+la caja registradora||收银台
+la bolsa de plástico||塑料袋
+el microondas||微波炉
+la comida preparada||即食餐
+la comida enlatada||罐头食品
+los fideos instantáneos||方便面
+el chicle||口香糖
+el cigarrillo||香烟
+el mechero||打火机
+el periódico||报纸
+la revista||杂志
+el sello||邮票
+el cajero automático||取款机
+el baño||洗手间

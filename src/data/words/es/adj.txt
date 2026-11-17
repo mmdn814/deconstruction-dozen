@@ -1,0 +1,191 @@
+bueno||好的
+malo||坏的
+grande||大的
+pequeño||小的
+largo||长的
+corto||短的
+elevado||高的
+bajo (altura)||低的
+ancho||宽的
+estrecho||窄的
+grueso||厚的
+fino||薄的 / 细的
+pesado||重的
+ligero||轻的
+nuevo||新的
+usado||旧的 / 用过的
+rápido||快的
+lento||慢的
+cercano||近的
+lejano||远的
+caliente||热的
+frío||冷的
+templado||暖和的
+fresco||凉爽的
+brillante||明亮的
+oscuro||暗的
+ruidoso||吵的
+silencioso||安静的
+limpio||干净的
+sucio||脏的
+bonito||漂亮的
+lindo||可爱的
+delicioso||好吃的
+rico||美味的
+dulce||甜的
+picante||辣的
+amargo||苦的
+agrio||酸的
+salado||咸的
+duro||硬的
+blando||软的
+redondo||圆的
+cuadrado||方的
+plano||平的
+profundo||深的
+poco profundo||浅的
+lleno||满的
+vacío||空的
+seco||干的
+mojado||湿的
+afilado||锋利的
+liso||光滑的
+áspero||粗糙的
+difícil||难的
+fácil||容易的
+sencillo||简单的
+complicado||复杂的
+conveniente||方便的
+ocupado||忙的
+libre||空闲的 / 自由的
+importante||重要的
+necesario||必要的
+posible||可能的
+imposible||不可能的
+peligroso||危险的
+seguro||安全的
+correcto||正确的
+equivocado||错的
+verdadero||真的
+falso||假的
+extraño||奇怪的
+normal||正常的
+especial||特别的
+famoso||有名的
+popular||受欢迎的
+amable||友善的
+educado||有礼貌的
+grosero||粗鲁的
+serio||认真的 / 严肃的
+honesto||诚实的
+gracioso||好笑的
+interesante||有趣的
+pesado (aburrido)||无聊的
+inteligente||聪明的
+tonto||笨的
+perezoso||懒的
+trabajador (adj.)||勤奋的
+valiente||勇敢的
+tímido||害羞的
+simpático||友好的
+estricto||严格的
+suave||温柔的
+paciente||有耐心的
+cuidadoso||小心的
+rico (dinero)||富有的
+pobre||穷的
+barato||便宜的
+caro||贵的
+gratis||免费的
+maravilloso||精彩的
+terrible||糟糕的
+excelente||优秀的
+perfecto||完美的
+corriente||普通的
+moderno||现代的
+tradicional||传统的
+antiguo||古老的
+fresco (comida)||新鲜的
+podrido||腐烂的
+crudo||生的
+maduro||熟的
+vivo||活的
+muerto||死的
+real||真实的
+falso (imitación)||假冒的
+público||公共的
+privado||私人的
+principal||主要的
+diferente||不同的
+parecido||相似的
+igual||相等的
+opuesto||相反的
+diversos||各种各样的
+común||常见的
+raro||罕见的
+general||一般的
+específico||具体的
+claro (adj.)||清楚的
+evidente||明显的
+cierto||确定的
+listo||准备好的
+disponible||可用的
+útil||有用的
+inútil||没用的
+afortunado||幸运的
+justo (adj.)||公平的
+apretado||紧的
+suelto||松的
+abarrotado||拥挤的
+ordenado||整洁的
+desordenado||乱的
+a la moda||时髦的
+nacional||国家的
+internacional||国际的
+local||本地的
+extranjero (adj.)||外国的
+enorme||巨大的
+diminuto||极小的
+gigante||巨型的
+de tamaño medio||中等大小的
+doble||双倍的
+extra grande||特大的
+completo (entero)||完整的
+roto||坏了的
+cerrado (adj.)||关着的
+abierto (adj.)||开着的
+perdido||丢失的
+desaparecido||失踪的
+oculto||隐藏的
+visible||看得见的
+callado||沉默的
+despierto||醒着的
+dormido||睡着的
+embarazada||怀孕的
+desnudo||裸的
+ciego||盲的
+sordo||聋的
+curioso||好奇的
+generoso||慷慨的
+egoísta||自私的
+terco||固执的
+alegre||开朗的
+gruñón||爱发脾气的
+sensible||敏感的
+responsable||负责的
+independiente||独立的
+creativo||有创意的
+talentoso||有才华的
+profesional||专业的
+oficial||官方的
+legal||合法的
+ilegal||非法的
+culpable||有罪的
+inocente||无辜的
+apremiante||紧迫的
+temporal||临时的
+permanente||永久的
+reciente||最近的
+anterior||之前的
+posterior||之后的
+definitivo||最终的

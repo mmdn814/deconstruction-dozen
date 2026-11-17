@@ -1,0 +1,111 @@
+very|muy|非常
+quite|bastante|相当
+really (adv.)|realmente|真的 / 确实
+so much|tanto|这么多
+too (excess)|demasiado (adv.)|太
+almost|casi|几乎
+nearly|por poco|差一点
+about (approx.)|aproximadamente|大约
+exactly|exactamente|正好
+at least|al menos|至少
+at most|como máximo|最多
+especially|especialmente|特别是
+mainly|principalmente|主要
+generally|generalmente|一般来说
+probably|probablemente|大概
+perhaps|tal vez|或许
+certainly|ciertamente|当然 / 肯定
+definitely|sin duda|一定
+absolutely|absolutamente|绝对
+actually|en realidad|其实
+in fact|de hecho|事实上
+for example|por ejemplo|例如
+first of all|en primer lugar|首先
+secondly|en segundo lugar|其次
+at last|al fin|最后终于
+in the end|al final|最终
+at first|al principio|起初
+afterwards|luego|然后
+quickly|rápidamente|快速地
+slowly|lentamente|慢慢地
+carefully|con cuidado|小心地
+easily|fácilmente|容易地
+well (adv.)|bien|好
+badly|mal|糟糕地
+better|mejor|更好
+worse|peor|更差
+best|lo mejor|最好
+worst|lo peor|最差
+together (adv.)|conjuntamente|共同
+separately|por separado|分别
+alone (adv.)|solo (adv.)|独自
+directly|directamente|直接
+straight|recto|笔直
+clearly|claramente|清楚地
+simply|simplemente|简单地
+naturally|naturalmente|自然地
+freely|libremente|自由地
+completely|completamente|完全
+partly|en parte|部分地
+hardly|apenas|几乎不
+not at all|en absoluto|一点也不
+not yet|todavía no|还没有
+no longer|ya no|不再
+anymore|nunca más|再也不
+as usual|como siempre|像往常一样
+on purpose|a propósito|故意
+by chance|por casualidad|偶然
+by the way|por cierto|顺便说一下
+anyway|de todos modos|反正
+however|sin embargo|然而
+therefore|por lo tanto|因此
+in addition|además de eso|另外
+besides|aparte|除此之外
+otherwise|si no|否则
+instead|en cambio|反而
+on the other hand|por otro lado|另一方面
+in other words|es decir|换句话说
+in short|en resumen|总之
+even if|aunque sea|即使
+as soon as|en cuanto|一…就
+as long as|siempre que|只要
+in case|por si acaso|以防万一
+so that|para que|以便
+unless|a menos que|除非
+whether|si (duda)|是否
+whenever|cuando sea|无论何时
+wherever|donde sea|无论哪里
+whatever|lo que sea|无论什么
+whoever|quien sea|无论是谁
+somehow|de alguna manera|不知怎么地
+sometime|algún día|某个时候
+once more|una vez más|再一次
+little by little|paso a paso|一步一步
+more or less|más o menos|差不多
+so-so|regular|一般般
+luckily|por suerte|幸好
+unfortunately|por desgracia|不幸的是
+honestly|sinceramente|说实话
+seriously|en serio|认真地
+personally|personalmente|就我个人
+normally|por lo general|通常
+originally|originalmente|原本
+basically|básicamente|基本上
+obviously|obviamente|显然
+apparently|al parecer|看来
+indeed|efectivamente|确实
+abroad|en el extranjero|在国外
+at home|en casa|在家
+upstairs|en el piso de arriba|楼上
+downstairs|en el piso de abajo|楼下
+ahead|adelante (adv.)|前面
+backwards|hacia atrás|向后
+forward|hacia adelante|向前
+nearby|cerca|附近
+far away|lejos|远处
+aside|a un lado|在一边
+in the middle|en el centro|在中间
+on foot|a pie|步行
+by heart|de memoria|凭记忆
+out loud|en voz alta|大声
+in a low voice|en voz baja|小声

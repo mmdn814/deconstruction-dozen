@@ -1,0 +1,147 @@
+I|yo|我
+you|tú|你
+he|él|他
+she|ella|她
+it|ello|它
+we|nosotros|我们
+they|ellos|他们
+you all|ustedes|你们
+me|me|我（宾格）
+him|lo|他（宾格）
+her|la|她（宾格）
+us|nos|我们（宾格）
+them|los|他们（宾格）
+my|mi|我的
+your|tu|你的
+his|su|他的 / 她的
+our|nuestro|我们的
+their|suyo|他们的
+mine|mío|我的（东西）
+yours|tuyo|你的（东西）
+myself|mí mismo|我自己
+everyone|todos|大家
+someone|alguien|某人
+nobody|nadie|没有人
+something|algo|某物
+nothing|nada|什么都没有
+everything|todo|一切
+anything|cualquier cosa|任何东西
+this|esto|这个
+that|eso|那个
+these|estos|这些
+those|esos|那些
+here|aquí|这里
+there|allí|那里
+over there|allá|那边
+somewhere|en algún lugar|某处
+everywhere|en todas partes|到处
+nowhere|en ninguna parte|哪里都不
+what|qué|什么
+who|quién|谁
+where|dónde|哪里
+when|cuándo|什么时候
+why|por qué|为什么
+how|cómo|怎么
+which|cuál|哪个
+whose|de quién|谁的
+how much|cuánto|多少
+how many|cuántos|多少个
+the|el|定冠词（那个）
+a|un|不定冠词（一个）
+some|algunos|一些
+any|alguno|任何
+each|cada|每个
+every|cada uno|每一个
+both|ambos|两个都
+all|todo el|全部的
+other|otro|其他的
+another|otro más|另一个
+same|mismo|同样的
+such|tal|这样的
+and|y|和
+or|o|或者
+but|pero|但是
+because|porque|因为
+so|así que|所以
+if|si|如果
+when (conj.)|cuando|当…的时候
+while|mientras|当… / 而
+although|aunque|虽然
+than|que|比
+as|como|像 / 作为
+that (conj.)|que (conj.)|…这件事（连接句子）
+then|entonces|那么 / 然后
+also|también|也
+too|además|也 / 而且
+either|tampoco|也不
+not|no (adv.)|不
+never|nunca|从不
+only|solo|只
+just|justo|刚刚 / 只是
+even|incluso|甚至
+still|todavía|仍然
+already|ya|已经
+yet|aún|还
+again|de nuevo|又 / 再
+in|en|在…里
+on|sobre|在…上
+at|a|在（某点）
+to|hacia|往
+from|desde|从
+of|de|…的
+with|con|和 / 用
+without|sin|没有
+for|para|为了 / 给
+by|por|由 / 乘
+about|acerca de|关于
+between|entre|在…之间
+among|en medio de|在…当中
+before|antes de|在…之前
+after|después de|在…之后
+during|durante|在…期间
+until|hasta|直到
+since|desde que|自从
+against|contra|反对 / 靠着
+through|a través de|穿过
+across|al otro lado de|横过 / 在对面
+into|dentro de|进入…里面
+out of|fuera de|从…出来
+up|arriba|向上
+down|abajo|向下
+over|encima de|在…上方
+under|debajo de|在…下面
+near|cerca de|靠近
+far from|lejos de|离…远
+next to|al lado de|在…旁边
+in front of|delante de|在…前面
+behind|detrás de|在…后面
+inside|dentro|里面
+outside|fuera|外面
+around|alrededor de|在…周围
+along|a lo largo de|沿着
+toward|en dirección a|朝着
+according to|según|根据
+instead of|en lugar de|代替
+because of|a causa de|由于
+be|ser|是
+be (state)|estar|在 / 处于
+have|tener|有
+do|hacer|做
+can|poder|能
+must|deber|必须
+want|querer|想要
+need|necesitar|需要
+there is|hay|有（存在）
+thing|la cosa|东西 / 事情
+way|la manera|方式
+place|el lugar|地方
+part|la parte|部分
+kind|el tipo|种类
+side|el lado|边
+top|la cima|顶部
+bottom|el fondo|底部
+middle|el medio|中间
+front|el frente|前面
+back|la parte de atrás|后面
+left|la izquierda|左
+right|la derecha|右

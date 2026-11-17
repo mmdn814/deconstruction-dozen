@@ -1,0 +1,120 @@
+think|/θɪŋk/|想
+believe|/bəˈliːv/|相信
+know|/noʊ/|知道
+know (someone)|/noʊ/|认识
+understand|/ˌʌndərˈstænd/|理解
+realize|/ˈriːəˌlaɪz/|意识到
+notice|/ˈnoʊtəs/|注意到
+imagine|/ɪˈmædʒən/|想象
+guess|/ges/|猜
+doubt|/daʊt/|怀疑
+suppose|/səˈpoʊz/|假设
+expect|/ɪkˈspekt/|预期
+hope (v.)|/hoʊp/|希望
+wish|/wɪʃ/|祝愿 / 想要
+dream (v.)|/driːm/|做梦
+plan|/plæn/|计划
+intend|/ɪnˈtend/|打算
+prefer|/priːˈfɜːr/|更喜欢
+compare|/kəmˈper/|比较
+judge|/dʒʌdʒ/|判断
+agree|/əˈgriː/|同意
+disagree|/ˌdɪsəˈgriː/|不同意
+accept|/əkˈsept/|接受
+refuse|/rəˈfjuːz/|拒绝
+allow|/əˈlaʊ/|允许
+forbid|/fərˈbɪd/|禁止
+promise|/ˈprɑːməs/|承诺
+swear|/swer/|发誓
+lie|/laɪ/|撒谎
+cheat|/tʃiːt/|欺骗
+trust|/trʌst/|信任
+respect|/rəˈspekt/|尊重
+admire|/ədˈmaɪər/|钦佩
+forgive|/fərˈgɪv/|原谅
+blame|/bleɪm/|责怪
+praise|/preɪz/|表扬
+scold|/skoʊld/|责骂
+complain|/kəmˈpleɪn/|抱怨
+argue|/ˈɑːrgjuː/|争论
+fight|/faɪt/|打架 / 吵架
+talk|/tɔːk/|交谈
+chat|/tʃæt/|聊天
+discuss|/dəˈskʌs/|讨论
+suggest|/səˈdʒest/|建议
+recommend|/ˌrekəˈmend/|推荐
+advise|/ədˈvaɪz/|劝告
+warn|/wɔːrn/|警告
+remind|/rəˈmaɪnd/|提醒
+inform|/ɪnˈfɔːrm/|通知
+announce|/əˈnaʊns/|宣布
+report|/rəˈpɔːrt/|报告
+describe|/dəˈskraɪb/|描述
+mention|/ˈmentʃən/|提到
+repeat|/rəˈpiːt/|重复
+translate|/trænzˈleɪt/|翻译
+pronounce|/prəˈnaʊns/|发音
+spell|/spel/|拼写
+mean|/miːn/|意思是
+express|/ɪkˈspres/|表达
+communicate|/kəˈmjuːnəˌkeɪt/|沟通
+contact|/ˈkɑːntækt/|联系
+reply|/rəˈplaɪ/|回复
+request|/rəˈkwest/|请求
+demand|/dəˈmænd/|要求
+offer|/ˈɔːfər/|提供
+propose|/prəˈpoʊz/|提议
+persuade|/pərˈsweɪd/|说服
+encourage|/ɪnˈkɜːrɪdʒ/|鼓励
+support|/səˈpɔːrt/|支持
+cooperate|/koʊˈɑːpəˌreɪt/|合作
+compete|/kəmˈpiːt/|竞争
+attend|/əˈtend/|出席
+participate|/pɑːrˈtɪsəˌpeɪt/|参加
+organize|/ˈɔːrgəˌnaɪz/|组织
+manage|/ˈmænɪdʒ/|管理
+lead|/liːd/|领导
+obey|/əˈbeɪ/|服从
+solve|/sɑːlv/|解决
+discover|/dəˈskʌvər/|发现
+invent|/ɪnˈvent/|发明
+create|/kriːˈeɪt/|创造
+design|/dəˈzaɪn/|设计
+research|/ˈriːˌsɜːrtʃ/|研究
+analyze|/ˈænlˌaɪz/|分析
+test|/test/|测试
+prove|/pruːv/|证明
+confirm|/kənˈfɜːrm/|确认
+correct|/kəˈrekt/|改正
+make a mistake|/meɪk ə məˈsteɪk/|犯错
+succeed in|/səkˈsiːd ɪn/|做到
+give up|/gɪv ʌp/|放弃
+try hard|/traɪ hɑːrd/|努力
+challenge|/ˈtʃæləndʒ/|挑战
+achieve|/əˈtʃiːv/|实现
+experience|/ɪkˈspɪriːəns/|经历
+enjoy|/ɪnˈdʒɔɪ/|享受
+suffer|/ˈsʌfər/|受苦
+bear (v.)|/ber/|忍受
+regret|/rəˈgret/|后悔
+miss (someone)|/mɪs/|想念
+care|/ker/|在乎
+mind (v.)|/maɪnd/|介意
+bother|/ˈbɑːðər/|打扰
+surprise|/sərˈpraɪz/|使惊讶
+scare|/sker/|吓
+amuse|/əˈmuːz/|逗乐
+get used to|/get juːzd tuː/|习惯
+pay attention|/peɪ əˈtentʃən/|注意
+concentrate|/ˈkɑːntsənˌtreɪt/|集中
+ignore|/ɪgˈnɔːr/|忽视
+pretend|/priːˈtend/|假装
+behave|/bəˈheɪv/|表现
+treat|/triːt/|对待
+protect|/prəˈtekt/|保护
+defend|/dəˈfend/|保卫
+attack|/əˈtæk/|攻击
+punish|/ˈpʌnɪʃ/|惩罚
+vote|/voʊt/|投票
+pray|/preɪ/|祈祷
+celebrate|/ˈseləˌbreɪt/|庆祝

@@ -1,0 +1,102 @@
+restaurant|el restaurante|餐厅
+cafe|la cafetería|咖啡馆
+bar|el bar|酒吧
+fast food|la comida rápida|快餐
+bakery|la panadería|面包店
+food stand|el puesto de comida|小吃摊
+canteen|el comedor|食堂
+menu|el menú|菜单
+dish|el plato|菜 / 盘子
+starter|el entrante|前菜
+main course|el plato principal|主菜
+daily special|el menú del día|今日套餐
+set meal|el combo|套餐
+specialty|la especialidad|招牌菜
+order (n.)|el pedido|订单
+table|la mesa|桌子
+seat|el asiento|座位
+reservation|la reserva|预订
+table for two|mesa para dos|两人桌
+waitress|la camarera|女服务员
+chef|el chef|主厨
+bill (check)|la cuenta|账单
+tip|la propina|小费
+receipt|el recibo|收据
+cash|el efectivo|现金
+card|la tarjeta|卡
+to go|para llevar|外带
+to eat here|para comer aquí|堂食
+delivery|el reparto a domicilio|外卖配送
+fork|el tenedor|叉子
+knife|el cuchillo|刀
+spoon|la cuchara|勺子
+chopsticks|los palillos|筷子
+plate|el plato llano|平盘
+bowl|el cuenco|碗
+napkin|la servilleta|餐巾纸
+straw|la pajita|吸管
+tray|la bandeja|托盘
+toothpick|el palillo de dientes|牙签
+hot drink|la bebida caliente|热饮
+cold drink|la bebida fría|冷饮
+with ice|con hielo|加冰
+without ice|sin hielo|去冰
+with milk|con leche|加奶
+sugar-free|sin azúcar|无糖
+black coffee|el café solo|黑咖啡
+latte|el café con leche|拿铁
+tap water|el agua del grifo|自来水
+sparkling water|el agua con gas|气泡水
+still water|el agua sin gas|无气水
+red wine|el vino tinto|红葡萄酒
+white wine|el vino blanco|白葡萄酒
+draft beer|la cerveza de barril|生啤
+cocktail|el cóctel|鸡尾酒
+whisky|el whisky|威士忌
+soft drink|la gaseosa|软饮料
+refill|rellenar|续杯
+large|grande (tamaño)|大份
+medium|mediano|中份
+small (size)|pequeño (tamaño)|小份
+extra|adicional|加量的
+half portion|media ración|半份
+rare (meat)|poco hecho|三分熟
+medium (meat)|al punto|五分熟
+well done|muy hecho|全熟
+allergy|la alergia|过敏
+gluten-free|sin gluten|无麸质
+vegan|vegano|纯素的
+recommend (dish)|la recomendación|推荐
+smoking area|la zona de fumadores|吸烟区
+non-smoking|no fumadores|禁烟
+terrace|la terraza|露台座位
+counter|la barra|吧台
+kitchen|la cocina|厨房
+open|abierto|营业中
+closed|cerrado|已关门
+opening hours|el horario de apertura|营业时间
+full (no seats)|completo|客满
+waiting list|la lista de espera|等位名单
+happy hour|la hora feliz|优惠时段
+toast (cheers)|el brindis|祝酒
+hangover|la resaca|宿醉
+drunk|borracho|喝醉的
+split the bill|dividir la cuenta|分摊账单
+my treat|invito yo|我请客
+keep the change|quédese con el cambio|不用找了
+supermarket|el supermercado|超市
+convenience store|la tienda de conveniencia|便利店
+checkout|la caja registradora|收银台
+plastic bag|la bolsa de plástico|塑料袋
+microwave|el microondas|微波炉
+ready meal|la comida preparada|即食餐
+canned food|la comida enlatada|罐头食品
+instant noodles|los fideos instantáneos|方便面
+chewing gum|el chicle|口香糖
+cigarette|el cigarrillo|香烟
+lighter|el mechero|打火机
+newspaper|el periódico|报纸
+magazine|la revista|杂志
+stamp|el sello|邮票
+ATM|el cajero automático|取款机
+restroom|el baño|洗手间

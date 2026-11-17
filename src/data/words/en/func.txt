@@ -1,0 +1,147 @@
+I|/aɪ/|我
+you|/juː/|你
+he|/hiː/|他
+she|/ʃiː/|她
+it|/ɪt/|它
+we|/wiː/|我们
+they|/ðeɪ/|他们
+you all|/juː ɔːl/|你们
+me|/miː/|我（宾格）
+him|/hɪm/|他（宾格）
+her|/hɜːr/|她（宾格）
+us|/ʌs/|我们（宾格）
+them|/ðem/|他们（宾格）
+my|/maɪ/|我的
+your|/jʊr/|你的
+his|/hɪz/|他的 / 她的
+our|/ˈaʊər/|我们的
+their|/ðer/|他们的
+mine|/maɪn/|我的（东西）
+yours|/jɔːrz/|你的（东西）
+myself|/maɪˈself/|我自己
+everyone|/ˈevriːwən/|大家
+someone|/ˈsʌmˌwʌn/|某人
+nobody|/ˈnoʊˌbɑːdiː/|没有人
+something|/ˈsʌmˌθɪŋ/|某物
+nothing|/ˈnʌθɪŋ/|什么都没有
+everything|/ˈevəriːˌθɪŋ/|一切
+anything|/ˈeniːˌθɪŋ/|任何东西
+this|/ðɪs/|这个
+that|/ðæt/|那个
+these|/ðiːz/|这些
+those|/ðoʊz/|那些
+here|/hɪr/|这里
+there|/ðer/|那里
+over there|/ˈoʊvər ðer/|那边
+somewhere|/ˈsʌmˌwer/|某处
+everywhere|/ˈevriːˌwer/|到处
+nowhere|/ˈnoʊˌwer/|哪里都不
+what|/wʌt/|什么
+who|/huː/|谁
+where|/wer/|哪里
+when|/wen/|什么时候
+why|/waɪ/|为什么
+how|/haʊ/|怎么
+which|/wɪtʃ/|哪个
+whose|/huːz/|谁的
+how much|/haʊ mʌtʃ/|多少
+how many|/haʊ ˈmeniː/|多少个
+the|/ðə/|定冠词（那个）
+a|/ə/|不定冠词（一个）
+some|/sʌm/|一些
+any|/ˈeniː/|任何
+each|/iːtʃ/|每个
+every|/ˈevəriː/|每一个
+both|/boʊθ/|两个都
+all|/ɔːl/|全部的
+other|/ˈʌðər/|其他的
+another|/əˈnʌðər/|另一个
+same|/seɪm/|同样的
+such|/sʌtʃ/|这样的
+and|/ænd/|和
+or|/ɔːr/|或者
+but|/bʌt/|但是
+because|/bəˈkʌz/|因为
+so|/soʊ/|所以
+if|/ɪf/|如果
+when (conj.)|/wen/|当…的时候
+while|/waɪl/|当… / 而
+although|/ɔːlˈðoʊ/|虽然
+than|/ðæn/|比
+as|/æz/|像 / 作为
+that (conj.)|/ðæt/|…这件事（连接句子）
+then|/ðen/|那么 / 然后
+also|/ˈɔːlsoʊ/|也
+too|/tuː/|也 / 而且
+either|/ˈiːðər/|也不
+not|/nɑːt/|不
+never|/ˈnevər/|从不
+only|/ˈoʊnliː/|只
+just|/dʒʌst/|刚刚 / 只是
+even|/ˈiːvən/|甚至
+still|/stɪl/|仍然
+already|/ˌɔːlˈrediː/|已经
+yet|/jet/|还
+again|/əˈgen/|又 / 再
+in|/ɪn/|在…里
+on|/ɔːn/|在…上
+at|/æt/|在（某点）
+to|/tuː/|往
+from|/frʌm/|从
+of|/əv/|…的
+with|/wɪð/|和 / 用
+without|/wəˈðaʊt/|没有
+for|/fɔːr/|为了 / 给
+by|/baɪ/|由 / 乘
+about|/əˈbaʊt/|关于
+between|/bəˈtwiːn/|在…之间
+among|/əˈmʌŋ/|在…当中
+before|/bəˈfɔːr/|在…之前
+after|/ˈæftər/|在…之后
+during|/ˈdʊrɪŋ/|在…期间
+until|/ˌʌnˈtɪl/|直到
+since|/sɪns/|自从
+against|/əˈgentst/|反对 / 靠着
+through|/θruː/|穿过
+across|/əˈkrɔːs/|横过 / 在对面
+into|/ˈɪntuː/|进入…里面
+out of|/aʊt əv/|从…出来
+up|/ʌp/|向上
+down|/daʊn/|向下
+over|/ˈoʊvər/|在…上方
+under|/ˈʌndər/|在…下面
+near|/nɪr/|靠近
+far from|/fɑːr frʌm/|离…远
+next to|/nekst tuː/|在…旁边
+in front of|/ɪn frʌnt əv/|在…前面
+behind|/bəˈhaɪnd/|在…后面
+inside|/ɪnˈsaɪd/|里面
+outside|/ˌaʊtˈsaɪd/|外面
+around|/əˈraʊnd/|在…周围
+along|/əˈlɔːŋ/|沿着
+toward|/tɔːrd/|朝着
+according to|/əˈkɔːrdɪŋ tuː/|根据
+instead of|/ɪnˈsted əv/|代替
+because of|/bəˈkʌz əv/|由于
+be|/biː/|是
+be (state)|/biː/|在 / 处于
+have|/hæv/|有
+do|/duː/|做
+can|/kæn/|能
+must|/mʌst/|必须
+want|/wɑːnt/|想要
+need|/niːd/|需要
+there is|/ðer ɪz/|有（存在）
+thing|/θɪŋ/|东西 / 事情
+way|/weɪ/|方式
+place|/pleɪs/|地方
+part|/pɑːrt/|部分
+kind|/kaɪnd/|种类
+side|/saɪd/|边
+top|/tɑːp/|顶部
+bottom|/ˈbɑːtəm/|底部
+middle|/ˈmɪdəl/|中间
+front|/frʌnt/|前面
+back|/bæk/|后面
+left|/left/|左
+right|/raɪt/|右

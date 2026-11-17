@@ -1,0 +1,121 @@
+now|ahora|现在
+today|hoy|今天
+tomorrow|mañana|明天
+yesterday|ayer|昨天
+day after tomorrow|pasado mañana|后天
+day before yesterday|anteayer|前天
+tonight|esta noche|今晚
+morning|la mañana|早上
+noon|el mediodía|中午
+afternoon|la tarde|下午
+evening|el atardecer|傍晚
+night|la noche|夜晚
+midnight|la medianoche|午夜
+dawn|el amanecer|黎明
+day|el día|天
+week|la semana|周
+month|el mes|月
+year|el año|年
+weekend|el fin de semana|周末
+weekday|el día laborable|工作日
+this week|esta semana|这周
+next week|la próxima semana|下周
+last week|la semana pasada|上周
+this month|este mes|这个月
+next month|el próximo mes|下个月
+last month|el mes pasado|上个月
+this year|este año|今年
+next year|el próximo año|明年
+last year|el año pasado|去年
+every day|todos los días|每天
+Monday|lunes|星期一
+Tuesday|martes|星期二
+Wednesday|miércoles|星期三
+Thursday|jueves|星期四
+Friday|viernes|星期五
+Saturday|sábado|星期六
+Sunday|domingo|星期日
+January|enero|一月
+February|febrero|二月
+March|marzo|三月
+April|abril|四月
+May|mayo|五月
+June|junio|六月
+July|julio|七月
+August|agosto|八月
+September|septiembre|九月
+October|octubre|十月
+November|noviembre|十一月
+December|diciembre|十二月
+spring|la primavera|春天
+summer|el verano|夏天
+autumn|el otoño|秋天
+winter|el invierno|冬天
+season|la estación del año|季节
+hour|la hora|小时
+minute|el minuto|分钟
+second (time)|el segundo (tiempo)|秒
+moment|el momento|片刻
+time|el tiempo|时间
+o'clock|en punto|…点整
+half past|y media|…点半
+quarter past|y cuarto|…点一刻
+clock|el reloj|钟表
+calendar|el calendario|日历
+date|la fecha|日期
+birthday|el cumpleaños|生日
+holiday|el día festivo|节日
+vacation|las vacaciones|假期
+anniversary|el aniversario|纪念日
+Christmas|la Navidad|圣诞节
+New Year|el Año Nuevo|新年
+schedule|el horario|时间表
+appointment|la cita|预约 / 约会
+deadline|la fecha límite|截止日期
+past|el pasado|过去
+present|el presente|现在
+future|el futuro|将来
+century|el siglo|世纪
+age|la edad|年龄
+period|el período|时期
+beginning|el principio|开始
+end|el final|结束
+early|temprano|早
+late|tarde|晚
+soon|pronto|很快
+later|más tarde|待会儿
+before (adv.)|antes|以前
+after (adv.)|después|之后
+recently|recientemente|最近
+long ago|hace mucho|很久以前
+just now|hace un momento|刚才
+right now|ahora mismo|马上
+always|siempre|总是
+usually|normalmente|通常
+often|a menudo|经常
+sometimes|a veces|有时
+rarely|rara vez|很少
+daily|a diario|每天地
+weekly|cada semana|每周
+monthly|cada mes|每月
+yearly|cada año|每年
+forever|para siempre|永远
+ago|hace|…之前
+for a long time|por mucho tiempo|很长时间
+all day|todo el día|一整天
+on time|a tiempo|准时
+in a hurry|con prisa|匆忙
+at the same time|al mismo tiempo|同时
+meanwhile|mientras tanto|与此同时
+finally|por fin|终于
+suddenly|de repente|突然
+immediately|inmediatamente|立刻
+gradually|poco a poco|渐渐
+start|empezar|开始
+finish|terminar|结束
+last (v.)|durar|持续
+wait|esperar|等
+be late|llegar tarde|迟到
+hurry|darse prisa|赶紧
+spend (time)|pasar (tiempo)|度过
+postpone|aplazar|推迟

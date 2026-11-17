@@ -1,0 +1,75 @@
+hello|hola|你好
+hi|buenas|嗨
+good morning|buenos días|早上好
+good afternoon|buenas tardes|下午好
+good evening|buenas noches|晚上好 / 晚安
+goodbye|adiós|再见
+bye|chao|拜拜
+see you later|hasta luego|回头见
+see you tomorrow|hasta mañana|明天见
+see you soon|hasta pronto|一会儿见
+thank you|gracias|谢谢
+thanks a lot|muchas gracias|非常感谢
+you're welcome|de nada|不客气
+please|por favor|请
+sorry|perdón|对不起
+I'm sorry|lo siento|很抱歉
+excuse me|disculpe|劳驾 / 打扰一下
+no problem|no hay problema|没问题
+yes|sí|是
+no|no|不
+okay|vale|好的
+of course|claro|当然
+maybe|quizás|也许
+that's right|así es|对的
+I see|ya veo|原来如此
+really|de verdad|真的
+I understand|entiendo|我明白
+I don't understand|no entiendo|我不明白
+I don't know|no sé|我不知道
+nice to meet you|mucho gusto|很高兴认识你
+how are you|cómo estás|你好吗
+I'm fine|estoy bien|我很好
+and you|y tú|你呢
+what's your name|cómo te llamas|你叫什么名字
+my name is|me llamo|我叫…
+welcome|bienvenido|欢迎
+come in|adelante|请进
+congratulations|felicidades|恭喜
+happy birthday|feliz cumpleaños|生日快乐
+good luck|buena suerte|祝你好运
+cheers|salud|干杯
+enjoy your meal|buen provecho|用餐愉快
+take care|cuídate|保重
+be careful|ten cuidado|小心
+get well soon|que te mejores|早日康复
+help|socorro|救命
+wait a moment|un momento|等一下
+one more time|otra vez|再一次
+slowly please|más despacio por favor|请慢一点
+can you help me|puede ayudarme|能帮我吗
+how much is it|cuánto cuesta|多少钱
+where is it|dónde está|在哪里
+what is this|qué es esto|这是什么
+what time is it|qué hora es|几点了
+I would like|quisiera|我想要
+I need|necesito|我需要
+I like it|me gusta|我喜欢
+I don't like it|no me gusta|我不喜欢
+it's fine|está bien|可以 / 没事
+it doesn't matter|no importa|没关系
+let's go|vamos|走吧
+come here|ven aquí|过来
+look|mira|你看
+hey|oye|听着 / 喂
+well|bueno (pues)|嗯 / 那么
+wow|vaya|哇
+great|genial|太棒了
+what a pity|qué lástima|真遗憾
+long time no see|cuánto tiempo|好久不见
+good night|que descanses|晚安（睡前）
+have a nice day|que tengas un buen día|祝你今天愉快
+me too|yo también|我也是
+me neither|yo tampoco|我也不
+do you speak English|hablas inglés|你会说英语吗
+I speak a little|hablo un poco|我会说一点

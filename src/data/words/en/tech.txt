@@ -1,0 +1,91 @@
+phone|/foʊn/|电话
+cell phone|/sel foʊn/|手机
+smartphone|/ˈsmɑːrtˌfoʊn/|智能手机
+computer|/kəmˈpjuːtər/|电脑
+laptop|/ˈlæpˌtɑːp/|笔记本电脑
+tablet|/ˈtæblət/|平板
+screen|/skriːn/|屏幕
+keyboard|/ˈkiːˌbɔːrd/|键盘
+mouse|/maɪs/|鼠标
+printer|/ˈprɪntər/|打印机
+camera|/ˈkæmərə/|相机
+headphones|/ˈhedˌfoʊnz/|耳机
+speaker|/ˈspiːkər/|音箱
+microphone|/ˈmaɪkrəˌfoʊn/|麦克风
+cable|/ˈkeɪbəl/|数据线
+power|/ˈpaʊər/|电源
+internet|/ˈɪntərˌnet/|互联网
+network|/ˈnetˌwɜːrk/|网络
+wifi|/ˈwaɪfaɪ/|无线网
+signal|/ˈsɪgnəl/|信号
+website|/ˈwebˌsaɪt/|网站
+web page|/web peɪdʒ/|网页
+app|/æp/|应用
+software|/ˈsɔːftˌwer/|软件
+program|/ˈproʊˌgræm/|程序
+system|/ˈsɪstəm/|系统
+account (online)|/əˈkaʊnt/|账号
+username|/ˈjuːzərˌneɪm/|用户名
+password|/ˈpæsˌwɜːrd/|密码
+PIN|/pɪn/|数字密码
+settings|/ˈsetɪŋz/|设置
+search|/sɜːrtʃ/|搜索
+link|/lɪŋk/|链接
+download|/ˈdaʊnˌloʊd/|下载
+update|/ˌʌpˈdeɪt/|更新
+backup|/ˈbækˌʌp/|备份
+storage|/ˈstɔːrɪdʒ/|存储
+memory|/ˈmeməriː/|内存
+folder|/ˈfoʊldər/|文件夹
+text message|/tekst ˈmesɪdʒ/|短信
+notification|/ˌnoʊtəfəˈkeɪʃən/|通知
+phone number|/foʊn ˈnʌmbər/|电话号码
+email address|/ˈiːˌmeɪl ˈæˌdres/|邮箱地址
+contact (n.)|/ˈkɑːntækt/|联系人
+video|/ˈvɪdiːoʊ/|视频
+image|/ˈɪmɪdʒ/|图片
+audio|/ˈɔːdiːoʊ/|音频
+recording|/rəˈkɔːrdɪŋ/|录音
+social media|/ˈsoʊʃəl ˈmiːdiːə/|社交媒体
+post|/poʊst/|帖子
+comment|/ˈkɑːˌment/|评论
+follower|/ˈfɑːloʊər/|粉丝
+blog|/blɔːg/|博客
+online|/ˌɑːnˈlaɪn/|在线
+offline|/ˌɔːfˈlaɪn/|离线
+QR code|/ˌkjuːˈɑːr koʊd/|二维码
+error|/ˈerər/|错误
+bug|/bʌg/|程序错误
+function|/ˈfʌŋʃən/|功能
+machine|/məˈʃiːn/|机器
+robot|/ˈroʊˌbɑːt/|机器人
+artificial intelligence|/ˌɑːrtəˈfɪʃəl ɪnˈtelədʒənts/|人工智能
+digital|/ˈdɪdʒətl/|数字的
+wireless|/ˈwaɪərləs/|无线的
+SIM card|/sɪm kɑːrd/|SIM 卡
+data plan|/ˈdætə plæn/|流量套餐
+call (v.)|/kɔːl/|打电话
+hang up|/hæŋ ʌp/|挂电话
+text (v.)|/tekst/|发消息
+charge|/tʃɑːrdʒ/|充电
+turn on (device)|/tɜːrn ɔːn/|开机
+restart|/riːˈstɑːrt/|重启
+log in|/lɔːg ɪn/|登录
+log out|/lɔːg aʊt/|登出
+sign up|/saɪn ʌp/|注册
+search (v.)|/sɜːrtʃ/|搜索
+click|/klɪk/|点击
+type|/taɪp/|打字
+save (file)|/seɪv/|保存
+delete|/dəˈliːt/|删除
+download (v.)|/ˈdaʊnˌloʊd/|下载
+upload|/ˌʌpˈloʊd/|上传
+install|/ɪnˈstɔːl/|安装
+update (v.)|/ˌʌpˈdeɪt/|更新
+connect|/kəˈnekt/|连接
+disconnect|/ˌdɪskəˈnekt/|断开
+scan|/skæn/|扫描
+record|/ˈrekərd/|录制
+take a photo|/teɪk ə ˈfoʊtoʊ/|拍照
+share a link|/ʃer ə lɪŋk/|分享链接
+it doesn't work|/ɪt ˈdʌznt wɜːrk/|它坏了 / 不能用

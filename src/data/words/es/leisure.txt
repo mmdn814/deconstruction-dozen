@@ -1,0 +1,90 @@
+la afición||爱好
+el tiempo libre||空闲时间
+el viaje||旅行
+el turismo||旅游
+el trayecto||旅途
+la excursión||游览
+el guía||导游
+la guía de viaje||旅游指南
+el alojamiento||住宿
+el registro de entrada||入住登记
+la salida del hotel||退房
+la habitación individual||单人间
+la habitación doble||双人间
+desayuno incluido||含早餐
+la habitación libre||空房
+la entrada (precio)||门票
+la tienda de recuerdos||纪念品店
+la fiesta||节日 / 派对
+los fuegos artificiales||烟花
+el evento||活动
+el concierto||音乐会
+el espectáculo||演出
+la película||电影
+la serie||电视剧
+los dibujos animados||动画片
+el programa de televisión||电视节目
+las noticias||新闻
+el juego||游戏
+el videojuego||电子游戏
+la canción||歌
+el karaoke||卡拉 OK
+el baile||舞蹈
+el piano||钢琴
+la guitarra||吉他
+el instrumento||乐器
+la lectura||阅读
+la pintura||绘画
+la fotografía||摄影
+la exposición||展览
+el deporte||运动
+el partido||比赛
+el jugador||运动员
+el fútbol||足球
+el baloncesto||篮球
+el tenis||网球
+el béisbol||棒球
+el voleibol||排球
+la natación||游泳
+correr (deporte)||跑步
+el ciclismo||骑行
+el yoga||瑜伽
+el esquí||滑雪
+el senderismo||徒步
+la acampada||露营
+la pesca||钓鱼
+la escalada||攀岩
+el paseo||散步
+el pícnic||野餐
+la fiesta (reunión)||聚会
+la cita romántica||约会
+el descanso||休息
+la siesta||午睡
+la diversión||乐趣
+el recuerdo (memoria)||回忆
+el campeón||冠军
+el aficionado||粉丝
+la regla del juego||规则
+el árbitro||裁判
+el entrenador||教练
+el músico||音乐家
+el pintor||画家
+el personaje||角色
+el cuento||故事
+el chiste||笑话
+el ajedrez||国际象棋
+las cartas (baraja)||扑克牌
+la lotería||彩票
+dar un paseo||去散步
+ir de viaje||去旅行
+tomar vacaciones||度假
+reservar una habitación||订房间
+hacer turismo||观光
+divertirse||玩得开心
+relajarse||放松
+hacer deporte||做运动
+tocar un instrumento||演奏乐器
+ver la televisión||看电视
+ir al cine||去看电影
+salir con amigos||和朋友出去玩
+coleccionar sellos||集邮

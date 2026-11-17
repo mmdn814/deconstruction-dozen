@@ -1,0 +1,81 @@
+la enfermedad||疾病
+el resfriado||感冒
+la gripe||流感
+la fiebre||发烧
+la tos||咳嗽
+el estornudo||喷嚏
+el dolor de cabeza||头痛
+el dolor de estómago||胃痛
+el dolor de muelas||牙痛
+el dolor de garganta||喉咙痛
+la diarrea||腹泻
+las náuseas||恶心
+el mareo||头晕
+la lesión||受伤
+la herida||伤口
+la quemadura||烧伤
+la fractura||骨折
+la reacción alérgica||过敏反应
+el virus||病毒
+la infección||感染
+el síntoma||症状
+el estado de salud||身体状况
+la presión arterial||血压
+el termómetro||体温计
+el chequeo||体检
+el examen médico||检查
+la radiografía||X 光
+la inyección||打针
+la operación||手术
+el tratamiento||治疗
+la prevención||预防
+la vacuna||疫苗
+el medicamento||药
+la pastilla||药片
+el analgésico||止痛药
+el antibiótico||抗生素
+la pomada||药膏
+la venda||绷带
+la tirita||创可贴
+la receta médica||处方
+el efecto secundario||副作用
+la dosis||剂量
+el seguro médico||医疗保险
+la emergencia||紧急情况
+las urgencias||急诊
+la ambulancia||救护车
+el paciente||病人
+el dentista||牙医
+el cirujano||外科医生
+el farmacéutico||药剂师
+la sala de espera||候诊室
+la cita médica||就诊预约
+el embarazo||怀孕
+la discapacidad||残疾
+la vida||生命 / 生活
+la muerte||死亡
+el cáncer||癌症
+la diabetes||糖尿病
+la depresión||抑郁症
+el insomnio||失眠
+la fatiga||疲劳
+la dieta||饮食
+la vitamina||维生素
+el ejercicio||锻炼
+el sueño (dormir)||睡眠
+enfermarse||生病
+resfriarse||感冒
+toser||咳嗽
+estornudar||打喷嚏
+vomitar||呕吐
+sangrar||流血
+hincharse||肿
+recuperarse||康复
+curar||治愈
+tomar medicina||吃药
+ir al médico||看医生
+estar ingresado||住院
+adelgazar||减肥
+engordar||发胖
+estar mareado||头晕
+me duele aquí||我这里疼

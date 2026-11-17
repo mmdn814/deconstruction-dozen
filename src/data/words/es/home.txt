@@ -1,0 +1,107 @@
+la habitación||房间
+el piso||公寓（套房）
+el estudio||单间公寓
+el alquiler||房租
+el inquilino||租客
+el contrato||合同
+la fianza||押金
+la inmobiliaria||房产中介
+amueblado||带家具的
+los suministros||水电煤
+la mudanza||搬家
+el salón||客厅
+el dormitorio||卧室
+el comedor (de casa)||餐厅（家里）
+el cuarto de baño||浴室
+el balcón||阳台
+el garaje||车库
+el patio||院子
+el ático||阁楼
+la puerta||门
+la ventana||窗户
+la pared||墙
+el suelo||地板
+el techo||天花板
+la llave||钥匙
+la cerradura||锁
+el timbre||门铃
+el buzón||信箱
+los muebles||家具
+el escritorio||书桌
+la silla||椅子
+el sofá||沙发
+el sillón||扶手椅
+la cama||床
+el colchón||床垫
+la almohada||枕头
+la manta||毯子
+la sábana||床单
+el armario||衣柜
+el cajón||抽屉
+el estante||架子
+la estantería||书架
+el espejo||镜子
+la lámpara||灯
+la luz||灯光 / 电
+la cortina||窗帘
+la alfombra||地毯
+el cuadro||画
+el jarrón||花瓶
+el interruptor||开关
+el enchufe||插座
+la pila||电池
+el electrodoméstico||家电
+la nevera||冰箱
+el congelador||冷冻柜
+el horno||烤箱
+la estufa||炉灶
+la lavadora||洗衣机
+la secadora||烘干机
+el lavavajillas||洗碗机
+la aspiradora||吸尘器
+el aire acondicionado||空调
+la calefacción||暖气
+el ventilador||电风扇
+la televisión||电视
+el secador de pelo||吹风机
+la plancha||熨斗
+el fregadero||水槽
+el grifo||水龙头
+la bañera||浴缸
+la ducha||淋浴
+el inodoro||马桶
+el gas||煤气
+la electricidad||电
+la factura del agua||水费单
+la basura||垃圾
+el cubo de basura||垃圾桶
+el reciclaje||回收
+las tareas domésticas||家务
+la limpieza||清洁
+la colada||待洗衣物
+el polvo||灰尘
+el ruido||噪音
+la fuga||漏水
+la avería||故障
+el apagón||停电
+el incendio||火灾
+el terremoto||地震
+el fontanero||水管工
+el electricista||电工
+el portero||门卫
+el administrador||物业管理员
+el vecino de arriba||楼上邻居
+vivir solo||独居
+compartir piso||合租
+instalarse||搬进
+barrer||扫地
+fregar||拖地
+lavar los platos||洗碗
+hacer la colada||洗衣服
+tender la ropa||晾衣服
+hacer la cama||铺床
+sacar la basura||倒垃圾
+acogedor||温馨的
+espacioso||宽敞的
+ruidoso (lugar)||吵闹的
+luminoso||采光好的

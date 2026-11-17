@@ -1,0 +1,146 @@
+food|/fuːd/|食物
+drink (n.)|/drɪŋk/|饮料
+meal|/miːl/|一顿饭
+breakfast|/ˈbrekfəst/|早餐
+lunch|/lʌnʃ/|午餐
+dinner|/ˈdɪnər/|晚餐
+snack|/snæk/|点心
+rice|/raɪs/|米饭
+bread|/bred/|面包
+noodles|/ˈnuːdəlz/|面条
+pasta|/ˈpɑːstə/|意大利面
+meat|/miːt/|肉
+beef|/biːf/|牛肉
+pork|/pɔːrk/|猪肉
+chicken|/ˈtʃɪkən/|鸡肉
+lamb|/læm/|羊肉
+fish|/fɪʃ/|鱼
+seafood|/ˈsiːˌfuːd/|海鲜
+shrimp|/ʃrɪmp/|虾
+crab|/kræb/|螃蟹
+egg|/eg/|鸡蛋
+ham|/hæm/|火腿
+sausage|/ˈsɔːsɪdʒ/|香肠
+bacon|/ˈbeɪkən/|培根
+vegetable|/ˈvedʒtəbəl/|蔬菜
+fruit|/fruːt/|水果
+potato|/pəˈteɪtoʊ/|土豆
+tomato|/təˈmeɪtoʊ/|番茄
+onion|/ˈʌnjən/|洋葱
+garlic|/ˈgɑːrlɪk/|大蒜
+carrot|/ˈkerət/|胡萝卜
+cucumber|/ˈkjuːˌkʌmbər/|黄瓜
+lettuce|/ˈletəs/|生菜
+cabbage|/ˈkæbɪdʒ/|卷心菜
+spinach|/ˈspɪnɪtʃ/|菠菜
+pepper (vegetable)|/ˈpepər/|青椒
+chili|/ˈtʃɪliː/|辣椒
+corn|/kɔːrn/|玉米
+bean|/biːn/|豆子
+pea|/piː/|豌豆
+mushroom|/ˈmʌʃˌruːm/|蘑菇
+pumpkin|/ˈpʌmpkən/|南瓜
+eggplant|/ˈegˌplænt/|茄子
+apple|/ˈæpəl/|苹果
+orange|/ˈɔːrəndʒ/|橙子
+banana|/bəˈnænə/|香蕉
+grape|/greɪp/|葡萄
+strawberry|/ˈstrɔːˌberiː/|草莓
+lemon|/ˈlemən/|柠檬
+peach|/piːtʃ/|桃子
+pear|/per/|梨
+watermelon|/ˈwɔːtərˌmelən/|西瓜
+melon|/ˈmelən/|甜瓜
+pineapple|/ˈpaɪˌnæpəl/|菠萝
+mango|/ˈmæŋgoʊ/|芒果
+cherry|/ˈtʃeriː/|樱桃
+avocado|/ˌɑːvəˈkɑːdoʊ/|牛油果
+coconut|/ˈkoʊkəˌnʌt/|椰子
+nut|/nʌt/|坚果
+milk|/mɪlk/|牛奶
+cheese|/tʃiːz/|奶酪
+butter|/ˈbʌtər/|黄油
+yogurt|/ˈjoʊgərt/|酸奶
+cream|/kriːm/|奶油
+water|/ˈwɔːtər/|水
+tea|/tiː/|茶
+coffee|/ˈkɔːfiː/|咖啡
+juice|/dʒuːs/|果汁
+soda|/ˈsoʊdə/|汽水
+beer|/bɪr/|啤酒
+wine|/waɪn/|葡萄酒
+alcohol|/ˈælkəˌhɔːl/|酒精
+ice|/aɪs/|冰
+sugar|/ˈʃʊgər/|糖
+salt|/sɔːlt/|盐
+pepper (spice)|/ˈpepər/|胡椒
+oil|/ɔɪl/|油
+vinegar|/ˈvɪnəgər/|醋
+sauce|/sɔːs/|酱
+soy sauce|/sɔɪ sɔːs/|酱油
+honey|/ˈhʌniː/|蜂蜜
+jam|/dʒæm/|果酱
+flour|/ˈflaʊər/|面粉
+spice|/spaɪs/|香料
+soup|/suːp/|汤
+salad|/ˈsæləd/|沙拉
+sandwich|/ˈsænˌdwɪtʃ/|三明治
+hamburger|/ˈhæmˌbɜːrgər/|汉堡
+pizza|/ˈpiːtsə/|披萨
+steak|/steɪk/|牛排
+fried chicken|/fraɪd ˈtʃɪkən/|炸鸡
+french fries|/frenʃ fraɪz/|薯条
+omelet|/ˈɑːmlət/|煎蛋饼
+stew|/stuː/|炖菜
+dumpling|/ˈdʌmplɪŋ/|饺子
+cake|/keɪk/|蛋糕
+cookie|/ˈkʊkiː/|饼干
+chocolate|/ˈtʃɑːkələt/|巧克力
+ice cream|/aɪs kriːm/|冰淇淋
+candy|/ˈkændiː/|糖果
+dessert|/dəˈzɜːrt/|甜点
+pie|/paɪ/|派
+flavor|/ˈfleɪvər/|味道
+smell (n.)|/smel/|气味
+appetite|/ˈæpəˌtaɪt/|食欲
+ingredient|/ɪnˈgriːdiːənt/|配料
+recipe|/ˈresəˌpiː/|食谱
+portion|/ˈpɔːrʃən/|一份
+vegetarian|/ˌvedʒəˈteriːən/|素食的
+frozen|/ˈfroʊzən/|冷冻的
+roasted|/ˈroʊstəd/|烤的
+boiled|/bɔɪld/|水煮的
+fried|/fraɪd/|油炸的
+grilled|/grɪld/|铁板烤的
+cereal|/ˈsɪriːəl/|麦片
+toast|/toʊst/|吐司
+tuna|/ˈtuːnə/|金枪鱼
+salmon|/ˈsæmən/|三文鱼
+squid|/skwɪd/|鱿鱼
+octopus|/ˈɑːktəpəs/|章鱼
+turkey|/ˈtɜːrkiː/|火鸡
+duck meat|/dʌk miːt/|鸭肉
+rib|/rɪb/|排骨
+meatball|/ˈmiːtˌbɔːl/|肉丸
+tofu|/ˌtoʊˈfuː/|豆腐
+olive|/ˈɑːləv/|橄榄
+olive oil|/ˈɑːləv ɔɪl/|橄榄油
+mustard|/ˈmʌstərd/|芥末酱
+ketchup|/ˈketʃəp/|番茄酱
+mayonnaise|/ˈmeɪəˌneɪz/|蛋黄酱
+cinnamon|/ˈsɪnəmən/|肉桂
+ginger|/ˈdʒɪndʒər/|生姜
+parsley|/ˈpɑːrsliː/|欧芹
+almond|/ˈɑːlmənd/|杏仁
+peanut|/ˈpiːˌnʌt/|花生
+raisin|/ˈreɪzn/|葡萄干
+pudding|/ˈpʊdɪŋ/|布丁
+donut|/ˈdoʊnʌt/|甜甜圈
+pancake|/ˈpænˌkeɪk/|松饼
+popcorn|/ˈpɑːpˌkɔːrn/|爆米花
+chips|/tʃɪps/|薯片
+milkshake|/ˈmɪlkˌʃeɪk/|奶昔
+hot chocolate|/hɑːt ˈtʃɑːkələt/|热巧克力
+lemonade|/ˌleməˈneɪd/|柠檬水
+mineral water|/ˈmɪnərəl ˈwɔːtər/|矿泉水
+ice cube|/aɪs kjuːb/|冰块

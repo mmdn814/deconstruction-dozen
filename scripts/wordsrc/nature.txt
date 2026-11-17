@@ -1,0 +1,128 @@
+weather|el tiempo (clima)|天气
+weather forecast|el pronóstico del tiempo|天气预报
+sun|el sol|太阳
+rain|la lluvia|雨
+snow|la nieve|雪
+wind|el viento|风
+cloud|la nube|云
+storm|la tormenta|暴风雨
+thunder|el trueno|雷
+lightning|el relámpago|闪电
+fog|la niebla|雾
+rainbow|el arcoíris|彩虹
+hurricane|el huracán|飓风
+flood|la inundación|洪水
+drought|la sequía|干旱
+climate|el clima|气候
+humidity|la humedad|湿度
+sunny|soleado|晴朗的
+cloudy|nublado|多云的
+rainy|lluvioso|下雨的
+windy|ventoso|刮风的
+humid|húmedo|潮湿的
+sky|el cielo|天空
+moon|la luna|月亮
+star|la estrella|星星
+planet|el planeta|行星
+earth|la tierra|地球 / 土地
+universe|el universo|宇宙
+air|el aire|空气
+fire (n.)|el fuego|火
+smoke (n.)|el humo|烟
+soil|el suelo (tierra)|土壤
+stone|la piedra|石头
+rock|la roca|岩石
+sand|la arena|沙子
+wave|la ola|波浪
+nature|la naturaleza|自然
+environment|el medio ambiente|环境
+pollution|la contaminación|污染
+plant|la planta (vegetal)|植物
+tree|el árbol|树
+flower|la flor|花
+grass|la hierba|草
+leaf|la hoja|叶子
+branch (tree)|la rama|树枝
+root|la raíz|根
+seed|la semilla|种子
+rose|la rosa|玫瑰
+pine|el pino|松树
+bamboo|el bambú|竹子
+animal|el animal|动物
+dog|el perro|狗
+cat|el gato|猫
+bird|el pájaro|鸟
+horse|el caballo|马
+cow|la vaca|奶牛
+pig|el cerdo (animal)|猪
+sheep|la oveja|绵羊
+goat|la cabra|山羊
+chicken (animal)|la gallina|母鸡
+duck|el pato|鸭子
+rabbit|el conejo|兔子
+mouse (animal)|el ratón (animal)|老鼠
+monkey|el mono|猴子
+bear|el oso|熊
+wolf|el lobo|狼
+fox|el zorro|狐狸
+deer|el ciervo|鹿
+elephant|el elefante|大象
+lion|el león|狮子
+tiger|el tigre|老虎
+panda|el oso panda|熊猫
+snake|la serpiente|蛇
+frog|la rana|青蛙
+turtle|la tortuga|乌龟
+whale|la ballena|鲸鱼
+dolphin|el delfín|海豚
+shark|el tiburón|鲨鱼
+insect|el insecto|昆虫
+mosquito|el mosquito|蚊子
+fly (insect)|la mosca|苍蝇
+bee|la abeja|蜜蜂
+butterfly|la mariposa|蝴蝶
+ant|la hormiga|蚂蚁
+spider|la araña|蜘蛛
+cockroach|la cucaracha|蟑螂
+pet|la mascota|宠物
+wing|el ala|翅膀
+tail|la cola (de animal)|尾巴
+bloom|florecer|开花
+wither|marchitarse|枯萎
+bark|ladrar|（狗）叫
+disaster|el desastre|灾害
+energy (resource)|la energía (recurso)|能源
+metal|el metal|金属
+iron (metal)|el hierro|铁
+gold (metal)|el oro|金
+silver (metal)|la plata|银
+glass (material)|el vidrio|玻璃
+plastic|el plástico|塑料
+wood|la madera|木头
+sunrise|la salida del sol|日出
+sunset|la puesta de sol|日落
+shadow|la sombra|影子
+heat|el calor|炎热
+cold (n.)|el frío|寒冷
+ice (nature)|el hielo natural|冰（自然）
+frost|la escarcha|霜
+hail|el granizo|冰雹
+breeze|la brisa|微风
+tide|la marea|潮汐
+volcano|el volcán|火山
+jungle|la selva|丛林
+swamp|el pantano|沼泽
+stream|el arroyo|小溪
+pond|el estanque|池塘
+cliff|el acantilado|悬崖
+peak|el pico|山峰
+mud|el barro|泥
+feather|la pluma|羽毛
+fur|el pelaje|毛皮
+horn|el cuerno|角
+nest|el nido|鸟巢
+cage|la jaula|笼子
+fruit tree|el árbol frutal|果树
+bush|el arbusto|灌木
+thorn|la espina|刺
+harvest|la cosecha|收成

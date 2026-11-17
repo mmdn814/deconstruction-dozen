@@ -1,0 +1,120 @@
+think|pensar|想
+believe|creer|相信
+know|saber|知道
+know (someone)|conocer|认识
+understand|comprender|理解
+realize|darse cuenta|意识到
+notice|notar|注意到
+imagine|imaginar|想象
+guess|adivinar|猜
+doubt|dudar|怀疑
+suppose|suponer|假设
+expect|esperar que|预期
+hope (v.)|tener esperanza|希望
+wish|desear|祝愿 / 想要
+dream (v.)|soñar|做梦
+plan|planear|计划
+intend|tener la intención|打算
+prefer|preferir|更喜欢
+compare|comparar|比较
+judge|juzgar|判断
+agree|estar de acuerdo|同意
+disagree|no estar de acuerdo|不同意
+accept|aceptar|接受
+refuse|rechazar|拒绝
+allow|permitir|允许
+forbid|prohibir|禁止
+promise|prometer|承诺
+swear|jurar|发誓
+lie|mentir|撒谎
+cheat|engañar|欺骗
+trust|confiar|信任
+respect|respetar|尊重
+admire|admirar|钦佩
+forgive|perdonar|原谅
+blame|culpar|责怪
+praise|elogiar|表扬
+scold|regañar|责骂
+complain|quejarse|抱怨
+argue|discutir|争论
+fight|pelear|打架 / 吵架
+talk|conversar|交谈
+chat|charlar|聊天
+discuss|debatir|讨论
+suggest|sugerir|建议
+recommend|recomendar|推荐
+advise|aconsejar|劝告
+warn|advertir|警告
+remind|hacer recordar|提醒
+inform|informar|通知
+announce|anunciar|宣布
+report|reportar|报告
+describe|describir|描述
+mention|mencionar|提到
+repeat|repetir|重复
+translate|traducir|翻译
+pronounce|pronunciar|发音
+spell|deletrear|拼写
+mean|significar|意思是
+express|expresar|表达
+communicate|comunicar|沟通
+contact|contactar|联系
+reply|contestar|回复
+request|solicitar|请求
+demand|exigir|要求
+offer|ofrecer|提供
+propose|proponer|提议
+persuade|convencer|说服
+encourage|animar|鼓励
+support|apoyar|支持
+cooperate|cooperar|合作
+compete|competir|竞争
+attend|asistir|出席
+participate|participar|参加
+organize|organizar|组织
+manage|gestionar|管理
+lead|dirigir|领导
+obey|obedecer|服从
+solve|resolver|解决
+discover|descubrir|发现
+invent|inventar|发明
+create|crear|创造
+design|diseñar|设计
+research|investigar|研究
+analyze|analizar|分析
+test|poner a prueba|测试
+prove|probar (demostrar)|证明
+confirm|confirmar|确认
+correct|corregir|改正
+make a mistake|equivocarse|犯错
+succeed in|lograr|做到
+give up|rendirse|放弃
+try hard|esforzarse|努力
+challenge|desafiar|挑战
+achieve|conseguir (un objetivo)|实现
+experience|experimentar|经历
+enjoy|disfrutar|享受
+suffer|sufrir|受苦
+bear (v.)|soportar|忍受
+regret|arrepentirse|后悔
+miss (someone)|echar de menos|想念
+care|importar|在乎
+mind (v.)|molestar|介意
+bother|incomodar|打扰
+surprise|sorprender|使惊讶
+scare|asustar|吓
+amuse|divertir|逗乐
+get used to|acostumbrarse|习惯
+pay attention|prestar atención|注意
+concentrate|concentrarse|集中
+ignore|ignorar|忽视
+pretend|fingir|假装
+behave|comportarse|表现
+treat|tratar|对待
+protect|proteger|保护
+defend|defender|保卫
+attack|atacar|攻击
+punish|castigar|惩罚
+vote|votar|投票
+pray|rezar|祈祷
+celebrate|celebrar|庆祝

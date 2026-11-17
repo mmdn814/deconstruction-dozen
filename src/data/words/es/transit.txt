@@ -1,0 +1,105 @@
+la estación||车站
+el tren||火车
+el metro (transporte)||地铁
+el tren de alta velocidad||高铁
+el autobús||公交车
+el autocar||长途客车
+el tranvía||有轨电车
+el taxi||出租车
+el coche||汽车
+la bicicleta||自行车
+la moto||摩托车
+el camión||卡车
+el avión||飞机
+el barco||船
+el ferri||渡轮
+el aeropuerto||机场
+el puerto||港口
+la parada de autobús||公交站
+el andén||站台
+la vía||轨道 / 站台号
+el billete (de viaje)||车票
+la taquilla||售票处
+la máquina de billetes||售票机
+de ida||单程
+de ida y vuelta||往返
+el abono||月票 / 通票
+el pasaje||车费
+el asiento reservado||对号座
+el asiento de ventanilla||靠窗座
+el asiento de pasillo||靠过道座
+primera clase||头等舱
+el horario de trenes||时刻表
+la salida (de viaje)||出发
+la llegada||到达
+el retraso||延误
+la cancelación||取消
+el transbordo||换乘
+la línea||线路
+la ruta||路线
+la dirección (sentido)||方向
+el destino||目的地
+la terminal||航站楼 / 终点站
+la próxima parada||下一站
+el último tren||末班车
+la hora punta||高峰时段
+el pasajero||乘客
+el revisor||检票员
+el piloto||飞行员
+el vuelo||航班
+el embarque||登机
+la tarjeta de embarque||登机牌
+la puerta de embarque||登机口
+el pasaporte||护照
+el visado||签证
+la aduana||海关
+el control de pasaportes||入境检查
+la recogida de equipaje||行李提取
+el equipaje de mano||随身行李
+la maleta||行李箱
+la mochila||背包
+la taquilla (consigna)||储物柜
+objetos perdidos||失物招领
+la carretera||公路
+la calle||街道
+la avenida||大道
+la autopista||高速公路
+el cruce||十字路口
+el semáforo||红绿灯
+el paso de peatones||人行横道
+la esquina||拐角
+el puente||桥
+el túnel||隧道
+la acera||人行道
+el aparcamiento||停车场
+la gasolinera||加油站
+el mapa||地图
+el norte||北
+el sur||南
+el este||东
+el oeste||西
+todo recto||一直往前
+girar a la izquierda||左转
+girar a la derecha||右转
+al fondo||在尽头
+el atajo||近路
+de camino||在路上
+el tráfico||交通
+el atasco||堵车
+el accidente||事故
+el carné de conducir||驾照
+el cinturón de seguridad||安全带
+el coche de alquiler||租的车
+la gasolina||汽油
+la rueda||轮子
+el motor||发动机
+el freno||刹车
+el casco||头盔
+el peatón||行人
+el límite de velocidad||限速
+la multa||罚款
+cómo llego a||怎么去…
+está lejos||远吗
+subir al coche||上车
+coger un taxi||打车
+perder el autobús||错过公交

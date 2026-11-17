@@ -1,0 +1,128 @@
+go|/goʊ/|去
+come|/kʌm/|来
+return|/rəˈtɜːrn/|回来
+go back|/goʊ bæk/|回去
+arrive|/əˈraɪv/|到达
+leave|/liːv/|离开
+go out|/goʊ aʊt/|出去
+enter|/ˈentər/|进入
+go up|/goʊ ʌp/|上去
+go down|/goʊ daʊn/|下去
+pass (v.)|/pæs/|经过
+cross|/krɔːs/|穿过
+turn|/tɜːrn/|转弯
+follow|/ˈfɑːloʊ/|跟随
+move|/muːv/|移动
+move (house)|/muːv/|搬家
+stay|/steɪ/|留下
+remain|/rəˈmeɪn/|保持
+travel|/ˈtrævəl/|旅行
+drive|/draɪv/|开车
+ride|/raɪd/|骑
+fly|/flaɪ/|飞
+sail|/seɪl/|航行
+get on|/get ɔːn/|上车
+get off|/get ɔːf/|下车
+transfer|/træntsˈfɜːrɪŋ/|换乘
+climb|/klaɪm/|爬
+fall|/fɔːl/|掉落
+drop|/drɑːp/|弄掉
+slip|/slɪp/|滑倒
+escape|/əˈskeɪp/|逃跑
+chase|/tʃeɪs/|追
+hurry up|/ˈhɜːriː ʌp/|赶快
+get lost|/get lɔːst/|迷路
+approach|/əˈproʊtʃ/|靠近
+go away|/goʊ əˈweɪ/|远离
+gather|/ˈgæðər/|聚集
+separate|/ˈsepərət/|分开
+change (v.)|/tʃeɪndʒ/|改变
+become|/bəˈkʌm/|变成
+increase|/ɪnˈkriːs/|增加
+decrease|/dəˈkriːs/|减少
+grow|/groʊ/|成长
+shrink|/ʃrɪŋk/|缩小
+appear|/əˈpɪr/|出现
+disappear|/ˌdɪsəˈpɪr/|消失
+be born|/biː bɔːrn/|出生
+die|/daɪ/|死
+happen|/ˈhæpən/|发生
+exist|/ɪgˈzɪst/|存在
+last (continue)|/læst/|持久
+end (v.)|/end/|结束
+lose|/luːz/|丢失 / 输
+win|/wɪn/|赢 / 赚
+miss (a train)|/mɪs/|错过
+reach|/riːtʃ/|够到 / 达到
+lift|/lɪft/|举起
+lower|/ˈloʊər/|降低
+raise (prices)|/reɪz/|提高
+shake|/ʃeɪk/|摇
+spin|/spɪn/|旋转
+roll|/roʊl/|滚动
+flow|/floʊ/|流动
+float|/floʊt/|漂浮
+sink (v.)|/sɪŋk/|下沉
+burn|/bɜːrn/|燃烧
+melt|/melt/|融化
+freeze|/friːz/|结冰
+dry|/draɪ/|弄干
+get wet|/get wet/|弄湿
+get dirty|/get ˈdɜːrtiː/|弄脏
+spill|/spɪl/|洒出
+tear (v.)|/ter/|撕
+bend|/bend/|弯曲
+stretch|/stretʃ/|伸展
+spread|/spred/|展开
+cover|/ˈkʌvər/|盖住
+hide|/haɪd/|藏
+shine|/ʃaɪn/|发光
+rain (v.)|/reɪn/|下雨
+snow (v.)|/snoʊ/|下雪
+blow|/bloʊ/|吹
+improve|/ɪmˈpruːv/|改善
+get worse|/get wɜːrs/|恶化
+repair|/rəˈper/|修复
+destroy|/dəˈstrɔɪ/|破坏
+damage|/ˈdæmɪdʒ/|损坏
+fail|/feɪl/|失败 / 出故障
+succeed|/səkˈsiːd/|成功
+fit|/fɪt/|装得下 / 合适
+match (v.)|/mætʃ/|相配
+differ|/ˈdɪfər/|不同
+resemble|/rəˈzembəl/|像
+belong|/bəˈlɔːŋ/|属于
+contain|/kənˈteɪn/|包含
+include|/ɪnˈkluːd/|包括
+lack|/læk/|缺少
+be enough|/biː ɪˈnʌf/|足够
+be left|/biː left/|剩下
+cost|/kɔːst/|花费
+take (time)|/teɪk/|花时间
+depend|/dəˈpend/|取决于
+seem|/siːm/|看起来
+sound|/saʊnd/|听起来
+turn into|/tɜːrn ˈɪntuː/|转变
+develop|/dəˈveləp/|发展
+advance|/ədˈvæns/|前进
+go backward|/goʊ ˈbækwərd/|后退
+stop (moving)|/stɑːp/|停下
+park (v.)|/pɑːrk/|停车
+deliver|/dəˈlɪvər/|送达
+collect|/kəˈlekt/|收集
+load|/loʊd/|装载
+unload|/ˌʌnˈloʊd/|卸下
+join|/dʒɔɪn/|连接 / 加入
+attach|/əˈtætʃ/|粘贴
+remove|/rəˈmuːv/|去掉
+replace|/rəˈpleɪs/|替换
+exchange|/ɪksˈtʃeɪndʒ/|交换
+share|/ʃer/|分享
+divide|/dəˈvaɪd/|分
+save|/seɪv/|节省 / 存
+waste|/weɪst/|浪费
+spend|/spend/|花（钱）
+earn|/ɜːrn/|挣钱
+owe|/oʊ/|欠
+rent|/rent/|租
+own|/oʊn/|拥有

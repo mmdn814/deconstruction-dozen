@@ -1,0 +1,128 @@
+go|ir|去
+come|venir|来
+return|volver|回来
+go back|regresar|回去
+arrive|llegar|到达
+leave|irse|离开
+go out|salir|出去
+enter|entrar|进入
+go up|subir|上去
+go down|bajar|下去
+pass (v.)|pasar|经过
+cross|cruzar|穿过
+turn|girar|转弯
+follow|seguir|跟随
+move|mover|移动
+move (house)|mudarse|搬家
+stay|quedarse|留下
+remain|permanecer|保持
+travel|viajar|旅行
+drive|conducir|开车
+ride|montar|骑
+fly|volar|飞
+sail|navegar|航行
+get on|subirse a|上车
+get off|bajarse de|下车
+transfer|hacer transbordo|换乘
+climb|escalar|爬
+fall|caer|掉落
+drop|dejar caer|弄掉
+slip|resbalar|滑倒
+escape|escapar|逃跑
+chase|perseguir|追
+hurry up|apresurarse|赶快
+get lost|perderse|迷路
+approach|acercarse|靠近
+go away|alejarse|远离
+gather|reunir|聚集
+separate|separar|分开
+change (v.)|cambiar|改变
+become|convertirse en|变成
+increase|aumentar|增加
+decrease|disminuir|减少
+grow|crecer|成长
+shrink|encoger|缩小
+appear|aparecer|出现
+disappear|desaparecer|消失
+be born|nacer|出生
+die|morir|死
+happen|ocurrir|发生
+exist|existir|存在
+last (continue)|perdurar|持久
+end (v.)|acabar|结束
+lose|perder|丢失 / 输
+win|ganar|赢 / 赚
+miss (a train)|perder (el tren)|错过
+reach|alcanzar|够到 / 达到
+lift|levantar|举起
+lower|descender|降低
+raise (prices)|subir (precios)|提高
+shake|agitar|摇
+spin|dar vueltas|旋转
+roll|rodar|滚动
+flow|fluir|流动
+float|flotar|漂浮
+sink (v.)|hundirse|下沉
+burn|quemar|燃烧
+melt|derretir|融化
+freeze|congelar|结冰
+dry|secar|弄干
+get wet|mojarse|弄湿
+get dirty|ensuciarse|弄脏
+spill|derramar|洒出
+tear (v.)|rasgar|撕
+bend|doblarse|弯曲
+stretch|estirar|伸展
+spread|extender|展开
+cover|cubrir|盖住
+hide|esconder|藏
+shine|brillar|发光
+rain (v.)|llover|下雨
+snow (v.)|nevar|下雪
+blow|soplar|吹
+improve|mejorar|改善
+get worse|empeorar|恶化
+repair|reparar|修复
+destroy|destruir|破坏
+damage|dañar|损坏
+fail|fallar|失败 / 出故障
+succeed|tener éxito|成功
+fit|caber|装得下 / 合适
+match (v.)|combinar|相配
+differ|diferenciarse|不同
+resemble|parecerse a|像
+belong|pertenecer|属于
+contain|contener|包含
+include|incluir|包括
+lack|faltar|缺少
+be enough|bastar|足够
+be left|sobrar|剩下
+cost|costar|花费
+take (time)|tardar|花时间
+depend|depender|取决于
+seem|parecer|看起来
+sound|sonar a|听起来
+turn into|transformarse|转变
+develop|desarrollar|发展
+advance|avanzar|前进
+go backward|retroceder|后退
+stop (moving)|detenerse|停下
+park (v.)|aparcar|停车
+deliver|entregar|送达
+collect|coleccionar|收集
+load|cargar (el coche)|装载
+unload|descargar (el coche)|卸下
+join|unir|连接 / 加入
+attach|pegar|粘贴
+remove|quitar|去掉
+replace|reemplazar|替换
+exchange|intercambiar|交换
+share|compartir|分享
+divide|dividir|分
+save|ahorrar|节省 / 存
+waste|malgastar|浪费
+spend|gastar|花（钱）
+earn|ganar dinero|挣钱
+owe|adeudar|欠
+rent|alquilar|租
+own|poseer|拥有

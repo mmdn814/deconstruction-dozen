@@ -1,0 +1,91 @@
+phone|el teléfono|电话
+cell phone|el móvil|手机
+smartphone|el teléfono inteligente|智能手机
+computer|el ordenador|电脑
+laptop|el portátil|笔记本电脑
+tablet|la tableta|平板
+screen|la pantalla|屏幕
+keyboard|el teclado|键盘
+mouse|el ratón|鼠标
+printer|la impresora|打印机
+camera|la cámara|相机
+headphones|los auriculares|耳机
+speaker|el altavoz|音箱
+microphone|el micrófono|麦克风
+cable|el cable|数据线
+power|la corriente|电源
+internet|el internet|互联网
+network|la red|网络
+wifi|el wifi|无线网
+signal|la señal|信号
+website|el sitio web|网站
+web page|la página web|网页
+app|la aplicación (app)|应用
+software|el software|软件
+program|el programa|程序
+system|el sistema|系统
+account (online)|la cuenta de usuario|账号
+username|el nombre de usuario|用户名
+password|la contraseña|密码
+PIN|el código PIN|数字密码
+settings|los ajustes|设置
+search|la búsqueda|搜索
+link|el enlace|链接
+download|la descarga|下载
+update|la actualización|更新
+backup|la copia de seguridad|备份
+storage|el almacenamiento|存储
+memory|la memoria|内存
+folder|la carpeta|文件夹
+text message|el mensaje de texto|短信
+notification|la notificación|通知
+phone number|el número de teléfono|电话号码
+email address|la dirección de correo|邮箱地址
+contact (n.)|el contacto|联系人
+video|el vídeo|视频
+image|la imagen|图片
+audio|el audio|音频
+recording|la grabación|录音
+social media|las redes sociales|社交媒体
+post|la publicación|帖子
+comment|el comentario|评论
+follower|el seguidor|粉丝
+blog|el blog|博客
+online|en línea|在线
+offline|sin conexión|离线
+QR code|el código QR|二维码
+error|el error|错误
+bug|el fallo|程序错误
+function|la función|功能
+machine|la máquina|机器
+robot|el robot|机器人
+artificial intelligence|la inteligencia artificial|人工智能
+digital|digital|数字的
+wireless|inalámbrico|无线的
+SIM card|la tarjeta SIM|SIM 卡
+data plan|el plan de datos|流量套餐
+call (v.)|telefonear|打电话
+hang up|colgar (el teléfono)|挂电话
+text (v.)|enviar un mensaje|发消息
+charge|cargar (batería)|充电
+turn on (device)|encender (aparato)|开机
+restart|reiniciar|重启
+log in|iniciar sesión|登录
+log out|cerrar sesión|登出
+sign up|registrarse|注册
+search (v.)|buscar en internet|搜索
+click|hacer clic|点击
+type|teclear|打字
+save (file)|guardar (archivo)|保存
+delete|borrar|删除
+download (v.)|descargar|下载
+upload|subir (archivo)|上传
+install|instalar|安装
+update (v.)|actualizar|更新
+connect|conectar|连接
+disconnect|desconectar|断开
+scan|escanear|扫描
+record|grabar|录制
+take a photo|sacar una foto|拍照
+share a link|compartir un enlace|分享链接
+it doesn't work|no funciona|它坏了 / 不能用

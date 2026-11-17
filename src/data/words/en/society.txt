@@ -1,0 +1,118 @@
+politics|/ˈpɑːləˌtɪks/|政治
+government|/ˈgʌvərnmənt/|政府
+law|/lɔː/|法律
+rule (regulation)|/ruːl/|规定
+right (n.)|/raɪt/|权利
+duty|/ˈduːtiː/|义务
+election|/əˈlekʃən/|选举
+president|/ˈprezəˌdent/|总统
+prime minister|/praɪm ˈmɪnəstər/|首相
+mayor|/ˈmeɪər/|市长
+king|/kɪŋ/|国王
+queen|/kwiːn/|女王
+population|/ˌpɑːpjəˈleɪʃən/|人口
+peace|/piːs/|和平
+war|/wɔːr/|战争
+army|/ˈɑːrmiː/|军队
+crime|/kraɪm/|犯罪
+thief|/θiːf/|小偷
+robbery|/ˈrɑːbəriː/|抢劫
+fraud|/frɔːd/|诈骗
+police|/pəˈliːs/|警方
+court|/kɔːrt/|法院
+judge (n.)|/dʒʌdʒ/|法官
+prison|/ˈprɪzn/|监狱
+victim|/ˈvɪktəm/|受害者
+witness|/ˈwɪtnəs/|证人
+news article|/nuːz ˈɑːrtəkəl/|新闻报道
+media|/ˈmiːdiːə/|媒体
+broadcast|/ˈbrɔːdˌkæst/|广播
+topic|/ˈtɑːpɪk/|话题
+rumor|/ˈruːmər/|谣言
+fact|/fækt/|事实
+truth|/truːθ/|真相
+lie (n.)|/laɪ/|谎言
+secret|/ˈsiːkrət/|秘密
+influence|/ˈɪnflʊəns/|影响
+change (n.)|/tʃeɪndʒ/|变化
+crisis|/ˈkraɪsəs/|危机
+price level|/praɪs ˈlevəl/|物价
+inflation|/ɪnˈfleɪʃən/|通货膨胀
+stock (shares)|/stɑːk/|股票
+investment|/ɪnˈvestmənt/|投资
+pension|/ˈpenʃən/|养老金
+insurance|/ɪnˈʃʊrəns/|保险
+welfare|/ˈwelˌfer/|福利
+poverty|/ˈpɑːvərtiː/|贫困
+wealth|/welθ/|财富
+procedure|/prəˈsiːdʒər/|手续
+form|/fɔːrm/|表格
+application form|/ˌæpləˈkeɪʃən fɔːrm/|申请表
+certificate|/sərˈtɪfəkət/|证明
+ID card|/ˌaɪˈdiː kɑːrd/|身份证
+residence permit|/ˈrezədəns pərˈmɪtɪŋ/|居留许可
+work permit|/wɜːrk pərˈmɪtɪŋ/|工作许可
+registration|/ˌredʒəˈstrʌɪʃən/|登记
+expiration date|/ˌekspəˈreɪʃən deɪt/|到期日
+valid|/ˈvæləd/|有效的
+expired|/ɪkˈspaɪərd/|过期的
+personal data|/ˈpɜːrsənəl ˈdætə/|个人信息
+date of birth|/deɪt əv bɜːrθ/|出生日期
+full name|/fʊl neɪm/|全名
+zip code|/zɪp koʊd/|邮编
+mail|/meɪl/|邮件
+registered mail|/ˈredʒəstərd meɪl/|挂号信
+bank transfer|/bæŋk træntsˈfɜːrɪŋ/|银行转账
+commission|/kəˈmɪʃən/|手续费
+balance|/ˈbæləns/|余额
+tax return|/tæks rəˈtɜːrn/|报税
+violation|/ˌvaɪəˈleɪʃən/|违规
+prohibition|/ˌproʊhəˈbɪʃən/|禁止
+permission|/pərˈmɪʃən/|许可
+warning|/ˈwɔːrnɪŋ/|警告
+no entry|/noʊ ˈentriː/|禁止入内
+no smoking|/noʊ ˈsmoʊkɪŋ/|禁止吸烟
+manners|/ˈmænərz/|礼貌
+custom|/ˈkʌstəm/|习俗
+habit|/ˈhæbət/|习惯
+tradition|/trəˈdɪʃən/|传统
+religion|/rəˈlɪdʒən/|宗教
+god|/gɑːd/|神
+volunteer|/ˌvɑːlənˈtɪr/|志愿者
+organization|/ˌɔːrgənəˈzeɪʃən/|组织
+association|/əˌsoʊsiːˈeɪʃən/|协会
+representative|/ˌreprəˈzentətɪv/|代表
+majority|/məˈdʒɑːrətiː/|多数人
+minority|/məˈnɔːrətiː/|少数
+freedom|/ˈfriːdəm/|自由
+equality|/iːˈkwɑːlətiː/|平等
+justice|/ˈdʒʌstəs/|正义
+safety|/ˈseɪftiː/|安全
+violence|/ˈvaɪələns/|暴力
+protest|/ˈproʊˌtest/|抗议
+demonstration|/ˌdemənˈstreɪʃən/|游行示威
+immigrant|/ˈɪməgrənt/|移民
+refugee|/ˌrefjəˈdʒiː/|难民
+era|/ˈerə/|时代
+fill out|/fɪl aʊt/|填写
+submit|/səbˈmɪt/|提交
+renew|/rəˈnuː/|续办
+register|/ˈredʒəstər/|登记
+report a theft|/rəˈpɔːrt ə θeft/|报案
+pay taxes|/peɪ ˈtækˌsiːz/|纳税
+vote (n.)|/voʊt/|选票
+party (political)|/ˈpɑːrtiː/|政党
+democracy|/dəˈmɑːkrəsiː/|民主
+parliament|/ˈpɑːrləmənt/|议会
+minister|/ˈmɪnəstər/|部长
+ambassador|/æmˈbæsədər/|大使
+nation|/ˈneɪʃən/|国家 / 民族
+flag|/flæg/|旗帜
+anthem|/ˈænθəm/|国歌
+border control|/ˈbɔːrdər kənˈtroʊl/|边境检查
+emergency number|/əˈmɜːrdʒənsiː ˈnʌmbər/|紧急电话
+lost property|/lɔːst ˈprɑːpərtiː/|遗失物品
+charity|/ˈtʃerətiː/|慈善机构
+donation|/doʊˈneɪʃən/|捐款
+homeless person|/ˈhoʊmləs ˈpɜːrsən/|无家可归者
+strike (n.)|/straɪk/|大罢工

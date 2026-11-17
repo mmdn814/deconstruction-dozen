@@ -1,0 +1,102 @@
+restaurant|/ˈrestərənt/|餐厅
+cafe|/kæˈfeɪ/|咖啡馆
+bar|/bɑːr/|酒吧
+fast food|/fæst fuːd/|快餐
+bakery|/ˈbeɪkəriː/|面包店
+food stand|/fuːd stænd/|小吃摊
+canteen|/kænˈtiːn/|食堂
+menu|/ˈmenjuː/|菜单
+dish|/dɪʃ/|菜 / 盘子
+starter|/ˈstɑːrtər/|前菜
+main course|/meɪn kɔːrs/|主菜
+daily special|/ˈdeɪliː ˈspeʃəl/|今日套餐
+set meal|/set miːl/|套餐
+specialty|/ˈspeʃəltiː/|招牌菜
+order (n.)|/ˈɔːrdər/|订单
+table|/ˈteɪbəl/|桌子
+seat|/siːt/|座位
+reservation|/ˌrezərˈveɪʃən/|预订
+table for two|/ˈteɪbəl fɔːr tuː/|两人桌
+waitress|/ˈweɪtrəs/|女服务员
+chef|/ʃef/|主厨
+bill (check)|/bɪl/|账单
+tip|/tɪp/|小费
+receipt|/rəˈsiːt/|收据
+cash|/kæʃ/|现金
+card|/kɑːrd/|卡
+to go|/tuː goʊ/|外带
+to eat here|/tuː iːt hɪr/|堂食
+delivery|/dəˈlɪvəriː/|外卖配送
+fork|/fɔːrk/|叉子
+knife|/naɪf/|刀
+spoon|/spuːn/|勺子
+chopsticks|/ˈtʃɑːpˌstɪks/|筷子
+plate|/pleɪt/|平盘
+bowl|/boʊl/|碗
+napkin|/ˈnæpkɪn/|餐巾纸
+straw|/strɔː/|吸管
+tray|/treɪ/|托盘
+toothpick|/ˈtuːθˌpɪk/|牙签
+hot drink|/hɑːt drɪŋk/|热饮
+cold drink|/koʊld drɪŋk/|冷饮
+with ice|/wɪð aɪs/|加冰
+without ice|/wəˈðaʊt aɪs/|去冰
+with milk|/wɪð mɪlk/|加奶
+sugar-free|/ˈʃʊgər friː/|无糖
+black coffee|/blæk ˈkɔːfiː/|黑咖啡
+latte|/ˈlɑːˌteɪ/|拿铁
+tap water|/tæp ˈwɔːtər/|自来水
+sparkling water|/ˈspɑːrkəlɪŋ ˈwɔːtər/|气泡水
+still water|/stɪl ˈwɔːtər/|无气水
+red wine|/red waɪn/|红葡萄酒
+white wine|/waɪt waɪn/|白葡萄酒
+draft beer|/dræft bɪr/|生啤
+cocktail|/ˈkɑːkˌteɪl/|鸡尾酒
+whisky|/ˈwɪskiː/|威士忌
+soft drink|/sɔːft drɪŋk/|软饮料
+refill|/riːˈfɪl/|续杯
+large|/lɑːrdʒ/|大份
+medium|/ˈmiːdiːəm/|中份
+small (size)|/smɔːl/|小份
+extra|/ˈekstrə/|加量的
+half portion|/hæf ˈpɔːrʃən/|半份
+rare (meat)|/rer/|三分熟
+medium (meat)|/ˈmiːdiːəm/|五分熟
+well done|/wel dʌn/|全熟
+allergy|/ˈælərdʒiː/|过敏
+gluten-free|/ˈgluːtn friː/|无麸质
+vegan|/ˈviːgən/|纯素的
+recommend (dish)|/ˌrekəˈmend/|推荐
+smoking area|/ˈsmoʊkɪŋ ˈeriːə/|吸烟区
+non-smoking|/nɑːn ˈsmoʊkɪŋ/|禁烟
+terrace|/ˈterəs/|露台座位
+counter|/ˈkaʊntər/|吧台
+kitchen|/ˈkɪtʃən/|厨房
+open|/ˈoʊpən/|营业中
+closed|/kloʊzd/|已关门
+opening hours|/ˈoʊpənɪŋ ˈaʊərz/|营业时间
+full (no seats)|/fʊl/|客满
+waiting list|/ˈweɪtɪŋ lɪst/|等位名单
+happy hour|/ˈhæpiː ˈaʊər/|优惠时段
+toast (cheers)|/toʊst/|祝酒
+hangover|/ˈhæŋˌoʊvər/|宿醉
+drunk|/drʌŋk/|喝醉的
+split the bill|/splɪt ðə bɪl/|分摊账单
+my treat|/maɪ triːt/|我请客
+keep the change|/kiːp ðə tʃeɪndʒ/|不用找了
+supermarket|/ˈsuːpərˌmɑːrkət/|超市
+convenience store|/kənˈviːnjəns stɔːr/|便利店
+checkout|/ˈtʃekˌaʊt/|收银台
+plastic bag|/ˈplæstɪk bæg/|塑料袋
+microwave|/ˈmaɪkroʊˌweɪv/|微波炉
+ready meal|/ˈrediː miːl/|即食餐
+canned food|/kænd fuːd/|罐头食品
+instant noodles|/ˈɪntstənt ˈnuːdəlz/|方便面
+chewing gum|/ˈtʃuːɪŋ gʌm/|口香糖
+cigarette|/ˌsɪgəˈret/|香烟
+lighter|/ˈlaɪtər/|打火机
+newspaper|/ˈnuːzˌpeɪpər/|报纸
+magazine|/ˈmægəˌziːn/|杂志
+stamp|/stæmp/|邮票
+ATM|/ˌeɪˌtiːˈem/|取款机
+restroom|/ˈrestˌruːm/|洗手间

@@ -1,0 +1,169 @@
+eat|/iːt/|吃
+drink|/drɪŋk/|喝
+see|/siː/|看见
+look at|/lʊk æt/|看
+watch|/wɑːtʃ/|观看
+hear|/hɪr/|听见
+listen|/ˈlɪsn/|听
+read|/red/|读
+write|/raɪt/|写
+speak|/spiːk/|说话
+say|/seɪ/|说
+tell|/tel/|告诉
+ask|/æsk/|问
+answer|/ˈænsər/|回答
+buy|/baɪ/|买
+sell|/sel/|卖
+pay|/peɪ/|付钱
+use|/juːz/|用
+make|/meɪk/|制作
+sleep|/sliːp/|睡觉
+wake up|/weɪk ʌp/|醒来
+get up|/get ʌp/|起床
+sit|/sɪt/|坐
+stand|/stænd/|站
+walk|/wɔːk/|走路
+run|/rʌn/|跑
+jump|/dʒʌmp/|跳
+swim|/swɪm/|游泳
+play|/pleɪ/|玩
+work|/wɜːrk/|工作
+study|/ˈstʌdiː/|学习
+live|/lɪv/|生活 / 住
+wash|/wɔːʃ/|洗
+clean|/kliːn/|打扫
+cook (v.)|/kʊk/|做饭
+wear|/wer/|穿着
+put on|/pʊt ɔːn/|穿上
+take off|/teɪk ɔːf/|脱下
+get dressed|/get drest/|穿衣服
+shower|/ˈʃaʊər/|洗澡
+brush|/brʌʃ/|刷
+comb|/koʊm/|梳
+shave|/ʃeɪv/|刮胡子
+hold|/hoʊld/|拿着
+take|/teɪk/|拿 / 取
+put|/pʊt/|放
+give|/gɪv/|给
+receive|/rəˈsiːv/|收到
+get|/get/|得到
+bring|/brɪŋ/|带来
+carry|/ˈkeriː/|搬 / 提
+send|/send/|寄 / 发送
+lend|/lend/|借出
+borrow|/ˈbɑːroʊ/|借入
+return (give back)|/rəˈtɜːrn/|归还
+keep|/kiːp/|保留
+open (v.)|/ˈoʊpən/|打开
+close|/kloʊs/|关上
+turn on|/tɜːrn ɔːn/|打开（电器）
+turn off|/tɜːrn ɔːf/|关掉（电器）
+push|/pʊʃ/|推
+pull|/pʊl/|拉
+press|/pres/|按
+cut|/kʌt/|切 / 剪
+break (v.)|/breɪk/|打破
+fix|/fɪks/|修理
+build|/bɪld/|建造
+draw|/drɔː/|画
+paint|/peɪnt/|涂色 / 油漆
+sing|/sɪŋ/|唱歌
+dance|/dæns/|跳舞
+wait for|/weɪt fɔːr/|等候
+meet|/miːt/|见面
+visit|/ˈvɪzət/|拜访 / 参观
+call|/kɔːl/|打电话 / 叫
+invite|/ɪnˈvaɪt/|邀请
+help (v.)|/help/|帮助
+teach|/tiːtʃ/|教
+learn|/lɜːrn/|学
+practice|/ˈpræktəs/|练习
+remember|/rəˈmembər/|记得
+forget|/fərˈget/|忘记
+look for|/lʊk fɔːr/|寻找
+find|/faɪnd/|找到
+show|/ʃoʊ/|展示
+try|/traɪ/|尝试
+choose|/tʃuːz/|选择
+decide|/dəˈsaɪd/|决定
+begin|/bəˈgɪn/|开始
+stop|/stɑːp/|停止
+continue|/kənˈtɪnjuː/|继续
+order|/ˈɔːrdər/|点餐 / 订购
+reserve|/rəˈzɜːrv/|预订
+prepare|/priːˈper/|准备
+check|/tʃek/|检查
+explain|/ɪkˈspleɪn/|解释
+introduce|/ˌɪntrəˈduːs/|介绍
+greet|/griːt/|打招呼
+thank|/θæŋk/|感谢
+apologize|/əˈpɑːləˌdʒaɪz/|道歉
+smoke|/smoʊk/|抽烟
+bite|/baɪt/|咬
+touch|/tʌtʃ/|摸
+hug|/hʌg/|拥抱
+kiss|/kɪs/|亲吻
+throw|/θroʊ/|扔
+catch|/ketʃ/|接住
+pick up|/pɪk ʌp/|捡起 / 接人
+wrap|/ræp/|包
+tie|/taɪ/|系
+hang|/hæŋ/|挂
+fold|/foʊld/|折叠
+fill|/fɪl/|装满
+empty (v.)|/ˈemptiː/|倒空
+pour|/pɔːr/|倒
+mix|/mɪks/|搅拌
+boil|/bɔɪl/|煮开
+fry|/fraɪ/|煎 / 炸
+bake|/beɪk/|烘烤
+heat (v.)|/hiːt/|加热
+cool|/kuːl/|冷却
+taste|/teɪst/|尝
+smell|/smel/|闻
+feed|/fiːd/|喂
+water (v.)|/ˈwɔːtər/|浇水
+plant (v.)|/plænt/|种植
+grow (plants)|/groʊ/|种
+raise|/reɪz/|养育
+take care of|/teɪk ker əv/|照顾
+tidy up|/ˈtaɪdiː ʌp/|整理
+iron|/ˈaɪərn/|熨
+sew|/soʊ/|缝
+lock|/lɑːk/|锁上
+knock|/nɑːk/|敲门
+ring|/rɪŋ/|响
+shout|/ʃaʊt/|喊
+whisper|/ˈwɪspər/|低声说
+lie down|/laɪ daʊn/|躺下
+stand up|/stænd ʌp/|站起来
+sit down|/sɪt daʊn/|坐下
+go to bed|/goʊ tuː bed/|上床睡觉
+have breakfast|/hæv ˈbrekfəst/|吃早饭
+have lunch|/hæv lʌnʃ/|吃午饭
+have dinner|/hæv ˈdɪnər/|吃晚饭
+go shopping|/goʊ ˈʃɑːpɪŋ/|去购物
+take a shower|/teɪk ə ˈʃaʊər/|冲澡
+brush your teeth|/brʌʃ jʊr tiːθ/|刷牙
+wash your hands|/wɔːʃ jʊr hændz/|洗手
+set the table|/set ðə ˈteɪbəl/|摆餐具
+peel|/piːl/|削皮
+chop|/tʃɑːp/|切碎
+stir|/stɜːr/|搅动
+serve|/sɜːrv/|上菜 / 服务
+swallow|/ˈswɑːloʊ/|吞
+chew|/tʃuː/|嚼
+lick|/lɪk/|舔
+yawn|/jɔːn/|打哈欠
+snore|/snɔːr/|打鼾
+dream of|/driːm əv/|梦见
+stare|/ster/|盯着看
+point|/pɔɪnt/|指
+wave (v.)|/weɪv/|挥手
+nod|/nɑːd/|点头
+clap|/klæp/|鼓掌
+kick|/kɪk/|踢
+hit|/hɪt/|打
+squeeze|/skwiːz/|挤 / 捏
+scratch|/skrætʃ/|挠
+rub|/rʌb/|擦 / 揉

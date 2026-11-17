@@ -1,0 +1,120 @@
+pensar||想
+creer||相信
+saber||知道
+conocer||认识
+comprender||理解
+darse cuenta||意识到
+notar||注意到
+imaginar||想象
+adivinar||猜
+dudar||怀疑
+suponer||假设
+esperar que||预期
+tener esperanza||希望
+desear||祝愿 / 想要
+soñar||做梦
+planear||计划
+tener la intención||打算
+preferir||更喜欢
+comparar||比较
+juzgar||判断
+estar de acuerdo||同意
+no estar de acuerdo||不同意
+aceptar||接受
+rechazar||拒绝
+permitir||允许
+prohibir||禁止
+prometer||承诺
+jurar||发誓
+mentir||撒谎
+engañar||欺骗
+confiar||信任
+respetar||尊重
+admirar||钦佩
+perdonar||原谅
+culpar||责怪
+elogiar||表扬
+regañar||责骂
+quejarse||抱怨
+discutir||争论
+pelear||打架 / 吵架
+conversar||交谈
+charlar||聊天
+debatir||讨论
+sugerir||建议
+recomendar||推荐
+aconsejar||劝告
+advertir||警告
+hacer recordar||提醒
+informar||通知
+anunciar||宣布
+reportar||报告
+describir||描述
+mencionar||提到
+repetir||重复
+traducir||翻译
+pronunciar||发音
+deletrear||拼写
+significar||意思是
+expresar||表达
+comunicar||沟通
+contactar||联系
+contestar||回复
+solicitar||请求
+exigir||要求
+ofrecer||提供
+proponer||提议
+convencer||说服
+animar||鼓励
+apoyar||支持
+cooperar||合作
+competir||竞争
+asistir||出席
+participar||参加
+organizar||组织
+gestionar||管理
+dirigir||领导
+obedecer||服从
+resolver||解决
+descubrir||发现
+inventar||发明
+crear||创造
+diseñar||设计
+investigar||研究
+analizar||分析
+poner a prueba||测试
+probar (demostrar)||证明
+confirmar||确认
+corregir||改正
+equivocarse||犯错
+lograr||做到
+rendirse||放弃
+esforzarse||努力
+desafiar||挑战
+conseguir (un objetivo)||实现
+experimentar||经历
+disfrutar||享受
+sufrir||受苦
+soportar||忍受
+arrepentirse||后悔
+echar de menos||想念
+importar||在乎
+molestar||介意
+incomodar||打扰
+sorprender||使惊讶
+asustar||吓
+divertir||逗乐
+acostumbrarse||习惯
+prestar atención||注意
+concentrarse||集中
+ignorar||忽视
+fingir||假装
+comportarse||表现
+tratar||对待
+proteger||保护
+defender||保卫
+atacar||攻击
+castigar||惩罚
+votar||投票
+rezar||祈祷
+celebrar||庆祝

@@ -1,0 +1,89 @@
+soap|/soʊp/|肥皂
+shampoo|/ʃæmˈpuː/|洗发水
+conditioner|/kənˈdɪʃənər/|护发素
+shower gel|/ˈʃaʊər dʒel/|沐浴露
+toothbrush|/ˈtuːθˌbrʌʃ/|牙刷
+toothpaste|/ˈtuːθˌpeɪst/|牙膏
+towel|/ˈtaʊəl/|毛巾
+tissue|/ˈtɪʃuː/|纸巾
+toilet paper|/ˈtɔɪlət ˈpeɪpər/|卫生纸
+wet wipe|/wet waɪp/|湿巾
+handkerchief|/ˈhæŋkərtʃəf/|手帕
+mask|/mæsk/|口罩
+razor|/ˈreɪzər/|剃须刀
+comb (n.)|/koʊm/|梳子
+hairbrush|/ˈherˌbrʌʃ/|发刷
+nail clipper|/neɪl ˈklɪpər/|指甲刀
+cotton swab|/ˈkɑːtn swɑːb/|棉签
+cosmetics|/kɑːzˈmetɪks/|化妆品
+makeup|/ˈmeɪˌkʌp/|彩妆
+lipstick|/ˈlɪpˌstɪk/|口红
+face cream|/feɪs kriːm/|面霜
+sunscreen|/ˈsʌnˌskriːn/|防晒霜
+lotion|/ˈloʊʃən/|乳液
+perfume|/ˈpɜːrˌfjuːm/|香水
+deodorant|/diːˈoʊdərənt/|止汗剂
+detergent|/dəˈtɜːrdʒənt/|洗涤剂
+bleach|/bliːtʃ/|漂白剂
+sponge|/spʌndʒ/|海绵
+cloth|/klɔːθ/|抹布
+broom|/bruːm/|扫帚
+bucket|/ˈbʌkət/|水桶
+hanger|/ˈhæŋər/|衣架
+clothespin|/ˈkloʊzˌpɪn/|晾衣夹
+umbrella|/ˌʌmˈbrelə/|雨伞
+handbag|/ˈhændˌbæg/|手提包
+glasses|/ˈglæsəz/|眼镜
+sunglasses|/ˈsʌnˌglæsəz/|太阳镜
+contact lenses|/ˈkɑːntækt lenzɪz/|隐形眼镜
+watch (n.)|/wɑːtʃ/|手表
+water bottle|/ˈwɔːtər ˈbɑːtəl/|水壶
+lunch box|/lʌnʃ bɑːks/|饭盒
+pot|/pɑːt/|锅
+frying pan|/ˈfraɪɪŋ pæn/|平底锅
+kettle|/ˈketəl/|烧水壶
+cutting board|/ˈkʌtɪŋ bɔːrd/|砧板
+can opener|/kæn ˈoʊpənər/|开罐器
+corkscrew|/ˈkɔːrkˌskruː/|开瓶器
+aluminum foil|/əˈluːmənəm fɔɪl/|锡纸
+plastic wrap|/ˈplæstɪk ræp/|保鲜膜
+match (fire)|/mætʃ/|火柴
+candle|/ˈkændəl/|蜡烛
+light bulb|/laɪt bʌlb/|灯泡
+charger|/ˈtʃɑːrdʒər/|充电器
+extension cord|/ɪkˈstentʃən kɔːrd/|接线板
+scissors|/ˈsɪzərz/|剪刀
+tape|/teɪp/|胶带
+glue|/gluː/|胶水
+string|/strɪŋ/|绳子
+rubber band|/ˈrʌbər bænd/|橡皮筋
+needle|/ˈniːdəl/|针
+thread|/θred/|线
+button|/ˈbʌtn/|纽扣 / 按钮
+pencil|/ˈpensəl/|铅笔
+pen|/pen/|圆珠笔
+eraser|/əˈreɪsər/|橡皮
+notebook|/ˈnoʊtˌbʊk/|笔记本
+paper|/ˈpeɪpər/|纸
+envelope|/ˈenvəˌloʊp/|信封
+postcard|/ˈpoʊstˌkɑːrd/|明信片
+letter|/ˈletər/|信
+business card|/ˈbɪznəs kɑːrd/|名片
+tool|/tuːl/|工具
+hammer|/ˈhæmər/|锤子
+screwdriver|/ˈskruːˌdraɪvər/|螺丝刀
+nail (metal)|/neɪl/|钉子
+ladder|/ˈlædər/|梯子
+toy|/tɔɪ/|玩具
+doll|/dɑːl/|娃娃
+photo|/ˈfoʊtoʊ/|照片
+album|/ˈælbəm/|相册
+ashtray|/ˈæʃˌtreɪ/|烟灰缸
+diaper|/ˈdaɪəpər/|尿布
+sanitary pad|/ˈsænəˌteriː pæd/|卫生巾
+insect repellent|/ˈɪnˌsekt rəˈpelənt/|驱虫剂
+first-aid kit|/fɜːrst eɪd kɪt/|急救箱
+flashlight|/ˈflæʃˌlaɪt/|手电筒
+alarm clock|/əˈlɑːrm klɑːk/|闹钟
+stuff|/stʌf/|东西（杂物）
+object|/ˈɑːbdʒəkt/|物体

@@ -1,0 +1,81 @@
+la ropa||衣服
+el uniforme||制服
+el traje||西装
+la camisa||衬衫
+la camiseta||T 恤
+la blusa||女式衬衫
+el jersey||毛衣
+la sudadera||卫衣
+la chaqueta||夹克
+el abrigo||大衣
+el impermeable||雨衣
+el chaleco||背心
+la ropa interior||内衣
+el pijama||睡衣
+los pantalones||裤子
+los vaqueros||牛仔裤
+los pantalones cortos||短裤
+la falda||裙子
+el vestido||连衣裙
+el bañador||泳衣
+los zapatos||鞋子
+los calcetines||袜子
+las zapatillas deportivas||运动鞋
+las sandalias||凉鞋
+las botas||靴子
+las pantuflas||拖鞋
+los tacones||高跟鞋
+el sombrero||帽子
+la gorra||鸭舌帽
+los guantes||手套
+la bufanda||围巾
+la corbata||领带
+el cinturón||腰带
+el anillo||戒指
+el collar||项链
+los pendientes||耳环
+la pulsera||手镯
+las joyas||首饰
+el bolsillo||口袋
+la manga||袖子
+el cuello de camisa||衣领
+la cremallera||拉链
+manga larga||长袖
+manga corta||短袖
+la tela||布料
+el algodón||棉
+la seda||丝绸
+la lana||羊毛
+el cuero||皮革
+el estampado||花纹
+a rayas||条纹的
+liso (sin dibujo)||纯色的
+el estilo||风格
+la moda||时尚
+talla pequeña||小号
+talla mediana||中号
+talla grande||大号
+rojo||红色
+azul||蓝色
+blanco||白色
+negro||黑色
+amarillo||黄色
+verde||绿色
+marrón||棕色
+morado||紫色
+gris||灰色
+rosa||粉色
+naranja (color)||橙色
+dorado||金色
+plateado||银色
+beis||米色
+azul marino||藏青色
+azul claro||浅蓝色
+color oscuro||深色
+color claro||浅色
+colorido||彩色的
+elegante||优雅的
+informal||休闲的
+formal||正式的
+quedar bien||合适 / 相称
+cambiarse de ropa||换衣服

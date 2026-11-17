@@ -1,0 +1,191 @@
+good|/gʊd/|好的
+bad|/bæd/|坏的
+big|/bɪg/|大的
+small|/smɔːl/|小的
+long|/lɔːŋ/|长的
+short|/ʃɔːrt/|短的
+high|/haɪ/|高的
+low|/loʊ/|低的
+wide|/waɪd/|宽的
+narrow|/ˈneroʊ/|窄的
+thick|/θɪk/|厚的
+slim|/slɪm/|薄的 / 细的
+heavy|/ˈheviː/|重的
+light|/laɪt/|轻的
+new|/nuː/|新的
+used|/juːzd/|旧的 / 用过的
+fast|/fæst/|快的
+slow|/sloʊ/|慢的
+near (adj.)|/nɪr/|近的
+far|/fɑːr/|远的
+hot|/hɑːt/|热的
+cold|/koʊld/|冷的
+warm|/wɔːrm/|暖和的
+cool (adj.)|/kuːl/|凉爽的
+bright|/braɪt/|明亮的
+dark|/dɑːrk/|暗的
+loud|/laʊd/|吵的
+quiet|/ˈkwaɪət/|安静的
+clean (adj.)|/kliːn/|干净的
+dirty|/ˈdɜːrtiː/|脏的
+pretty|/ˈprɪtiː/|漂亮的
+cute|/kjuːt/|可爱的
+delicious|/dəˈlɪʃəs/|好吃的
+tasty|/ˈteɪstiː/|美味的
+sweet|/swiːt/|甜的
+spicy|/ˈspaɪsiː/|辣的
+bitter|/ˈbɪtər/|苦的
+sour|/ˈsaʊər/|酸的
+salty|/ˈsɔːltiː/|咸的
+hard|/hɑːrd/|硬的
+soft|/sɔːft/|软的
+round|/raʊnd/|圆的
+square|/skwer/|方的
+flat|/flæt/|平的
+deep|/diːp/|深的
+shallow|/ˈʃæloʊ/|浅的
+full|/fʊl/|满的
+empty|/ˈemptiː/|空的
+dry (adj.)|/draɪ/|干的
+wet|/wet/|湿的
+sharp|/ʃɑːrp/|锋利的
+smooth|/smuːð/|光滑的
+rough|/rʌf/|粗糙的
+difficult|/ˈdɪfəkəlt/|难的
+easy|/ˈiːziː/|容易的
+simple|/ˈsɪmpəl/|简单的
+complicated|/ˈkɑːmpləˌkeɪtəd/|复杂的
+convenient|/kənˈviːnjənt/|方便的
+busy|/ˈbɪziː/|忙的
+free|/friː/|空闲的 / 自由的
+important|/ɪmˈpɔːrtənt/|重要的
+necessary|/ˈnesəˌseriː/|必要的
+possible|/ˈpɑːsəbəl/|可能的
+impossible|/ɪmˈpɑːsəbəl/|不可能的
+dangerous|/ˈdeɪndʒərəs/|危险的
+safe|/seɪf/|安全的
+correct (adj.)|/kəˈrekt/|正确的
+wrong|/rɔːŋ/|错的
+true|/truː/|真的
+false|/fɔːls/|假的
+strange|/streɪndʒ/|奇怪的
+normal|/ˈnɔːrməl/|正常的
+special|/ˈspeʃəl/|特别的
+famous|/ˈfeɪməs/|有名的
+popular|/ˈpɑːpjələr/|受欢迎的
+kind (adj.)|/kaɪnd/|友善的
+polite|/pəˈlaɪt/|有礼貌的
+rude|/ruːd/|粗鲁的
+serious|/ˈsɪriːəs/|认真的 / 严肃的
+honest|/ˈɑːnəst/|诚实的
+funny|/ˈfʌniː/|好笑的
+interesting|/ˈɪntərəstɪŋ/|有趣的
+boring|/ˈbɔːrɪŋ/|无聊的
+smart|/smɑːrt/|聪明的
+stupid|/ˈstuːpəd/|笨的
+lazy|/ˈleɪziː/|懒的
+hardworking|/ˌhɑːrdˈwɜːrkɪŋ/|勤奋的
+brave|/breɪv/|勇敢的
+shy|/ʃaɪ/|害羞的
+friendly|/ˈfrendliː/|友好的
+strict|/strɪkt/|严格的
+gentle|/ˈdʒentəl/|温柔的
+patient|/ˈpeɪʃənt/|有耐心的
+careful|/ˈkerfəl/|小心的
+rich|/rɪtʃ/|富有的
+poor|/pʊr/|穷的
+cheap|/tʃiːp/|便宜的
+expensive|/ɪkˈspensɪv/|贵的
+free (no cost)|/friː/|免费的
+wonderful|/ˈwʌndərfəl/|精彩的
+terrible|/ˈterəbəl/|糟糕的
+excellent|/ˈeksələnt/|优秀的
+perfect|/ˈpɜːrfəkt/|完美的
+ordinary|/ˈɔːrdnˌeriː/|普通的
+modern|/ˈmɑːdərn/|现代的
+traditional|/trəˈdɪʃənəl/|传统的
+ancient|/ˈeɪntʃənt/|古老的
+fresh|/freʃ/|新鲜的
+rotten|/ˈrɑːtn/|腐烂的
+raw|/rɔː/|生的
+ripe|/raɪp/|熟的
+alive|/əˈlaɪv/|活的
+dead|/ded/|死的
+real|/riːəl/|真实的
+fake|/feɪk/|假冒的
+public|/ˈpʌblɪk/|公共的
+private|/ˈpraɪvət/|私人的
+main|/meɪn/|主要的
+different|/ˈdɪfərənt/|不同的
+similar|/ˈsɪmələr/|相似的
+equal|/ˈiːkwəl/|相等的
+opposite|/ˈɑːpəzət/|相反的
+various|/ˈveriːəs/|各种各样的
+common|/ˈkɑːmən/|常见的
+rare|/rer/|罕见的
+general|/ˈdʒenərəl/|一般的
+specific|/spəˈsɪfɪk/|具体的
+clear|/klɪr/|清楚的
+obvious|/ˈɑːbviːəs/|明显的
+certain|/ˈsɜːrtn/|确定的
+ready|/ˈrediː/|准备好的
+available|/əˈveɪləbəl/|可用的
+useful|/ˈjuːsfəl/|有用的
+useless|/ˈjuːsləs/|没用的
+lucky|/ˈlʌkiː/|幸运的
+fair|/fer/|公平的
+tight|/taɪt/|紧的
+loose|/luːs/|松的
+crowded|/ˈkraʊdəd/|拥挤的
+tidy|/ˈtaɪdiː/|整洁的
+messy|/ˈmesiː/|乱的
+fashionable|/ˈfæʃənəbəl/|时髦的
+national|/ˈnæʃənəl/|国家的
+international|/ˌɪntərˈnæʃənəl/|国际的
+local|/ˈloʊkəl/|本地的
+foreign|/ˈfɔːrən/|外国的
+huge|/hjuːdʒ/|巨大的
+tiny|/ˈtaɪniː/|极小的
+giant|/ˈdʒaɪənt/|巨型的
+medium-sized|/ˈmiːdiːəm saɪzd/|中等大小的
+double (adj.)|/ˈdʌbəl/|双倍的
+extra large|/ˈekstrə lɑːrdʒ/|特大的
+whole (adj.)|/hoʊl/|完整的
+broken|/ˈbroʊkən/|坏了的
+closed (adj.)|/kloʊzd/|关着的
+open (adj.)|/ˈoʊpən/|开着的
+lost|/lɔːst/|丢失的
+missing|/ˈmɪsɪŋ/|失踪的
+hidden|/ˈhɪdən/|隐藏的
+visible|/ˈvɪzəbəl/|看得见的
+silent|/ˈsaɪlənt/|沉默的
+awake|/əˈweɪk/|醒着的
+asleep|/əˈsliːp/|睡着的
+pregnant|/ˈpregnənt/|怀孕的
+naked|/ˈneɪkəd/|裸的
+blind|/blaɪnd/|盲的
+deaf|/def/|聋的
+curious|/ˈkjʊriːəs/|好奇的
+generous|/ˈdʒenərəs/|慷慨的
+selfish|/ˈselfɪʃ/|自私的
+stubborn|/ˈstʌbərn/|固执的
+cheerful|/ˈtʃɪrfəl/|开朗的
+grumpy|/ˈgrʌmpiː/|爱发脾气的
+sensitive|/ˈsentsətɪv/|敏感的
+responsible|/rəˈspɑːnsəbəl/|负责的
+independent|/ˌɪndəˈpendənt/|独立的
+creative|/kriːˈeɪtɪv/|有创意的
+talented|/ˈtæləntəd/|有才华的
+professional|/prəˈfeʃənəl/|专业的
+official|/əˈfɪʃəl/|官方的
+legal|/ˈliːgəl/|合法的
+illegal|/ɪlˈliːgəl/|非法的
+guilty|/ˈgɪltiː/|有罪的
+innocent|/ˈɪnəsənt/|无辜的
+urgent (adj.)|/ˈɜːrdʒənt/|紧迫的
+temporary|/ˈtempəˌreriː/|临时的
+permanent|/ˈpɜːrmənənt/|永久的
+recent|/ˈriːsənt/|最近的
+previous|/ˈpriːviːəs/|之前的
+following|/ˈfɑːloʊɪŋ/|之后的
+final|/ˈfaɪnəl/|最终的

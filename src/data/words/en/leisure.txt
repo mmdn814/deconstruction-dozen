@@ -1,0 +1,90 @@
+hobby|/ˈhɑːbiː/|爱好
+free time|/friː taɪm/|空闲时间
+trip|/trɪp/|旅行
+tourism|/ˈtʊˌrɪzəm/|旅游
+journey|/ˈdʒɜːrniː/|旅途
+tour|/tʊr/|游览
+guide|/gaɪd/|导游
+guidebook|/ˈgaɪdˌbʊk/|旅游指南
+accommodation|/əˌkɑːməˈdeɪʃən/|住宿
+check-in|/tʃek ɪn/|入住登记
+check-out|/tʃek aʊt/|退房
+single room|/ˈsɪŋgəl ruːm/|单人间
+double room|/ˈdʌbəl ruːm/|双人间
+breakfast included|/ˈbrekfəst ɪnˈkluːdəd/|含早餐
+vacancy|/ˈveɪkənsiː/|空房
+admission|/ədˈmɪʃən/|门票
+souvenir shop|/ˌsuːvəˈnɪr ʃɑːp/|纪念品店
+festival|/ˈfestəvəl/|节日 / 派对
+fireworks|/ˈfaɪərˌwɜːrks/|烟花
+event|/əˈvent/|活动
+concert|/ˈkɑːntsərt/|音乐会
+show (n.)|/ʃoʊ/|演出
+movie|/ˈmuːviː/|电影
+series|/ˈsɪriːz/|电视剧
+cartoon|/kɑːrˈtuːn/|动画片
+program (TV)|/ˈproʊˌgræm/|电视节目
+news|/nuːz/|新闻
+game|/geɪm/|游戏
+video game|/ˈvɪdiːoʊ geɪm/|电子游戏
+song|/sɔːŋ/|歌
+karaoke|/ˌkeriːˈoʊkiː/|卡拉 OK
+dance (n.)|/dæns/|舞蹈
+piano|/piːˈænoʊ/|钢琴
+guitar|/gəˈtɑːr/|吉他
+instrument|/ˈɪntstrəmənt/|乐器
+reading|/ˈriːdɪŋ/|阅读
+painting|/ˈpeɪntɪŋ/|绘画
+photography|/fəˈtɑːgrəfiː/|摄影
+exhibition|/ˌeksəˈbɪʃən/|展览
+sport|/spɔːrt/|运动
+match|/mætʃ/|比赛
+player|/ˈpleɪər/|运动员
+soccer|/ˈsɑːkər/|足球
+basketball|/ˈbæskətˌbɔːl/|篮球
+tennis|/ˈtenəs/|网球
+baseball|/ˈbeɪsˌbɔːl/|棒球
+volleyball|/ˈvɑːliːˌbɔːl/|排球
+swimming|/ˈswɪmɪŋ/|游泳
+running|/ˈrʌnɪŋ/|跑步
+cycling|/ˈsaɪkəlɪŋ/|骑行
+yoga|/ˈjoʊgə/|瑜伽
+skiing|/ˈskiːɪŋ/|滑雪
+hiking|/ˈhaɪkɪŋ/|徒步
+camping|/ˈkæmpɪŋ/|露营
+fishing|/ˈfɪʃɪŋ/|钓鱼
+climbing|/ˈklaɪmɪŋ/|攀岩
+walk (n.)|/wɔːk/|散步
+picnic|/ˈpɪkˌnɪk/|野餐
+party|/ˈpɑːrtiː/|聚会
+date (romantic)|/deɪt/|约会
+break|/breɪk/|休息
+nap|/næp/|午睡
+fun|/fʌn/|乐趣
+memory (remembrance)|/ˈmeməriː/|回忆
+champion|/ˈtʃæmpiːən/|冠军
+fan (supporter)|/fæn/|粉丝
+rule|/ruːl/|规则
+referee|/ˌrefəˈriː/|裁判
+coach (trainer)|/koʊtʃ/|教练
+musician|/mjuːˈzɪʃən/|音乐家
+painter|/ˈpeɪntər/|画家
+character|/ˈkerəktər/|角色
+story|/ˈstɔːriː/|故事
+joke|/dʒoʊk/|笑话
+chess|/tʃes/|国际象棋
+cards|/kɑːrdz/|扑克牌
+lottery|/ˈlɑːtəriː/|彩票
+go for a walk|/goʊ fɔːr ə wɔːk/|去散步
+go on a trip|/goʊ ɔːn ə trɪp/|去旅行
+take a vacation|/teɪk ə veɪˈkeɪʃən/|度假
+book a room|/bʊk ə ruːm/|订房间
+sightsee|/ˈsaɪtˌsiː/|观光
+have fun|/hæv fʌn/|玩得开心
+relax|/rəˈlæks/|放松
+play sports|/pleɪ spɔːrts/|做运动
+play an instrument|/pleɪ æn ˈɪntstrəmənt/|演奏乐器
+watch TV|/wɑːtʃ ˌtiːˈviː/|看电视
+go to the movies|/goʊ tuː ðə ˈmuːviːz/|去看电影
+hang out|/hæŋ aʊt/|和朋友出去玩
+collect (hobby)|/kəˈlekt/|集邮

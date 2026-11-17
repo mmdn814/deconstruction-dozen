@@ -1,0 +1,125 @@
+city|la ciudad|城市
+town|el pueblo|城镇
+village|la aldea|村庄
+capital|la capital|首都
+country|el país|国家
+countryside|el campo|乡下
+region|la región|地区
+state|el estado|州 / 国家
+province|la provincia|省
+neighborhood|el barrio|街区
+downtown|el centro|市中心
+suburb|las afueras|郊区
+world|el mundo|世界
+continent|el continente|洲
+Asia|Asia|亚洲
+Europe|Europa|欧洲
+America|América|美洲
+Africa|África|非洲
+China|China|中国
+Japan|Japón|日本
+Spain|España|西班牙
+Mexico|México|墨西哥
+United States|Estados Unidos|美国
+England|Inglaterra|英格兰
+France|Francia|法国
+Germany|Alemania|德国
+building|el edificio|建筑
+house|la casa|房子
+home|el hogar|家
+apartment|el apartamento|公寓
+office|la oficina|办公室
+company|la empresa|公司
+factory|la fábrica|工厂
+school|la escuela|学校
+university|la universidad|大学
+hospital|el hospital|医院
+clinic|la clínica|诊所
+post office|la oficina de correos|邮局
+police station|la comisaría|警察局
+fire station|la estación de bomberos|消防站
+city hall|el ayuntamiento|市政厅
+embassy|la embajada|大使馆
+library|la biblioteca|图书馆
+museum|el museo|博物馆
+gallery|la galería|画廊
+theater|el teatro|剧院
+cinema|el cine|电影院
+park|el parque|公园
+square (plaza)|la plaza|广场
+zoo|el zoológico|动物园
+aquarium|el acuario|水族馆
+amusement park|el parque de atracciones|游乐园
+stadium|el estadio|体育场
+gym|el gimnasio|健身房
+swimming pool|la piscina|游泳池
+church|la iglesia|教堂
+temple|el templo|寺庙
+castle|el castillo|城堡
+palace|el palacio|宫殿
+tower|la torre|塔
+monument|el monumento|纪念碑
+hotel|el hotel|酒店
+hostel|el albergue|青年旅舍
+hair salon|la peluquería|理发店
+laundry|la lavandería|洗衣店
+farm|la granja|农场
+garden|el jardín|花园
+beach|la playa|海滩
+sea|el mar|海
+ocean|el océano|海洋
+mountain|la montaña|山
+hill|la colina|小山
+river|el río|河
+lake|el lago|湖
+island|la isla|岛
+forest|el bosque|森林
+desert|el desierto|沙漠
+valley|el valle|山谷
+coast|la costa|海岸
+field|el prado|田野
+cave|la cueva|洞穴
+waterfall|la cascada|瀑布
+reception|la recepción|前台
+lobby|el vestíbulo|大厅
+stairs|las escaleras|楼梯
+hallway|el pasillo|走廊
+floor (level)|la planta|楼层
+ground floor|la planta baja|一楼
+basement|el sótano|地下室
+roof|el tejado|屋顶
+emergency exit|la salida de emergencia|紧急出口
+toilet|los servicios|厕所
+landmark|el punto de referencia|地标
+tourist attraction|la atracción turística|旅游景点
+view|la vista|景色
+landscape|el paisaje|风景
+border|la frontera|边境
+area|la zona|区域
+space|el espacio|空间
+location|la ubicación|位置
+hometown|la ciudad natal|家乡
+Italy|Italia|意大利
+Portugal|Portugal|葡萄牙
+Russia|Rusia|俄罗斯
+India|la India|印度
+Korea|Corea|韩国
+Brazil|Brasil|巴西
+Argentina|Argentina|阿根廷
+Canada|Canadá|加拿大
+Australia|Australia|澳大利亚
+London|Londres|伦敦
+Madrid|Madrid|马德里
+New York|Nueva York|纽约
+Tokyo|Tokio|东京
+Beijing|Pekín|北京
+bookshop corner|el quiosco|报刊亭
+playground|el parque infantil|儿童游乐场
+cemetery|el cementerio|墓地
+market square|la plaza del mercado|集市广场
+harbor|el muelle|码头
+lighthouse|el faro|灯塔
+fountain|la fuente|喷泉
+statue|la estatua|雕像
+ruins|las ruinas|遗迹
+old town|el casco antiguo|老城区

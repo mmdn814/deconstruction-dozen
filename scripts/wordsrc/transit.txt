@@ -1,0 +1,105 @@
+station|la estación|车站
+train|el tren|火车
+subway|el metro (transporte)|地铁
+high-speed train|el tren de alta velocidad|高铁
+bus|el autobús|公交车
+coach|el autocar|长途客车
+tram|el tranvía|有轨电车
+taxi|el taxi|出租车
+car|el coche|汽车
+bicycle|la bicicleta|自行车
+motorcycle|la moto|摩托车
+truck|el camión|卡车
+airplane|el avión|飞机
+ship|el barco|船
+ferry|el ferri|渡轮
+airport|el aeropuerto|机场
+port|el puerto|港口
+bus stop|la parada de autobús|公交站
+platform|el andén|站台
+track|la vía|轨道 / 站台号
+ticket|el billete (de viaje)|车票
+ticket office|la taquilla|售票处
+ticket machine|la máquina de billetes|售票机
+one-way|de ida|单程
+round trip|de ida y vuelta|往返
+pass|el abono|月票 / 通票
+fare|el pasaje|车费
+reserved seat|el asiento reservado|对号座
+window seat|el asiento de ventanilla|靠窗座
+aisle seat|el asiento de pasillo|靠过道座
+first class|primera clase|头等舱
+timetable|el horario de trenes|时刻表
+departure|la salida (de viaje)|出发
+arrival|la llegada|到达
+delay|el retraso|延误
+cancellation|la cancelación|取消
+transfer (n.)|el transbordo|换乘
+line|la línea|线路
+route|la ruta|路线
+direction|la dirección (sentido)|方向
+destination|el destino|目的地
+terminal|la terminal|航站楼 / 终点站
+next stop|la próxima parada|下一站
+last train|el último tren|末班车
+rush hour|la hora punta|高峰时段
+passenger|el pasajero|乘客
+conductor|el revisor|检票员
+pilot|el piloto|飞行员
+flight|el vuelo|航班
+boarding|el embarque|登机
+boarding pass|la tarjeta de embarque|登机牌
+gate|la puerta de embarque|登机口
+passport|el pasaporte|护照
+visa|el visado|签证
+customs|la aduana|海关
+immigration|el control de pasaportes|入境检查
+baggage claim|la recogida de equipaje|行李提取
+hand luggage|el equipaje de mano|随身行李
+suitcase|la maleta|行李箱
+backpack|la mochila|背包
+locker|la taquilla (consigna)|储物柜
+lost and found|objetos perdidos|失物招领
+road|la carretera|公路
+street|la calle|街道
+avenue|la avenida|大道
+highway|la autopista|高速公路
+intersection|el cruce|十字路口
+traffic light|el semáforo|红绿灯
+crosswalk|el paso de peatones|人行横道
+corner|la esquina|拐角
+bridge|el puente|桥
+tunnel|el túnel|隧道
+sidewalk|la acera|人行道
+parking lot|el aparcamiento|停车场
+gas station|la gasolinera|加油站
+map|el mapa|地图
+north|el norte|北
+south|el sur|南
+east|el este|东
+west|el oeste|西
+straight ahead|todo recto|一直往前
+turn left|girar a la izquierda|左转
+turn right|girar a la derecha|右转
+at the end|al fondo|在尽头
+shortcut|el atajo|近路
+on the way|de camino|在路上
+traffic|el tráfico|交通
+traffic jam|el atasco|堵车
+accident|el accidente|事故
+driver's license|el carné de conducir|驾照
+seat belt|el cinturón de seguridad|安全带
+rental car|el coche de alquiler|租的车
+gasoline|la gasolina|汽油
+wheel|la rueda|轮子
+engine|el motor|发动机
+brake|el freno|刹车
+helmet|el casco|头盔
+pedestrian|el peatón|行人
+speed limit|el límite de velocidad|限速
+fine|la multa|罚款
+how do I get to|cómo llego a|怎么去…
+is it far|está lejos|远吗
+get in (car)|subir al coche|上车
+take a taxi|coger un taxi|打车
+miss the bus|perder el autobús|错过公交

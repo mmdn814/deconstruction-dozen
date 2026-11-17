@@ -1,0 +1,81 @@
+clothes|la ropa|衣服
+uniform|el uniforme|制服
+suit|el traje|西装
+shirt|la camisa|衬衫
+T-shirt|la camiseta|T 恤
+blouse|la blusa|女式衬衫
+sweater|el jersey|毛衣
+hoodie|la sudadera|卫衣
+jacket|la chaqueta|夹克
+coat|el abrigo|大衣
+raincoat|el impermeable|雨衣
+vest|el chaleco|背心
+underwear|la ropa interior|内衣
+pajamas|el pijama|睡衣
+pants|los pantalones|裤子
+jeans|los vaqueros|牛仔裤
+shorts|los pantalones cortos|短裤
+skirt|la falda|裙子
+dress|el vestido|连衣裙
+swimsuit|el bañador|泳衣
+shoes|los zapatos|鞋子
+socks|los calcetines|袜子
+sneakers|las zapatillas deportivas|运动鞋
+sandals|las sandalias|凉鞋
+boots|las botas|靴子
+slippers|las pantuflas|拖鞋
+high heels|los tacones|高跟鞋
+hat|el sombrero|帽子
+cap|la gorra|鸭舌帽
+gloves|los guantes|手套
+scarf|la bufanda|围巾
+tie (n.)|la corbata|领带
+belt|el cinturón|腰带
+ring (n.)|el anillo|戒指
+necklace|el collar|项链
+earrings|los pendientes|耳环
+bracelet|la pulsera|手镯
+jewelry|las joyas|首饰
+pocket|el bolsillo|口袋
+sleeve|la manga|袖子
+collar|el cuello de camisa|衣领
+zipper|la cremallera|拉链
+long sleeve|manga larga|长袖
+short sleeve|manga corta|短袖
+fabric|la tela|布料
+cotton|el algodón|棉
+silk|la seda|丝绸
+wool|la lana|羊毛
+leather|el cuero|皮革
+pattern|el estampado|花纹
+striped|a rayas|条纹的
+plain|liso (sin dibujo)|纯色的
+style|el estilo|风格
+fashion|la moda|时尚
+size S|talla pequeña|小号
+size M|talla mediana|中号
+size L|talla grande|大号
+red|rojo|红色
+blue|azul|蓝色
+white|blanco|白色
+black|negro|黑色
+yellow|amarillo|黄色
+green|verde|绿色
+brown|marrón|棕色
+purple|morado|紫色
+gray|gris|灰色
+pink|rosa|粉色
+orange (color)|naranja (color)|橙色
+gold|dorado|金色
+silver|plateado|银色
+beige|beis|米色
+navy blue|azul marino|藏青色
+light blue|azul claro|浅蓝色
+dark color|color oscuro|深色
+light color|color claro|浅色
+colorful|colorido|彩色的
+elegant|elegante|优雅的
+casual|informal|休闲的
+formal|formal|正式的
+suit (v.)|quedar bien|合适 / 相称
+change clothes|cambiarse de ropa|换衣服

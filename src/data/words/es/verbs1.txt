@@ -1,0 +1,169 @@
+comer||吃
+beber||喝
+ver||看见
+mirar||看
+observar||观看
+oír||听见
+escuchar||听
+leer||读
+escribir||写
+hablar||说话
+decir||说
+contar (decir)||告诉
+preguntar||问
+responder||回答
+comprar||买
+vender||卖
+pagar||付钱
+usar||用
+fabricar||制作
+dormir||睡觉
+despertarse||醒来
+levantarse||起床
+sentarse||坐
+estar de pie||站
+caminar||走路
+correr||跑
+saltar||跳
+nadar||游泳
+jugar||玩
+trabajar||工作
+estudiar||学习
+vivir||生活 / 住
+lavar||洗
+limpiar||打扫
+cocinar||做饭
+llevar puesto||穿着
+ponerse||穿上
+quitarse||脱下
+vestirse||穿衣服
+ducharse||洗澡
+cepillar||刷
+peinar||梳
+afeitarse||刮胡子
+sostener||拿着
+tomar||拿 / 取
+poner||放
+dar||给
+recibir||收到
+conseguir||得到
+traer||带来
+cargar||搬 / 提
+enviar||寄 / 发送
+prestar||借出
+pedir prestado||借入
+devolver||归还
+guardar||保留
+abrir||打开
+cerrar||关上
+encender||打开（电器）
+apagar||关掉（电器）
+empujar||推
+tirar de||拉
+presionar||按
+cortar||切 / 剪
+romper||打破
+arreglar||修理
+construir||建造
+dibujar||画
+pintar||涂色 / 油漆
+cantar||唱歌
+bailar||跳舞
+aguardar||等候
+encontrarse con||见面
+visitar||拜访 / 参观
+llamar||打电话 / 叫
+invitar||邀请
+ayudar||帮助
+enseñar||教
+aprender||学
+practicar||练习
+recordar||记得
+olvidar||忘记
+buscar||寻找
+encontrar||找到
+mostrar||展示
+intentar||尝试
+elegir||选择
+decidir||决定
+comenzar||开始
+parar||停止
+continuar||继续
+pedir||点餐 / 订购
+reservar||预订
+preparar||准备
+comprobar||检查
+explicar||解释
+presentar||介绍
+saludar||打招呼
+agradecer||感谢
+disculparse||道歉
+fumar||抽烟
+morder||咬
+tocar||摸
+abrazar||拥抱
+besar||亲吻
+tirar||扔
+atrapar||接住
+recoger||捡起 / 接人
+envolver||包
+atar||系
+colgar||挂
+doblar||折叠
+llenar||装满
+vaciar||倒空
+verter||倒
+mezclar||搅拌
+hervir||煮开
+freír||煎 / 炸
+hornear||烘烤
+calentar||加热
+enfriar||冷却
+probar||尝
+oler||闻
+dar de comer||喂
+regar||浇水
+plantar||种植
+cultivar||种
+criar||养育
+cuidar||照顾
+ordenar||整理
+planchar||熨
+coser||缝
+cerrar con llave||锁上
+llamar a la puerta||敲门
+sonar||响
+gritar||喊
+susurrar||低声说
+acostarse||躺下
+ponerse de pie||站起来
+tomar asiento||坐下
+irse a la cama||上床睡觉
+desayunar||吃早饭
+almorzar||吃午饭
+cenar||吃晚饭
+ir de compras||去购物
+darse una ducha||冲澡
+cepillarse los dientes||刷牙
+lavarse las manos||洗手
+poner la mesa||摆餐具
+pelar||削皮
+picar||切碎
+remover||搅动
+servir||上菜 / 服务
+tragar||吞
+masticar||嚼
+lamer||舔
+bostezar||打哈欠
+roncar||打鼾
+soñar con||梦见
+mirar fijamente||盯着看
+señalar||指
+saludar con la mano||挥手
+asentir||点头
+aplaudir||鼓掌
+dar una patada||踢
+golpear||打
+apretar||挤 / 捏
+rascar||挠
+frotar||擦 / 揉

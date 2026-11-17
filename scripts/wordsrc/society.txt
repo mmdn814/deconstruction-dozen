@@ -1,0 +1,118 @@
+politics|la política|政治
+government|el gobierno|政府
+law|la ley|法律
+rule (regulation)|la norma|规定
+right (n.)|el derecho|权利
+duty|el deber|义务
+election|las elecciones|选举
+president|el presidente|总统
+prime minister|el primer ministro|首相
+mayor|el alcalde|市长
+king|el rey|国王
+queen|la reina|女王
+population|la población|人口
+peace|la paz|和平
+war|la guerra|战争
+army|el ejército|军队
+crime|el delito|犯罪
+thief|el ladrón|小偷
+robbery|el robo|抢劫
+fraud|la estafa|诈骗
+police|la policía|警方
+court|el tribunal|法院
+judge (n.)|el juez|法官
+prison|la cárcel|监狱
+victim|la víctima|受害者
+witness|el testigo|证人
+news article|el artículo de prensa|新闻报道
+media|los medios de comunicación|媒体
+broadcast|la emisión|广播
+topic|el tema|话题
+rumor|el rumor|谣言
+fact|el hecho|事实
+truth|la verdad|真相
+lie (n.)|la mentira|谎言
+secret|el secreto|秘密
+influence|la influencia|影响
+change (n.)|el cambio social|变化
+crisis|la crisis|危机
+price level|el coste de la vida|物价
+inflation|la inflación|通货膨胀
+stock (shares)|las acciones|股票
+investment|la inversión|投资
+pension|la pensión|养老金
+insurance|el seguro|保险
+welfare|el bienestar social|福利
+poverty|la pobreza|贫困
+wealth|la riqueza|财富
+procedure|el trámite|手续
+form|el formulario|表格
+application form|el formulario de solicitud|申请表
+certificate|el certificado|证明
+ID card|el documento de identidad|身份证
+residence permit|el permiso de residencia|居留许可
+work permit|el permiso de trabajo|工作许可
+registration|el registro|登记
+expiration date|la fecha de caducidad|到期日
+valid|válido|有效的
+expired|caducado|过期的
+personal data|los datos personales|个人信息
+date of birth|la fecha de nacimiento|出生日期
+full name|el nombre completo|全名
+zip code|el código postal|邮编
+mail|el correo|邮件
+registered mail|el correo certificado|挂号信
+bank transfer|la transferencia bancaria|银行转账
+commission|la comisión|手续费
+balance|el saldo|余额
+tax return|la declaración de la renta|报税
+violation|la infracción|违规
+prohibition|la prohibición|禁止
+permission|el permiso oficial|许可
+warning|la advertencia|警告
+no entry|prohibido el paso|禁止入内
+no smoking|prohibido fumar|禁止吸烟
+manners|los modales|礼貌
+custom|la costumbre|习俗
+habit|el hábito|习惯
+tradition|la tradición|传统
+religion|la religión|宗教
+god|el dios|神
+volunteer|el voluntario|志愿者
+organization|la organización|组织
+association|la asociación|协会
+representative|el representante|代表
+majority|la mayoría de la gente|多数人
+minority|la minoría|少数
+freedom|la libertad|自由
+equality|la igualdad|平等
+justice|la justicia|正义
+safety|la seguridad|安全
+violence|la violencia|暴力
+protest|la protesta|抗议
+demonstration|la manifestación|游行示威
+immigrant|el inmigrante|移民
+refugee|el refugiado|难民
+era|la época|时代
+fill out|rellenar (un formulario)|填写
+submit|presentar (documentos)|提交
+renew|renovar|续办
+register|inscribirse|登记
+report a theft|denunciar un robo|报案
+pay taxes|pagar impuestos|纳税
+vote (n.)|el voto|选票
+party (political)|el partido político|政党
+democracy|la democracia|民主
+parliament|el parlamento|议会
+minister|el ministro|部长
+ambassador|el embajador|大使
+nation|la nación|国家 / 民族
+flag|la bandera|旗帜
+anthem|el himno|国歌
+border control|el control fronterizo|边境检查
+emergency number|el número de emergencias|紧急电话
+lost property|los objetos extraviados|遗失物品
+charity|la organización benéfica|慈善机构
+donation|la donación|捐款
+homeless person|la persona sin hogar|无家可归者
+strike (n.)|la huelga general|大罢工

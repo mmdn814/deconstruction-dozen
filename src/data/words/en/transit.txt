@@ -1,0 +1,105 @@
+station|/ˈsteɪʃən/|车站
+train|/treɪn/|火车
+subway|/ˈsʌbˌweɪ/|地铁
+high-speed train|/haɪ spiːd treɪn/|高铁
+bus|/bʌs/|公交车
+coach|/koʊtʃ/|长途客车
+tram|/træm/|有轨电车
+taxi|/ˈtæksiː/|出租车
+car|/kɑːr/|汽车
+bicycle|/ˈbaɪsəkəl/|自行车
+motorcycle|/ˈmoʊtərˌsaɪkəl/|摩托车
+truck|/trʌk/|卡车
+airplane|/ˈerˌpleɪn/|飞机
+ship|/ʃɪp/|船
+ferry|/ˈferiː/|渡轮
+airport|/ˈerˌpɔːrt/|机场
+port|/pɔːrt/|港口
+bus stop|/bʌs stɑːp/|公交站
+platform|/ˈplætˌfɔːrm/|站台
+track|/træk/|轨道 / 站台号
+ticket|/ˈtɪkət/|车票
+ticket office|/ˈtɪkət ˈɔːfəs/|售票处
+ticket machine|/ˈtɪkət məˈʃiːn/|售票机
+one-way|/wʌn weɪ/|单程
+round trip|/raʊnd trɪp/|往返
+pass|/pæs/|月票 / 通票
+fare|/fer/|车费
+reserved seat|/rəˈzɜːrvd siːt/|对号座
+window seat|/ˈwɪndoʊ siːt/|靠窗座
+aisle seat|/aɪl siːt/|靠过道座
+first class|/fɜːrst klæs/|头等舱
+timetable|/ˈtaɪmˌteɪbəl/|时刻表
+departure|/dəˈpɑːrtʃər/|出发
+arrival|/əˈraɪvəl/|到达
+delay|/dəˈleɪ/|延误
+cancellation|/ˌkæntsəˈleɪʃən/|取消
+transfer (n.)|/træntsˈfɜːrɪŋ/|换乘
+line|/laɪn/|线路
+route|/ruːt/|路线
+direction|/dəˈrekʃən/|方向
+destination|/ˌdestəˈneɪʃən/|目的地
+terminal|/ˈtɜːrmənəl/|航站楼 / 终点站
+next stop|/nekst stɑːp/|下一站
+last train|/læst treɪn/|末班车
+rush hour|/rʌʃ ˈaʊər/|高峰时段
+passenger|/ˈpæsndʒər/|乘客
+conductor|/kənˈdʌktər/|检票员
+pilot|/ˈpaɪlət/|飞行员
+flight|/flaɪt/|航班
+boarding|/ˈbɔːrdɪŋ/|登机
+boarding pass|/ˈbɔːrdɪŋ pæs/|登机牌
+gate|/geɪt/|登机口
+passport|/ˈpæsˌpɔːrt/|护照
+visa|/ˈviːzə/|签证
+customs|/ˈkʌstəmz/|海关
+immigration|/ˌɪməˈgreɪʃən/|入境检查
+baggage claim|/ˈbægɪdʒ kleɪm/|行李提取
+hand luggage|/hænd ˈlʌgɪdʒ/|随身行李
+suitcase|/ˈsuːtˌkeɪs/|行李箱
+backpack|/ˈbækˌpæk/|背包
+locker|/ˈlɑːkər/|储物柜
+lost and found|/lɔːst ænd faʊnd/|失物招领
+road|/roʊd/|公路
+street|/striːt/|街道
+avenue|/ˈævəˌnuː/|大道
+highway|/ˈhaɪˌweɪ/|高速公路
+intersection|/ˌɪntərˈsekʃən/|十字路口
+traffic light|/ˈtræfɪk laɪt/|红绿灯
+crosswalk|/ˈkrɔːsˌwɔːk/|人行横道
+corner|/ˈkɔːrnər/|拐角
+bridge|/brɪdʒ/|桥
+tunnel|/ˈtʌnəl/|隧道
+sidewalk|/ˈsaɪdˌwɔːk/|人行道
+parking lot|/ˈpɑːrkɪŋ lɑːt/|停车场
+gas station|/gæs ˈsteɪʃən/|加油站
+map|/mæp/|地图
+north|/nɔːrθ/|北
+south|/saʊθ/|南
+east|/iːst/|东
+west|/west/|西
+straight ahead|/streɪt əˈhed/|一直往前
+turn left|/tɜːrn left/|左转
+turn right|/tɜːrn raɪt/|右转
+at the end|/æt ðə end/|在尽头
+shortcut|/ˈʃɔːrtˌkʌt/|近路
+on the way|/ɔːn ðə weɪ/|在路上
+traffic|/ˈtræfɪk/|交通
+traffic jam|/ˈtræfɪk dʒæm/|堵车
+accident|/ˈæksədnt/|事故
+driver's license|/ˈdraɪvərz ˈlaɪsns/|驾照
+seat belt|/siːt belt/|安全带
+rental car|/ˈrentl kɑːr/|租的车
+gasoline|/ˈgæsəliːn/|汽油
+wheel|/wiːl/|轮子
+engine|/ˈendʒən/|发动机
+brake|/breɪk/|刹车
+helmet|/ˈhelmət/|头盔
+pedestrian|/pəˈdestriːən/|行人
+speed limit|/spiːd ˈlɪmət/|限速
+fine|/faɪn/|罚款
+how do I get to|/haʊ duː aɪ get tuː/|怎么去…
+is it far|/ɪz ɪt fɑːr/|远吗
+get in (car)|/get ɪn/|上车
+take a taxi|/teɪk ə ˈtæksiː/|打车
+miss the bus|/mɪs ðə bʌs/|错过公交

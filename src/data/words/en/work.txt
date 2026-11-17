@@ -1,0 +1,128 @@
+job|/dʒɑːb/|工作（职位）
+work (n.)|/wɜːrk/|工作
+career|/kəˈrɪr/|职业生涯
+profession|/prəˈfeʃən/|职业
+workplace|/ˈwɜːrkˌpleɪs/|工作场所
+headquarters|/ˈhedˌkwɔːrtərz/|总部
+branch|/brænʃ/|分公司
+department|/dəˈpɑːrtmənt/|部门
+sales|/seɪlz/|销售
+marketing|/ˈmɑːrkətɪŋ/|市场营销
+human resources|/ˈhjuːmən ˈriːˌsɔːrsɪz/|人力资源
+accounting|/əˈkaʊntɪŋ/|会计
+employee|/ˌemˌplɔːˈiː/|员工
+employer|/ɪmˈplɔɪjər/|雇主
+colleague|/ˈkɑːliːg/|同事
+manager|/ˈmænɪdʒər/|经理
+director|/dəˈrektər/|总监 / 主任
+secretary|/ˈsekrəˌteriː/|秘书
+assistant|/əˈsɪstnt/|助理
+intern|/ˈɪnˌtɜːrn/|实习生
+team|/tiːm/|团队
+client|/ˈklaɪənt/|客户
+supplier|/səˈplaɪər/|供应商
+part-time job|/pɑːrt taɪm dʒɑːb/|兼职
+full-time|/fʊl taɪm/|全职
+meeting|/ˈmiːtɪŋ/|会议
+conference|/ˈkɑːnfərəns/|大会
+presentation|/ˌpriːˌzenˈteɪʃən/|演示
+project|/ˈprɑːˌdʒekt/|项目
+task|/tæsk/|任务
+document|/ˈdɑːkjəmənt/|文件
+report (n.)|/rəˈpɔːrt/|报告
+proposal|/prəˈpoʊzəl/|提案
+plan (n.)|/plæn/|计划
+strategy|/ˈstrætədʒiː/|策略
+goal|/goʊl/|目标
+result|/rəˈzʌlt/|结果
+cause|/kɔːz/|原因
+problem|/ˈprɑːbləm/|问题
+solution|/səˈluːʃən/|解决办法
+decision|/dəˈsɪʒən/|决定
+opinion|/əˈpɪnjən/|意见
+idea|/aɪˈdiːə/|主意
+progress|/ˈprɑːgrəs/|进展
+situation|/ˌsɪtʃəˈweɪʃən/|情况
+schedule (work)|/ˈskeˌdʒuːl/|日程
+shift|/ʃɪft/|班次
+overtime|/ˈoʊvərˌtaɪm/|加班
+business trip|/ˈbɪznəs trɪp/|出差
+day off|/deɪ ɔːf/|休息日
+leave (n.)|/liːv/|请假
+commute|/kəˈmjuːt/|通勤
+remote work|/rəˈmoʊt wɜːrk/|远程办公
+job interview|/dʒɑːb ˈɪntərˌvjuː/|面试
+résumé|/ˈrezəˌmeɪ/|简历
+application|/ˌæpləˈkeɪʃən/|申请
+hiring|/ˈhaɪərɪŋ/|招聘
+training|/ˈtreɪnɪŋ/|培训
+experience (n.)|/ɪkˈspɪriːəns/|经验
+skill|/skɪl/|技能
+ability|/əˈbɪlətiː/|能力
+responsibility|/rəˌspɑːntsəˈbɪlətiː/|责任
+role|/roʊl/|角色
+position|/pəˈzɪʃən/|职位
+promotion|/prəˈmoʊʃən/|升职
+raise (n.)|/reɪz/|加薪
+bonus|/ˈboʊnəs/|奖金
+wage|/weɪdʒ/|薪水
+retirement|/rəˈtaɪərmənt/|退休
+unemployment|/ˌʌnəmˈplɔɪmənt/|失业
+resignation|/ˌrezəgˈneɪʃən/|辞职
+dismissal|/dəˈsmɪsəl/|解雇
+strike|/straɪk/|罢工
+union|/ˈjuːnjən/|工会
+signature|/ˈsɪgnətʃər/|签名
+copy|/ˈkɑːpiː/|复印件
+file|/faɪl/|文件 / 档案
+data|/ˈdætə/|数据
+email|/ˈiːˌmeɪl/|电子邮件
+attachment|/əˈtætʃmənt/|附件
+phone call|/foʊn kɔːl/|电话
+message|/ˈmesɪdʒ/|留言 / 消息
+urgent|/ˈɜːrdʒənt/|紧急的
+business|/ˈbɪznəs/|生意
+industry|/ˈɪndəstriː/|产业
+economy|/iːˈkɑːnəmiː/|经济
+trade|/treɪd/|贸易
+export|/ˈekˌspɔːrt/|出口
+import|/ɪmˈpɔːrt/|进口
+production|/prəˈdʌkʃən/|生产
+development|/dəˈveləpmənt/|开发
+technology|/tekˈnɑːlədʒiː/|技术
+competition|/ˌkɑːmpəˈtɪʃən/|竞争
+success|/səkˈses/|成功
+failure|/ˈfeɪljər/|失败
+advantage|/ədˈvæntɪdʒ/|优势
+disadvantage|/ˌdɪsədˈvæntɪdʒ/|劣势
+opportunity|/ˌɑːpərˈtuːnətiː/|机会
+risk|/rɪsk/|风险
+effort|/ˈefərt/|努力
+hire|/ˈhaɪər/|雇用
+fire (v.)|/ˈfaɪər/|解雇
+resign|/rəˈzaɪn/|辞职
+retire|/rəˈtaɪər/|退休
+apply for|/əˈplaɪ fɔːr/|申请
+sign|/saɪn/|签字
+print|/prɪnt/|打印
+copy (v.)|/ˈkɑːpiː/|复印
+send an email|/send æn ˈiːˌmeɪl/|发邮件
+attend a meeting|/əˈtend ə ˈmiːtɪŋ/|开会
+be in charge|/biː ɪn tʃɑːrdʒ/|负责
+work overtime|/wɜːrk ˈoʊvərˌtaɪm/|加班
+take a break|/teɪk ə breɪk/|休息一下
+negotiate|/nəˈgoʊʃiːˌeɪt/|谈判
+invest|/ɪnˈvest/|投资
+produce|/prəˈduːs/|生产
+launch|/lɔːnʃ/|推出
+schedule (v.)|/ˈskeˌdʒuːl/|安排
+deadline (work)|/ˈdedˌlaɪn/|交付期限
+budget (work)|/ˈbʌdʒət/|项目预算
+quote|/kwoʊt/|报价
+agreement|/əˈgriːmənt/|协议
+partner (business)|/ˈpɑːrtnər/|合伙人
+shareholder|/ˈʃerˌhoʊldər/|股东
+customer satisfaction|/ˈkʌstəmər ˌsætəsˈfækʃən/|客户满意度
+workload|/ˈwɜːrkˌloʊd/|工作量
+performance|/pərˈfɔːrməns/|业绩
+feedback|/ˈfiːdˌbæk/|反馈

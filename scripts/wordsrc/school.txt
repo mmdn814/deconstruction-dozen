@@ -1,0 +1,113 @@
+study (n.)|el estudio (aprendizaje)|学习
+education|la educación|教育
+kindergarten|la guardería|幼儿园
+primary school|la escuela primaria|小学
+secondary school|el instituto|中学
+college|la facultad|学院
+language school|la academia de idiomas|语言学校
+classroom|el aula|教室
+class|la clase|课
+lesson|la lección|一课
+course|el curso|课程
+homework|los deberes|作业
+exam|el examen|考试
+quiz|la prueba|小测验
+grade|la nota|成绩
+score|la puntuación|分数
+pass an exam|aprobar|及格
+fail (exam)|suspender|不及格
+question|la pregunta|问题
+answer (n.)|la respuesta|答案
+exercise (study)|el ejercicio (de clase)|练习题
+review|el repaso|复习
+research (n.)|la investigación|研究
+thesis|la tesis|论文
+essay|el ensayo|短文
+graduation|la graduación|毕业
+degree (academic)|el título|学位
+diploma|el diploma|文凭
+scholarship|la beca|奖学金
+tuition|la matrícula|学费
+exchange student|el estudiante de intercambio|交换生
+pupil|el alumno|学生（中小学）
+professor|el catedrático|教授
+principal|el director de escuela|校长
+semester|el semestre|学期
+school year|el año escolar|学年
+timetable (school)|el horario de clases|课程表
+attendance|la asistencia|出勤
+absence|la ausencia|缺席
+textbook|el libro de texto|教科书
+dictionary|el diccionario|词典
+book|el libro|书
+novel|la novela|小说
+comic|el cómic|漫画
+page|la página|页
+chapter|el capítulo|章
+sentence|la frase|句子
+paragraph|el párrafo|段落
+text|el texto|文本
+grammar|la gramática|语法
+vocabulary|el vocabulario|词汇
+word|la palabra|单词
+letter (alphabet)|la letra|字母
+alphabet|el alfabeto|字母表
+language|el idioma|语言
+meaning|el significado|意思
+pronunciation|la pronunciación|发音
+accent|el acento|口音 / 重音
+spelling|la ortografía|拼写
+conversation|la conversación|对话
+composition|la redacción|作文
+translation|la traducción|翻译
+interpreter|el intérprete|口译员
+dialect|el dialecto|方言
+English|el inglés|英语
+Spanish|el español|西班牙语
+Chinese|el chino|中文
+Japanese|el japonés|日语
+foreign language|la lengua extranjera|外语
+mother tongue|la lengua materna|母语
+subject|la asignatura|科目
+mathematics|las matemáticas|数学
+science|la ciencia|科学
+physics|la física|物理
+chemistry|la química|化学
+biology|la biología|生物
+history|la historia|历史
+geography|la geografía|地理
+literature|la literatura|文学
+art|el arte|艺术
+music|la música|音乐
+physical education|la educación física|体育
+culture|la cultura|文化
+knowledge|el conocimiento|知识
+information|la información|信息
+explanation|la explicación|解释
+example|el ejemplo|例子
+content|el contenido|内容
+method|el método|方法
+reason|la razón|理由
+purpose|el propósito|目的
+theory|la teoría|理论
+level|el nivel|水平
+beginner|el principiante|初学者
+intermediate|intermedio|中级
+advanced|avanzado|高级
+blackboard|la pizarra|黑板
+chalk|la tiza|粉笔
+ruler|la regla|尺子
+schoolbag|la mochila escolar|书包
+recess|el recreo|课间休息
+club|el club|社团
+take an exam|hacer un examen|参加考试
+take notes|tomar apuntes|记笔记
+memorize|memorizar|背诵
+review (v.)|repasar|复习
+graduate|graduarse|毕业
+enroll|matricularse|注册入学
+skip class|faltar a clase|逃课
+raise your hand|levantar la mano|举手
+look up|consultar|查阅
+underline|subrayar|划线
+summarize|resumir|总结
