@@ -91,7 +91,7 @@ export const TabWords = ({ targetLang }) => {
   const themeName = (t) => (targetLang !== 'ja' && t.alt) || t.name;
 
   const handleCard = (item) => {
-    speakText(cleanWord(item.w), 0.85);
+    speakText(cleanWord(item.w), 0.85, 1.0, null, langConfig.speechLang);
     markRead(item);
   };
 
@@ -125,10 +125,10 @@ export const TabWords = ({ targetLang }) => {
     if (!step) return onEnd && onEnd();
     if (step.pause) return setTimeout(() => onEnd && onEnd(), 320);
     if (step.phoneme) {
-      playPurePhoneme(step.phoneme[0], step.phoneme[1]);
+      playPurePhoneme(step.phoneme[0], step.phoneme[1], langConfig.speechLang);
       return setTimeout(() => onEnd && onEnd(), 750);
     }
-    return speakText(step.text, 0.7, 1.0, () => setTimeout(() => onEnd && onEnd(), 180));
+    return speakText(step.text, 0.7, 1.0, () => setTimeout(() => onEnd && onEnd(), 180), langConfig.speechLang);
   };
 
   // 拼读：一个单位一个单位慢慢读，最后连起来读整个词
@@ -137,7 +137,7 @@ export const TabWords = ({ targetLang }) => {
     let i = 0;
     const next = () => {
       if (i >= steps.length) {
-        setTimeout(() => speakText(cleanWord(item.w), 0.85), 350);
+        setTimeout(() => speakText(cleanWord(item.w), 0.85, 1.0, null, langConfig.speechLang), 350);
         markRead(item);
         return;
       }

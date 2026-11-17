@@ -45,7 +45,7 @@ export const TabZeroToOne = ({
     const side = Math.random() < 0.5 ? 1 : 2;
     const rawWord = cleanSpeakWord(side === 1 ? pair.w1 : pair.w2);
     setEarQuiz({ pairIdx: idx, targetSide: side, word: rawWord, guessed: null });
-    speakText(rawWord, 0.92);
+    speakText(rawWord, 0.92, 1.0, null, langConfig.speechLang);
   };
 
   const handleGuessEarQuiz = (side) => {
@@ -62,7 +62,7 @@ export const TabZeroToOne = ({
       wordStr: chosen,
       guessedIdx: null
     });
-    speakText(chosen, 0.92);
+    speakText(chosen, 0.92, 1.0, null, langConfig.speechLang);
   };
 
   const playClusterChain = (wordsList) => {
@@ -73,7 +73,7 @@ export const TabZeroToOne = ({
       idx += 1;
       speakText(clean, 0.94, 1.0, () => {
         setTimeout(playNext, 420);
-      });
+      }, langConfig.speechLang);
     };
     playNext();
   };
@@ -167,7 +167,7 @@ export const TabZeroToOne = ({
                   return (
                     <div
                       key={idx}
-                      onClick={() => playPurePhoneme(c.char, singleSoundText)}
+                      onClick={() => playPurePhoneme(c.char, singleSoundText, langConfig.speechLang)}
                       className="bg-white hover:bg-blue-50/50 border border-slate-200/90 hover:border-blue-400 rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between gap-1.5"
                     >
                       {/* Row 1: Phonetic Symbol / Kana + Pure Phoneme Single Sound Button + Spelling Rule Badge */}
@@ -180,7 +180,7 @@ export const TabZeroToOne = ({
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              playPurePhoneme(c.char, singleSoundText);
+                              playPurePhoneme(c.char, singleSoundText, langConfig.speechLang);
                             }}
                             className="px-1.5 py-0.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold flex items-center gap-0.5 shrink-0 transition-colors shadow-2xs"
                             title={`播放 ${c.char} 的纯粹音标单音`}
@@ -203,7 +203,7 @@ export const TabZeroToOne = ({
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            speakText(c.sample || singleSoundText, 0.92);
+                            speakText(c.sample || singleSoundText, 0.92, 1.0, null, langConfig.speechLang);
                           }}
                           className="font-bold text-slate-800 hover:text-blue-600 flex items-center gap-1 text-left min-w-0 truncate"
                           title="点击朗读下方示例单词"
@@ -223,7 +223,7 @@ export const TabZeroToOne = ({
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            speakText(c.sample || singleSoundText, 0.6);
+                            speakText(c.sample || singleSoundText, 0.6, 1.0, null, langConfig.speechLang);
                           }}
                           className="px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0"
                           title="0.6x 慢速读示例词"
@@ -304,7 +304,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center justify-between bg-slate-50 hover:bg-blue-50/70 border border-slate-200/80 rounded-lg px-2.5 py-1.5 transition-colors">
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW1, 0.95)}
+                          onClick={() => speakText(cleanW1, 0.95, 1.0, null, langConfig.speechLang)}
                           className="text-left flex-1"
                         >
                           <div className="text-xs font-extrabold text-slate-900 flex items-center gap-1">
@@ -315,7 +315,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW1, 0.6)}
+                          onClick={() => speakText(cleanW1, 0.6, 1.0, null, langConfig.speechLang)}
                           className="px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0 ml-1"
                         >
                           🐢 慢速
@@ -326,7 +326,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center justify-between bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 rounded-lg px-2.5 py-1.5 transition-colors">
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW2, 0.95)}
+                          onClick={() => speakText(cleanW2, 0.95, 1.0, null, langConfig.speechLang)}
                           className="text-left flex-1"
                         >
                           <div className="text-xs font-extrabold text-slate-900 flex items-center gap-1">
@@ -337,7 +337,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW2, 0.6)}
+                          onClick={() => speakText(cleanW2, 0.6, 1.0, null, langConfig.speechLang)}
                           className="px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0 ml-1"
                         >
                           🐢 慢速
@@ -394,7 +394,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center gap-1.5 shrink-0">
                         <button
                           type="button"
-                          onClick={() => speakText(pair.sentence, 0.94)}
+                          onClick={() => speakText(pair.sentence, 0.94, 1.0, null, langConfig.speechLang)}
                           className="px-2 py-1 rounded-lg bg-white hover:bg-blue-50 text-blue-600 border border-slate-200 text-[11px] font-bold flex items-center gap-1"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -402,7 +402,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(pair.sentence, 0.6)}
+                          onClick={() => speakText(pair.sentence, 0.6, 1.0, null, langConfig.speechLang)}
                           className="px-2 py-1 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-[11px] font-bold"
                         >
                           🐢 慢速
@@ -434,7 +434,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center gap-2">
                         <button
                           type="button"
-                          onClick={() => speakText(earQuiz.word, 0.92)}
+                          onClick={() => speakText(earQuiz.word, 0.92, 1.0, null, langConfig.speechLang)}
                           className="bg-indigo-600 text-white px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -442,7 +442,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(earQuiz.word, 0.6)}
+                          onClick={() => speakText(earQuiz.word, 0.6, 1.0, null, langConfig.speechLang)}
                           className="bg-amber-500 text-white px-2 py-1 rounded-lg font-bold text-[11px]"
                         >
                           🐢 慢速听谜题
@@ -578,7 +578,7 @@ export const TabZeroToOne = ({
                     return (
                       <div
                         key={wIdx}
-                        onClick={() => speakText(cleanSpeak, 0.95)}
+                        onClick={() => speakText(cleanSpeak, 0.95, 1.0, null, langConfig.speechLang)}
                         className="bg-white hover:bg-blue-50/70 border border-slate-200/90 hover:border-blue-400 rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between gap-1">
@@ -587,7 +587,7 @@ export const TabZeroToOne = ({
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              speakText(cleanSpeak, 0.6);
+                              speakText(cleanSpeak, 0.6, 1.0, null, langConfig.speechLang);
                             }}
                             className="px-1.5 py-0.2 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0"
                           >
@@ -608,7 +608,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center gap-2">
                         <button
                           type="button"
-                          onClick={() => speakText(clusterQuiz.wordStr, 0.92)}
+                          onClick={() => speakText(clusterQuiz.wordStr, 0.92, 1.0, null, langConfig.speechLang)}
                           className="bg-indigo-600 text-white px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -616,7 +616,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(clusterQuiz.wordStr, 0.6)}
+                          onClick={() => speakText(clusterQuiz.wordStr, 0.6, 1.0, null, langConfig.speechLang)}
                           className="bg-amber-500 text-white px-2 py-1 rounded-lg font-bold text-[11px]"
                         >
                           🐢 慢速听

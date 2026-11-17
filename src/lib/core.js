@@ -54,63 +54,80 @@ export const setSpeechLang = (lang) => {
   currentSpeechLang = lang;
 };
 
-// --- Standard IPA Pure Phoneme Audio Map (Using Wikimedia Transcoded MP3 Streams for 100% Cross-Platform Audio) ---
-export const IPA_AUDIO_URLS = {
-  // English 12 Monophthongs (单元音)
-  '/iː/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/9/91/Close_front_unrounded_vowel.ogg/Close_front_unrounded_vowel.ogg.mp3',
-  '/ɪ/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4c/Near-close_near-front_unrounded_vowel.ogg/Near-close_near-front_unrounded_vowel.ogg.mp3',
-  '/e/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Close-mid_front_unrounded_vowel.ogg/Close-mid_front_unrounded_vowel.ogg.mp3',
-  '/æ/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c9/Near-open_front_unrounded_vowel.ogg/Near-open_front_unrounded_vowel.ogg.mp3',
-  '/ɜːr/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a6/Open-mid_central_unrounded_vowel.ogg/Open-mid_central_unrounded_vowel.ogg.mp3',
-  '/ə/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d9/Mid-central_vowel.ogg/Mid-central_vowel.ogg.mp3',
-  '/ʌ/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/9/92/Open-mid_back_unrounded_vowel.ogg/Open-mid_back_unrounded_vowel.ogg.mp3',
-  '/ɑː/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e5/Open_back_unrounded_vowel.ogg/Open_back_unrounded_vowel.ogg.mp3',
-  '/ɔː/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/0/02/Open-mid_back_rounded_vowel.ogg/Open-mid_back_rounded_vowel.ogg.mp3',
-  '/ɒ/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/3/31/Open_back_rounded_vowel.ogg/Open_back_rounded_vowel.ogg.mp3',
-  '/uː/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5d/Close_back_rounded_vowel.ogg/Close_back_rounded_vowel.ogg.mp3',
-  '/ʊ/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Near-close_near-back_rounded_vowel.ogg/Near-close_near-back_rounded_vowel.ogg.mp3',
+// --- Standard Oxford 44 IPA Pure Phoneme Audio Map (Local High-Fidelity MP3 Files) ---
+export const IPA_AUDIO_MAP = {
+  // 12 单元音 (Monophthongs)
+  '/iː/': 'iː_isolation.mp3',
+  '/ɪ/': 'ɪ_isolation.mp3',
+  '/e/': 'e_isolation.mp3',
+  '/æ/': 'æ_isolation.mp3',
+  '/ɜːr/': 'ɜː_isolation.mp3',
+  '/ɜː/': 'ɜː_isolation.mp3',
+  '/ə/': 'ə_isolation.mp3',
+  '/ʌ/': 'ʌ_isolation.mp3',
+  '/ɑː/': 'ɑː_isolation.mp3',
+  '/ɔː/': 'ɔː_isolation.mp3',
+  '/ɒ/': 'ɒ_isolation.mp3',
+  '/uː/': 'uː_isolation.mp3',
+  '/ʊ/': 'ʊ_isolation.mp3',
 
-  // English 16 Paired Consonants (清浊成对辅音 - 纯正母语录音)
-  '/p/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/51/Voiceless_bilabial_plosive.ogg/Voiceless_bilabial_plosive.ogg.mp3',
-  '/b/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2c/Voiced_bilabial_plosive.ogg/Voiced_bilabial_plosive.ogg.mp3',
-  '/t/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/0/02/Voiceless_alveolar_plosive.ogg/Voiceless_alveolar_plosive.ogg.mp3',
-  '/d/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/0/01/Voiced_alveolar_plosive.ogg/Voiced_alveolar_plosive.ogg.mp3',
-  '/k/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e3/Voiceless_velar_plosive.ogg/Voiceless_velar_plosive.ogg.mp3',
-  '/ɡ/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/1/12/Voiced_velar_plosive.ogg/Voiced_velar_plosive.ogg.mp3',
-  '/f/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/3/33/Voiceless_labiodental_fricative.ogg/Voiceless_labiodental_fricative.ogg.mp3',
-  '/v/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/8/85/Voiced_labiodental_fricative.ogg/Voiced_labiodental_fricative.ogg.mp3',
-  '/θ/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/Voiceless_dental_fricative.ogg/Voiceless_dental_fricative.ogg.mp3',
-  '/ð/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6a/Voiced_dental_fricative.ogg/Voiced_dental_fricative.ogg.mp3',
-  '/s/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ac/Voiceless_alveolar_sibilant.ogg/Voiceless_alveolar_sibilant.ogg.mp3',
-  '/z/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Voiced_alveolar_sibilant.ogg/Voiced_alveolar_sibilant.ogg.mp3',
-  '/ʃ/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/Voiceless_postalveolar_fricative.ogg/Voiceless_postalveolar_fricative.ogg.mp3',
-  '/ʒ/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/3/30/Voiced_postalveolar_fricative.ogg/Voiced_postalveolar_fricative.ogg.mp3',
-  '/tʃ/ 清': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/Voiceless_palato-alveolar_affricate.ogg/Voiceless_palato-alveolar_affricate.ogg.mp3',
-  '/dʒ/ 浊': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/0/07/Voiced_palato-alveolar_affricate.ogg/Voiced_palato-alveolar_affricate.ogg.mp3',
+  // 8 双元音 (Diphthongs)
+  '/eɪ/': 'eɪ_isolation.mp3',
+  '/aɪ/': 'aɪ_isolation.mp3',
+  '/ɔɪ/': 'ɔɪ_isolation.mp3',
+  '/aʊ/': 'aʊ_isolation.mp3',
+  '/əʊ/': 'əʊ_isolation.mp3',
+  '/oʊ/': 'əʊ_isolation.mp3',
+  '/ɪər/': 'ɪə_isolation.mp3',
+  '/ɪə/': 'ɪə_isolation.mp3',
+  '/eər/': 'eə_isolation.mp3',
+  '/eə/': 'eə_isolation.mp3',
+  '/ʊər/': 'ʊə_isolation.mp3',
+  '/ʊə/': 'ʊə_isolation.mp3',
 
-  // English 8 Nasals, Lateral & Approximants (鼻音、舌侧音与半元音)
-  '/m/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/51/Bilabial_nasal.ogg/Bilabial_nasal.ogg.mp3',
-  '/n/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/Alveolar_nasal.ogg/Alveolar_nasal.ogg.mp3',
-  '/ŋ/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/3/39/Velar_nasal.ogg/Velar_nasal.ogg.mp3',
-  '/h/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/da/Voiceless_glottal_fricative.ogg/Voiceless_glottal_fricative.ogg.mp3',
-  '/l/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Alveolar_lateral_approximant.ogg/Alveolar_lateral_approximant.ogg.mp3',
-  '/r/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1f/Alveolar_approximant.ogg/Alveolar_approximant.ogg.mp3',
-  '/w/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f2/Voiced_labio-velar_approximant.ogg/Voiced_labio-velar_approximant.ogg.mp3',
-  '/j/': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Palatal_approximant.ogg/Palatal_approximant.ogg.mp3',
+  // 16 清浊成对辅音 (Paired Consonants)
+  '/p/': 'p_isolation.mp3',
+  '/b/': 'b_isolation.mp3',
+  '/t/': 't_isolation.mp3',
+  '/d/': 'd_isolation.mp3',
+  '/k/': 'k_isolation.mp3',
+  '/ɡ/': 'g_isolation.mp3',
+  '/g/': 'g_isolation.mp3',
+  '/f/': 'f_isolation.mp3',
+  '/v/': 'v_isolation.mp3',
+  '/θ/': 'θ_isolation.mp3',
+  '/ð/': 'ð_isolation.mp3',
+  '/s/': 's_isolation.mp3',
+  '/z/': 'z_isolation.mp3',
+  '/ʃ/': 'ʃ_isolation.mp3',
+  '/ʒ/': 'ʒ_isolation.mp3',
+  '/tʃ/': 'tʃ_isolation.mp3',
+  '/dʒ/': 'dʒ_isolation.mp3',
 
-  // Spanish Pure Vowels & Trills (西班牙语 5 大元音与大舌颤音)
-  'A a': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/50/Open_central_unrounded_vowel.ogg/Open_central_unrounded_vowel.ogg.mp3',
-  'E e': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Close-mid_front_unrounded_vowel.ogg/Close-mid_front_unrounded_vowel.ogg.mp3',
-  'I i': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/9/91/Close_front_unrounded_vowel.ogg/Close_front_unrounded_vowel.ogg.mp3',
-  'O o': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/8/84/Close-mid_back_rounded_vowel.ogg/Close-mid_back_rounded_vowel.ogg.mp3',
-  'U u': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5d/Close_back_rounded_vowel.ogg/Close_back_rounded_vowel.ogg.mp3',
-  'RR rr': 'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/ce/Alveolar_trill.ogg/Alveolar_trill.ogg.mp3'
+  // 8 鼻音、舌侧音与半元音 (Nasals, Lateral, Approximants)
+  '/m/': 'm_isolation.mp3',
+  '/n/': 'n_isolation.mp3',
+  '/ŋ/': 'ŋ_isolation.mp3',
+  '/h/': 'h_isolation.mp3',
+  '/l/': 'l_isolation.mp3',
+  '/r/': 'r_isolation.mp3',
+  '/w/': 'w_isolation.mp3',
+  '/j/': 'j_isolation.mp3',
+
+  // Spanish Trill (西语大舌颤音)
+  'RR': 'rr_isolation.mp3',
+  'RR rr': 'rr_isolation.mp3'
+};
+
+const getIpaAudioUrl = (filename) => {
+  const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
+  return `${base.replace(/\/+$/, '')}/audio/ipa/${filename}`;
 };
 
 let activeIpaAudio = null;
 
-// --- Play Pure IPA Phoneme Sound (1. Direct High-Fidelity Audio -> 2. Native Speech Synthesis) ---
-export const playPurePhoneme = (charKey, fallbackSoundText) => {
+// --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Native TTS) ---
+export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
   if (typeof window === 'undefined') return;
   try {
     if ('speechSynthesis' in window) {
@@ -121,29 +138,68 @@ export const playPurePhoneme = (charKey, fallbackSoundText) => {
       activeIpaAudio.currentTime = 0;
     }
 
-    // 1. Play official IPA audio recording if available
-    const ipaUrl = IPA_AUDIO_URLS[charKey];
-    if (ipaUrl) {
-      const audio = new Audio(ipaUrl);
+    const raw = String(charKey || '').trim();
+    // 兼容 '/p/ 清'、'/p/'、'p' 等各种传入格式
+    const cleanKey = raw.replace(/\s*[\(（].*$/, '').replace(/\s*(清|浊).*$/, '').trim();
+    const slashKey = `/${cleanKey.replace(/^\/+|\/+$/g, '')}/`;
+    const audioFile = IPA_AUDIO_MAP[raw] || IPA_AUDIO_MAP[cleanKey] || IPA_AUDIO_MAP[slashKey];
+
+    if (audioFile) {
+      const audioUrl = getIpaAudioUrl(audioFile);
+      const audio = new Audio(audioUrl);
       activeIpaAudio = audio;
       audio.onerror = () => {
-        speakText(fallbackSoundText, 0.85);
+        speakText(fallbackSoundText, 0.85, 1.0, null, lang);
       };
       audio.play().catch(() => {
-        speakText(fallbackSoundText, 0.85);
+        speakText(fallbackSoundText, 0.85, 1.0, null, lang);
       });
       return;
     }
 
-    // 2. Fallback to clean TTS pronunciation
-    speakText(fallbackSoundText, 0.85);
+    speakText(fallbackSoundText, 0.85, 1.0, null, lang);
   } catch {
-    speakText(fallbackSoundText, 0.85);
+    speakText(fallbackSoundText, 0.85, 1.0, null, lang);
   }
 };
 
-// --- Web Speech TTS Helper ---
-export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null) => {
+// --- Web Speech TTS Helper with Native Multilingual Voice Detection ---
+let cachedVoices = [];
+const refreshVoices = () => {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    cachedVoices = window.speechSynthesis.getVoices() || [];
+  }
+};
+
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  refreshVoices();
+  window.speechSynthesis.onvoiceschanged = refreshVoices;
+}
+
+export const getBestVoiceForLang = (langCode) => {
+  if (!cachedVoices.length) refreshVoices();
+  const target = (langCode || currentSpeechLang || 'en-US').toLowerCase();
+  const short = target.split('-')[0];
+
+  // 1. 完全匹配（如 ja-JP, es-ES, en-US），优先选择自然/增强发音人
+  const exact = cachedVoices.filter((v) => {
+    const vLang = v.lang.toLowerCase().replace('_', '-');
+    return vLang === target;
+  });
+  if (exact.length) {
+    return exact.find((v) => /natural|premium|enhanced/i.test(v.name)) || exact[0];
+  }
+
+  // 2. 语言前缀匹配（如 ja, es, en）
+  const prefix = cachedVoices.filter((v) => v.lang.toLowerCase().startsWith(short));
+  if (prefix.length) {
+    return prefix.find((v) => /natural|premium|enhanced/i.test(v.name)) || prefix[0];
+  }
+
+  return null;
+};
+
+export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null, langCode = null) => {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     if (onEndCallback) onEndCallback();
     return;
@@ -156,7 +212,16 @@ export const speakText = (text, rate = 0.95, pitch = 1.0, onEndCallback = null) 
       return;
     }
     const utterance = new SpeechSynthesisUtterance(cleanText);
-    utterance.lang = currentSpeechLang;
+    const targetLangCode = langCode || currentSpeechLang || 'en-US';
+    const bestVoice = getBestVoiceForLang(targetLangCode);
+
+    if (bestVoice) {
+      utterance.voice = bestVoice;
+      utterance.lang = bestVoice.lang;
+    } else {
+      utterance.lang = targetLangCode;
+    }
+
     utterance.rate = rate;
     utterance.pitch = pitch;
 

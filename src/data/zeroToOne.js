@@ -43,22 +43,22 @@ export const zeroToOneDataByLang = {
         name: '③ 清浊成对辅音 (16个: 口型相同，声带震动不同)',
         desc: '每对清浊辅音口型100%一样！点击【🔊纯单音】对比：左边清音只有纯粹气流摩擦/爆破（绝无元音尾巴），右边浊音叠加声带共鸣震动：',
         items: [
-          { char: '/p/ 清', sound: 'pay', sub: 'p', tip: '双唇爆破送气(无声带震动)', sample: 'pay', sampleCn: '支付' },
-          { char: '/b/ 浊', sound: 'buy', sub: 'b', tip: '双唇爆破震动声带', sample: 'buy', sampleCn: '买' },
-          { char: '/t/ 清', sound: 'tea', sub: 't', tip: '舌尖抵上齿龈爆破送气', sample: 'tea', sampleCn: '茶' },
-          { char: '/d/ 浊', sound: 'day', sub: 'd', tip: '舌尖抵上齿龈震声带', sample: 'day', sampleCn: '日子/天' },
-          { char: '/k/ 清', sound: 'key', sub: 'k / c / ck', tip: '舌根软腭爆破送气', sample: 'key', sampleCn: '钥匙' },
-          { char: '/ɡ/ 浊', sound: 'give', sub: 'g', tip: '舌根软腭震声带', sample: 'give', sampleCn: '给' },
-          { char: '/f/ 清', sound: 'free', sub: 'f / ph', tip: '上齿轻咬下唇纯吹气', sample: 'free', sampleCn: '免费的' },
-          { char: '/v/ 浊', sound: 'very', sub: 'v', tip: '上齿咬下唇吹气+震声带', sample: 'very', sampleCn: '非常' },
-          { char: '/θ/ 清', sound: 'think', sub: 'th (清)', tip: '舌尖轻放上下齿间纯吹气', sample: 'think', sampleCn: '思考' },
-          { char: '/ð/ 浊', sound: 'this', sub: 'th (浊)', tip: '舌尖轻放上下齿间震声带', sample: 'this', sampleCn: '这个' },
-          { char: '/s/ 清', sound: 'see', sub: 's / c', tip: '舌尖平舌摩擦纯吹气', sample: 'see', sampleCn: '看见' },
-          { char: '/z/ 浊', sound: 'zoo', sub: 'z / s', tip: '舌尖平舌摩擦+震声带', sample: 'zoo', sampleCn: '动物园' },
-          { char: '/ʃ/ 清', sound: 'she', sub: 'sh / -tion', tip: '双唇微翘送气摩擦(“嘘”)', sample: 'she', sampleCn: '她' },
-          { char: '/ʒ/ 浊', sound: 'decision', sub: 's / ge', tip: '双唇微翘摩擦+震声带', sample: 'decision', sampleCn: '决定' },
-          { char: '/tʃ/ 清', sound: 'cheap', sub: 'ch / tch', tip: '短促破擦送气清音', sample: 'cheap', sampleCn: '便宜的' },
-          { char: '/dʒ/ 浊', sound: 'job', sub: 'j / g / dge', tip: '短促破擦震动声带浊音', sample: 'job', sampleCn: '工作' }
+          { char: '/p/ 清', sound: 'p', sub: 'p', tip: '双唇爆破送气(无声带震动)', sample: 'pay', sampleCn: '支付' },
+          { char: '/b/ 浊', sound: 'b', sub: 'b', tip: '双唇爆破震动声带', sample: 'buy', sampleCn: '买' },
+          { char: '/t/ 清', sound: 't', sub: 't', tip: '舌尖抵上齿龈爆破送气', sample: 'tea', sampleCn: '茶' },
+          { char: '/d/ 浊', sound: 'd', sub: 'd', tip: '舌尖抵上齿龈震声带', sample: 'day', sampleCn: '日子/天' },
+          { char: '/k/ 清', sound: 'k', sub: 'k / c / ck', tip: '舌根软腭爆破送气', sample: 'key', sampleCn: '钥匙' },
+          { char: '/ɡ/ 浊', sound: 'g', sub: 'g', tip: '舌根软腭震声带', sample: 'give', sampleCn: '给' },
+          { char: '/f/ 清', sound: 'f', sub: 'f / ph', tip: '上齿轻咬下唇纯吹气', sample: 'free', sampleCn: '免费的' },
+          { char: '/v/ 浊', sound: 'v', sub: 'v', tip: '上齿咬下唇吹气+震声带', sample: 'very', sampleCn: '非常' },
+          { char: '/θ/ 清', sound: 'th', sub: 'th (清)', tip: '舌尖轻放上下齿间纯吹气', sample: 'think', sampleCn: '思考' },
+          { char: '/ð/ 浊', sound: 'th', sub: 'th (浊)', tip: '舌尖轻放上下齿间震声带', sample: 'this', sampleCn: '这个' },
+          { char: '/s/ 清', sound: 's', sub: 's / c', tip: '舌尖平舌摩擦纯吹气', sample: 'see', sampleCn: '看见' },
+          { char: '/z/ 浊', sound: 'z', sub: 'z / s', tip: '舌尖平舌摩擦+震声带', sample: 'zoo', sampleCn: '动物园' },
+          { char: '/ʃ/ 清', sound: 'sh', sub: 'sh / -tion', tip: '双唇微翘送气摩擦(“嘘”)', sample: 'she', sampleCn: '她' },
+          { char: '/ʒ/ 浊', sound: 'zh', sub: 's / ge', tip: '双唇微翘摩擦+震声带', sample: 'decision', sampleCn: '决定' },
+          { char: '/tʃ/ 清', sound: 'ch', sub: 'ch / tch', tip: '短促破擦送气清音', sample: 'cheap', sampleCn: '便宜的' },
+          { char: '/dʒ/ 浊', sound: 'j', sub: 'j / g / dge', tip: '短促破擦震动声带浊音', sample: 'job', sampleCn: '工作' }
         ]
       },
       {
@@ -66,14 +66,14 @@ export const zeroToOneDataByLang = {
         name: '④ 鼻音、舌侧音与半元音 (8个)',
         desc: '决定英语连贯度与地道尾音的关键辅音：',
         items: [
-          { char: '/m/', sound: 'money', sub: 'm', tip: '双唇紧闭鼻腔共鸣', sample: 'money', sampleCn: '钱' },
-          { char: '/n/', sound: 'need', sub: 'n / kn', tip: '舌尖抵上齿龈鼻音', sample: 'need', sampleCn: '需要' },
-          { char: '/ŋ/', sound: 'thing', sub: 'ng / nk', tip: '舌根抵软腭后鼻音', sample: 'thing', sampleCn: '事物' },
-          { char: '/h/', sound: 'help', sub: 'h / wh', tip: '气流顺畅通过声门', sample: 'help', sampleCn: '帮助' },
-          { char: '/l/', sound: 'feel', sub: 'l / ll', tip: '词首清晰，词尾舌尖顶上齿龈', sample: 'feel', sampleCn: '感觉' },
-          { char: '/r/', sound: 'red', sub: 'r / wr', tip: '舌尖向上卷起不碰上颚', sample: 'red', sampleCn: '红色的' },
-          { char: '/w/', sound: 'want', sub: 'w / wh', tip: '双唇嘟圆快速滑开', sample: 'want', sampleCn: '想要' },
-          { char: '/j/', sound: 'yes', sub: 'y', tip: '舌面抬高快速发“耶”', sample: 'yes', sampleCn: '是的' }
+          { char: '/m/', sound: 'm', sub: 'm', tip: '双唇紧闭鼻腔共鸣', sample: 'money', sampleCn: '钱' },
+          { char: '/n/', sound: 'n', sub: 'n / kn', tip: '舌尖抵上齿龈鼻音', sample: 'need', sampleCn: '需要' },
+          { char: '/ŋ/', sound: 'ng', sub: 'ng / nk', tip: '舌根抵软腭后鼻音', sample: 'thing', sampleCn: '事物' },
+          { char: '/h/', sound: 'h', sub: 'h / wh', tip: '气流顺畅通过声门', sample: 'help', sampleCn: '帮助' },
+          { char: '/l/', sound: 'l', sub: 'l / ll', tip: '词首清晰，词尾舌尖顶上齿龈', sample: 'feel', sampleCn: '感觉' },
+          { char: '/r/', sound: 'r', sub: 'r / wr', tip: '舌尖向上卷起不碰上颚', sample: 'red', sampleCn: '红色的' },
+          { char: '/w/', sound: 'w', sub: 'w / wh', tip: '双唇嘟圆快速滑开', sample: 'want', sampleCn: '想要' },
+          { char: '/j/', sound: 'y', sub: 'y', tip: '舌面抬高快速发“耶”', sample: 'yes', sampleCn: '是的' }
         ]
       }
     ],
