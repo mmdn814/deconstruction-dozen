@@ -63,6 +63,8 @@ export const IPA_AUDIO_MAP = {
   '/æ/': 'æ_isolation.mp3',
   '/ɜːr/': 'ɜː_isolation.mp3',
   '/ɜː/': 'ɜː_isolation.mp3',
+  '/ər/': 'ɜː_isolation.mp3',
+  '/er/': 'ɜː_isolation.mp3',
   '/ə/': 'ə_isolation.mp3',
   '/ʌ/': 'ʌ_isolation.mp3',
   '/ɑː/': 'ɑː_isolation.mp3',
@@ -125,8 +127,11 @@ const getIpaAudioUrl = (filename) => {
 };
 
 // --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Studio Audio) ---
-export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
-  if (typeof window === 'undefined') return;
+export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEnd = null) => {
+  if (typeof window === 'undefined') {
+    if (onEnd) onEnd();
+    return;
+  }
   try {
     stopAllAudio();
 
@@ -140,23 +145,36 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US') => {
       const audioUrl = getIpaAudioUrl(audioFile);
       const audio = new Audio(audioUrl);
       currentActiveAudio = audio;
-      audio.onerror = () => {
-        speakText(fallbackSoundText, 1.0, 1.0, null, lang);
+      let finished = false;
+      const finish = () => {
+        if (!finished) {
+          finished = true;
+          if (currentActiveAudio === audio) currentActiveAudio = null;
+          if (onEnd) onEnd();
+        }
       };
-      audio.play().catch(() => {
-        speakText(fallbackSoundText, 1.0, 1.0, null, lang);
-      });
+      audio.onended = finish;
+      audio.onerror = () => {
+        finish();
+      };
+      const playPromise = audio.play();
+      if (playPromise && playPromise.catch) {
+        playPromise.catch(() => {
+          speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
+        });
+      }
       return;
     }
 
-    speakText(fallbackSoundText, 1.0, 1.0, null, lang);
+    speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
   } catch {
-    speakText(fallbackSoundText, 1.0, 1.0, null, lang);
+    speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
   }
 };
 
 // --- Global Active Audio Player Reference (Prevents Audio Overlap) ---
 let currentActiveAudio = null;
+let activeUtterance = null; // 防垃圾回收关键引用
 
 export const stopAllAudio = () => {
   if (typeof window === 'undefined') return;
@@ -168,6 +186,8 @@ export const stopAllAudio = () => {
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
   }
+  activeUtterance = null;
+  if (typeof window !== 'undefined') window._dd_active_utterance = null;
 };
 
 // --- Web Speech TTS Voice Cache & Multilingual Voice Detection (Offline Backup) ---
@@ -183,6 +203,22 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   window.speechSynthesis.onvoiceschanged = refreshVoices;
 }
 
+// 智能语言检测：确保日语句子永不被英文发音人静音，西语句子永不被乱读
+export const detectLang = (text, fallbackLang = 'en-US') => {
+  const str = String(text || '');
+  // 日语假名或中日标点
+  if (/[\u3040-\u309F\u30A0-\u30FF]/.test(str)) {
+    return 'ja-JP';
+  }
+  // 西班牙特色重音与标点符号
+  if (/[áéíóúÁÉÍÓÚñÑ¿¡]/.test(str)) {
+    return 'es-ES';
+  }
+  if (fallbackLang && fallbackLang.toLowerCase().startsWith('ja')) return 'ja-JP';
+  if (fallbackLang && fallbackLang.toLowerCase().startsWith('es')) return 'es-ES';
+  return fallbackLang || 'en-US';
+};
+
 export const getBestVoiceForLang = (langCode) => {
   if (!cachedVoices.length) refreshVoices();
   const target = (langCode || currentSpeechLang || 'en-US').toLowerCase();
@@ -194,50 +230,83 @@ export const getBestVoiceForLang = (langCode) => {
     return vLang === target;
   });
   if (exact.length) {
-    return exact.find((v) => /natural|premium|enhanced|siri/i.test(v.name)) || exact[0];
+    return (
+      exact.find((v) =>
+        /kyoko|otoya|mónica|monica|jorge|samantha|alex|victoria|helena|david|natural|premium|enhanced/i.test(v.name)
+      ) || exact[0]
+    );
   }
 
   // 2. 语言前缀匹配（如 ja, es, en）
   const prefix = cachedVoices.filter((v) => v.lang.toLowerCase().startsWith(short));
   if (prefix.length) {
-    return prefix.find((v) => /natural|premium|enhanced|siri/i.test(v.name)) || prefix[0];
+    return (
+      prefix.find((v) =>
+        /kyoko|otoya|mónica|monica|jorge|samantha|alex|victoria|helena|david|natural|premium|enhanced/i.test(v.name)
+      ) || prefix[0]
+    );
   }
 
   return null;
 };
 
-// 本地离线合成备选 (Local SpeechSynthesis Fallback)
+// 本地离线合成核心（彻底解决 Chrome/Safari 连续 cancel() 导致的死锁静音与 GC 回收 bug）
 const speakViaLocalSpeechSynthesis = (cleanText, rate = 0.95, pitch = 1.0, onEndCallback = null, langCode = null) => {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     if (onEndCallback) onEndCallback();
     return;
   }
-  try {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(cleanText);
-    const targetLangCode = langCode || currentSpeechLang || 'en-US';
-    const bestVoice = getBestVoiceForLang(targetLangCode);
 
-    if (bestVoice) {
-      utterance.voice = bestVoice;
-      utterance.lang = bestVoice.lang;
-    } else {
-      utterance.lang = targetLangCode;
+  const targetLangCode = detectLang(cleanText, langCode || currentSpeechLang);
+  const bestVoice = getBestVoiceForLang(targetLangCode);
+
+  const doSpeak = () => {
+    try {
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      activeUtterance = utterance;
+      if (typeof window !== 'undefined') window._dd_active_utterance = utterance;
+
+      if (bestVoice) {
+        utterance.voice = bestVoice;
+        utterance.lang = bestVoice.lang;
+      } else {
+        utterance.lang = targetLangCode;
+      }
+
+      utterance.rate = Math.max(0.4, Math.min(rate, 1.5));
+      utterance.pitch = Math.max(0.5, Math.min(pitch, 1.5));
+
+      let done = false;
+      const finish = () => {
+        if (!done) {
+          done = true;
+          activeUtterance = null;
+          if (typeof window !== 'undefined' && window._dd_active_utterance === utterance) {
+            window._dd_active_utterance = null;
+          }
+          if (onEndCallback) onEndCallback();
+        }
+      };
+
+      utterance.onend = finish;
+      utterance.onerror = finish;
+
+      window.speechSynthesis.speak(utterance);
+    } catch {
+      if (onEndCallback) onEndCallback();
     }
+  };
 
-    utterance.rate = rate;
-    utterance.pitch = pitch;
-
-    utterance.onend = () => {
-      if (onEndCallback) onEndCallback();
-    };
-    utterance.onerror = () => {
-      if (onEndCallback) onEndCallback();
-    };
-
-    window.speechSynthesis.speak(utterance);
-  } catch {
-    if (onEndCallback) onEndCallback();
+  // Chromium 关键修复：如果当前正在播放，cancel 之后必须给浏览器音频管线 25ms 恢复时间，杜绝静音吃字
+  if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+    window.speechSynthesis.cancel();
+    setTimeout(doSpeak, 25);
+  } else {
+    doSpeak();
   }
 };
 
@@ -248,15 +317,25 @@ export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, l
     return;
   }
 
-  stopAllAudio();
+  // 停止正在播放的 HTML5 独立音频（不强杀当前语音合成，交由 speakViaLocalSpeechSynthesis 平滑调度）
+  if (currentActiveAudio) {
+    currentActiveAudio.pause();
+    currentActiveAudio.currentTime = 0;
+    currentActiveAudio = null;
+  }
 
-  const cleanText = String(text || '').replace(/\(.*?\)|（.*?）/g, '').trim();
+  let cleanText = String(text || '').replace(/\(.*?\)|（.*?）/g, '').trim();
   if (!cleanText) {
     if (onEndCallback) onEndCallback();
     return;
   }
 
-  const targetLang = (langCode || currentSpeechLang || 'en-US').toLowerCase();
+  const targetLang = detectLang(cleanText, langCode || currentSpeechLang);
+
+  // 日语连贯朗读优化：剔除假名之间因展示需要添加的空格，还原原生流畅语流
+  if (targetLang === 'ja-JP') {
+    cleanText = cleanText.replace(/([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])\s+([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])/g, '$1$2');
+  }
 
   // 毫秒级极速直出 (0ms 延迟，直接调用设备原生绑定的母语发音人，杜绝任何外部网络卡顿)
   speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);

@@ -7,7 +7,7 @@ import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 
 // 龟速开关：整页共用。开着时所有点读都放慢。
 let slowMode = false;
-export const say = (text, rate = 0.85) => speakText(String(text).replace(/[（(].*?[）)]/g, ''), slowMode ? 0.45 : rate);
+export const say = (text, rate = 0.85, langCode = null) => speakText(String(text).replace(/[（(].*?[）)]/g, ''), slowMode ? 0.45 : rate, 1.0, null, langCode);
 
 export const SlowToggle = () => {
   const [slow, setSlow] = useState(slowMode);

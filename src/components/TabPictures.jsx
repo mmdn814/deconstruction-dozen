@@ -58,6 +58,7 @@ export const TabPictures = ({ targetLang, getReadCount, onIncrementReadCount }) 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {stage.scenes.map((scene, i) => {
           const line = scene[targetLang] || scene.en;
+          const speechLang = scene[targetLang] ? langConfig.speechLang : 'en-US';
           const key = `${stage.id}-${i}`;
           const cnShown = !!shownCn[key];
           const practicing = practiceKey === key;
@@ -76,7 +77,7 @@ export const TabPictures = ({ targetLang, getReadCount, onIncrementReadCount }) 
 
               <button
                 type="button"
-                onClick={() => speakText(line.say, 0.9)}
+                onClick={() => speakText(line.say, 0.9, 1.0, null, speechLang)}
                 className="block w-full text-left"
               >
                 <div className="text-base font-black text-slate-900 leading-snug">{line.text}</div>
@@ -88,7 +89,7 @@ export const TabPictures = ({ targetLang, getReadCount, onIncrementReadCount }) 
               <div className="flex flex-wrap items-center gap-1.5">
                 <button
                   type="button"
-                  onClick={() => speakText(line.say, 0.9)}
+                  onClick={() => speakText(line.say, 0.9, 1.0, null, speechLang)}
                   className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold"
                 >
                   <Volume2 className="w-3.5 h-3.5" />
@@ -96,7 +97,7 @@ export const TabPictures = ({ targetLang, getReadCount, onIncrementReadCount }) 
                 </button>
                 <button
                   type="button"
-                  onClick={() => speakText(line.say, 0.55)}
+                  onClick={() => speakText(line.say, 0.55, 1.0, null, speechLang)}
                   className="px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold"
                 >
                   🐢 慢速

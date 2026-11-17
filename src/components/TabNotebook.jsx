@@ -41,7 +41,7 @@ export const TabNotebook = ({
         if (loopActiveRef.current) {
           setTimeout(playNext, 900);
         }
-      });
+      }, langConfig.speechLang);
     };
 
     playNext();
@@ -164,14 +164,14 @@ export const TabNotebook = ({
                     <span className="text-sm font-extrabold text-slate-900">{item.en}</span>
                     <button
                       type="button"
-                      onClick={() => speakText(item.en, 0.95)}
+                      onClick={() => speakText(item.en, 0.95, 1.0, null, langConfig.speechLang)}
                       className="p-1 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600"
                     >
                       <Volume2 className="w-3.5 h-3.5" />
                     </button>
                     <button
                       type="button"
-                      onClick={() => speakText(item.en, 0.62)}
+                      onClick={() => speakText(item.en, 0.62, 1.0, null, langConfig.speechLang)}
                       className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold"
                     >
                       🐢 慢速

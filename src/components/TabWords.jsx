@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Check, ChevronLeft, ChevronRight, Loader2, Sparkles, ChevronDown, ChevronUp, Layers } from 'lucide-react';
-import { LANGUAGE_CONFIG, speakText, playPurePhoneme, callGemini, loadFromStorage, saveToStorage, STORAGE_KEYS } from '../lib/core.js';
+import { LANGUAGE_CONFIG, speakText, playPurePhoneme, stopAllAudio, callGemini, loadFromStorage, saveToStorage, STORAGE_KEYS } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { WORD_THEMES, CORE_THEME_ID, parseWordFile } from '../data/wordThemes.js';
 import { splitMora, moraSpeakUnits } from '../lib/kana.js';
@@ -20,7 +20,7 @@ const EXTRA_KEY = 'dd_words_extra_v1';
 const PAGE_SIZE = 12;
 
 const wordId = (item) => (item.r && item.r !== item.w ? `${item.w}|${item.r}` : item.w);
-const cleanWord = (w) => String(w || '').split('(')[0].trim();
+const cleanWord = (w) => String(w || '').split('(')[0].split('（')[0].trim();
 
 export const TabWords = ({ targetLang }) => {
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
@@ -111,8 +111,14 @@ export const TabWords = ({ targetLang }) => {
     if (targetLang === 'en') {
       return splitIpa(item.r).map((u) => {
         if (u.gap) return u;
-        const key = `/${u.k === 'oʊ' ? 'əʊ' : u.k === 'g' ? 'ɡ' : u.k}/`;
-        return { ...u, step: { phoneme: [key, EN_SOUNDS[key] || u.k] } };
+        const normalizedKey = u.k === 'oʊ' ? 'əʊ' : u.k === 'g' ? 'ɡ' : u.k;
+        const key = `/${normalizedKey}/`;
+        const soundTip = EN_SOUNDS[key] || EN_SOUNDS[`/${u.k}/`] || u.k;
+        return {
+          ...u,
+          r: soundTip !== u.k ? soundTip : '',
+          step: { phoneme: [key, soundTip] }
+        };
       });
     }
     if (targetLang === 'es') {
@@ -123,26 +129,34 @@ export const TabWords = ({ targetLang }) => {
 
   const playStep = (step, onEnd) => {
     if (!step) return onEnd && onEnd();
-    if (step.pause) return setTimeout(() => onEnd && onEnd(), 320);
+    if (step.pause) return setTimeout(() => onEnd && onEnd(), 280);
     if (step.phoneme) {
-      playPurePhoneme(step.phoneme[0], step.phoneme[1], langConfig.speechLang);
-      return setTimeout(() => onEnd && onEnd(), 750);
+      playPurePhoneme(step.phoneme[0], step.phoneme[1], langConfig.speechLang, () => {
+        setTimeout(() => onEnd && onEnd(), 100);
+      });
+      return;
     }
-    return speakText(step.text, 0.7, 1.0, () => setTimeout(() => onEnd && onEnd(), 180), langConfig.speechLang);
+    return speakText(step.text, 0.78, 1.0, () => {
+      setTimeout(() => onEnd && onEnd(), 120);
+    }, langConfig.speechLang);
   };
 
   // 拼读：一个单位一个单位慢慢读，最后连起来读整个词
   const spellOut = (item, units) => {
+    stopAllAudio();
     const steps = units.map((u) => u.step).filter(Boolean);
     let i = 0;
     const next = () => {
       if (i >= steps.length) {
-        setTimeout(() => speakText(cleanWord(item.w), 0.85, 1.0, null, langConfig.speechLang), 350);
+        setTimeout(() => {
+          speakText(cleanWord(item.w), 0.85, 1.0, null, langConfig.speechLang);
+        }, 250);
         markRead(item);
         return;
       }
+      const cur = steps[i];
       i += 1;
-      playStep(steps[i - 1], next);
+      playStep(cur, next);
     };
     next();
   };

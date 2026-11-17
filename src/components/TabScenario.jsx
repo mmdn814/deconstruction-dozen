@@ -119,7 +119,7 @@ export const TabScenario = ({ targetLang, isSentenceSaved, onToggleSaveSentence 
           sample: parsed.nextSampleReply
         });
         if (autoSpeakAi) {
-          speakText(parsed.reply, 0.96);
+          speakText(parsed.reply, 0.96, 1.0, null, langConfig.speechLang);
         }
       } catch (e) {}
     }
@@ -181,7 +181,7 @@ export const TabScenario = ({ targetLang, isSentenceSaved, onToggleSaveSentence 
                 <div className="flex items-center gap-1">
                   <button
                     type="button"
-                    onClick={() => speakText(msg.text, 0.95)}
+                    onClick={() => speakText(msg.text, 0.95, 1.0, null, langConfig.speechLang)}
                     className={`p-1 rounded-full ${
                       msg.role === 'user'
                         ? 'hover:bg-blue-500 text-white'
@@ -192,7 +192,7 @@ export const TabScenario = ({ targetLang, isSentenceSaved, onToggleSaveSentence 
                   </button>
                   <button
                     type="button"
-                    onClick={() => speakText(msg.text, 0.62)}
+                    onClick={() => speakText(msg.text, 0.62, 1.0, null, langConfig.speechLang)}
                     className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold ${
                       msg.role === 'user'
                         ? 'bg-blue-700 text-amber-200'
@@ -242,14 +242,14 @@ export const TabScenario = ({ targetLang, isSentenceSaved, onToggleSaveSentence 
                     <div className="flex items-center gap-1">
                       <button
                         type="button"
-                        onClick={() => speakText(msg.upgraded, 0.95)}
+                        onClick={() => speakText(msg.upgraded, 0.95, 1.0, null, langConfig.speechLang)}
                         className="px-1.5 py-0.5 rounded bg-white text-blue-600 border border-blue-200 text-[10px] font-bold"
                       >
                         🔊 朗读
                       </button>
                       <button
                         type="button"
-                        onClick={() => speakText(msg.upgraded, 0.62)}
+                        onClick={() => speakText(msg.upgraded, 0.62, 1.0, null, langConfig.speechLang)}
                         className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 text-[10px] font-bold"
                       >
                         🐢 慢速

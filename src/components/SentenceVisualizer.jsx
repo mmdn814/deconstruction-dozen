@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Volume2 } from 'lucide-react';
-import { speakText } from '../lib/core.js';
+import { speakText, LANGUAGE_CONFIG } from '../lib/core.js';
 import { baseWordDict } from '../data/sentences.js';
 
 // --- Harmonious Line Color Palette ---
@@ -22,9 +22,11 @@ export const WordWithTooltip = ({
   isHighlighted = false,
   onMouseEnter,
   onMouseLeave,
-  customMeta = null
+  customMeta = null,
+  targetLang = 'en'
 }) => {
   const [hovered, setHovered] = useState(false);
+  const speechLang = LANGUAGE_CONFIG[targetLang]?.speechLang || 'en-US';
   const cleanKey = String(word || '')
     .toLowerCase()
     .replace(/[.,?!¿¡"]/g, '')
@@ -54,7 +56,7 @@ export const WordWithTooltip = ({
       <span
         onClick={(e) => {
           e.stopPropagation();
-          speakText(word, 0.95);
+          speakText(word, 0.95, 1.0, null, speechLang);
         }}
         style={
           isHighlighted
@@ -89,7 +91,7 @@ export const WordWithTooltip = ({
                 type="button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  speakText(word, 0.95);
+                  speakText(word, 0.95, 1.0, null, speechLang);
                 }}
                 className="px-1.5 py-0.5 rounded bg-blue-600 hover:bg-blue-500 text-[10px] font-bold flex items-center gap-0.5"
               >
@@ -100,7 +102,7 @@ export const WordWithTooltip = ({
                 type="button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  speakText(word, 0.6);
+                  speakText(word, 0.6, 1.0, null, speechLang);
                 }}
                 className="px-1.5 py-0.5 rounded bg-amber-600 hover:bg-amber-500 text-[10px] font-bold"
               >
@@ -121,7 +123,7 @@ export const WordWithTooltip = ({
 };
 
 // --- 3-Layer Sentence Visualizer with Harmonious Colored SVG Lines ---
-export const MiniSentenceVisualizer = ({ en, lit, nat, mapping }) => {
+export const MiniSentenceVisualizer = ({ en, lit, nat, mapping, targetLang = 'en' }) => {
   const containerRef = useRef(null);
   const enRefs = useRef([]);
   const litRefs = useRef([]);
@@ -215,6 +217,7 @@ export const MiniSentenceVisualizer = ({ en, lit, nat, mapping }) => {
                 isHighlighted={hoveredEnIdx === idx}
                 onMouseEnter={() => setHoveredEnIdx(idx)}
                 onMouseLeave={() => setHoveredEnIdx(null)}
+                targetLang={targetLang}
               />
             </div>
           );

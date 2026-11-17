@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown } from 'lucide-react';
-import { speakText } from '../lib/core.js';
+import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
 import { sentencesByLang } from '../data/sentences.js';
 import { MiniSentenceVisualizer, WordWithTooltip } from './SentenceVisualizer.jsx';
 
 // --- TAB 2: 12 Sentences Deconstruction (2-Column Grid with Expandable Trap & Workplace) ---
 export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSentence }) => {
   const sentences = sentencesByLang[targetLang] || sentencesByLang.en;
+  const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
   const [expandedMap, setExpandedMap] = useState({});
   const [allExpanded, setAllExpanded] = useState(true);
 
@@ -57,7 +58,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
       {/* 2-Column Sentence Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
         {sentences.map((item) => {
-          const fullCoreSentence = item.en.join(' ');
+          const fullCoreSentence = targetLang === 'ja' ? item.en.join('') : item.en.join(' ');
           const workplaceWords = item.workplace.split(' ');
           const saved = isSentenceSaved(item.workplace);
           const isExpanded = expandedMap[item.id] !== undefined ? expandedMap[item.id] : allExpanded;
@@ -82,7 +83,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                     <div className="flex items-center gap-1 shrink-0">
                       <button
                         type="button"
-                        onClick={() => speakText(fullCoreSentence, 0.95)}
+                        onClick={() => speakText(fullCoreSentence, 0.95, 1.0, null, langConfig.speechLang)}
                         className="p-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
                         title="常速整句朗读"
                       >
@@ -90,7 +91,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                       </button>
                       <button
                         type="button"
-                        onClick={() => speakText(fullCoreSentence, 0.62)}
+                        onClick={() => speakText(fullCoreSentence, 0.62, 1.0, null, langConfig.speechLang)}
                         className="px-1.5 py-0.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold transition-colors"
                         title="0.65x 慢速朗读"
                       >
@@ -104,6 +105,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                     lit={item.lit}
                     nat={item.nat}
                     mapping={item.mapping}
+                    targetLang={targetLang}
                   />
                 </div>
               </div>
@@ -137,18 +139,18 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                         </span>
                         <button
                           type="button"
-                          onClick={() => speakText(item.workplace, 0.95)}
+                          onClick={() => speakText(item.workplace, 0.95, 1.0, null, langConfig.speechLang)}
                           className="text-emerald-600 hover:text-emerald-700 p-0.5 shrink-0"
                           title="朗读职场例句"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
                         </button>
                         {workplaceWords.map((w, idx) => (
-                          <WordWithTooltip key={idx} word={w} />
+                          <WordWithTooltip key={idx} word={w} targetLang={targetLang} />
                         ))}
                         <button
                           type="button"
-                          onClick={() => speakText(item.workplace, 0.62)}
+                          onClick={() => speakText(item.workplace, 0.62, 1.0, null, langConfig.speechLang)}
                           className="px-1.5 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold ml-1 shrink-0"
                         >
                           🐢 慢速

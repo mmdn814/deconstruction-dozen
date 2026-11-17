@@ -97,7 +97,7 @@ export const TabSubstitution = ({
   };
 
   const handleAddLegoTile = (block) => {
-    speakText(block.word, 0.95);
+    speakText(block.word, 0.95, 1.0, null, langConfig.speechLang);
     const next = [...selectedLegoTiles, block];
     setSelectedLegoTiles(next);
     setUserTranslation(next.map((b) => b.word).join(' '));
@@ -111,7 +111,7 @@ export const TabSubstitution = ({
 
   const handleFillRecommendedOrder = () => {
     setUserTranslation(legoData.recommendedOrder);
-    speakText(legoData.recommendedOrder, 0.95);
+    speakText(legoData.recommendedOrder, 0.95, 1.0, null, langConfig.speechLang);
   };
 
   // Ensure words array and full sentence stay 100% synced
@@ -518,17 +518,17 @@ export const TabSubstitution = ({
                 <div className="flex items-center flex-wrap gap-1.5">
                   <button
                     type="button"
-                    onClick={() => speakText(syncedStd.fullSentence, 0.95)}
+                    onClick={() => speakText(syncedStd.fullSentence, 0.95, 1.0, null, langConfig.speechLang)}
                     className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600"
                   >
                     <Volume2 className="w-4 h-4" />
                   </button>
                   {syncedStd.words.map((w, idx) => (
-                    <WordWithTooltip key={idx} word={w} />
+                    <WordWithTooltip key={idx} word={w} targetLang={targetLang} />
                   ))}
                   <button
                     type="button"
-                    onClick={() => speakText(syncedStd.fullSentence, 0.62)}
+                    onClick={() => speakText(syncedStd.fullSentence, 0.62, 1.0, null, langConfig.speechLang)}
                     className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold"
                   >
                     🐢 慢速
@@ -563,17 +563,17 @@ export const TabSubstitution = ({
                     <div className="flex items-center flex-wrap gap-1.5">
                       <button
                         type="button"
-                        onClick={() => speakText(syncedAlt.fullSentence, 0.95)}
+                        onClick={() => speakText(syncedAlt.fullSentence, 0.95, 1.0, null, langConfig.speechLang)}
                         className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600"
                       >
                         <Volume2 className="w-4 h-4" />
                       </button>
                       {syncedAlt.words.map((w, wIdx) => (
-                        <WordWithTooltip key={wIdx} word={w} />
+                        <WordWithTooltip key={wIdx} word={w} targetLang={targetLang} />
                       ))}
                       <button
                         type="button"
-                        onClick={() => speakText(syncedAlt.fullSentence, 0.62)}
+                        onClick={() => speakText(syncedAlt.fullSentence, 0.62, 1.0, null, langConfig.speechLang)}
                         className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold"
                       >
                         🐢 慢速
