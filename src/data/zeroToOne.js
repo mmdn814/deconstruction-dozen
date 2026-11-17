@@ -706,11 +706,11 @@ export const zeroToOneDataByLang = {
           { char: 'I i', sound: 'i', sub: '/i/ (衣)', tip: '永远发微笑“衣”', sample: 'isla', sampleCn: '岛屿' },
           { char: 'O o', sound: 'o', sub: '/o/ (哦)', tip: '圆唇固定发“哦”', sample: 'hola', sampleCn: '你好' },
           { char: 'U u', sound: 'u', sub: '/u/ (乌)', tip: '圆唇发“乌” (qu/gu中静音)', sample: 'uno', sampleCn: '一 (1)' },
-          { char: 'ia / ie', sound: 'ia', sub: '呀 / 耶', tip: 'i 快速滑向 a/e', sample: 'quiero', sampleCn: '我想要' },
-          { char: 'io / iu', sound: 'io', sub: '哟 / 优', tip: 'i 快速滑向 o/u', sample: 'precio', sampleCn: '价格' },
-          { char: 'ua / ue', sound: 'ua', sub: '哇 / 威', tip: 'u 快速滑向 a/e', sample: 'bueno', sampleCn: '好的' },
-          { char: 'ai / ei', sound: 'ai', sub: '爱 / 欸', tip: 'a/e 滑向 i', sample: 'aire', sampleCn: '空气' },
-          { char: 'au / eu', sound: 'au', sub: '奥 / 欧', tip: 'a/e 滑向 u', sample: 'auto', sampleCn: '汽车' }
+          { char: 'ia / ie', sound: 'ya, ye', sub: '呀 / 耶', tip: 'i 快速滑向 a/e', sample: 'quiero', sampleCn: '我想要' },
+          { char: 'io / iu', sound: 'yo, yu', sub: '哟 / 优', tip: 'i 快速滑向 o/u', sample: 'precio', sampleCn: '价格' },
+          { char: 'ua / ue', sound: 'gua, gue', sub: '哇 / 威', tip: 'u 快速滑向 a/e', sample: 'bueno', sampleCn: '好的' },
+          { char: 'ai / ei', sound: 'hay, ley', sub: '爱 / 欸', tip: 'a/e 滑向 i', sample: 'aire', sampleCn: '空气' },
+          { char: 'au / eu', sound: 'auto, Europa', sub: '奥 / 欧', tip: 'a/e 滑向 u', sample: 'auto', sampleCn: '汽车' }
         ]
       },
       {
@@ -724,12 +724,12 @@ export const zeroToOneDataByLang = {
           { char: 'LL ll', sound: 'doble ele', sub: 'doble ele (/ʝ/)', tip: '官方名称为 doble ele 或 elle，不读 l，读如 yes 的 y', sample: 'ella', sampleCn: '她' },
           { char: 'RR rr', sound: 'doble erre', sub: 'doble erre (/r/)', tip: '官方名称为 doble erre，大舌颤音，双写 rr 连续弹舌', sample: 'perro', sampleCn: '狗' },
           { char: 'R r (单)', sound: 'erre', sub: 'erre (/ɾ/ 单颤)', tip: '官方名称为 erre，词中单写 r 舌尖轻弹齿龈一下', sample: 'pero', sampleCn: '但是' },
-          { char: 'C + a/o/u', sound: 'ca', sub: '/k/ (咔)', tip: '后接 a/o/u 时发清音 k (ca, co, cu)', sample: 'casa', sampleCn: '房子/家' },
-          { char: 'C + e/i', sound: 'ce', sub: '/θ/ 或 /s/', tip: '后接 e/i 时发咬舌音或 s (ce, ci)', sample: 'cena', sampleCn: '晚餐' },
-          { char: 'G + a/o/u', sound: 'ga', sub: '/ɡ/ (嘎)', tip: '后接 a/o/u 时发浊音 g (ga, go, gu)', sample: 'gato', sampleCn: '猫' },
-          { char: 'G + e/i', sound: 'ge', sub: '/x/ (喝)', tip: '后接 e/i 时与 J 一样发喉音“喝” (ge, gi)', sample: 'gente', sampleCn: '人们' },
-          { char: 'QU + e/i', sound: 'que', sub: 'ke / ki', tip: '中间的 u 静音，直接读 ke / ki', sample: 'queso', sampleCn: '奶酪' },
-          { char: 'GU + e/i', sound: 'gue', sub: 'ge / gi', tip: '中间的 u 静音，读浊音 ge / gi', sample: 'guía', sampleCn: '导游/指南' }
+          { char: 'C + a/o/u', sound: 'ca, co, cu', sub: '/k/ (咔)', tip: '后接 a/o/u 时发清音 k (ca, co, cu)', sample: 'casa', sampleCn: '房子/家' },
+          { char: 'C + e/i', sound: 'ce, ci', sub: '/θ/ 或 /s/', tip: '后接 e/i 时发咬舌音或 s (ce, ci)', sample: 'cena', sampleCn: '晚餐' },
+          { char: 'G + a/o/u', sound: 'ga, go, gu', sub: '/ɡ/ (嘎)', tip: '后接 a/o/u 时发浊音 g (ga, go, gu)', sample: 'gato', sampleCn: '猫' },
+          { char: 'G + e/i', sound: 'ge, gi', sub: '/x/ (喝)', tip: '后接 e/i 时与 J 一样发喉音“喝” (ge, gi)', sample: 'gente', sampleCn: '人们' },
+          { char: 'QU + e/i', sound: 'que, qui', sub: 'ke / ki', tip: '中间的 u 静音，直接读 ke / ki', sample: 'queso', sampleCn: '奶酪' },
+          { char: 'GU + e/i', sound: 'gue, gui', sub: 'ge / gi', tip: '中间的 u 静音，读浊音 ge / gi', sample: 'guía', sampleCn: '导游/指南' }
         ]
       },
       {
@@ -737,12 +737,12 @@ export const zeroToOneDataByLang = {
         name: '③ 常规辅音全表 (与英语/汉语拼音直觉基本一致)',
         desc: '注意 B 与 V 在西语中发音完全相同，且 P / T / K 不送气（更像中文的 b / d / g）：',
         items: [
-          { char: 'B b / V v', sound: 'be', sub: 'be / uve (/b/)', tip: '西语官方字母名为 be 与 uve，发音完全相同', sample: 'vino', sampleCn: '葡萄酒' },
+          { char: 'B b / V v', sound: 'be, uve', sub: 'be / uve (/b/)', tip: '西语官方字母名为 be 与 uve，发音完全相同', sample: 'vino', sampleCn: '葡萄酒' },
           { char: 'CH ch', sound: 'che', sub: 'che (/tʃ/ 切)', tip: '官方名称为 che，与英语 ch (chat) 发音相同', sample: 'chico', sampleCn: '男孩/小伙' },
           { char: 'D d', sound: 'de', sub: 'de (/d/)', tip: '官方名称为 de，词首读 d，元音间轻咬舌', sample: 'donde', sampleCn: '哪里' },
           { char: 'F f', sound: 'efe', sub: 'efe (/f/)', tip: '官方名称为 efe，上齿轻触下唇吹气', sample: 'foto', sampleCn: '照片' },
           { char: 'L l', sound: 'ele', sub: 'ele (/l/)', tip: '官方名称为 ele，舌尖清晰顶住上齿龈', sample: 'listo', sampleCn: '准备好的' },
-          { char: 'M m / N n', sound: 'eme', sub: 'eme / ene', tip: '官方名称为 eme 与 ene，双唇鼻音与舌尖鼻音', sample: 'mano', sampleCn: '手' },
+          { char: 'M m / N n', sound: 'eme, ene', sub: 'eme / ene', tip: '官方名称为 eme 与 ene，双唇鼻音与舌尖鼻音', sample: 'mano', sampleCn: '手' },
           { char: 'P p', sound: 'pe', sub: 'pe (/p/ 不送气)', tip: '官方名称为 pe，双唇不送气清音（接近中文“巴”）', sample: 'papa', sampleCn: '土豆' },
           { char: 'S s', sound: 'ese', sub: 'ese (/s/)', tip: '官方名称为 ese，清脆平舌音 s', sample: 'sí', sampleCn: '是的' },
           { char: 'T t', sound: 'te', sub: 'te (/t/ 不送气)', tip: '官方名称为 te，舌尖不送气清音（接近中文“搭”）', sample: 'todo', sampleCn: '全部/一切' },

@@ -122,26 +122,43 @@ export const TabWords = ({ targetLang }) => {
       });
     }
     if (targetLang === 'es') {
-      return splitEsSyllables(cleanWord(item.w)).map((u) => (u.gap ? u : { ...u, step: { text: u.k } }));
+      const raw = cleanWord(item.w);
+      // 剥离西语名词前置冠词 (el / la / los / las / un / una)，只对核心词进行音节拆分
+      const cleanEs = raw.replace(/^(el|la|los|las|un|una)\s+/i, '');
+      return splitEsSyllables(cleanEs).map((u) => (u.gap ? u : { ...u, step: { text: u.k } }));
     }
     return [];
   };
 
-  const playStep = (step, onEnd) => {
+  const playStep = (step, onEnd, fast = false) => {
     if (!step) return onEnd && onEnd();
-    if (step.pause) return setTimeout(() => onEnd && onEnd(), 280);
+    if (step.pause) return setTimeout(() => onEnd && onEnd(), fast ? 140 : 260);
     if (step.phoneme) {
-      playPurePhoneme(step.phoneme[0], step.phoneme[1], langConfig.speechLang, () => {
-        setTimeout(() => onEnd && onEnd(), 100);
-      });
+      playPurePhoneme(
+        step.phoneme[0],
+        step.phoneme[1],
+        langConfig.speechLang,
+        () => {
+          setTimeout(() => onEnd && onEnd(), fast ? 45 : 100);
+        },
+        fast
+      );
       return;
     }
-    return speakText(step.text, 0.78, 1.0, () => {
-      setTimeout(() => onEnd && onEnd(), 120);
-    }, langConfig.speechLang);
+    // 快速拼读模式下语速 1.06x，音节间隔仅 55ms，连贯自然
+    const rate = fast ? 1.06 : 0.82;
+    return speakText(
+      step.text,
+      rate,
+      1.0,
+      () => {
+        setTimeout(() => onEnd && onEnd(), fast ? 55 : 120);
+      },
+      langConfig.speechLang
+    );
   };
 
-  // 拼读：一个单位一个单位慢慢读，最后连起来读整个词
+  // 拼读：紧凑连贯读出各个音素/音节，最后平滑连读出整个单词
   const spellOut = (item, units) => {
     stopAllAudio();
     const steps = units.map((u) => u.step).filter(Boolean);
@@ -149,14 +166,14 @@ export const TabWords = ({ targetLang }) => {
     const next = () => {
       if (i >= steps.length) {
         setTimeout(() => {
-          speakText(cleanWord(item.w), 0.85, 1.0, null, langConfig.speechLang);
-        }, 250);
+          speakText(cleanWord(item.w), 0.88, 1.0, null, langConfig.speechLang);
+        }, 180);
         markRead(item);
         return;
       }
       const cur = steps[i];
       i += 1;
-      playStep(cur, next);
+      playStep(cur, next, true);
     };
     next();
   };
@@ -356,7 +373,7 @@ export const TabWords = ({ targetLang }) => {
                           key={mi}
                           type="button"
                           disabled={!m.step || !!m.note}
-                          onClick={() => playStep(m.step)}
+                          onClick={() => playStep(m.step, null, false)}
                           className={`min-w-[1.5rem] px-1 rounded text-center leading-none py-0.5 ${
                             m.note
                               ? 'bg-amber-100 text-amber-800'

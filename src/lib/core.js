@@ -127,7 +127,7 @@ const getIpaAudioUrl = (filename) => {
 };
 
 // --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Studio Audio) ---
-export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEnd = null) => {
+export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEnd = null, fast = false) => {
   if (typeof window === 'undefined') {
     if (onEnd) onEnd();
     return;
@@ -145,6 +145,11 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEn
       const audioUrl = getIpaAudioUrl(audioFile);
       const audio = new Audio(audioUrl);
       currentActiveAudio = audio;
+
+      if (fast) {
+        audio.playbackRate = 1.35; // 拼读连读模式：适度加速，去除 Oxford 音频文件尾部的冗余死寂空白
+      }
+
       let finished = false;
       const finish = () => {
         if (!finished) {
@@ -153,22 +158,35 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEn
           if (onEnd) onEnd();
         }
       };
-      audio.onended = finish;
-      audio.onerror = () => {
+
+      // 拼读模式下最大播放上限 380ms，保证音素如齿轮般紧凑衔接，杜绝拖泥带水
+      let maxTimer = null;
+      if (fast) {
+        maxTimer = setTimeout(finish, 380);
+      }
+
+      audio.onended = () => {
+        if (maxTimer) clearTimeout(maxTimer);
         finish();
       };
+      audio.onerror = () => {
+        if (maxTimer) clearTimeout(maxTimer);
+        finish();
+      };
+
       const playPromise = audio.play();
       if (playPromise && playPromise.catch) {
         playPromise.catch(() => {
-          speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
+          if (maxTimer) clearTimeout(maxTimer);
+          speakText(fallbackSoundText, fast ? 1.1 : 1.0, 1.0, onEnd, lang);
         });
       }
       return;
     }
 
-    speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
+    speakText(fallbackSoundText, fast ? 1.1 : 1.0, 1.0, onEnd, lang);
   } catch {
-    speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
+    speakText(fallbackSoundText, fast ? 1.1 : 1.0, 1.0, onEnd, lang);
   }
 };
 
@@ -220,34 +238,51 @@ export const detectLang = (text, fallbackLang = 'en-US') => {
 };
 
 export const getBestVoiceForLang = (langCode) => {
-  if (!cachedVoices.length) refreshVoices();
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+  const voices = window.speechSynthesis.getVoices() || cachedVoices;
+  if (voices.length) cachedVoices = voices;
+  if (!cachedVoices.length) return null;
+
   const target = (langCode || currentSpeechLang || 'en-US').toLowerCase();
   const short = target.split('-')[0];
 
-  // 1. 完全匹配（如 ja-JP, es-ES, en-US），优先选择自然/增强发音人
-  const exact = cachedVoices.filter((v) => {
-    const vLang = v.lang.toLowerCase().replace('_', '-');
-    return vLang === target;
+  // 匹配对应语言大类的所有发音人 (es, ja, en)
+  const matches = cachedVoices.filter((v) => {
+    const vLang = (v.lang || '').toLowerCase().replace('_', '-');
+    return vLang.startsWith(short);
   });
-  if (exact.length) {
-    return (
-      exact.find((v) =>
-        /kyoko|otoya|mónica|monica|jorge|samantha|alex|victoria|helena|david|natural|premium|enhanced/i.test(v.name)
-      ) || exact[0]
-    );
+  if (!matches.length) return null;
+
+  // 西班牙语：优先选择发音清晰纯正、通用/美洲标准发音（无含糊或强烈 Ceceo 咬舌），支持 Paulina / Google / Mónica / Helena / Jorge
+  if (short === 'es') {
+    const preferred =
+      matches.find((v) => /paulina/i.test(v.name)) ||
+      matches.find((v) => /google.*es/i.test(v.name)) ||
+      matches.find((v) => /mónica|monica/i.test(v.name)) ||
+      matches.find((v) => /helena|sabina|laura|jorge/i.test(v.name));
+    if (preferred) return preferred;
   }
 
-  // 2. 语言前缀匹配（如 ja, es, en）
-  const prefix = cachedVoices.filter((v) => v.lang.toLowerCase().startsWith(short));
-  if (prefix.length) {
-    return (
-      prefix.find((v) =>
-        /kyoko|otoya|mónica|monica|jorge|samantha|alex|victoria|helena|david|natural|premium|enhanced/i.test(v.name)
-      ) || prefix[0]
-    );
+  // 日语：优先选择 Kyoko, Google 日本語, Otoya
+  if (short === 'ja') {
+    const preferred =
+      matches.find((v) => /kyoko/i.test(v.name)) ||
+      matches.find((v) => /google.*ja/i.test(v.name)) ||
+      matches.find((v) => /otoya|ayumi|haruka|ichiro/i.test(v.name));
+    if (preferred) return preferred;
   }
 
-  return null;
+  // 英语：优先选择 Samantha, Google US English, Alex, Victoria, David
+  if (short === 'en') {
+    const preferred =
+      matches.find((v) => /samantha/i.test(v.name)) ||
+      matches.find((v) => /google.*en/i.test(v.name)) ||
+      matches.find((v) => /alex|victoria|david|jenny/i.test(v.name));
+    if (preferred) return preferred;
+  }
+
+  // 默认返回带 natural / premium 的，或第一个匹配发音人
+  return matches.find((v) => /natural|premium|enhanced/i.test(v.name)) || matches[0];
 };
 
 // 本地离线合成核心（彻底解决 Chrome/Safari 连续 cancel() 导致的死锁静音与 GC 回收 bug）
@@ -337,8 +372,14 @@ export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, l
     cleanText = cleanText.replace(/([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])\s+([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])/g, '$1$2');
   }
 
+  // 西班牙语标准语速微调：西语语速较快，默认 0.92x 更清脆易辨
+  let finalRate = rate;
+  if (targetLang === 'es-ES' && rate === 1.0) {
+    finalRate = 0.92;
+  }
+
   // 毫秒级极速直出 (0ms 延迟，直接调用设备原生绑定的母语发音人，杜绝任何外部网络卡顿)
-  speakViaLocalSpeechSynthesis(cleanText, rate, pitch, onEndCallback, targetLang);
+  speakViaLocalSpeechSynthesis(cleanText, finalRate, pitch, onEndCallback, targetLang);
 };
 
 // --- Multi-Provider AI Helper (Supports OpenAI-Compatible Protocols & Google Gemini) ---
