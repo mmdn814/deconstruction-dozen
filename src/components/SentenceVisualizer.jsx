@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Volume2 } from 'lucide-react';
-import { speakText, LANGUAGE_CONFIG } from '../lib/core.js';
+import { speakText, getWordAudioUrl, LANGUAGE_CONFIG } from '../lib/core.js';
 import { baseWordDict } from '../data/sentences.js';
 
 // --- Harmonious Line Color Palette ---
@@ -56,7 +56,8 @@ export const WordWithTooltip = ({
       <span
         onClick={(e) => {
           e.stopPropagation();
-          speakText(word, 0.95, 1.0, null, speechLang);
+          const wordAudio = getWordAudioUrl(word, targetLang);
+          speakText(word, 0.95, 1.0, null, speechLang, wordAudio);
         }}
         style={
           isHighlighted
@@ -91,7 +92,8 @@ export const WordWithTooltip = ({
                 type="button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  speakText(word, 0.95, 1.0, null, speechLang);
+                  const wordAudio = getWordAudioUrl(word, targetLang);
+                  speakText(word, 0.95, 1.0, null, speechLang, wordAudio);
                 }}
                 className="px-1.5 py-0.5 rounded bg-blue-600 hover:bg-blue-500 text-[10px] font-bold flex items-center gap-0.5"
               >
@@ -102,7 +104,8 @@ export const WordWithTooltip = ({
                 type="button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  speakText(word, 0.6, 1.0, null, speechLang);
+                  const wordAudio = getWordAudioUrl(word, targetLang);
+                  speakText(word, 0.6, 1.0, null, speechLang, wordAudio);
                 }}
                 className="px-1.5 py-0.5 rounded bg-amber-600 hover:bg-amber-500 text-[10px] font-bold"
               >

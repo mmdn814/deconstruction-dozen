@@ -11,6 +11,7 @@ const ART = '冠词';
 const PREP = '介词';
 
 export const MAP_EN = {
+  lang: 'en',
   posters: [
     {
       title: '英语 44 个音',

@@ -11,6 +11,7 @@ const ART = '冠词';
 const PREP = '介词';
 
 export const MAP_ES = {
+  lang: 'es',
   posters: [
     {
       title: '西班牙语发音',

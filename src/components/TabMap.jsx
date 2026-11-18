@@ -128,7 +128,7 @@ const SentencePoster = () => (
             <div className="flex flex-wrap items-end gap-x-1 gap-y-1">
               {parts.map((p) => (
                 <React.Fragment key={p.id}>
-                  <button type="button" onClick={() => say(p.r)} className="inline-flex flex-col items-center active:opacity-60">
+                  <button type="button" onClick={() => say(p.r, 0.9, 'ja')} className="inline-flex flex-col items-center active:opacity-60">
                     <span className={`text-[10px] font-extrabold leading-none ${ROLE_TEXT[p.role]}`}>{p.role}</span>
                     <span className="text-[9px] font-semibold text-slate-500 leading-none h-2.5 mt-0.5">{p.r !== p.w ? p.r : ''}</span>
                     <span className={`px-1 rounded text-[15px] font-black leading-snug ${ROLE_STYLE[p.role].replace(/border-\S+/, '')}`}>
@@ -138,7 +138,7 @@ const SentencePoster = () => (
                   {p.p && (
                     <button
                       type="button"
-                      onClick={() => say(p.r + p.p)}
+                      onClick={() => say(p.r + p.p, 0.9, 'ja')}
                       className="inline-flex flex-col items-center active:opacity-60"
                     >
                       <span className="text-[10px] font-bold leading-none text-slate-400">助词</span>
@@ -152,7 +152,12 @@ const SentencePoster = () => (
               ))}
               <span className="text-[15px] font-bold text-slate-500 leading-snug">。</span>
             </div>
-            <WholeLine text={text} className="text-xs text-slate-700 mt-0.5">
+            <WholeLine
+              text={text}
+              audioUrl={`/audio/map/ja/ladder_${si}.mp3`}
+              langCode="ja"
+              className="text-xs text-slate-700 mt-0.5"
+            >
               <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-slate-800 text-white text-[10px] font-bold mr-1">
                 {si + 1}
               </span>

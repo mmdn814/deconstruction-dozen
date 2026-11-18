@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Volume2 } from 'lucide-react';
-import { speakText, playPurePhoneme } from '../lib/core.js';
+import { speakText, playPurePhoneme, getWordAudioUrl } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 
 // 语言地图的公用零件。地图只用来看、听、读：没有选项，没有跳转，点哪里读哪里。
 
 // 龟速开关：整页共用。开着时所有点读都放慢。
 let slowMode = false;
-export const say = (text, rate = 0.85, langCode = null) => speakText(String(text).replace(/[（(].*?[）)]/g, ''), slowMode ? 0.45 : rate, 1.0, null, langCode);
+export const say = (text, rate = 0.85, langCode = null, audioUrl = null) => {
+  const clean = String(text || '').replace(/[（(].*?[）)]/g, '').trim();
+  const wordAudio = audioUrl || getWordAudioUrl(clean, langCode || 'en');
+  return speakText(clean, slowMode ? 0.6 : rate, 1.0, null, langCode, wordAudio);
+};
 
 export const SlowToggle = () => {
   const [slow, setSlow] = useState(slowMode);
@@ -35,8 +39,12 @@ export const SlowToggle = () => {
   );
 };
 
-export const WholeLine = ({ text, children, className = '' }) => (
-  <button type="button" onClick={() => say(text)} className={`flex items-center gap-1 text-left active:opacity-60 ${className}`}>
+export const WholeLine = ({ text, audioUrl = null, langCode = null, children, className = '' }) => (
+  <button
+    type="button"
+    onClick={() => say(text, 0.9, langCode, audioUrl)}
+    className={`flex items-center gap-1 text-left active:opacity-60 ${className}`}
+  >
     <Volume2 className="w-3 h-3 shrink-0 text-blue-500" />
     <span>{children}</span>
   </button>
@@ -117,7 +125,7 @@ const SoundsBlock = ({ lang }) => {
 };
 
 // 表格：cell 可以是 null（空）、字符串（行标签）、[词, 中文]
-const TableBlock = ({ tpl, heads, headTones = [], colTones = [], rows, small }) => {
+const TableBlock = ({ tpl, heads, headTones = [], colTones = [], rows, small, lang = 'en' }) => {
   const cols = heads ? heads.length : rows[0].length;
   return (
     <div className="grid gap-y-1 gap-x-0.5 text-center items-start" style={{ gridTemplateColumns: tpl || `repeat(${cols}, 1fr)` }}>
@@ -139,7 +147,7 @@ const TableBlock = ({ tpl, heads, headTones = [], colTones = [], rows, small }) 
             );
           const [w, cn, tone] = cell;
           return (
-            <button key={k} type="button" onClick={() => say(w)} className="active:opacity-60 pt-0.5">
+            <button key={k} type="button" onClick={() => say(w, 0.9, lang)} className="active:opacity-60 pt-0.5">
               <div
                 className={`inline-block px-1 rounded font-black leading-snug ${small ? 'text-[12px]' : 'text-[13px]'} ${
                   TONES[tone || colTones[ci]] || 'bg-slate-100'
@@ -167,36 +175,52 @@ const ROLE_TONE = {
 };
 
 // 一句话逐行长大。part = [角色, 词]；不在上表里的角色（冠词、介词）画成灰色虚线框
-const LadderBlock = ({ lines, foot }) => (
+const LadderBlock = ({ lines, foot, lang = 'en' }) => (
   <>
     <div className="space-y-2.5">
-      {lines.map((line, li) => (
-        <div key={li}>
-          <div className="flex flex-wrap items-end gap-x-1 gap-y-1">
-            {line.parts.map(([role, w], pi) => {
-              const tone = ROLE_TONE[role];
-              return (
-                <button key={pi} type="button" onClick={() => say(w)} className="inline-flex flex-col items-center active:opacity-60">
-                  <span className={`text-[10px] font-extrabold leading-none mb-0.5 ${tone ? tone[0] : 'text-slate-400'}`}>{role}</span>
-                  <span
-                    className={`px-1 rounded text-[15px] font-black leading-snug ${
-                      tone ? tone[1] : 'border border-dashed border-slate-400 text-slate-600'
-                    }`}
+      {lines.map((line, li) => {
+        const ladderAudioUrl = `/audio/map/${lang}/ladder_${li}.mp3`;
+        const fullSentence = line.parts.map((p) => p[1]).join(' ');
+        return (
+          <div key={li}>
+            <div className="flex flex-wrap items-end gap-x-1 gap-y-1">
+              {line.parts.map(([role, w], pi) => {
+                const tone = ROLE_TONE[role];
+                return (
+                  <button
+                    key={pi}
+                    type="button"
+                    onClick={() => say(w, 0.9, lang)}
+                    className="inline-flex flex-col items-center active:opacity-60"
                   >
-                    {w}
-                  </span>
-                </button>
-              );
-            })}
+                    <span className={`text-[10px] font-extrabold leading-none mb-0.5 ${tone ? tone[0] : 'text-slate-400'}`}>
+                      {role}
+                    </span>
+                    <span
+                      className={`px-1 rounded text-[15px] font-black leading-snug ${
+                        tone ? tone[1] : 'border border-dashed border-slate-400 text-slate-600'
+                      }`}
+                    >
+                      {w}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <WholeLine
+              text={fullSentence}
+              audioUrl={ladderAudioUrl}
+              langCode={lang}
+              className="text-xs text-slate-700 mt-0.5"
+            >
+              <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-slate-800 text-white text-[10px] font-bold mr-1">
+                {li + 1}
+              </span>
+              {line.cn}
+            </WholeLine>
           </div>
-          <WholeLine text={line.parts.map((p) => p[1]).join(' ')} className="text-xs text-slate-700 mt-0.5">
-            <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-slate-800 text-white text-[10px] font-bold mr-1">
-              {li + 1}
-            </span>
-            {line.cn}
-          </WholeLine>
-        </div>
-      ))}
+        );
+      })}
     </div>
     {foot && <div className="mt-2.5 pt-2 border-t border-dashed border-slate-300 text-xs text-slate-700 leading-relaxed">{foot}</div>}
   </>
@@ -205,13 +229,13 @@ const LadderBlock = ({ lines, foot }) => (
 const P_TONES = ['bg-emerald-100', 'bg-amber-100', 'bg-indigo-100', 'bg-teal-100', 'bg-rose-100', 'bg-lime-100', 'bg-sky-100', 'bg-orange-100', 'bg-yellow-100', 'bg-violet-100', 'bg-cyan-100', 'bg-pink-100'];
 
 // 用法表：左边色块是小词，右边每行是 用法 / 例句 / 中文。例句按空格切开，逐词可点
-const UsageBlock = ({ items }) => (
+const UsageBlock = ({ items, lang = 'en' }) => (
   <div className="lg:columns-2 lg:gap-3">
     {items.map((item, ii) => (
       <div key={item.p} className="flex border-b border-slate-200 break-inside-avoid">
         <button
           type="button"
-          onClick={() => say(item.p)}
+          onClick={() => say(item.p, 0.9, lang)}
           className={`w-14 shrink-0 flex items-center justify-center text-sm font-black text-slate-900 ${P_TONES[ii % P_TONES.length]}`}
         >
           {item.p}
@@ -226,14 +250,14 @@ const UsageBlock = ({ items }) => (
                     <button
                       key={wi}
                       type="button"
-                      onClick={() => say(word.replace(/[.,¿?¡!]/g, ''))}
+                      onClick={() => say(word.replace(/[.,¿?¡!]/g, ''), 0.9, lang)}
                       className="rounded active:bg-amber-200 hover:bg-amber-100"
                     >
                       {word}
                     </button>
                   ))}
                 </span>
-                <WholeLine text={sentence} className="text-[11px] text-slate-600 leading-snug">
+                <WholeLine text={sentence} langCode={lang} className="text-[11px] text-slate-600 leading-snug">
                   {cn}
                 </WholeLine>
               </span>
@@ -245,23 +269,24 @@ const UsageBlock = ({ items }) => (
   </div>
 );
 
-const Block = ({ b }) => {
+const Block = ({ b, lang = 'en' }) => {
   if (b.t === 'sub') return <SubTitle>{b.text}</SubTitle>;
   if (b.t === 'note') return <p className="text-xs text-slate-700 leading-relaxed mt-1.5">{b.text}</p>;
-  if (b.t === 'sounds') return <SoundsBlock lang={b.lang} />;
-  if (b.t === 'table') return <TableBlock {...b} />;
-  if (b.t === 'ladder') return <LadderBlock {...b} />;
-  if (b.t === 'usage') return <UsageBlock {...b} />;
+  if (b.t === 'sounds') return <SoundsBlock lang={b.lang || lang} />;
+  if (b.t === 'table') return <TableBlock {...b} lang={lang} />;
+  if (b.t === 'ladder') return <LadderBlock {...b} lang={lang} />;
+  if (b.t === 'usage') return <UsageBlock {...b} lang={lang} />;
   return null;
 };
 
 /** spec.posters：第 1 张放左栏，中间几张叠在右栏，最后一张通栏。 */
 export const DataMap = ({ spec }) => {
   const posters = spec.posters;
+  const lang = spec.lang || 'en';
   const render = (p) => (
     <Poster key={p.title} title={p.title} note={p.note} wide={p.wide}>
       {p.blocks.map((b, i) => (
-        <Block key={i} b={b} />
+        <Block key={i} b={b} lang={lang} />
       ))}
     </Poster>
   );

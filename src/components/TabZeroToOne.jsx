@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Volume2, Mic, Play } from 'lucide-react';
-import { LANGUAGE_CONFIG, playPurePhoneme, speakText } from '../lib/core.js';
+import { LANGUAGE_CONFIG, playPurePhoneme, speakText, getWordAudioUrl } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { PronunciationEvaluator } from './PronunciationEvaluator.jsx';
 
@@ -45,7 +45,7 @@ export const TabZeroToOne = ({
     const side = Math.random() < 0.5 ? 1 : 2;
     const rawWord = cleanSpeakWord(side === 1 ? pair.w1 : pair.w2);
     setEarQuiz({ pairIdx: idx, targetSide: side, word: rawWord, guessed: null });
-    speakText(rawWord, 0.92, 1.0, null, langConfig.speechLang);
+    speakText(rawWord, 0.92, 1.0, null, langConfig.speechLang, getWordAudioUrl(rawWord, targetLang));
   };
 
   const handleGuessEarQuiz = (side) => {
@@ -62,7 +62,7 @@ export const TabZeroToOne = ({
       wordStr: chosen,
       guessedIdx: null
     });
-    speakText(chosen, 0.92, 1.0, null, langConfig.speechLang);
+    speakText(chosen, 0.92, 1.0, null, langConfig.speechLang, getWordAudioUrl(chosen, targetLang));
   };
 
   const playClusterChain = (wordsList) => {
@@ -73,7 +73,7 @@ export const TabZeroToOne = ({
       idx += 1;
       speakText(clean, 0.94, 1.0, () => {
         setTimeout(playNext, 420);
-      }, langConfig.speechLang);
+      }, langConfig.speechLang, getWordAudioUrl(clean, targetLang));
     };
     playNext();
   };
@@ -203,7 +203,9 @@ export const TabZeroToOne = ({
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            speakText(c.sample || singleSoundText, 0.92, 1.0, null, langConfig.speechLang);
+                            const sampleText = c.sample || singleSoundText;
+                            const wordAudio = getWordAudioUrl(sampleText, targetLang);
+                            speakText(sampleText, 0.95, 1.0, null, langConfig.speechLang, wordAudio);
                           }}
                           className="font-bold text-slate-800 hover:text-blue-600 flex items-center gap-1 text-left min-w-0 truncate"
                           title="点击朗读下方示例单词"
@@ -223,7 +225,9 @@ export const TabZeroToOne = ({
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            speakText(c.sample || singleSoundText, 0.6, 1.0, null, langConfig.speechLang);
+                            const sampleText = c.sample || singleSoundText;
+                            const wordAudio = getWordAudioUrl(sampleText, targetLang);
+                            speakText(sampleText, 0.6, 1.0, null, langConfig.speechLang, wordAudio);
                           }}
                           className="px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0"
                           title="0.6x 慢速读示例词"
@@ -304,7 +308,10 @@ export const TabZeroToOne = ({
                       <div className="flex items-center justify-between bg-slate-50 hover:bg-blue-50/70 border border-slate-200/80 rounded-lg px-2.5 py-1.5 transition-colors">
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW1, 0.95, 1.0, null, langConfig.speechLang)}
+                          onClick={() => {
+                            const wordAudio = getWordAudioUrl(cleanW1, targetLang);
+                            speakText(cleanW1, 0.95, 1.0, null, langConfig.speechLang, wordAudio);
+                          }}
                           className="text-left flex-1"
                         >
                           <div className="text-xs font-extrabold text-slate-900 flex items-center gap-1">
@@ -315,7 +322,10 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW1, 0.6, 1.0, null, langConfig.speechLang)}
+                          onClick={() => {
+                            const wordAudio = getWordAudioUrl(cleanW1, targetLang);
+                            speakText(cleanW1, 0.6, 1.0, null, langConfig.speechLang, wordAudio);
+                          }}
                           className="px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0 ml-1"
                         >
                           🐢 慢速
@@ -326,7 +336,10 @@ export const TabZeroToOne = ({
                       <div className="flex items-center justify-between bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 rounded-lg px-2.5 py-1.5 transition-colors">
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW2, 0.95, 1.0, null, langConfig.speechLang)}
+                          onClick={() => {
+                            const wordAudio = getWordAudioUrl(cleanW2, targetLang);
+                            speakText(cleanW2, 0.95, 1.0, null, langConfig.speechLang, wordAudio);
+                          }}
                           className="text-left flex-1"
                         >
                           <div className="text-xs font-extrabold text-slate-900 flex items-center gap-1">
@@ -337,7 +350,10 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(cleanW2, 0.6, 1.0, null, langConfig.speechLang)}
+                          onClick={() => {
+                            const wordAudio = getWordAudioUrl(cleanW2, targetLang);
+                            speakText(cleanW2, 0.6, 1.0, null, langConfig.speechLang, wordAudio);
+                          }}
                           className="px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0 ml-1"
                         >
                           🐢 慢速
@@ -375,58 +391,61 @@ export const TabZeroToOne = ({
                   </div>
 
                   {/* Row 2: Same-Sentence Contrast Box (Contains Both Confusing Words!) */}
-                  {pair.sentence && (
-                    <div className="bg-slate-50/90 border border-slate-200/80 rounded-lg px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                      <div className="space-y-0.5">
-                        <div className="flex items-center flex-wrap gap-1.5">
-                          <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px]">
-                            🔥 同句对比实战
-                          </span>
-                          <span className="text-xs font-extrabold text-slate-900">{pair.sentence}</span>
-                          <span className="text-[11px] text-slate-500">（{pair.sentenceCn}）</span>
+                  {pair.sentence && (() => {
+                    const pairAudioUrl = `/audio/zerotoone/${targetLang}/pair_${idx}.mp3`;
+                    return (
+                      <div className="bg-slate-50/90 border border-slate-200/80 rounded-lg px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div className="space-y-0.5">
+                          <div className="flex items-center flex-wrap gap-1.5">
+                            <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px]">
+                              🔥 同句对比实战
+                            </span>
+                            <span className="text-xs font-extrabold text-slate-900">{pair.sentence}</span>
+                            <span className="text-[11px] text-slate-500">（{pair.sentenceCn}）</span>
+                          </div>
+                          <p className="text-[10.5px] text-slate-500">
+                            🎯 <strong>发音要领：</strong>
+                            {pair.tip}
+                          </p>
                         </div>
-                        <p className="text-[10.5px] text-slate-500">
-                          🎯 <strong>发音要领：</strong>
-                          {pair.tip}
-                        </p>
-                      </div>
 
-                      <div className="flex items-center gap-1.5 shrink-0">
-                        <button
-                          type="button"
-                          onClick={() => speakText(pair.sentence, 0.94, 1.0, null, langConfig.speechLang)}
-                          className="px-2 py-1 rounded-lg bg-white hover:bg-blue-50 text-blue-600 border border-slate-200 text-[11px] font-bold flex items-center gap-1"
-                        >
-                          <Volume2 className="w-3.5 h-3.5" />
-                          <span>读整句</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => speakText(pair.sentence, 0.6, 1.0, null, langConfig.speechLang)}
-                          className="px-2 py-1 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-[11px] font-bold"
-                        >
-                          🐢 慢速
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setActivePairPractice((prev) =>
-                              prev && prev.idx === idx && prev.mode === 'sentence'
-                                ? null
-                                : { idx, mode: 'sentence' }
-                            )
-                          }
-                          className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-colors ${
-                            isPracticingSentence
-                              ? 'bg-emerald-600 text-white border-emerald-600'
-                              : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-emerald-200'
-                          }`}
-                        >
-                          🎤 跟读对比句
-                        </button>
+                        <div className="flex items-center gap-1.5 shrink-0">
+                          <button
+                            type="button"
+                            onClick={() => speakText(pair.sentence, 0.94, 1.0, null, langConfig.speechLang, pairAudioUrl)}
+                            className="px-2 py-1 rounded-lg bg-white hover:bg-blue-50 text-blue-600 border border-slate-200 text-[11px] font-bold flex items-center gap-1"
+                          >
+                            <Volume2 className="w-3.5 h-3.5" />
+                            <span>读整句</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => speakText(pair.sentence, 0.6, 1.0, null, langConfig.speechLang, pairAudioUrl)}
+                            className="px-2 py-1 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-[11px] font-bold"
+                          >
+                            🐢 慢速
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setActivePairPractice((prev) =>
+                                prev && prev.idx === idx && prev.mode === 'sentence'
+                                  ? null
+                                  : { idx, mode: 'sentence' }
+                              )
+                            }
+                            className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-colors ${
+                              isPracticingSentence
+                                ? 'bg-emerald-600 text-white border-emerald-600'
+                                : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-emerald-200'
+                            }`}
+                          >
+                            🎤 跟读对比句
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    );
+                  })()}
 
                   {/* Interactive Blind Ear Quiz Box */}
                   {isQuizActive && (
@@ -434,7 +453,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center gap-2">
                         <button
                           type="button"
-                          onClick={() => speakText(earQuiz.word, 0.92, 1.0, null, langConfig.speechLang)}
+                          onClick={() => speakText(earQuiz.word, 0.92, 1.0, null, langConfig.speechLang, getWordAudioUrl(earQuiz.word, targetLang))}
                           className="bg-indigo-600 text-white px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -442,7 +461,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(earQuiz.word, 0.6, 1.0, null, langConfig.speechLang)}
+                          onClick={() => speakText(earQuiz.word, 0.6, 1.0, null, langConfig.speechLang, getWordAudioUrl(earQuiz.word, targetLang))}
                           className="bg-amber-500 text-white px-2 py-1 rounded-lg font-bold text-[11px]"
                         >
                           🐢 慢速听谜题
@@ -575,10 +594,11 @@ export const TabZeroToOne = ({
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
                   {cluster.words.map((item, wIdx) => {
                     const cleanSpeak = cleanSpeakWord(item.w);
+                    const wordAudio = getWordAudioUrl(cleanSpeak, targetLang);
                     return (
                       <div
                         key={wIdx}
-                        onClick={() => speakText(cleanSpeak, 0.95, 1.0, null, langConfig.speechLang)}
+                        onClick={() => speakText(cleanSpeak, 0.95, 1.0, null, langConfig.speechLang, wordAudio)}
                         className="bg-white hover:bg-blue-50/70 border border-slate-200/90 hover:border-blue-400 rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between gap-1">
@@ -587,7 +607,7 @@ export const TabZeroToOne = ({
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              speakText(cleanSpeak, 0.6, 1.0, null, langConfig.speechLang);
+                              speakText(cleanSpeak, 0.6, 1.0, null, langConfig.speechLang, wordAudio);
                             }}
                             className="px-1.5 py-0.2 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold shrink-0"
                           >
@@ -608,7 +628,7 @@ export const TabZeroToOne = ({
                       <div className="flex items-center gap-2">
                         <button
                           type="button"
-                          onClick={() => speakText(clusterQuiz.wordStr, 0.92, 1.0, null, langConfig.speechLang)}
+                          onClick={() => speakText(clusterQuiz.wordStr, 0.92, 1.0, null, langConfig.speechLang, getWordAudioUrl(clusterQuiz.wordStr, targetLang))}
                           className="bg-indigo-600 text-white px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -616,7 +636,7 @@ export const TabZeroToOne = ({
                         </button>
                         <button
                           type="button"
-                          onClick={() => speakText(clusterQuiz.wordStr, 0.6, 1.0, null, langConfig.speechLang)}
+                          onClick={() => speakText(clusterQuiz.wordStr, 0.6, 1.0, null, langConfig.speechLang, getWordAudioUrl(clusterQuiz.wordStr, targetLang))}
                           className="bg-amber-500 text-white px-2 py-1 rounded-lg font-bold text-[11px]"
                         >
                           🐢 慢速听

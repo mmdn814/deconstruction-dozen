@@ -4,6 +4,7 @@ import sys
 import json
 import re
 import argparse
+import subprocess
 import edge_tts
 
 VOICES = {
@@ -18,7 +19,6 @@ semaphore = asyncio.Semaphore(6)
 
 async def synthesize_one(text, voice, out_path, lang):
     clean_text = str(text or '').strip()
-    # Remove parens
     clean_text = re.sub(r'\(.*?\)|（.*?）', '', clean_text).strip()
     if not clean_text or clean_text.startswith('（'):
         return
@@ -28,7 +28,6 @@ async def synthesize_one(text, voice, out_path, lang):
 
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
-    # For Japanese, remove inter-kana artificial spacing
     if lang == 'ja':
         clean_text = re.sub(r'([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])\s+([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])', r'\1\2', clean_text)
 
@@ -45,23 +44,6 @@ async def synthesize_one(text, voice, out_path, lang):
 
 async def generate_core_sentences():
     print("Generating Core Sentences & Workplace Audio...")
-    # Extract from sentences.js
-    with open('src/data/sentences.js', 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    tasks = []
-    # Simple regex or python execution to parse sentencesByLang
-    # Let's extract items with a small script
-    import subprocess
-    cmd = """
-node -e "
-const fs = require('fs');
-let code = fs.readFileSync('src/data/sentences.js', 'utf8');
-code = code.replace(/export const/g, 'const');
-code += '; console.log(JSON.stringify(sentencesByLang));';
-eval(code);
-"
-"""
     p = subprocess.run(['node', '-e', """
 const fs = require('fs');
 let code = fs.readFileSync('src/data/sentences.js', 'utf8');
@@ -71,6 +53,7 @@ eval(code);
 """], capture_output=True, text=True)
     if p.returncode == 0:
         sentences_by_lang = json.loads(p.stdout)
+        tasks = []
         for lang, items in sentences_by_lang.items():
             if lang not in VOICES:
                 continue
@@ -90,7 +73,85 @@ eval(code);
         await asyncio.gather(*tasks)
         print(f"Core Sentences Done! Total: {len(tasks)}")
     else:
-        print("Failed to parse sentences.js via node:", p.stderr)
+        print("Failed to parse sentences.js:", p.stderr)
+
+async def generate_map_audio():
+    print("Generating Language Map Ladder Sentences Audio...")
+    tasks = []
+
+    en_ladder = [
+        "I drank beer.",
+        "I drank cold beer.",
+        "I drank cold beer with a friend.",
+        "I drank cold beer with a friend at the bar.",
+        "I drank cold beer with a friend at the bar at 8 pm."
+    ]
+    for idx, s in enumerate(en_ladder):
+        tasks.append(synthesize_one(s, VOICES['en'], f"public/audio/map/en/ladder_{idx}.mp3", 'en'))
+
+    ja_ladder = [
+        "私は 飲みました。",
+        "私は ビールを 飲みました。",
+        "私は 冷たいビールを 飲みました。",
+        "私は 友達と 冷たいビールを 飲みました。",
+        "私は バーで 友達と 冷たいビールを 飲みました。",
+        "私は 8時に バーで 友達と 冷たいビールを 飲みました。",
+        "私は 昨日 8時に バーで 友達と 冷たいビールを 飲みました。"
+    ]
+    for idx, s in enumerate(ja_ladder):
+        tasks.append(synthesize_one(s, VOICES['ja'], f"public/audio/map/ja/ladder_{idx}.mp3", 'ja'))
+
+    es_ladder = [
+        "Bebí cerveza.",
+        "Bebí cerveza fría.",
+        "Bebí cerveza fría con un amigo.",
+        "Bebí cerveza fría con un amigo en el bar.",
+        "Bebí cerveza fría con un amigo en el bar a las 8 pm."
+    ]
+    for idx, s in enumerate(es_ladder):
+        tasks.append(synthesize_one(s, VOICES['es'], f"public/audio/map/es/ladder_{idx}.mp3", 'es'))
+
+    await asyncio.gather(*tasks)
+    print(f"Map Ladder Sentences Audio Done! Total: {len(tasks)}")
+
+async def generate_zerotoone_sentences():
+    print("Generating ZeroToOne Minimal Pair Sentences...")
+    tasks = []
+    p = subprocess.run(['node', '-e', """
+const fs = require('fs');
+let code = fs.readFileSync('src/data/zeroToOne.js', 'utf8');
+code = code.replace(/export const /g, 'const ');
+code += '; const out = {}; for (let k of ["en", "ja", "es"]) { out[k] = (zeroToOneDataByLang[k].minimalPairs || []).map(p => p.sentence); }; console.log(JSON.stringify(out));';
+eval(code);
+"""], capture_output=True, text=True)
+    if p.returncode == 0:
+        data = json.loads(p.stdout)
+        for lang, sentences in data.items():
+            voice = VOICES[lang]
+            for idx, s in enumerate(sentences):
+                tasks.append(synthesize_one(s, voice, f"public/audio/zerotoone/{lang}/pair_{idx}.mp3", lang))
+        await asyncio.gather(*tasks)
+        print(f"ZeroToOne Sentences Done! Total: {len(tasks)}")
+
+async def generate_stages_audio():
+    print("Generating PICTURE_STAGES Audio...")
+    with open('src/data/pictures.jsx', 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Find S(...) invocations: S('en', 'ja', 'jaSay', 'roma', 'es', 'cn')
+    # e.g. S('I am here.', '...', '...', '...', 'Yo estoy aquí.', '...')
+    pattern = r"S\(\s*'(.*?)',\s*'(.*?)',\s*'(.*?)',\s*'(.*?)',\s*'(.*?)',\s*'(.*?)'\s*\)"
+    matches = re.findall(pattern, content)
+    print(f"Found {len(matches)} scenes in pictures.jsx")
+
+    tasks = []
+    for idx, (en, ja, ja_say, roma, es, cn) in enumerate(matches):
+        tasks.append(synthesize_one(en, VOICES['en'], f"public/audio/stages/en/scene_{idx}.mp3", 'en'))
+        tasks.append(synthesize_one(ja_say or ja, VOICES['ja'], f"public/audio/stages/ja/scene_{idx}.mp3", 'ja'))
+        tasks.append(synthesize_one(es, VOICES['es'], f"public/audio/stages/es/scene_{idx}.mp3", 'es'))
+
+    await asyncio.gather(*tasks)
+    print(f"Stages Audio Done! Total: {len(tasks)}")
 
 async def generate_richards(start_page=1, end_page=119):
     print(f"Generating Richards Book 1 Audio (Pages {start_page} to {end_page})...")
@@ -115,7 +176,6 @@ async def generate_richards(start_page=1, end_page=119):
                 tasks.append(synthesize_one(sentence, voice, out_path, lang))
 
     print(f"Queued {len(tasks)} panels for synthesis...")
-    # Execute in batches of 60 to report progress
     batch_size = 60
     for i in range(0, len(tasks), batch_size):
         chunk = tasks[i:i+batch_size]
@@ -126,7 +186,11 @@ async def generate_richards(start_page=1, end_page=119):
 
 async def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--core', action='store_true', help='Generate core sentences')
+    parser.add_argument('--core', action='store_true')
+    parser.add_argument('--map', action='store_true')
+    parser.add_argument('--zerotoone', action='store_true')
+    parser.add_argument('--stages', action='store_true')
+    parser.add_argument('--richards', action='store_true')
     parser.add_argument('--start-page', type=int, default=1)
     parser.add_argument('--end-page', type=int, default=119)
     parser.add_argument('--all', action='store_true')
@@ -134,7 +198,14 @@ async def main():
 
     if args.core or args.all:
         await generate_core_sentences()
-    await generate_richards(args.start_page, args.end_page)
+    if args.map or args.all:
+        await generate_map_audio()
+    if args.zerotoone or args.all:
+        await generate_zerotoone_sentences()
+    if args.stages or args.all:
+        await generate_stages_audio()
+    if args.richards or args.all:
+        await generate_richards(args.start_page, args.end_page)
 
 if __name__ == '__main__':
     asyncio.run(main())
