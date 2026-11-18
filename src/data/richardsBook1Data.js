@@ -9,6 +9,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p1_tl",
+        "img": "/richards_panels/p_1_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "I",
@@ -18,6 +19,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p1_tr",
+        "img": "/richards_panels/p_1_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "YOU",
@@ -27,6 +29,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p1_bl",
+        "img": "/richards_panels/p_1_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "I",
@@ -36,6 +39,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p1_br",
+        "img": "/richards_panels/p_1_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "YOU",
@@ -52,6 +56,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p2_tl",
+        "img": "/richards_panels/p_2_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "HE",
@@ -61,6 +66,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p2_tr",
+        "img": "/richards_panels/p_2_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "SHE",
@@ -70,6 +76,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p2_bl",
+        "img": "/richards_panels/p_2_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "IT",
@@ -79,6 +86,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p2_br",
+        "img": "/richards_panels/p_2_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "THEY",
@@ -95,6 +103,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p3_tl",
+        "img": "/richards_panels/p_3_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "HE",
@@ -104,6 +113,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p3_tr",
+        "img": "/richards_panels/p_3_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "THEY",
@@ -113,6 +123,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p3_bl",
+        "img": "/richards_panels/p_3_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "IT",
@@ -122,6 +133,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p3_br",
+        "img": "/richards_panels/p_3_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "THEY",
@@ -138,6 +150,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p4_tl",
+        "img": "/richards_panels/p_4_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "I am here.",
@@ -147,6 +160,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p4_tr",
+        "img": "/richards_panels/p_4_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is there.",
@@ -156,6 +170,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p4_bl",
+        "img": "/richards_panels/p_4_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She is here.",
@@ -165,6 +180,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p4_br",
+        "img": "/richards_panels/p_4_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She is there.",
@@ -181,6 +197,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p5_tl",
+        "img": "/richards_panels/p_5_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "It is here.",
@@ -190,6 +207,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p5_tr",
+        "img": "/richards_panels/p_5_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "It is there.",
@@ -199,6 +217,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p5_bl",
+        "img": "/richards_panels/p_5_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "They are here.",
@@ -208,6 +227,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p5_br",
+        "img": "/richards_panels/p_5_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "They are there.",
@@ -224,6 +244,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p6_tl",
+        "img": "/richards_panels/p_6_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "You are there.",
@@ -233,6 +254,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p6_tr",
+        "img": "/richards_panels/p_6_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "You are there.",
@@ -242,6 +264,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p6_bl",
+        "img": "/richards_panels/p_6_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "You are here.",
@@ -251,6 +274,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p6_br",
+        "img": "/richards_panels/p_6_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "We are here.",
@@ -267,6 +291,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p7_tl",
+        "img": "/richards_panels/p_7_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "It is there.",
@@ -276,6 +301,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p7_tr",
+        "img": "/richards_panels/p_7_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "They are there.",
@@ -285,6 +311,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p7_bl",
+        "img": "/richards_panels/p_7_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "We are here.",
@@ -294,6 +321,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p7_br",
+        "img": "/richards_panels/p_7_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "They are here.",
@@ -310,6 +338,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p8_tl",
+        "img": "/richards_panels/p_8_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a man.",
@@ -319,6 +348,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p8_tr",
+        "img": "/richards_panels/p_8_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a woman.",
@@ -328,6 +358,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p8_bl",
+        "img": "/richards_panels/p_8_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "That is a man.",
@@ -337,6 +368,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p8_br",
+        "img": "/richards_panels/p_8_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "That is a woman.",
@@ -353,6 +385,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p9_tl",
+        "img": "/richards_panels/p_9_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This man is here.",
@@ -362,6 +395,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p9_tr",
+        "img": "/richards_panels/p_9_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "That man is there.",
@@ -371,6 +405,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p9_bl",
+        "img": "/richards_panels/p_9_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This woman is here.",
@@ -380,6 +415,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p9_br",
+        "img": "/richards_panels/p_9_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "That woman is there.",
@@ -396,6 +432,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p10_tl",
+        "img": "/richards_panels/p_10_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a table. This table is here. It is here.",
@@ -405,6 +442,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p10_tr",
+        "img": "/richards_panels/p_10_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "That is a table. That table is there. It is there.",
@@ -414,6 +452,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p10_bl",
+        "img": "/richards_panels/p_10_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a hat. It is a hat.",
@@ -423,6 +462,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p10_br",
+        "img": "/richards_panels/p_10_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a hand. This is the thumb. These are the fingers.",
@@ -439,6 +479,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p11_tl",
+        "img": "/richards_panels/p_11_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is my head.",
@@ -448,6 +489,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p11_tr",
+        "img": "/richards_panels/p_11_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is my hat.",
@@ -457,6 +499,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p11_bl",
+        "img": "/richards_panels/p_11_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "My hat is in my hand. It is in my hand.",
@@ -466,6 +509,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p11_br",
+        "img": "/richards_panels/p_11_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "My hat is on my head. It is on my head.",
@@ -482,6 +526,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p12_tl",
+        "img": "/richards_panels/p_12_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is my hat.",
@@ -491,6 +536,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p12_tr",
+        "img": "/richards_panels/p_12_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "That is his hat.",
@@ -500,6 +546,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p12_bl",
+        "img": "/richards_panels/p_12_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "His hat is on his head.",
@@ -509,6 +556,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p12_br",
+        "img": "/richards_panels/p_12_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Her hat is in her hand.",
@@ -525,6 +573,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p13_tl",
+        "img": "/richards_panels/p_13_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "That is your hat. It is on the table.",
@@ -534,6 +583,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p13_tr",
+        "img": "/richards_panels/p_13_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Those are your hats. They are on the table.",
@@ -543,6 +593,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p13_bl",
+        "img": "/richards_panels/p_13_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are my hands. This is my right hand. This is my left hand.",
@@ -552,6 +603,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p13_br",
+        "img": "/richards_panels/p_13_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Those are your hands. That is your right hand. That is your left hand.",
@@ -568,6 +620,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p14_tl",
+        "img": "/richards_panels/p_14_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "His hat is on the table.",
@@ -577,6 +630,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p14_tr",
+        "img": "/richards_panels/p_14_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He will take his hat off the table.",
@@ -586,6 +640,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p14_bl",
+        "img": "/richards_panels/p_14_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He is taking it off the table.",
@@ -595,6 +650,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p14_br",
+        "img": "/richards_panels/p_14_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He took it off the table.",
@@ -611,6 +667,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p15_tl",
+        "img": "/richards_panels/p_15_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "He will put his hat on his head.",
@@ -620,6 +677,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p15_tr",
+        "img": "/richards_panels/p_15_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is putting his hat on his head.",
@@ -629,6 +687,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p15_bl",
+        "img": "/richards_panels/p_15_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He put his hat on his head. He put it on.",
@@ -638,6 +697,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p15_br",
+        "img": "/richards_panels/p_15_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "It was on the table. It is on his head.",
@@ -654,6 +714,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p16_tl",
+        "img": "/richards_panels/p_16_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "He will take his hat off his head.",
@@ -663,6 +724,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p16_tr",
+        "img": "/richards_panels/p_16_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is taking his hat off his head.",
@@ -672,6 +734,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p16_bl",
+        "img": "/richards_panels/p_16_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "His hat is in his hand. It was on his head.",
@@ -681,6 +744,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p16_br",
+        "img": "/richards_panels/p_16_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He took his hat off. It is in his hand.",
@@ -697,6 +761,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p17_tl",
+        "img": "/richards_panels/p_17_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a hat. These are hats. This is a hand. These are hands.",
@@ -706,6 +771,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p17_tr",
+        "img": "/richards_panels/p_17_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a table. These are tables.",
@@ -715,6 +781,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p17_bl",
+        "img": "/richards_panels/p_17_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a man. These are men.",
@@ -724,6 +791,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p17_br",
+        "img": "/richards_panels/p_17_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a woman. These are women.",
@@ -740,6 +808,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p18_tl",
+        "img": "/richards_panels/p_18_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a man. This is his hand. It is the man’s hand.",
@@ -749,6 +818,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p18_tr",
+        "img": "/richards_panels/p_18_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a woman. This is her hand. It is the woman’s hand.",
@@ -758,6 +828,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p18_bl",
+        "img": "/richards_panels/p_18_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a man’s hat. It is on a man’s head. Now it is in the man’s hands. It is in his hands.",
@@ -767,6 +838,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p18_br",
+        "img": "/richards_panels/p_18_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a woman’s hat. It is on a woman’s head. Now it is in the woman’s hands. It is in her hands.",
@@ -783,6 +855,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p19_tl",
+        "img": "/richards_panels/p_19_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "He will give his hat to the man.",
@@ -792,6 +865,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p19_tr",
+        "img": "/richards_panels/p_19_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is giving his hat to the man.",
@@ -801,6 +875,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p19_bl",
+        "img": "/richards_panels/p_19_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He gave it to the man. He gave it to him.",
@@ -810,6 +885,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p19_br",
+        "img": "/richards_panels/p_19_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "It is in the man’s hands now.",
@@ -826,6 +902,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p20_tl",
+        "img": "/richards_panels/p_20_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The man will give his hat to the woman.",
@@ -835,6 +912,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p20_tr",
+        "img": "/richards_panels/p_20_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is giving his hat to the woman.",
@@ -844,6 +922,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p20_bl",
+        "img": "/richards_panels/p_20_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He gave it to the woman. He gave it to her.",
@@ -853,6 +932,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p20_br",
+        "img": "/richards_panels/p_20_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "It is in the woman’s hands now.",
@@ -869,6 +949,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p21_tl",
+        "img": "/richards_panels/p_21_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The woman will put the hat on the table.",
@@ -878,6 +959,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p21_tr",
+        "img": "/richards_panels/p_21_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She is putting it on the table.",
@@ -887,6 +969,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p21_bl",
+        "img": "/richards_panels/p_21_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She put it there.",
@@ -896,6 +979,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p21_br",
+        "img": "/richards_panels/p_21_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "It was in her hand. It is on the table.",
@@ -912,6 +996,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p22_tl",
+        "img": "/richards_panels/p_22_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a ship.",
@@ -921,6 +1006,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p22_tr",
+        "img": "/richards_panels/p_22_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "These are ships.",
@@ -930,6 +1016,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p22_bl",
+        "img": "/richards_panels/p_22_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This ship is in the bottle.",
@@ -939,6 +1026,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p22_br",
+        "img": "/richards_panels/p_22_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These ships are on the water. This is water.",
@@ -955,6 +1043,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p23_tl",
+        "img": "/richards_panels/p_23_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is water. This is a bottle. The bottle is in a man’s hand.",
@@ -964,6 +1053,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p23_tr",
+        "img": "/richards_panels/p_23_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a glass. It is on the table.",
@@ -973,6 +1063,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p23_bl",
+        "img": "/richards_panels/p_23_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Now the glass is off the table.",
@@ -982,6 +1073,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p23_br",
+        "img": "/richards_panels/p_23_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The glass and the water are on the floor.",
@@ -998,6 +1090,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p24_tl",
+        "img": "/richards_panels/p_24_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a bottle and this is a bottle. This and this are bottles.",
@@ -1007,6 +1100,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p24_tr",
+        "img": "/richards_panels/p_24_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a glass and this is a glass. These are glasses.",
@@ -1016,6 +1110,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p24_bl",
+        "img": "/richards_panels/p_24_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "That is a bird and that is a bird. Those are birds. They are birds.",
@@ -1025,6 +1120,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p24_br",
+        "img": "/richards_panels/p_24_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "That man and that woman are there. This man and this woman are here.",
@@ -1041,6 +1137,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p25_tl",
+        "img": "/richards_panels/p_25_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a man. These are his arms. These are his legs. These are his feet.",
@@ -1050,6 +1147,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p25_tr",
+        "img": "/richards_panels/p_25_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is an arm. This is a leg. This is a foot.",
@@ -1059,6 +1157,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p25_bl",
+        "img": "/richards_panels/p_25_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a table. These are its legs Its feet are on the floor.",
@@ -1068,6 +1167,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p25_br",
+        "img": "/richards_panels/p_25_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a seat. These are its arms. These are its legs. Its feet are on the floor.",
@@ -1084,6 +1184,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p26_tl",
+        "img": "/richards_panels/p_26_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a This is a door. is the windows are These This is the floor",
@@ -1093,6 +1194,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p26_tr",
+        "img": "/richards_panels/p_26_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "room. This is a This door. a picture. of the room.",
@@ -1102,6 +1204,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p26_bl",
+        "img": "/richards_panels/p_26_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are the windows This is a window and This window is shut.",
@@ -1111,6 +1214,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p26_br",
+        "img": "/richards_panels/p_26_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "of the room. this is a window. This window is open.",
@@ -1127,6 +1231,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p27_tl",
+        "img": "/richards_panels/p_27_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This door is open.",
@@ -1136,6 +1241,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p27_tr",
+        "img": "/richards_panels/p_27_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This door is shut.",
@@ -1145,6 +1251,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p27_bl",
+        "img": "/richards_panels/p_27_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a wall of the room. This is a wall. A picture is on this wall. This is the floor of the room.",
@@ -1154,6 +1261,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p27_br",
+        "img": "/richards_panels/p_27_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a picture of a man and a woman. This is the cord of the picture. This is a hook. This is the frame of the picture.",
@@ -1170,6 +1278,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p28_tl",
+        "img": "/richards_panels/p_28_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a This is a window of the house. This is the door of",
@@ -1179,6 +1288,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p28_tr",
+        "img": "/richards_panels/p_28_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "house. These are windows of the house. the house.",
@@ -1188,6 +1298,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p28_bl",
+        "img": "/richards_panels/p_28_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are This man That",
@@ -1197,6 +1308,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p28_br",
+        "img": "/richards_panels/p_28_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "houses. This is a street. is in the street. is his house.",
@@ -1213,6 +1325,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p29_tl",
+        "img": "/richards_panels/p_29_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The man will go to his house.",
@@ -1222,6 +1335,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p29_tr",
+        "img": "/richards_panels/p_29_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is going to his house.",
@@ -1231,6 +1345,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p29_bl",
+        "img": "/richards_panels/p_29_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "The man went to his house. He is there. He went there. He was here.",
@@ -1240,6 +1355,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p29_br",
+        "img": "/richards_panels/p_29_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He is at his door. He is at the door of his house.",
@@ -1256,6 +1372,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p30_tl",
+        "img": "/richards_panels/p_30_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is this? “It is a hat. “What is this?”is a question. “It is a hat,”is an answer.",
@@ -1265,6 +1382,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p30_tr",
+        "img": "/richards_panels/p_30_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a question mark. We put question marks after questions.",
@@ -1274,6 +1392,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p30_bl",
+        "img": "/richards_panels/p_30_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "“Is this a hat?” That is a question. “Yes, it is.” That is an answer.",
@@ -1283,6 +1402,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p30_br",
+        "img": "/richards_panels/p_30_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "“Is this a hat?” “No, it is not a hat. It is a hand.” That is an answer.",
@@ -1299,6 +1419,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p31_tl",
+        "img": "/richards_panels/p_31_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a What is this? It is a c What is this?",
@@ -1308,6 +1429,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p31_tr",
+        "img": "/richards_panels/p_31_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b What is this? d What is this?",
@@ -1317,6 +1439,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p31_bl",
+        "img": "/richards_panels/p_31_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e What is this? g What is this? This page is page 31.The answers",
@@ -1326,6 +1449,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p31_br",
+        "img": "/richards_panels/p_31_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f What is this? h What is this? are on page 34.",
@@ -1342,6 +1466,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p32_tl",
+        "img": "/richards_panels/p_32_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a What are these? And what is this? c What are these? And what is this?",
@@ -1351,6 +1476,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p32_tr",
+        "img": "/richards_panels/p_32_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b What are these? And what is this? d What are these? And what is this?",
@@ -1360,6 +1486,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p32_bl",
+        "img": "/richards_panels/p_32_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e What are these? And what is this? g What are these? And what is this? This page is page 32.The answers",
@@ -1369,6 +1496,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p32_br",
+        "img": "/richards_panels/p_32_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f What is this? And what is this? h What is this? What is in it? are on page 34.",
@@ -1385,6 +1513,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p33_tl",
+        "img": "/richards_panels/p_33_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a Is the hat on the table? c Is the picture on the wall?",
@@ -1394,6 +1523,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p33_tr",
+        "img": "/richards_panels/p_33_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b Is the man in the room? d Is the bird on the seat?",
@@ -1403,6 +1533,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p33_bl",
+        "img": "/richards_panels/p_33_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e Is the glass in the woman’s hand? g Is this ship in a bottle? This page is page 33.The answers",
@@ -1412,6 +1543,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p33_br",
+        "img": "/richards_panels/p_33_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f Is the water in the glass? h Are the man and the woman at the door? are on page 34.",
@@ -1428,6 +1560,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p34_tl",
+        "img": "/richards_panels/p_34_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "These are answers to questions This page is page 34. Page 31 a It is a house. b It is a ship. c It is a table. d It is a bottle. e It is a leg. f It is an arm. g It is a leg of a table. h It is an arm of a seat. Page 32 a They are three men.",
@@ -1437,6 +1570,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p34_tr",
+        "img": "/richards_panels/p_34_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "on pages 31, 32, and 33. Page 33 a Yes, it is. b Yes, he is. c No, it is not. It is on the floor. d No, it is not. It is on the floor. e No. It is in the man’s hand. f No, it is not in the glass. g No. It is on the water.",
@@ -1446,6 +1580,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p34_bl",
+        "img": "/richards_panels/p_34_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "That is a woman. b They are glasses. That is a glass. c They are fingers. That is the thumb. d They are windows. That is a door. e They are houses. That is a street. f It is a picture of a man and a house. That is the frame of the picture. (Its frame) g They are feet. That is a foot. h That is a room. A table is in it.",
@@ -1455,6 +1590,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p34_br",
+        "img": "/richards_panels/p_34_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "h Yes, they are at the door.",
@@ -1471,6 +1607,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p35_tl",
+        "img": "/richards_panels/p_35_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is this? This is a clock. What is the time? The time is one (1:00). One hand is at one.",
@@ -1480,6 +1617,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p35_tr",
+        "img": "/richards_panels/p_35_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is the time? The time is two (2:00). It was one (1:00). It will be three (3:00).",
@@ -1489,6 +1627,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p35_bl",
+        "img": "/richards_panels/p_35_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "What is the time? The time is four (4:00). It was three (3:00). It will be five (5:00).",
@@ -1498,6 +1637,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p35_br",
+        "img": "/richards_panels/p_35_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "What is the time? Now the time is six (6:00). It was five (5:00). It will be seven (7:00).",
@@ -1514,6 +1654,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p36_tl",
+        "img": "/richards_panels/p_36_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is the time? Now the time is eight (8:00). It was seven (7:00). It will be nine (9:00).",
@@ -1523,6 +1664,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p36_tr",
+        "img": "/richards_panels/p_36_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is the time? Now the time is ten (10:00). It was nine (9:00). It will be eleven (11:00).",
@@ -1532,6 +1674,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p36_bl",
+        "img": "/richards_panels/p_36_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "What is the time? The time is twelve (12:00). It was eleven (11:00). It will be one (1:00). The two hands are at twelve now.",
@@ -1541,6 +1684,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p36_br",
+        "img": "/richards_panels/p_36_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These are the numbers from one to twelve. One, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve.",
@@ -1557,6 +1701,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p37_tl",
+        "img": "/richards_panels/p_37_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What are things? A house is a thing. Houses are things. A hat is a thing. Hats are things. Doors and windows are things. Tables and seats are things.",
@@ -1566,6 +1711,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p37_tr",
+        "img": "/richards_panels/p_37_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a man. This is a woman. This is a boy. This is a girl. Men and women and boys and girls are not things.They are persons. You are a person.",
@@ -1575,6 +1721,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p37_bl",
+        "img": "/richards_panels/p_37_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "There are two persons in this room. They are a boy and a girl. The girl is at the door. The boy is at the window.",
@@ -1584,6 +1731,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p37_br",
+        "img": "/richards_panels/p_37_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The girl will go to the window. She will be with the boy at the window. She will be with him at the window.",
@@ -1600,6 +1748,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p38_tl",
+        "img": "/richards_panels/p_38_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The girl is going to the window. Where was she? She was at the door.",
@@ -1609,6 +1758,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p38_tr",
+        "img": "/richards_panels/p_38_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She went to the window. Where is she now? She is at the window now. She is with the boy.",
@@ -1618,6 +1768,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p38_bl",
+        "img": "/richards_panels/p_38_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "They are at the window together. She is with him at the window. He is with her at the window.",
@@ -1627,6 +1778,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p38_br",
+        "img": "/richards_panels/p_38_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These books are together on the shelf. These books are not together.They are on the shelf, but they are not together.",
@@ -1643,6 +1795,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p39_tl",
+        "img": "/richards_panels/p_39_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The girl and the boy will go from the window.",
@@ -1652,6 +1805,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p39_tr",
+        "img": "/richards_panels/p_39_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "They are going from the window.They were at the window.",
@@ -1661,6 +1815,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p39_bl",
+        "img": "/richards_panels/p_39_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "They went from the window. She went with him and he went with her.",
@@ -1670,6 +1825,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p39_br",
+        "img": "/richards_panels/p_39_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Now they are at the door together. The boy is with the girl at the door. She is at the door again.",
@@ -1686,6 +1842,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p40_tl",
+        "img": "/richards_panels/p_40_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is my head.",
@@ -1695,6 +1852,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p40_tr",
+        "img": "/richards_panels/p_40_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "That is her head.",
@@ -1704,6 +1862,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p40_bl",
+        "img": "/richards_panels/p_40_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are my eyes. This is This is the one eye. other eye.",
@@ -1713,6 +1872,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p40_br",
+        "img": "/richards_panels/p_40_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Her eyes are open. Her eyes are shut.",
@@ -1729,6 +1889,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p41_tl",
+        "img": "/richards_panels/p_41_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "My eyes are open. I see. Her eyes are shut. She does not see. I see her. She does not see me.",
@@ -1738,6 +1899,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p41_tr",
+        "img": "/richards_panels/p_41_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Now her eyes are open. She sees. What does she see? She sees me. I see her. Our eyes are open.",
@@ -1747,6 +1909,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p41_bl",
+        "img": "/richards_panels/p_41_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Her eyes are open. She sees. They were shut. She did not see. She did not see me.",
@@ -1756,6 +1919,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p41_br",
+        "img": "/richards_panels/p_41_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Her eyes are shut. They were open. She saw. What did she see? She saw me.",
@@ -1772,6 +1936,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p42_tl",
+        "img": "/richards_panels/p_42_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "A man has two eyes. I have two eyes. These are my eyes. A man has a nose. I have a nose. This is my nose.",
@@ -1781,6 +1946,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p42_tr",
+        "img": "/richards_panels/p_42_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "A man has a mouth. I have a mouth. This is my mouth.",
@@ -1790,6 +1956,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p42_bl",
+        "img": "/richards_panels/p_42_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This man’s mouth is open. He is saying “mouth.” His mouth is shut. He is not saying “mouth.”",
@@ -1799,6 +1966,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p42_br",
+        "img": "/richards_panels/p_42_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "His mouth is shut. He will say “mouths.” He is saying “mouths.” He said “mouths.” He is not saying “mouths”now. His mouth is shut again.",
@@ -1815,6 +1983,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p43_tl",
+        "img": "/richards_panels/p_43_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "These are three books. They are on a shelf. This book is between the other two books.",
@@ -1824,6 +1993,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p43_tr",
+        "img": "/richards_panels/p_43_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "I have the book in my hand now. It was on the shelf. It was between the other two books on the shelf.",
@@ -1833,6 +2003,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p43_bl",
+        "img": "/richards_panels/p_43_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are the pages of the book. These are the covers of the book. The pages are between the covers of the book.",
@@ -1842,6 +2013,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p43_br",
+        "img": "/richards_panels/p_43_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These are the fingers of my hand. This finger is between these other two fingers of my hand.",
@@ -1858,6 +2030,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p44_tl",
+        "img": "/richards_panels/p_44_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "My nose is between my eyes. And it is between my eyes and my mouth.",
@@ -1867,6 +2040,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p44_tr",
+        "img": "/richards_panels/p_44_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "My mouth is under my nose. My nose is over my mouth. Our noses are over our mouths.",
@@ -1876,6 +2050,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p44_bl",
+        "img": "/richards_panels/p_44_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "The light is over the table. The dog is under the table.",
@@ -1885,6 +2060,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p44_br",
+        "img": "/richards_panels/p_44_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a clock. It is on the wall. It is over the bookshelves. The bookshelves are under the clock.",
@@ -1901,6 +2077,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p45_tl",
+        "img": "/richards_panels/p_45_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is his hair. It is short. This is her hair. It is long.",
@@ -1910,6 +2087,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p45_tr",
+        "img": "/richards_panels/p_45_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "These are his ears. Where are her ears? They are under her hair. Her hair is over her ears.",
@@ -1919,6 +2097,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p45_bl",
+        "img": "/richards_panels/p_45_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is his head. This is his face. His eyes, his nose, and his mouth are parts of his face.",
@@ -1928,6 +2107,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p45_br",
+        "img": "/richards_panels/p_45_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a clock. It has a face. This is the face of the clock.The clock has two hands, a long hand and a short hand.The long hand is at 5.The short hand is between 7 and 8.",
@@ -1944,6 +2124,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p46_tl",
+        "img": "/richards_panels/p_46_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "A clock has a face. It has no nose. It has no eyes. It has no mouth.",
@@ -1953,6 +2134,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p46_tr",
+        "img": "/richards_panels/p_46_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "It has no ears. It has no hair but it has a face. It has a face and two hands, the long hand and the short hand.",
@@ -1962,6 +2144,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p46_bl",
+        "img": "/richards_panels/p_46_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "The long hand of the clock is between one and two. One is before two.Two is between one and three. Three is after two and two is after one.",
@@ -1971,6 +2154,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p46_br",
+        "img": "/richards_panels/p_46_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "I have this book in my hands. It was on the shelf with the other books. It was between the other two books before I took it from the shelf.",
@@ -1987,6 +2171,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p47_tl",
+        "img": "/richards_panels/p_47_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "I have it in my hand. I am putting it between the other two books. Then it will be with the other books.",
@@ -1996,6 +2181,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p47_tr",
+        "img": "/richards_panels/p_47_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Now it is on the shelf again. It was in my hand. I had it in my hand. It is not in my hand.Where is it?",
@@ -2005,6 +2191,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p47_bl",
+        "img": "/richards_panels/p_47_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a room. What do you see in the room? Do you see the floor and three walls of the room? Do you see them?",
@@ -2014,6 +2201,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p47_br",
+        "img": "/richards_panels/p_47_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Do you see a door and two windows? Is one of the windows open? Is the other window shut? Do you see two seats and the bookshelves between them? Do you see the clock over the bookshelves? Yes. I see them. These things are in the room.The room is in a house.",
@@ -2030,6 +2218,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p48_tl",
+        "img": "/richards_panels/p_48_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a face. Eyes, nose, and mouth are parts of a face. Which are the eyes? Which is the nose? Which is the mouth?",
@@ -2039,6 +2228,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p48_tr",
+        "img": "/richards_panels/p_48_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "These are my hands. Which is my right hand? Which is my left hand? Which are my thumbs? Which are my fingers?",
@@ -2048,6 +2238,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p48_bl",
+        "img": "/richards_panels/p_48_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a man. Which are his arms? Which are his hands? Which are his legs? Which are his feet?",
@@ -2057,6 +2248,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p48_br",
+        "img": "/richards_panels/p_48_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is his head. These are his arms. These are his legs. These are his feet. What is this?",
@@ -2073,6 +2265,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p49_tl",
+        "img": "/richards_panels/p_49_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is his body. His head, his arms, his legs, and his body are parts of a man.",
@@ -2082,6 +2275,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p49_tr",
+        "img": "/richards_panels/p_49_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He has a body. She has a body. All men and women and boys and girls have bodies. This baby has a body.",
@@ -2091,6 +2285,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p49_bl",
+        "img": "/richards_panels/p_49_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This dog has a body. This is his tail. This is his body. He has four legs and a head and a tail. He has no arms or hands, but he has feet. His head, his body, his legs, and his tail are parts of a dog.",
@@ -2100,6 +2295,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p49_br",
+        "img": "/richards_panels/p_49_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a dog’s head. Which is his mouth? Which are his eyes? Which are his ears? Which is his nose?",
@@ -2116,6 +2312,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p50_tl",
+        "img": "/richards_panels/p_50_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a foot. These are toes. They are parts of a foot. These parts of a foot are its toes. This is a toe.",
@@ -2125,6 +2322,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p50_tr",
+        "img": "/richards_panels/p_50_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a leg. This is a knee. It is part of a leg. This part of a leg is its knee. Our legs are parts of us.",
@@ -2134,6 +2332,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p50_bl",
+        "img": "/richards_panels/p_50_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a neck. It is a part of a man. It is between his head and his body. The part which is between his head and his body is his neck.",
@@ -2143,6 +2342,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p50_br",
+        "img": "/richards_panels/p_50_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a man’s head. This is his chin. It is under his mouth. It is a part of his face. The part which is under his mouth is his chin.",
@@ -2159,6 +2359,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p51_tl",
+        "img": "/richards_panels/p_51_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a man’s body. The part which is between his head, his arms, and his legs is his body.",
@@ -2168,6 +2369,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p51_tr",
+        "img": "/richards_panels/p_51_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is his body. This part of him is his chest. This is a chest of drawers.",
@@ -2177,6 +2379,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p51_bl",
+        "img": "/richards_panels/p_51_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This man has his finger on his chin. This man has his hand on his chest.",
@@ -2186,6 +2389,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p51_br",
+        "img": "/richards_panels/p_51_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This baby is on his hands and knees. This baby is on his hands and feet. This baby is on his knees. This baby is on his feet.",
@@ -2202,6 +2406,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p52_tl",
+        "img": "/richards_panels/p_52_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS Where is a c",
@@ -2211,6 +2416,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p52_tr",
+        "img": "/richards_panels/p_52_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "the dog? b d",
@@ -2220,6 +2426,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p52_bl",
+        "img": "/richards_panels/p_52_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e g This page is page 52.The answers",
@@ -2229,6 +2436,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p52_br",
+        "img": "/richards_panels/p_52_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f h are on page 56.",
@@ -2245,6 +2453,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p53_tl",
+        "img": "/richards_panels/p_53_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS What do a c",
@@ -2254,6 +2463,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p53_tr",
+        "img": "/richards_panels/p_53_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "you see? b d",
@@ -2263,6 +2473,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p53_bl",
+        "img": "/richards_panels/p_53_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e g This page is page 53.The answers",
@@ -2272,6 +2483,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p53_br",
+        "img": "/richards_panels/p_53_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f h are on page 56.",
@@ -2288,6 +2500,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p54_tl",
+        "img": "/richards_panels/p_54_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS What is he a c",
@@ -2297,6 +2510,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p54_tr",
+        "img": "/richards_panels/p_54_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "saying? b d",
@@ -2306,6 +2520,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p54_bl",
+        "img": "/richards_panels/p_54_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e g This page is page 54.The answers",
@@ -2315,6 +2530,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p54_br",
+        "img": "/richards_panels/p_54_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f h are on page 57.",
@@ -2331,6 +2547,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p55_tl",
+        "img": "/richards_panels/p_55_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS What do a",
@@ -2340,6 +2557,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p55_tr",
+        "img": "/richards_panels/p_55_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "you see? b",
@@ -2349,6 +2567,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p55_bl",
+        "img": "/richards_panels/p_55_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "c This page is page 55.The answers",
@@ -2358,6 +2577,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p55_br",
+        "img": "/richards_panels/p_55_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "d are on page 57.",
@@ -2374,6 +2594,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p56_tl",
+        "img": "/richards_panels/p_56_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Answers to questions on pages Page 52 a The dog is in the room. b The dog is at the door. c The dog is at the window. d The dog is under the chair. e The dog is under the table. f The dog is on the table. g The dog is between the chair and the table. h The dog is on the",
@@ -2383,6 +2604,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p56_tr",
+        "img": "/richards_panels/p_56_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "52–53. Page 53 a I see a clock. b I see a man. c I see a woman. d I see a baby. e I see two books. f I see two girls and a book. g I see two babies. h I see a chest of drawers.",
@@ -2392,6 +2614,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p56_bl",
+        "img": "/richards_panels/p_56_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "chair.",
@@ -2401,6 +2624,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p56_br",
+        "img": "/richards_panels/p_56_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "",
@@ -2417,6 +2641,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p57_tl",
+        "img": "/richards_panels/p_57_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Answers to questions on pages Page 54 a He is saying,“These are my ears.” b He is saying,“This is my mouth.” c He is saying,“These are my eyes.” d He is saying,“This is my thumb.” e He is saying,“This fin- ger is between these fingers.” f He is saying,“This is my nose.”",
@@ -2426,6 +2651,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p57_tr",
+        "img": "/richards_panels/p_57_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "54–55. Page 55 a I see a boy and a girl. They are at a window. b I see a clock on a table. The time is four. c I see a room. It has two seats in it. It has two windows and a door. One of the windows is open.The other win- dow is shut.The door of the room is open. A picture is on the wall. d I see a man. He has his",
@@ -2435,6 +2661,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p57_bl",
+        "img": "/richards_panels/p_57_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "g He is saying,“This is my hair.” h He is saying.“This is my head.”",
@@ -2444,6 +2671,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p57_br",
+        "img": "/richards_panels/p_57_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "finger on his chin. One of his eyes is open.The other eye is shut. His mouth is shut. He has no hair on his head.",
@@ -2460,6 +2688,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p58_tl",
+        "img": "/richards_panels/p_58_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Who is this? He is John Smith. His name is John Smith. Where is John Smith? He is at the door of his house.",
@@ -2469,6 +2698,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p58_tr",
+        "img": "/richards_panels/p_58_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He has his hand in his pocket.",
@@ -2478,6 +2708,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p58_bl",
+        "img": "/richards_panels/p_58_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He is taking a key from his pocket.",
@@ -2487,6 +2718,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p58_br",
+        "img": "/richards_panels/p_58_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a key. These are other keys.",
@@ -2503,6 +2735,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p59_tl",
+        "img": "/richards_panels/p_59_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "He will put the key in the lock of the door.",
@@ -2512,6 +2745,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p59_tr",
+        "img": "/richards_panels/p_59_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is putting the key in the lock.",
@@ -2521,6 +2755,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p59_bl",
+        "img": "/richards_panels/p_59_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He is giving a turn to the key.",
@@ -2530,6 +2765,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p59_br",
+        "img": "/richards_panels/p_59_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He is giving a push to the door. The door is open now.",
@@ -2546,6 +2782,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p60_tl",
+        "img": "/richards_panels/p_60_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "John took the key from the lock. He is putting it in his pocket. He will go into his house.",
@@ -2555,6 +2792,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p60_tr",
+        "img": "/richards_panels/p_60_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is going into the house.",
@@ -2564,6 +2802,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p60_bl",
+        "img": "/richards_panels/p_60_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He went into the house. He is in the house. The door is shut.",
@@ -2573,6 +2812,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p60_br",
+        "img": "/richards_panels/p_60_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a room in the house. Is John in the room? No, he is not. He will come into the room.",
@@ -2589,6 +2829,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p61_tl",
+        "img": "/richards_panels/p_61_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "He is coming into the room. He will go to the table.",
@@ -2598,6 +2839,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p61_tr",
+        "img": "/richards_panels/p_61_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Mr. Smith came into the room. He went to the table.",
@@ -2607,6 +2849,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p61_bl",
+        "img": "/richards_panels/p_61_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Is Ms. Smith in the room? No, she is not.",
@@ -2616,6 +2859,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p61_br",
+        "img": "/richards_panels/p_61_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She is in the house but she is not in the room. She is in another room in the house. Who is this? This is Mary Smith. She is Ms. Smith. Her name is Mary Smith.",
@@ -2632,6 +2876,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p62_tl",
+        "img": "/richards_panels/p_62_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is one of the doors of the room. This is the other door.",
@@ -2641,6 +2886,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p62_tr",
+        "img": "/richards_panels/p_62_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is one of the windows of the room. This is another window. And this is another window. One window is open. The other windows are shut.",
@@ -2650,6 +2896,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p62_bl",
+        "img": "/richards_panels/p_62_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is one of my hands. It is my left hand. This is my other hand. It is my right hand.",
@@ -2659,6 +2906,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p62_br",
+        "img": "/richards_panels/p_62_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is one of my fingers. This is my left thumb. These are the other fingers of my left hand.",
@@ -2675,6 +2923,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p63_tl",
+        "img": "/richards_panels/p_63_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Ms. Smith is not in the room. She went out of the room. She went through this door.",
@@ -2684,6 +2933,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p63_tr",
+        "img": "/richards_panels/p_63_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Mr. Smith is in the room. He came into the room. He came through this door.",
@@ -2693,6 +2943,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p63_bl",
+        "img": "/richards_panels/p_63_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Mr. Smith is putting his hat on the table. He will go out of the room through this door.",
@@ -2702,6 +2953,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p63_br",
+        "img": "/richards_panels/p_63_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He put his hat on the table. It is on the table now. He went out of the room through this door.",
@@ -2718,6 +2970,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p64_tl",
+        "img": "/richards_panels/p_64_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary is coming into the room.",
@@ -2727,6 +2980,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p64_tr",
+        "img": "/richards_panels/p_64_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She is going to the table.",
@@ -2736,6 +2990,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p64_bl",
+        "img": "/richards_panels/p_64_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She will see the hat.",
@@ -2745,6 +3000,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p64_br",
+        "img": "/richards_panels/p_64_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She sees it.",
@@ -2761,6 +3017,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p65_tl",
+        "img": "/richards_panels/p_65_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "She saw it. When did she see it? She saw it after she went to the table.",
@@ -2770,6 +3027,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p65_tr",
+        "img": "/richards_panels/p_65_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is that?",
@@ -2779,6 +3037,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p65_bl",
+        "img": "/richards_panels/p_65_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "John’s hat!",
@@ -2788,6 +3047,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p65_br",
+        "img": "/richards_panels/p_65_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "What is that? John’s hat!",
@@ -2804,6 +3064,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p66_tl",
+        "img": "/richards_panels/p_66_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "She will take the hat in her hand.",
@@ -2813,6 +3074,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p66_tr",
+        "img": "/richards_panels/p_66_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She is taking it.",
@@ -2822,6 +3084,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p66_bl",
+        "img": "/richards_panels/p_66_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She took it in her hand. She is going out of the room. She has the hat in her hand.",
@@ -2831,6 +3094,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p66_br",
+        "img": "/richards_panels/p_66_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She went out of the room with John’s hat.",
@@ -2847,6 +3111,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p67_tl",
+        "img": "/richards_panels/p_67_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "She is in another room now. She came into this room through this door. She has the hat with her.",
@@ -2856,6 +3121,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p67_tr",
+        "img": "/richards_panels/p_67_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What are these? They are hooks. That is another hat. It is on a hook.",
@@ -2865,6 +3131,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p67_bl",
+        "img": "/richards_panels/p_67_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She will put John’s hat on a hook. She will put it on a hook with the other hat.",
@@ -2874,6 +3141,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p67_br",
+        "img": "/richards_panels/p_67_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She put it on the hook. Now it is with the other hat. The other hat is one of Mary’s hats.",
@@ -2890,6 +3158,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p68_tl",
+        "img": "/richards_panels/p_68_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "John is coming into the room again.",
@@ -2899,6 +3168,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p68_tr",
+        "img": "/richards_panels/p_68_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He came into the room. He went to the table. He is there now.",
@@ -2908,6 +3178,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p68_bl",
+        "img": "/richards_panels/p_68_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "The hat is not on the table.",
@@ -2917,6 +3188,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p68_br",
+        "img": "/richards_panels/p_68_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He is saying, Where is my hat? I put it on the table.",
@@ -2933,6 +3205,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p69_tl",
+        "img": "/richards_panels/p_69_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "“Where is my hat? It is not on my head. It isn’t here.”",
@@ -2942,6 +3215,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p69_tr",
+        "img": "/richards_panels/p_69_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "“It isn’t (is not) here.”",
@@ -2951,6 +3225,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p69_bl",
+        "img": "/richards_panels/p_69_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "“Where is it? Mary, where is my hat? Where are you, Mary?”",
@@ -2960,6 +3235,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p69_br",
+        "img": "/richards_panels/p_69_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Here is Mary. She is coming into the room. She says,“Here I am.”",
@@ -2976,6 +3252,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p70_tl",
+        "img": "/richards_panels/p_70_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "“Where is your hat?”",
@@ -2985,6 +3262,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p70_tr",
+        "img": "/richards_panels/p_70_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "“You put it on the table. It was on the table.”",
@@ -2994,6 +3272,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p70_bl",
+        "img": "/richards_panels/p_70_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "“I took it. I put it in the other room.”",
@@ -3003,6 +3282,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p70_br",
+        "img": "/richards_panels/p_70_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "“It is on a hook there.You will see it there.”",
@@ -3019,6 +3299,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p71_tl",
+        "img": "/richards_panels/p_71_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "John says,“I will get my hat.”",
@@ -3028,6 +3309,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p71_tr",
+        "img": "/richards_panels/p_71_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is getting it.",
@@ -3037,6 +3319,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p71_bl",
+        "img": "/richards_panels/p_71_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Did he get it? Yes. He has it.",
@@ -3046,6 +3329,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p71_br",
+        "img": "/richards_panels/p_71_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "He went out of the room.",
@@ -3062,6 +3346,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p72_tl",
+        "img": "/richards_panels/p_72_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "When he saw the hat he took it off the hook.",
@@ -3071,6 +3356,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p72_tr",
+        "img": "/richards_panels/p_72_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He came into the room again with the hat in his hands. He got it.",
@@ -3080,6 +3366,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p72_bl",
+        "img": "/richards_panels/p_72_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "He is giving the hat to Mary.",
@@ -3089,6 +3376,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p72_br",
+        "img": "/richards_panels/p_72_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "See what is in the hat, Mary!",
@@ -3105,6 +3393,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p73_tl",
+        "img": "/richards_panels/p_73_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is in the hat? Mary will see.",
@@ -3114,6 +3403,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p73_tr",
+        "img": "/richards_panels/p_73_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is she taking from the hat?",
@@ -3123,6 +3413,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p73_bl",
+        "img": "/richards_panels/p_73_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "What is that in her hand? It is money.",
@@ -3132,6 +3423,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p73_br",
+        "img": "/richards_panels/p_73_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Do you see? She sees.",
@@ -3148,6 +3440,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p74_tl",
+        "img": "/richards_panels/p_74_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What does she see? One thousand dollars. The money is in her hand. It was in the hat.",
@@ -3157,6 +3450,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p74_tr",
+        "img": "/richards_panels/p_74_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Where was the hat? It was on the table. What did she see? She saw the hat. She did not see the money.",
@@ -3166,6 +3460,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p74_bl",
+        "img": "/richards_panels/p_74_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She put the hat in the other room. John went there and got it. Who got it? John did.",
@@ -3175,6 +3470,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p74_br",
+        "img": "/richards_panels/p_74_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Does she see the money now? Yes, she sees it. Oh John! Where did you get it?",
@@ -3191,6 +3487,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p75_tl",
+        "img": "/richards_panels/p_75_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "I was in the street. I was coming here.",
@@ -3200,6 +3497,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p75_tr",
+        "img": "/richards_panels/p_75_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "The wind came. It took my hat off.",
@@ -3209,6 +3507,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p75_bl",
+        "img": "/richards_panels/p_75_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "I went after my hat.",
@@ -3218,6 +3517,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p75_br",
+        "img": "/richards_panels/p_75_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "When I took it up, there was this money.",
@@ -3234,6 +3534,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p76_tl",
+        "img": "/richards_panels/p_76_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The money was under the hat. The hat was over the money.",
@@ -3243,6 +3544,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p76_tr",
+        "img": "/richards_panels/p_76_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "The wind came. My hat went up. When the wind came, my hat went up. UP",
@@ -3252,6 +3554,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p76_bl",
+        "img": "/richards_panels/p_76_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "The hat came down again. UP DOWN",
@@ -3261,6 +3564,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p76_br",
+        "img": "/richards_panels/p_76_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "It was over the money. The money was under the hat.",
@@ -3277,6 +3581,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p77_tl",
+        "img": "/richards_panels/p_77_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is Mary doing? She is taking things from a drawer. What are those things in the drawer?",
@@ -3286,6 +3591,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p77_tr",
+        "img": "/richards_panels/p_77_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "They are knives, forks and spoons. knife fork spoon The drawer has knives, forks and spoons in it.",
@@ -3295,6 +3601,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p77_bl",
+        "img": "/richards_panels/p_77_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Mary has a knife, a fork and a spoon in her right hand.",
@@ -3304,6 +3611,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p77_br",
+        "img": "/richards_panels/p_77_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She took them from the drawer. She will put them on the table. These are drawers. One of them is open. The other two drawers are shut.",
@@ -3320,6 +3628,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p78_tl",
+        "img": "/richards_panels/p_78_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary is getting the soup. These are plates of soup.",
@@ -3329,6 +3638,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p78_tr",
+        "img": "/richards_panels/p_78_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "John is taking the seats to the table.",
@@ -3338,6 +3648,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p78_bl",
+        "img": "/richards_panels/p_78_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Mary is in her seat at the table.",
@@ -3347,6 +3658,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p78_br",
+        "img": "/richards_panels/p_78_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "John is in his seat. They are in their seats at the table.",
@@ -3363,6 +3675,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p79_tl",
+        "img": "/richards_panels/p_79_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Now they are taking their soup. They have their spoons in their hands.",
@@ -3372,6 +3685,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p79_tr",
+        "img": "/richards_panels/p_79_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "“John is saying to Mary, “I took the hat up.” “Mary is saying to John, “Where did the money “come from?”",
@@ -3381,6 +3695,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p79_bl",
+        "img": "/richards_panels/p_79_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "John said, “I saw it there under the hat.” Mary said, “But who put it there?”",
@@ -3390,6 +3705,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p79_br",
+        "img": "/richards_panels/p_79_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "John said, “Nobody put it there.The money was there and the wind came and put the hat down over the money.” Nobody = no man or woman or boy or girl or baby.",
@@ -3406,6 +3722,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p80_tl",
+        "img": "/richards_panels/p_80_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What will we do What will with our you do? money?",
@@ -3415,6 +3732,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p80_tr",
+        "img": "/richards_panels/p_80_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "I will get a new dress. This dress is new. This dress is old.",
@@ -3424,6 +3742,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p80_bl",
+        "img": "/richards_panels/p_80_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "And what will you get?",
@@ -3433,6 +3752,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p80_br",
+        "img": "/richards_panels/p_80_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "I will get a new pipe. This pipe is new. This pipe is old.",
@@ -3449,6 +3769,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p81_tl",
+        "img": "/richards_panels/p_81_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary is getting the new dress. She is in a store. The other woman has two dresses in her hands.",
@@ -3458,6 +3779,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p81_tr",
+        "img": "/richards_panels/p_81_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is the store. CLOTHING STORE Dresses and hats and shoes are in the window of the store.",
@@ -3467,6 +3789,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p81_bl",
+        "img": "/richards_panels/p_81_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are shoes. They are women’s shoes. These are stockings.",
@@ -3476,6 +3799,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p81_br",
+        "img": "/richards_panels/p_81_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These are gloves. Dresses and stockings and shoes and gloves are clothing.",
@@ -3492,6 +3816,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p82_tl",
+        "img": "/richards_panels/p_82_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a tree. This is a branch of the tree. An apple is on this branch. It is over the girl’s head. She will take the apple from the branch. She will put her hand up.",
@@ -3501,6 +3826,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p82_tr",
+        "img": "/richards_panels/p_82_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She put her hand up. She took the apple. It is in her hand. She took the apple which is in her hand. She has it in her hand. She is putting it in her basket.",
@@ -3510,6 +3836,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p82_bl",
+        "img": "/richards_panels/p_82_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She put it in her basket. She had it in her hand before she put it in her basket. It was on the branch before she put her hand up and took it.",
@@ -3519,6 +3846,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p82_br",
+        "img": "/richards_panels/p_82_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "After she took the apple she put it in the basket. Then she put her basket down.The apple was up on the tree. Now it is down in the basket.",
@@ -3535,6 +3863,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p83_tl",
+        "img": "/richards_panels/p_83_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "When was the apple on the branch? When was it over her head? It was on the branch before she took it. It was on the branch then.",
@@ -3544,6 +3873,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p83_tr",
+        "img": "/richards_panels/p_83_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "When did she take it? She took it after she put her hand up. She took it then.",
@@ -3553,6 +3883,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p83_bl",
+        "img": "/richards_panels/p_83_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "When did she put it in the basket? She put it in the basket after she took it from the branch.",
@@ -3562,6 +3893,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p83_br",
+        "img": "/richards_panels/p_83_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "When did she have the apple in her hand? She had it in her hand after she took it from the branch and before she put it in the basket.",
@@ -3578,6 +3910,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p84_tl",
+        "img": "/richards_panels/p_84_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a box. This is the front of the box.",
@@ -3587,6 +3920,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p84_tr",
+        "img": "/richards_panels/p_84_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a house. This is the front of the house. This is the front door.",
@@ -3596,6 +3930,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p84_bl",
+        "img": "/richards_panels/p_84_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is the back of the box. And these are the sides of the box.",
@@ -3605,6 +3940,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p84_br",
+        "img": "/richards_panels/p_84_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a coat. This is the front of the coat.",
@@ -3621,6 +3957,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p85_tl",
+        "img": "/richards_panels/p_85_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "These are the arms of the coat. These are the sides of the coat.",
@@ -3630,6 +3967,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p85_tr",
+        "img": "/richards_panels/p_85_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "And this is the back of the coat.",
@@ -3639,6 +3977,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p85_bl",
+        "img": "/richards_panels/p_85_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are a man’s arms. These are his sides.",
@@ -3648,6 +3987,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p85_br",
+        "img": "/richards_panels/p_85_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "And this is his back.",
@@ -3664,6 +4004,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p86_tl",
+        "img": "/richards_panels/p_86_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Who is this? This is Ms. Smith. She is Mary Smith. “Mary Smith”is her name.",
@@ -3673,6 +4014,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p86_tr",
+        "img": "/richards_panels/p_86_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is that? What is in her hands? It is a tray. She has a tray in her hands.",
@@ -3682,6 +4024,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p86_bl",
+        "img": "/richards_panels/p_86_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She will put the tray on the table.",
@@ -3691,6 +4034,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p86_br",
+        "img": "/richards_panels/p_86_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She is putting the tray on the table.",
@@ -3707,6 +4051,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p87_tl",
+        "img": "/richards_panels/p_87_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "She put the tray on the table. It was in her hands. It is on the table now.",
@@ -3716,6 +4061,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p87_tr",
+        "img": "/richards_panels/p_87_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Here is the tray. What are these things on the tray?",
@@ -3725,6 +4071,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p87_bl",
+        "img": "/richards_panels/p_87_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are glasses. What are these? They are forks. What is this? It is a knife. What are these? They are two other knives.",
@@ -3734,6 +4081,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p87_br",
+        "img": "/richards_panels/p_87_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "What are these? They are spoons. What is this? It is another spoon. What is this? It is a plate. These are three other plates.",
@@ -3750,6 +4098,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p88_tl",
+        "img": "/richards_panels/p_88_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Ms. Smith is taking a knife and fork off the tray. She has them in her hands.",
@@ -3759,6 +4108,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p88_tr",
+        "img": "/richards_panels/p_88_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She is putting them on the table.",
@@ -3768,6 +4118,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p88_bl",
+        "img": "/richards_panels/p_88_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Now she is putting the plates on the table.",
@@ -3777,6 +4128,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p88_br",
+        "img": "/richards_panels/p_88_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She put the knives and forks and spoons and plates and glasses on the table. She put these things on the table.",
@@ -3793,6 +4145,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p89_tl",
+        "img": "/richards_panels/p_89_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary Smith will go from the table to the door.",
@@ -3802,6 +4155,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p89_tr",
+        "img": "/richards_panels/p_89_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She is going to the door. The door is shut.",
@@ -3811,6 +4165,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p89_bl",
+        "img": "/richards_panels/p_89_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She went out of the room. The door is open now. It was shut.",
@@ -3820,6 +4175,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p89_br",
+        "img": "/richards_panels/p_89_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Mary Smith is not in the room. She was in the room. She went out of the room.",
@@ -3836,6 +4192,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p90_tl",
+        "img": "/richards_panels/p_90_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is this? It is a knife. What is this? What is this? What is this? What are these?",
@@ -3845,6 +4202,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p90_tr",
+        "img": "/richards_panels/p_90_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is this? What is this? What is this? What is this?",
@@ -3854,6 +4212,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p90_bl",
+        "img": "/richards_panels/p_90_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "What are these? What is this? What is this?",
@@ -3863,6 +4222,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p90_br",
+        "img": "/richards_panels/p_90_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "What is this? What are these things?",
@@ -3879,6 +4239,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p91_tl",
+        "img": "/richards_panels/p_91_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary is making soup. This is a plate of soup. She will make the soup from milk and potatoes.",
@@ -3888,6 +4249,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p91_tr",
+        "img": "/richards_panels/p_91_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "These are potatoes. This is a bottle of milk. It is cow’s milk. This is a cow.",
@@ -3897,6 +4259,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p91_bl",
+        "img": "/richards_panels/p_91_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Cows are animals. These are some other animals. a pig a sheep a horse",
@@ -3906,6 +4269,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p91_br",
+        "img": "/richards_panels/p_91_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "We get milk from cows. Mary is putting some milk in a cup. The milk is going into the cup.",
@@ -3922,6 +4286,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p92_tl",
+        "img": "/richards_panels/p_92_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary has a potato in her hand. She is taking its skin off with a knife.",
@@ -3931,6 +4296,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p92_tr",
+        "img": "/richards_panels/p_92_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "We get potatoes from the roots of a plant. Here they are in the earth. We get them up with a fork.",
@@ -3940,6 +4306,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p92_bl",
+        "img": "/richards_panels/p_92_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a plant. This is its flower. These are its leaves. These are its fruit. This is a branch. This is its stem. These are its roots.",
@@ -3949,6 +4316,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p92_br",
+        "img": "/richards_panels/p_92_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These are roots of other plants.",
@@ -3965,6 +4333,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p93_tl",
+        "img": "/richards_panels/p_93_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary is making the soup.",
@@ -3974,6 +4343,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p93_tr",
+        "img": "/richards_panels/p_93_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is the pot. This is the cover of the pot. She will make the soup in this pot.",
@@ -3983,6 +4353,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p93_bl",
+        "img": "/richards_panels/p_93_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She put the potatoes in the pot. The water in the pot is boiling. This is steam.",
@@ -3992,6 +4363,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p93_br",
+        "img": "/richards_panels/p_93_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a flame. The pot is over the flame. The flame is under the pot.",
@@ -4008,6 +4380,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p94_tl",
+        "img": "/richards_panels/p_94_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This water is boiling. It is giving off steam. The heat of the flame is making it give off steam.",
@@ -4017,6 +4390,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p94_tr",
+        "img": "/richards_panels/p_94_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Ice is solid. This is ice. Water is a liquid. This is water.",
@@ -4026,6 +4400,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p94_bl",
+        "img": "/richards_panels/p_94_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a tray. It is a tray of ice. Ice is cold.",
@@ -4035,6 +4410,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p94_br",
+        "img": "/richards_panels/p_94_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The room is warm. The heat of the flame is making the room warm. The things in the room are warm. Ice is not warm. It is cold.",
@@ -4051,6 +4427,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p95_tl",
+        "img": "/richards_panels/p_95_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a bird. It is on a tree. The other birds are not on the tree. They are in the air.",
@@ -4060,6 +4437,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p95_tr",
+        "img": "/richards_panels/p_95_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is a plane. It is in the air. It is an airplane. It is going through the air. These are airplanes.",
@@ -4069,6 +4447,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p95_bl",
+        "img": "/richards_panels/p_95_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "We take in air through our mouths and through our noses. The air comes in.Then it goes out.That is a breath. in out one breath in out two breaths in out",
@@ -4078,6 +4457,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p95_br",
+        "img": "/richards_panels/p_95_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The air is coming out. It is warm. When it comes out it is warm. Put your hand here.Your breath is warm.",
@@ -4094,6 +4474,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p96_tl",
+        "img": "/richards_panels/p_96_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The room is warm. The water in the pot is very warm. It is boiling. 212° 100°",
@@ -4103,6 +4484,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p96_tr",
+        "img": "/richards_panels/p_96_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "The air over the flame is very warm. It goes up. The air under the flame is not very warm. It goes up to the flame.",
@@ -4112,6 +4494,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p96_bl",
+        "img": "/richards_panels/p_96_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is the icebox. It has ice in it. The air in the icebox is cold. This is These are milk. eggs.",
@@ -4121,6 +4504,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p96_br",
+        "img": "/richards_panels/p_96_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is the icebox. Mary keeps the milk in the icebox. She keeps it in the cold air. The air in the icebox is cold. The cold air keeps the milk cold.",
@@ -4137,6 +4521,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p97_tl",
+        "img": "/richards_panels/p_97_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a clock. A clock is an instrument for measuring time.",
@@ -4146,6 +4531,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p97_tr",
+        "img": "/richards_panels/p_97_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is an instrument for measuring heat. Very warm Warm Cold Very cold",
@@ -4155,6 +4541,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p97_bl",
+        "img": "/richards_panels/p_97_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a measure. It is a yard measure. There are three feet in a yard. There are twelve inches in a foot.",
@@ -4164,6 +4551,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p97_br",
+        "img": "/richards_panels/p_97_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is Mary’s foot. These are her feet. This is John’s foot. It is ten inches long.",
@@ -4180,6 +4568,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p98_tl",
+        "img": "/richards_panels/p_98_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The walls and floor of the icebox are thick. This is a thin line. This is a thick line.",
@@ -4189,6 +4578,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p98_tr",
+        "img": "/richards_panels/p_98_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Warm Cold Warm air air air The thick walls keep the heat of the room out of the icebox. They keep the heat from the milk. The cold air in the icebox keeps the milk good.",
@@ -4198,6 +4588,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p98_bl",
+        "img": "/richards_panels/p_98_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "John is having a drink. He is having a drink of milk from a glass. The milk is good. John is happy.",
@@ -4207,6 +4598,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p98_br",
+        "img": "/richards_panels/p_98_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This milk is not good. It is bad. John is not happy.",
@@ -4223,6 +4615,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p99_tl",
+        "img": "/richards_panels/p_99_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is meat. Mary keeps the meat in the icebox.",
@@ -4232,6 +4625,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p99_tr",
+        "img": "/richards_panels/p_99_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "This is bread. Mary does not keep the bread in the icebox. She keeps it in a bread-box.",
@@ -4241,6 +4635,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p99_bl",
+        "img": "/richards_panels/p_99_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is cheese. We make cheese from milk. We get milk from cows.",
@@ -4250,6 +4645,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p99_br",
+        "img": "/richards_panels/p_99_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is butter. We make butter from milk. Mary keeps the butter with the milk in the icebox. She keeps the cheese there.",
@@ -4266,6 +4662,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p100_tl",
+        "img": "/richards_panels/p_100_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "These are apples. These are oranges. Apples and oranges are fruit. Does Mary keep the fruit in the icebox?",
@@ -4275,6 +4672,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p100_tr",
+        "img": "/richards_panels/p_100_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "What is the time? The time is five (5:00). It is five. Mary will make the soup.",
@@ -4284,6 +4682,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p100_bl",
+        "img": "/richards_panels/p_100_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "What is the time? It’s five-thirty (5:30). Mary is making the soup. The potatoes are in the pot.The water in the pot is boiling.",
@@ -4293,6 +4692,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p100_br",
+        "img": "/richards_panels/p_100_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "It is five-forty (5:40). Mary has a fork in her hand. She is putting the fork into the potatoes.",
@@ -4309,6 +4709,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p101_tl",
+        "img": "/richards_panels/p_101_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The potatoes are hard. The fork does not go into them.",
@@ -4318,6 +4719,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p101_tr",
+        "img": "/richards_panels/p_101_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "It is five-fifty (5:50). Mary is putting the fork in again. She is doing it again.",
@@ -4327,6 +4729,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p101_bl",
+        "img": "/richards_panels/p_101_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "The potatoes are soft. The fork goes into them.",
@@ -4336,6 +4739,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p101_br",
+        "img": "/richards_panels/p_101_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "She is taking them out of the pot and putting them on a plate.",
@@ -4352,6 +4756,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p102_tl",
+        "img": "/richards_panels/p_102_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The potatoes are on the plate. They were in the pot. They were hard. They are soft now.",
@@ -4361,6 +4766,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p102_tr",
+        "img": "/richards_panels/p_102_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Mary is crushing them with a fork. They are not hard now. They are soft.",
@@ -4370,6 +4776,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p102_bl",
+        "img": "/richards_panels/p_102_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Bread is soft. Meat is soft.",
@@ -4379,6 +4786,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p102_br",
+        "img": "/richards_panels/p_102_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Glass is hard. Butter is soft.",
@@ -4395,6 +4803,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p103_tl",
+        "img": "/richards_panels/p_103_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "John has a bit of cheese in his fingers.",
@@ -4404,6 +4813,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p103_tr",
+        "img": "/richards_panels/p_103_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "He is putting the bit of cheese in his mouth.",
@@ -4413,6 +4823,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p103_bl",
+        "img": "/richards_panels/p_103_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Now it is between his teeth. This is his mouth. This is a tooth. These are teeth.",
@@ -4422,6 +4833,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p103_br",
+        "img": "/richards_panels/p_103_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The cheese is not soft. It is hard. John’s teeth do not go into the cheese.",
@@ -4438,6 +4850,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p104_tl",
+        "img": "/richards_panels/p_104_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Mary put the potatoes and the milk and other things into the pot. This is salt.",
@@ -4447,6 +4860,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p104_tr",
+        "img": "/richards_panels/p_104_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "She put the pot over a low flame. She put the cover on the pot. The low flame is under the pot.",
@@ -4456,6 +4870,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p104_bl",
+        "img": "/richards_panels/p_104_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This flame is low. This flame is high.",
@@ -4465,6 +4880,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p104_br",
+        "img": "/richards_panels/p_104_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This building is high. This building is low.",
@@ -4481,6 +4897,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p105_tl",
+        "img": "/richards_panels/p_105_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "What is the time? It is six (6:00). Mary is tasting the soup. It has a good taste. The soup is ready.",
@@ -4490,6 +4907,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p105_tr",
+        "img": "/richards_panels/p_105_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Now she is putting the soup in the plates. It was in the pot. Now it is in the plates.",
@@ -4499,6 +4917,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p105_bl",
+        "img": "/richards_panels/p_105_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "She made the soup. She put it in the plates. She took them to the table.",
@@ -4508,6 +4927,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p105_br",
+        "img": "/richards_panels/p_105_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The plates are on the table. The soup is ready. It is good soup. Mary made it.",
@@ -4524,6 +4944,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p106_tl",
+        "img": "/richards_panels/p_106_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Soup, potatoes, milk, meat, bread, butter, cheese, apples, oranges are food. They are different sorts of food.",
@@ -4533,6 +4954,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p106_tr",
+        "img": "/richards_panels/p_106_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "An apple An orange Apples and oranges are different sorts of fruit.",
@@ -4542,6 +4964,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p106_bl",
+        "img": "/richards_panels/p_106_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are different sorts of glasses. These are different sorts of boxes.",
@@ -4551,6 +4974,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p106_br",
+        "img": "/richards_panels/p_106_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Glasses and boxes and fingers and dresses and flames are things. They are different sorts of things.",
@@ -4567,6 +4991,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p107_tl",
+        "img": "/richards_panels/p_107_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Cows and sheep and pigs and horses and goats are animals. They are different sorts of animals.",
@@ -4576,6 +5001,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p107_tr",
+        "img": "/richards_panels/p_107_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "These are different sorts of plants. This is the leaf of one sort of plant. This is the leaf of another sort of plant.",
@@ -4585,6 +5011,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p107_bl",
+        "img": "/richards_panels/p_107_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "These are the same. These are different. These are the same. These are different.",
@@ -4594,6 +5021,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p107_br",
+        "img": "/richards_panels/p_107_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "These plates are the same. These plates are different. These glasses are the same. These are different.",
@@ -4610,6 +5038,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p108_tl",
+        "img": "/richards_panels/p_108_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Here are a woman and a boy. The boy is the woman’s son. She is his mother. He is her son.",
@@ -4619,6 +5048,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p108_tr",
+        "img": "/richards_panels/p_108_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Here are a woman and a girl. The girl is the woman’s daughter. The woman is her mother.",
@@ -4628,6 +5058,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p108_bl",
+        "img": "/richards_panels/p_108_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Here are a man and his son. The man is the father of the boy. He is the boy’s father.",
@@ -4637,6 +5068,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p108_br",
+        "img": "/richards_panels/p_108_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "Here are a man and his daughter. He is the father of the girl. He is the girl’s father. She is his daughter.",
@@ -4653,6 +5085,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p109_tl",
+        "img": "/richards_panels/p_109_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "The boy is the brother of the girl. He is the girl’s brother. He is her brother.",
@@ -4662,6 +5095,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p109_tr",
+        "img": "/richards_panels/p_109_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "The girl is the sister of the boy. She is the boy’s sister. She is his sister.",
@@ -4671,6 +5105,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p109_bl",
+        "img": "/richards_panels/p_109_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This man and woman have two sons and three daughters.",
@@ -4680,6 +5115,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p109_br",
+        "img": "/richards_panels/p_109_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This boy has one brother and three sisters. This girl has two brothers and two sisters. They are a family of seven (7).",
@@ -4696,6 +5132,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p110_tl",
+        "img": "/richards_panels/p_110_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Here are Ms. Smith, her daughter Jane, and her son Tom. They are at the table. They are having their potato soup.",
@@ -4705,6 +5142,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p110_tr",
+        "img": "/richards_panels/p_110_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Potato soup is a thick soup. It is not clear. Thick soup and clear soup are two different sorts of soup.",
@@ -4714,6 +5152,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p110_bl",
+        "img": "/richards_panels/p_110_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This water is clear. When a liquid is clear we see through it. Milk is not a clear liquid. We do not see through it.",
@@ -4723,6 +5162,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p110_br",
+        "img": "/richards_panels/p_110_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "The air is clear. I see the mountains. When the air is not clear I do not see them.",
@@ -4739,6 +5179,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p111_tl",
+        "img": "/richards_panels/p_111_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This soup is clear. We see the spoon through it. Potato soup is a thick soup.We do not see the spoon through it.",
@@ -4748,6 +5189,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p111_tr",
+        "img": "/richards_panels/p_111_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "Who is this? This is Mary Smith. She made the soup. This is Mary who made the soup.",
@@ -4757,6 +5199,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p111_bl",
+        "img": "/richards_panels/p_111_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is the soup. Mary made it. This is the soup which Mary made.",
@@ -4766,6 +5209,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p111_br",
+        "img": "/richards_panels/p_111_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is the milk. Mary put it in the soup. This is the milk which Mary put in the soup.",
@@ -4782,6 +5226,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p112_tl",
+        "img": "/richards_panels/p_112_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "This is a spoon. It is in my hand. This is a spoon which is in my hand.",
@@ -4791,6 +5236,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p112_tr",
+        "img": "/richards_panels/p_112_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "That is a glass of water. It is on the table. That is a glass of water which is on the table.",
@@ -4800,6 +5246,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p112_bl",
+        "img": "/richards_panels/p_112_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "This is a bone. It was in the dog’s mouth. This is a bone which was in the dog’s mouth.",
@@ -4809,6 +5256,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p112_br",
+        "img": "/richards_panels/p_112_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "This is a dog. He had the bone. This is the dog who had it.",
@@ -4825,6 +5273,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p113_tl",
+        "img": "/richards_panels/p_113_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a What is the time? c What is this?",
@@ -4834,6 +5283,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p113_tr",
+        "img": "/richards_panels/p_113_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b What are these? d What are these?",
@@ -4843,6 +5293,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p113_bl",
+        "img": "/richards_panels/p_113_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e What are these? g What is this? This page is page 113.The answers",
@@ -4852,6 +5303,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p113_br",
+        "img": "/richards_panels/p_113_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f What is this? h What is this? are on page 116.",
@@ -4868,6 +5320,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p114_tl",
+        "img": "/richards_panels/p_114_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a What is this? c What are these?",
@@ -4877,6 +5330,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p114_tr",
+        "img": "/richards_panels/p_114_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b What is this? d What is this?",
@@ -4886,6 +5340,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p114_bl",
+        "img": "/richards_panels/p_114_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e What is this? g What is this? This page is page 114.The answers",
@@ -4895,6 +5350,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p114_br",
+        "img": "/richards_panels/p_114_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f What are these? h What is this? are on page 116.",
@@ -4911,6 +5367,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p115_tl",
+        "img": "/richards_panels/p_115_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a This is a family. a What do you see? c This is an icebox. c What do you see in it?",
@@ -4920,6 +5377,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p115_tr",
+        "img": "/richards_panels/p_115_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b b This is a plant. b Which parts of the plant do you see? d This is a dog. d Which parts of the dog do you see?",
@@ -4929,6 +5387,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p115_bl",
+        "img": "/richards_panels/p_115_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e What do you see? g What do you see? This page is page 115.The answers",
@@ -4938,6 +5397,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p115_br",
+        "img": "/richards_panels/p_115_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f What do you see? h What do you see? are on page 116.",
@@ -4954,6 +5414,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p116_tl",
+        "img": "/richards_panels/p_116_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "Answers to questions on pages Page 113 a The time is four-forty- two (4:42). b They are apples. c It is a pot. d They are leaves. e They are roots. f It is a bottle of milk. g It is butter. h It is bread. Page 114 a It is cheese.",
@@ -4963,6 +5424,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p116_tr",
+        "img": "/richards_panels/p_116_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "113–115. Page 115 a I see a father and mother and their son and daughter. b I see its roots and its stem and its leaves and its flower. c I see a bottle of milk and four eggs and two roots. d I see its head and ears and nose, its body, its legs, and its tail. e I see a bone. It is on the",
@@ -4972,6 +5434,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p116_bl",
+        "img": "/richards_panels/p_116_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "b It is a cup. c They are flames. d It is a horse. e It is a high building. f They are a box and its cover. g It is a pig. h It is a sheep.",
@@ -4981,6 +5444,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p116_br",
+        "img": "/richards_panels/p_116_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "floor. And I see the leg of a table. f I see two glasses. One of them has liquid in it. g I see a woman. She has a spoon in her hand. She is tasting the soup. h I see a man. He has a glass in his hand. He is having a drink from the glass.",
@@ -4997,6 +5461,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p117_tl",
+        "img": "/richards_panels/p_117_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a Where are the women? a What has one woman in her hands? c What is the girl doing?",
@@ -5006,6 +5471,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p117_tr",
+        "img": "/richards_panels/p_117_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b b What are these? d Where will she put the apple? Where was it before she took it?",
@@ -5015,6 +5481,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p117_bl",
+        "img": "/richards_panels/p_117_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "Where is the apple? e What are some different sorts of food? g What are some different sorts of fruits? This page is page 117.The answers",
@@ -5024,6 +5491,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p117_br",
+        "img": "/richards_panels/p_117_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "(See pages 82-83) f What are some different sorts of animals? h What are some different sorts of persons? are on page 120.",
@@ -5040,6 +5508,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p118_tl",
+        "img": "/richards_panels/p_118_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a This is a glass of milk. Is it clear? Do you see through it? c Is glass hard? e Is ice warm?",
@@ -5049,6 +5518,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p118_tr",
+        "img": "/richards_panels/p_118_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b Is the glass in this window clear? What do you see through the window? d Is meat soft? f Are flames cold?",
@@ -5058,6 +5528,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p118_bl",
+        "img": "/richards_panels/p_118_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "g What is he doing? This page is page 118.The answers",
@@ -5067,6 +5538,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p118_br",
+        "img": "/richards_panels/p_118_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "h What is she doing? are on page 121.",
@@ -5083,6 +5555,7 @@ export const RICHARDS_BOOK1_PAGES = [
     "panels": [
       {
         "id": "p119_tl",
+        "img": "/richards_panels/p_119_tl.webp",
         "pos": "top-left",
         "label": "① 左上",
         "en": "QUESTIONS a What do you see? c What are they doing?",
@@ -5092,6 +5565,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p119_tr",
+        "img": "/richards_panels/p_119_tr.webp",
         "pos": "top-right",
         "label": "② 右上",
         "en": "b What is he doing? d What are these?",
@@ -5101,6 +5575,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p119_bl",
+        "img": "/richards_panels/p_119_bl.webp",
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "e What do we keep in the icebox? This page is page 119.The answers",
@@ -5110,6 +5585,7 @@ export const RICHARDS_BOOK1_PAGES = [
       },
       {
         "id": "p119_br",
+        "img": "/richards_panels/p_119_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
         "en": "f What are some different sorts of things? Give the names of ten different things which you see in a house. are on page 121.",

@@ -179,9 +179,11 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                       </div>
 
                       {item.workplaceCn && (
-                        <div className="text-[11.5px] text-slate-600 pl-6 flex items-baseline gap-1.5 border-t border-slate-200/50 pt-1">
-                          <span className="text-[10px] font-semibold text-slate-400 bg-slate-200/70 px-1 py-0.2 rounded shrink-0">译</span>
-                          <span className="text-slate-600">{item.workplaceCn}</span>
+                        <div className="text-xs text-slate-600 flex items-center gap-2 border-t border-slate-200/60 pt-1.5 mt-1">
+                          <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 px-1.5 py-0.5 rounded shrink-0">
+                            释义
+                          </span>
+                          <span className="text-slate-700 font-medium">{item.workplaceCn}</span>
                         </div>
                       )}
                     </div>

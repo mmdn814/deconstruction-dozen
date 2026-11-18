@@ -9,8 +9,8 @@ import {
   BookOpen,
   Layers,
   Star,
-  Play,
-  RotateCcw
+  FileText,
+  X
 } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
 import { PICTURE_STAGES, SceneArt } from '../data/pictures.jsx';
@@ -50,29 +50,25 @@ export const TabPictures = ({
   isSentenceSaved,
   onToggleSaveSentence
 }) => {
-  // 浏览模式：'book' (119页原著逐页复刻) | 'stages' (13阶精选提炼)
+  // 浏览模式：'book' (原著逐页翻页点读) | 'stages' (13阶精选提炼)
   const [viewMode, setViewMode] = useState('book');
 
-  // Book 模式状态
+  // Book 翻页模式状态
   const [bookPage, setBookPage] = useState(1);
-  const [focusedPanelId, setFocusedPanelId] = useState(null);
-  const [showAllTranslations, setShowAllTranslations] = useState(true);
-  const [bookPracticeId, setBookPracticeId] = useState(null);
+  const [shownCn, setShownCn] = useState({});
+  const [practiceKey, setPracticeKey] = useState(null);
+  const [showOriginalScan, setShowOriginalScan] = useState(false);
 
   // Stages 模式状态
   const [stageIdx, setStageIdx] = useState(0);
-  const [shownCn, setShownCn] = useState({});
-  const [stagePracticeKey, setStagePracticeKey] = useState(null);
 
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
   const stage = PICTURE_STAGES[stageIdx];
-
   const currentPageData = RICHARDS_BOOK1_PAGES[bookPage - 1] || RICHARDS_BOOK1_PAGES[0];
 
-  // 键盘左右箭头翻页支持
+  // 键盘左右箭头快速翻页支持
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // 避免输入框内触发
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
       if (viewMode !== 'book') return;
       if (e.key === 'ArrowLeft') {
@@ -85,410 +81,363 @@ export const TabPictures = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [viewMode]);
 
-  // 重置评测状态
+  // 切页或切模式时，重置跟读态与显隐态
   useEffect(() => {
-    setBookPracticeId(null);
-    setFocusedPanelId(null);
-  }, [bookPage, viewMode]);
-
-  // 连续朗读整页 4 格
-  const handlePlayWholePage = () => {
-    if (!currentPageData || !currentPageData.panels) return;
-    const panelsWithText = currentPageData.panels.filter((p) => p.en && p.en.trim());
-    if (panelsWithText.length === 0) return;
-
-    let idx = 0;
-    const playNext = () => {
-      if (idx >= panelsWithText.length) {
-        setFocusedPanelId(null);
-        return;
-      }
-      const p = panelsWithText[idx];
-      setFocusedPanelId(p.id);
-      speakText(p.en, 0.9, 1.0, () => {
-        idx++;
-        setTimeout(playNext, 450);
-      }, 'en-US');
-    };
-    playNext();
-  };
+    setPracticeKey(null);
+    setShownCn({});
+  }, [bookPage, viewMode, targetLang, stageIdx]);
 
   return (
-    <div className="space-y-4">
-      {/* 顶部模式切换栏 */}
-      <div className="bg-white border border-slate-200/80 rounded-2xl p-2 shadow-2xs space-y-2.5">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-2">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 rounded-lg bg-amber-600 text-white text-xs font-black tracking-wide">
-              STEP 3 · 看图直接学
+    <div className="space-y-3.5">
+      {/* 顶部标题与模式切换栏 */}
+      <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-rose-50 border border-amber-200/80 rounded-2xl p-3 space-y-2 shadow-2xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className="px-2 py-0.5 rounded-md bg-amber-600 text-white text-[10.5px] font-extrabold">
+              STEP 3 · 看图小人短句
             </span>
-            <span className="text-xs font-black text-slate-900">
-              {langConfig.flag} {langConfig.name} · I.A. Richards《看图学英语》
-            </span>
+            <h2 className="text-sm font-black text-slate-900">
+              {langConfig.flag} {langConfig.name} · 看图直接懂，不靠翻译
+            </h2>
           </div>
 
-          {/* 模式切换胶囊 */}
-          <div className="inline-flex items-center p-1 bg-slate-100 rounded-xl">
+          {/* 模式选择 */}
+          <div className="inline-flex items-center p-0.5 bg-white/90 rounded-xl border border-amber-200/80 shrink-0">
             <button
               type="button"
               onClick={() => setViewMode('book')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black transition-all ${
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black transition-all ${
                 viewMode === 'book'
-                  ? 'bg-white text-amber-700 shadow-2xs'
+                  ? 'bg-amber-600 text-white shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" />
               <span>📖 原著 119 页逐页点读</span>
-              <span className="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded-full font-bold">
-                100% 全量
-              </span>
             </button>
             <button
               type="button"
               onClick={() => setViewMode('stages')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black transition-all ${
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black transition-all ${
                 viewMode === 'stages'
-                  ? 'bg-white text-amber-700 shadow-2xs'
+                  ? 'bg-amber-600 text-white shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
-              <span>🎯 核心语法 13 阶精选</span>
+              <span>🎯 语法 13 阶精选</span>
             </button>
           </div>
         </div>
 
-        {/* 模式说明 */}
-        <p className="text-[11.5px] text-slate-500">
+        <p className="text-[11px] text-slate-600">
           {viewMode === 'book'
-            ? '100% 逐字逐画还原原版第一册 119 页（476 个连贯四格小人画框），点击画面或右侧卡片即可点读、慢速听、跟读打分，键盘 ← → 键快速翻页。'
-            : '精选提炼的 13 大认知语法阶段（61 个交互场景），采用自绘彩色矢量动画，帮助快速建立主干语感。'}
+            ? '内容完全保持原版手绘线稿与原著 119 页短句，一页 4 格。先看图猜意思，再听常速、慢速、跟读评测；中文默认隐藏，点击「看中文」随时查看。'
+            : '精选提炼的 13 大认知语法阶段（61 个场景），自绘彩色矢量动图，快速建立核心语感。'}
         </p>
-      </div>
 
-      {/* ================= 模式一：📖 原著 119 页全量逐页点读 ================= */}
-      {viewMode === 'book' && (
-        <div className="space-y-4">
-          {/* 翻页与快捷导航控制条 */}
-          <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-3 space-y-2.5 shadow-2xs">
-            <div className="flex flex-wrap items-center justify-between gap-2.5">
-              {/* 翻页按钮组 */}
-              <div className="flex items-center gap-1.5">
-                <button
-                  type="button"
-                  disabled={bookPage <= 1}
-                  onClick={() => setBookPage((p) => Math.max(1, p - 1))}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 disabled:opacity-40 disabled:hover:bg-white text-slate-700 border border-slate-200 text-xs font-bold shadow-2xs transition-all"
-                  title="快捷键: ← 左箭头"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                  <span>上一页</span>
-                </button>
+        {/* 翻页控制条 (仅在 Book 翻页模式展示) */}
+        {viewMode === 'book' && (
+          <div className="bg-white/95 border border-amber-200/80 rounded-xl p-2 flex flex-wrap items-center justify-between gap-2 shadow-2xs">
+            {/* 上一页 / 页码 / 下一页 */}
+            <div className="flex items-center gap-1.5">
+              <button
+                type="button"
+                disabled={bookPage <= 1}
+                onClick={() => setBookPage((p) => Math.max(1, p - 1))}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 disabled:opacity-40 disabled:hover:bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold transition-all"
+                title="快捷键: ←"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span>上一页</span>
+              </button>
 
-                <div className="px-3 py-1 rounded-lg bg-white border border-amber-200 text-xs font-black text-amber-900 shadow-2xs flex items-center gap-1">
-                  <span>第</span>
-                  <span className="text-amber-600 text-sm">{bookPage}</span>
-                  <span>/ 119 页</span>
-                </div>
-
-                <button
-                  type="button"
-                  disabled={bookPage >= RICHARDS_BOOK1_PAGES.length}
-                  onClick={() => setBookPage((p) => Math.min(RICHARDS_BOOK1_PAGES.length, p + 1))}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 disabled:opacity-40 disabled:hover:bg-white text-slate-700 border border-slate-200 text-xs font-bold shadow-2xs transition-all"
-                  title="快捷键: → 右箭头"
-                >
-                  <span>下一页</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+              <div className="px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-black text-slate-800">
+                <span>第 </span>
+                <span className="text-amber-600 text-sm">{bookPage}</span>
+                <span> / 119 课</span>
               </div>
 
-              {/* 快速跳转下拉选择 */}
-              <div className="flex items-center gap-2">
-                <select
-                  value={bookPage}
-                  onChange={(e) => setBookPage(Number(e.target.value))}
-                  className="text-xs font-bold bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-amber-500"
-                >
-                  {CHAPTER_JUMPS.map((ch) => (
-                    <option key={ch.page} value={ch.page}>
-                      {ch.label}
-                    </option>
-                  ))}
-                  <option disabled>────────── 逐页选择 ──────────</option>
-                  {RICHARDS_BOOK1_PAGES.map((p) => (
-                    <option key={p.page} value={p.page}>
-                      第 {p.page} 页 · {p.topic}
-                    </option>
-                  ))}
-                </select>
-
-                {/* 连读四格 */}
-                <button
-                  type="button"
-                  onClick={handlePlayWholePage}
-                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-2xs transition-all"
-                  title="自动连续朗读本页 4 个画框"
-                >
-                  <Play className="w-3.5 h-3.5 fill-white" />
-                  <span>连读整页</span>
-                </button>
-
-                {/* 译文开关 */}
-                <button
-                  type="button"
-                  onClick={() => setShowAllTranslations((prev) => !prev)}
-                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 text-xs font-bold shadow-2xs"
-                >
-                  {showAllTranslations ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                  <span>{showAllTranslations ? '隐藏全部译文' : '显示全部译文'}</span>
-                </button>
-              </div>
+              <button
+                type="button"
+                disabled={bookPage >= RICHARDS_BOOK1_PAGES.length}
+                onClick={() => setBookPage((p) => Math.min(RICHARDS_BOOK1_PAGES.length, p + 1))}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 disabled:opacity-40 disabled:hover:bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold transition-all"
+                title="快捷键: →"
+              >
+                <span>下一页</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
 
-            {/* 快速滑动条与主题标题 */}
-            <div className="flex items-center gap-3 pt-1 border-t border-amber-200/60">
-              <span className="text-[11px] font-black text-amber-800 shrink-0">
-                本页主题：{currentPageData.topic}
-              </span>
-              <input
-                type="range"
-                min="1"
-                max={RICHARDS_BOOK1_PAGES.length}
+            {/* 课次章节选择下拉框 */}
+            <div className="flex items-center gap-2">
+              <select
                 value={bookPage}
                 onChange={(e) => setBookPage(Number(e.target.value))}
-                className="w-full h-1.5 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600"
-              />
+                className="text-xs font-bold bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-amber-500"
+              >
+                {CHAPTER_JUMPS.map((ch) => (
+                  <option key={ch.page} value={ch.page}>
+                    {ch.label}
+                  </option>
+                ))}
+                <option disabled>──────── 全部 119 课 ────────</option>
+                {RICHARDS_BOOK1_PAGES.map((p) => (
+                  <option key={p.page} value={p.page}>
+                    第 {p.page} 课 · {p.topic}
+                  </option>
+                ))}
+              </select>
+
+              {/* 查看原书完整单页 */}
+              <button
+                type="button"
+                onClick={() => setShowOriginalScan(true)}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200 text-xs font-bold transition-colors"
+                title="查看本课原版印刷整页"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>原版整页</span>
+              </button>
             </div>
           </div>
+        )}
+      </div>
 
-          {/* 双栏布局：左侧原版插画画板 + 右侧 4 格互动卡片 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
-            {/* 左侧：原版手绘教材页面画板 (占 5 列) */}
-            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-3 shadow-2xs space-y-2 sticky top-4">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-black text-slate-800">
-                  原版教材插画（第 {bookPage} 页）
-                </span>
-                <span className="text-[10.5px] text-slate-400">点击画面对应画框可聚焦</span>
-              </div>
+      {/* ================= 模式一：📖 原著逐页卡片点读 (功能和原来一致) ================= */}
+      {viewMode === 'book' && (
+        <div className="space-y-3">
+          {/* 本课主题微提示 */}
+          <div className="flex items-center justify-between px-1">
+            <span className="text-xs font-bold text-slate-700">
+              第 {bookPage} 课 · {currentPageData.topic}
+            </span>
+            <span className="text-[11px] text-slate-400">支持按键盘 ← → 左右箭头翻页</span>
+          </div>
 
-              <div className="relative rounded-xl overflow-hidden border border-slate-200/80 bg-slate-50 group">
-                <img
-                  src={currentPageData.img}
-                  alt={`English Through Pictures Book 1 - Page ${bookPage}`}
-                  className="w-full h-auto block select-none"
-                  loading="eager"
-                />
+          {/* 4 格画框卡片网格 (采用与原来完全一致的卡片风格) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            {currentPageData.panels.map((panel, idx) => {
+              const key = panel.id;
+              const cnShown = !!shownCn[key];
+              const practicing = practiceKey === key;
+              const isSaved = isSentenceSaved ? isSentenceSaved(panel.en) : false;
 
-                {/* 4 个可点击交互热区层 (TL, TR, BL, BR) */}
-                <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-auto">
-                  {currentPageData.panels.map((p, idx) => {
-                    const isFocused = focusedPanelId === p.id;
-                    return (
-                      <button
-                        key={p.id}
-                        type="button"
-                        onClick={() => {
-                          setFocusedPanelId(p.id);
-                          if (p.en) speakText(p.en, 0.9, 1.0, null, 'en-US');
-                        }}
-                        className={`relative transition-all flex items-start justify-start p-1.5 focus:outline-hidden ${
-                          isFocused
-                            ? 'bg-amber-400/25 ring-2 ring-amber-500 ring-inset'
-                            : 'hover:bg-blue-400/15'
-                        }`}
-                        title={`点击点读：${p.en || p.label}`}
-                      >
-                        <span
-                          className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-black shadow-xs ${
-                            isFocused
-                              ? 'bg-amber-600 text-white scale-110'
-                              : 'bg-white/90 text-slate-700 border border-slate-300'
-                          }`}
-                        >
-                          {idx + 1}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
+              let targetText = '';
+              if (targetLang === 'ja') targetText = panel.ja;
+              else if (targetLang === 'es') targetText = panel.es;
 
-            {/* 右侧：4 格点读互动卡片 (占 7 列) */}
-            <div className="lg:col-span-7 space-y-2.5">
-              {currentPageData.panels.map((panel, idx) => {
-                const isFocused = focusedPanelId === panel.id;
-                const practicing = bookPracticeId === panel.id;
-                const isSaved = isSentenceSaved ? isSentenceSaved(panel.en) : false;
-
-                // 目标语言翻译展示
-                let targetText = '';
-                if (targetLang === 'ja') targetText = panel.ja;
-                else if (targetLang === 'es') targetText = panel.es;
-
-                return (
-                  <div
-                    key={panel.id}
-                    onClick={() => setFocusedPanelId(panel.id)}
-                    className={`bg-white border rounded-xl p-3 space-y-2 transition-all shadow-2xs ${
-                      isFocused
-                        ? 'border-amber-400 ring-2 ring-amber-300/60 bg-amber-50/20'
-                        : 'border-slate-200 hover:border-slate-300'
-                    }`}
-                  >
-                    {/* 卡片头部 */}
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-1.5">
-                        <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-800 text-[11px] font-black flex items-center justify-center">
-                          {idx + 1}
-                        </span>
-                        <span className="text-xs font-bold text-slate-500">{panel.label}</span>
-                      </div>
+              return (
+                <div
+                  key={key}
+                  className="bg-white border border-slate-200 rounded-xl p-3 space-y-2.5 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between"
+                >
+                  <div className="space-y-2">
+                    {/* 原稿手绘插画图片 */}
+                    <div className="relative rounded-lg overflow-hidden border border-slate-100 bg-slate-50/80 flex items-center justify-center p-2 min-h-[170px]">
+                      <img
+                        src={panel.img}
+                        alt={panel.en}
+                        className="max-h-44 w-auto object-contain select-none transition-transform hover:scale-102"
+                        loading="lazy"
+                      />
+                      <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-md bg-white/90 text-slate-700 border border-slate-200 text-[10.5px] font-black shadow-2xs">
+                        {panel.label}
+                      </span>
 
                       {/* 收藏按钮 */}
                       {onToggleSaveSentence && panel.en && (
                         <button
                           type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
+                          onClick={() =>
                             onToggleSaveSentence({
                               en: panel.en,
-                              cn: panel.cn || '《看图学英语》第 ' + bookPage + ' 页短句',
+                              cn: panel.cn || `《看图学英语》第 ${bookPage} 课`,
                               skeletonId: bookPage,
                               tag: 'Richards 原著'
-                            });
-                          }}
-                          className={`px-2 py-0.5 rounded-md text-[10.5px] font-bold border transition-all ${
+                            })
+                          }
+                          className={`absolute top-1.5 right-1.5 px-2 py-0.5 rounded-md text-[10.5px] font-bold border transition-all shadow-2xs ${
                             isSaved
                               ? 'bg-amber-50 text-amber-700 border-amber-300'
-                              : 'bg-white hover:bg-slate-100 text-slate-500 border-slate-200'
+                              : 'bg-white/90 hover:bg-white text-slate-500 border-slate-200'
                           }`}
                         >
-                          <Star className={`w-3 h-3 inline mr-1 ${isSaved ? 'fill-amber-500 text-amber-500' : ''}`} />
+                          <Star className={`w-3 h-3 inline mr-0.5 ${isSaved ? 'fill-amber-500 text-amber-500' : ''}`} />
                           <span>{isSaved ? '已收藏' : '收藏'}</span>
                         </button>
                       )}
                     </div>
 
-                    {/* 英文短句主体 */}
-                    <div className="text-base font-black text-slate-900 leading-snug tracking-wide">
-                      {panel.en || <span className="text-slate-400 font-normal italic">（插画过渡画框）</span>}
+                    {/* 句子主体 (点击可直接朗读，与原来功能一致) */}
+                    <button
+                      type="button"
+                      onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                      className="block w-full text-left group"
+                    >
+                      <div className="text-base font-black text-slate-900 leading-snug group-hover:text-amber-700 transition-colors">
+                        {panel.en || <span className="text-slate-400 font-normal italic">（插画过渡画框）</span>}
+                      </div>
+                    </button>
+
+                    {/* 目标语言对照 (若为日文或西文) */}
+                    {targetLang !== 'en' && targetText && (
+                      <div className="text-xs text-indigo-700 font-semibold flex items-baseline gap-1 bg-indigo-50/70 p-1.5 rounded-lg border border-indigo-100">
+                        <span className="text-[10px] font-bold bg-indigo-100 text-indigo-800 px-1 py-0.2 rounded shrink-0">
+                          {langConfig.name}
+                        </span>
+                        <span>{targetText}</span>
+                      </div>
+                    )}
+
+                    {/* 中文对照 (点击「看中文」显示，默认隐藏，与原来一致) */}
+                    <div className="text-xs min-h-[1.25rem] text-slate-600 font-medium">
+                      {cnShown && panel.cn ? (
+                        <div className="flex items-baseline gap-1.5 text-slate-700 bg-amber-50/60 p-1.5 rounded-lg border border-amber-100">
+                          <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-1 py-0.2 rounded shrink-0">
+                            中文
+                          </span>
+                          <span>{panel.cn}</span>
+                        </div>
+                      ) : null}
                     </div>
-
-                    {/* 多语言翻译区域 */}
-                    {showAllTranslations && (
-                      <div className="bg-slate-50/90 rounded-lg p-2 border border-slate-200/60 space-y-1 text-xs">
-                        {/* 目标语言翻译 (若为日文或西文) */}
-                        {targetText && (
-                          <div className="flex items-baseline gap-1.5 text-slate-800 font-medium">
-                            <span className="text-[10px] font-bold text-blue-600 bg-blue-100 px-1 py-0.2 rounded shrink-0">
-                              {langConfig.name}
-                            </span>
-                            <span>{targetText}</span>
-                          </div>
-                        )}
-
-                        {/* 中文对照 */}
-                        {panel.cn && (
-                          <div className="flex items-baseline gap-1.5 text-slate-600">
-                            <span className="text-[10px] font-bold text-slate-500 bg-slate-200/80 px-1 py-0.2 rounded shrink-0">
-                              中文
-                            </span>
-                            <span>{panel.cn}</span>
-                          </div>
-                        )}
-                      </div>
-                    )}
-
-                    {/* 操作按钮栏 */}
-                    {panel.en && (
-                      <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                        {/* 英文原音 */}
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            speakText(panel.en, 0.95, 1.0, null, 'en-US');
-                          }}
-                          className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold transition-colors"
-                        >
-                          <Volume2 className="w-3.5 h-3.5" />
-                          <span>英文原声</span>
-                        </button>
-
-                        {/* 慢速朗读 */}
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            speakText(panel.en, 0.6, 1.0, null, 'en-US');
-                          }}
-                          className="px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold transition-colors"
-                        >
-                          🐢 慢速
-                        </button>
-
-                        {/* 目标语言（日文/西文）发音 */}
-                        {targetLang !== 'en' && targetText && (
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              speakText(targetText, 0.9, 1.0, null, langConfig.speechLang);
-                            }}
-                            className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold transition-colors"
-                          >
-                            <Volume2 className="w-3.5 h-3.5" />
-                            <span>{langConfig.name}读音</span>
-                          </button>
-                        )}
-
-                        {/* 跟读评测 */}
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setBookPracticeId(practicing ? null : panel.id);
-                          }}
-                          className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg border text-xs font-bold transition-colors ${
-                            practicing
-                              ? 'bg-rose-600 text-white border-rose-600'
-                              : 'bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-200'
-                          }`}
-                        >
-                          <Mic className="w-3.5 h-3.5" />
-                          <span>跟读评测</span>
-                        </button>
-                      </div>
-                    )}
-
-                    {/* 跟读打分评测器 */}
-                    {practicing && panel.en && (
-                      <div className="pt-2">
-                        <PronunciationEvaluator
-                          targetSentence={panel.en}
-                          targetLang="en"
-                          readCount={getReadCount ? getReadCount(panel.en) : 0}
-                          onIncrementCount={onIncrementReadCount}
-                        />
-                      </div>
-                    )}
                   </div>
-                );
-              })}
+
+                  {/* 底部操作按钮栏 (常速、慢速、跟读、看中文) */}
+                  <div className="flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-slate-100">
+                    <button
+                      type="button"
+                      onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                      className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold transition-colors"
+                    >
+                      <Volume2 className="w-3.5 h-3.5" />
+                      <span>常速</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => speakText(panel.en, 0.55, 1.0, null, 'en-US')}
+                      className="px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold transition-colors"
+                    >
+                      🐢 慢速
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setPracticeKey(practicing ? null : key)}
+                      className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg border text-xs font-bold transition-colors ${
+                        practicing
+                          ? 'bg-rose-600 text-white border-rose-600'
+                          : 'bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-200'
+                      }`}
+                    >
+                      <Mic className="w-3.5 h-3.5" />
+                      <span>跟读</span>
+                    </button>
+
+                    {/* 目标语言发音 (若为日文/西文) */}
+                    {targetLang !== 'en' && targetText && (
+                      <button
+                        type="button"
+                        onClick={() => speakText(targetText, 0.9, 1.0, null, langConfig.speechLang)}
+                        className="px-2 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold transition-colors"
+                      >
+                        <span>{langConfig.name}读音</span>
+                      </button>
+                    )}
+
+                    {/* 看中文 / 藏中文 */}
+                    <button
+                      type="button"
+                      onClick={() => setShownCn((prev) => ({ ...prev, [key]: !prev[key] }))}
+                      className="ml-auto flex items-center gap-1 px-2 py-1.5 rounded-lg text-slate-500 hover:bg-slate-100 text-xs font-bold transition-colors"
+                    >
+                      {cnShown ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                      <span>{cnShown ? '藏中文' : '看中文'}</span>
+                    </button>
+                  </div>
+
+                  {/* 录音跟读评测器 */}
+                  {practicing && panel.en && (
+                    <div className="pt-2 border-t border-rose-100">
+                      <PronunciationEvaluator
+                        targetSentence={panel.en}
+                        targetLang="en"
+                        readCount={getReadCount ? getReadCount(panel.en) : 0}
+                        onIncrementCount={onIncrementReadCount}
+                      />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* 底部简捷翻页栏 */}
+          <div className="flex items-center justify-between pt-2">
+            <button
+              type="button"
+              disabled={bookPage <= 1}
+              onClick={() => {
+                setBookPage((p) => Math.max(1, p - 1));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 disabled:opacity-40 text-slate-600 border border-slate-200 text-xs font-bold shadow-2xs"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>上一课</span>
+            </button>
+
+            <span className="text-xs font-black text-slate-500">
+              第 {bookPage} / 119 课
+            </span>
+
+            <button
+              type="button"
+              disabled={bookPage >= RICHARDS_BOOK1_PAGES.length}
+              onClick={() => {
+                setBookPage((p) => Math.min(RICHARDS_BOOK1_PAGES.length, p + 1));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 disabled:opacity-40 text-slate-600 border border-slate-200 text-xs font-bold shadow-2xs"
+            >
+              <span>下一课</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 原版整页扫描弹窗 */}
+      {showOriginalScan && (
+        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3">
+          <div className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl">
+            <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-100 bg-slate-50">
+              <span className="text-xs font-black text-slate-800">
+                原版教材单页扫描（第 {bookPage} 课）
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowOriginalScan(false)}
+                className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200/60"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="p-3 overflow-y-auto flex items-center justify-center bg-slate-100">
+              <img
+                src={currentPageData.img}
+                alt={`Richards Page ${bookPage}`}
+                className="max-h-[75vh] w-auto rounded-lg shadow-md border border-slate-200 bg-white"
+              />
             </div>
           </div>
         </div>
       )}
 
-      {/* ================= 模式二：🎯 核心语法 13 阶精选 ================= */}
+      {/* ================= 模式二：🎯 语法 13 阶精选 ================= */}
       {viewMode === 'stages' && (
         <div className="space-y-3.5">
-          {/* 阶段选择胶囊栏 */}
-          <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-xl border border-slate-200 overflow-x-auto scrollbar-none max-w-full">
+          <div className="flex items-center gap-1.5 bg-white/90 p-1 rounded-xl border border-amber-200/80 overflow-x-auto scrollbar-none max-w-full">
             {PICTURE_STAGES.map((s, i) => (
               <button
                 key={s.id}
@@ -513,7 +462,7 @@ export const TabPictures = ({
               const speechLang = scene[targetLang] ? langConfig.speechLang : 'en-US';
               const key = `${stage.id}-${i}`;
               const cnShown = !!shownCn[key];
-              const practicing = stagePracticeKey === key;
+              const practicing = practiceKey === key;
               return (
                 <div
                   key={key}
@@ -567,7 +516,7 @@ export const TabPictures = ({
                     </button>
                     <button
                       type="button"
-                      onClick={() => setStagePracticeKey(practicing ? null : key)}
+                      onClick={() => setPracticeKey(practicing ? null : key)}
                       className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg border text-xs font-bold ${
                         practicing
                           ? 'bg-rose-600 text-white border-rose-600'
