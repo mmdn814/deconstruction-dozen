@@ -127,6 +127,7 @@ const getIpaAudioUrl = (filename) => {
 };
 
 // --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Studio Audio) ---
+// --- Standard Oxford 44 IPA Pure Phoneme Audio Map (Local High-Fidelity MP3 Files) ---
 export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEnd = null, fast = false) => {
   if (typeof window === 'undefined') {
     if (onEnd) onEnd();
@@ -146,9 +147,8 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEn
       const audio = new Audio(audioUrl);
       currentActiveAudio = audio;
 
-      if (fast) {
-        audio.playbackRate = 1.35; // 拼读连读模式：适度加速，去除 Oxford 音频文件尾部的冗余死寂空白
-      }
+      // 保持 100% 真实纯正人类原声（严禁人为加速导致失真、变调或变尖锐）
+      audio.playbackRate = 1.0;
 
       let finished = false;
       const finish = () => {
@@ -159,35 +159,47 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEn
         }
       };
 
-      // 拼读模式下最大播放上限 380ms，保证音素如齿轮般紧凑衔接，杜绝拖泥带水
-      let maxTimer = null;
-      if (fast) {
-        maxTimer = setTimeout(finish, 380);
-      }
-
-      audio.onended = () => {
-        if (maxTimer) clearTimeout(maxTimer);
-        finish();
-      };
-      audio.onerror = () => {
-        if (maxTimer) clearTimeout(maxTimer);
-        finish();
-      };
+      // 完整自然放完真人录音原声，杜绝任何提前强切导致的卡顿与爆音
+      audio.onended = finish;
+      audio.onerror = finish;
 
       const playPromise = audio.play();
       if (playPromise && playPromise.catch) {
         playPromise.catch(() => {
-          if (maxTimer) clearTimeout(maxTimer);
-          speakText(fallbackSoundText, fast ? 1.1 : 1.0, 1.0, onEnd, lang);
+          speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
         });
       }
       return;
     }
 
-    speakText(fallbackSoundText, fast ? 1.1 : 1.0, 1.0, onEnd, lang);
+    speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
   } catch {
-    speakText(fallbackSoundText, fast ? 1.1 : 1.0, 1.0, onEnd, lang);
+    speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
   }
+};
+
+// --- High-Fidelity Studio Word Audio Resolver (Dictionary Studio Recording / Neural Voice) ---
+export const getWordAudioUrl = (word, langCode = 'en') => {
+  const clean = String(word || '').split('(')[0].split('（')[0].replace(/[.,!?;:"'~]/g, '').trim();
+  if (!clean) return null;
+  const shortLang = (langCode || 'en').split('-')[0].toLowerCase();
+
+  // 1. 英语：官方纯正美式真人录音棚发音（标准美音真人原声，拒绝合成机械音）
+  if (shortLang === 'en') {
+    return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=2`;
+  }
+
+  // 2. 日语：官方真人母语词汇原声发音
+  if (shortLang === 'ja') {
+    return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&le=jap`;
+  }
+
+  // 3. 西班牙语：官方真人母语词汇原声发音
+  if (shortLang === 'es') {
+    return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&le=spa`;
+  }
+
+  return null;
 };
 
 // --- Global Active Audio Player Reference (Prevents Audio Overlap) ---

@@ -1,6 +1,16 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Check, ChevronLeft, ChevronRight, Loader2, Sparkles, ChevronDown, ChevronUp, Layers } from 'lucide-react';
-import { LANGUAGE_CONFIG, speakText, playPurePhoneme, stopAllAudio, callGemini, loadFromStorage, saveToStorage, STORAGE_KEYS } from '../lib/core.js';
+import {
+  LANGUAGE_CONFIG,
+  speakText,
+  playPurePhoneme,
+  stopAllAudio,
+  getWordAudioUrl,
+  callGemini,
+  loadFromStorage,
+  saveToStorage,
+  STORAGE_KEYS
+} from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { WORD_THEMES, CORE_THEME_ID, parseWordFile } from '../data/wordThemes.js';
 import { splitMora, moraSpeakUnits } from '../lib/kana.js';
@@ -91,7 +101,9 @@ export const TabWords = ({ targetLang }) => {
   const themeName = (t) => (targetLang !== 'ja' && t.alt) || t.name;
 
   const handleCard = (item) => {
-    speakText(cleanWord(item.w), 0.85, 1.0, null, langConfig.speechLang);
+    const wordText = cleanWord(item.w);
+    const wordAudio = getWordAudioUrl(wordText, targetLang);
+    speakText(wordText, 1.0, 1.0, null, langConfig.speechLang, wordAudio);
     markRead(item);
   };
 
@@ -132,42 +144,46 @@ export const TabWords = ({ targetLang }) => {
 
   const playStep = (step, onEnd, fast = false) => {
     if (!step) return onEnd && onEnd();
-    if (step.pause) return setTimeout(() => onEnd && onEnd(), fast ? 140 : 260);
+    if (step.pause) return setTimeout(() => onEnd && onEnd(), fast ? 150 : 260);
     if (step.phoneme) {
       playPurePhoneme(
         step.phoneme[0],
         step.phoneme[1],
         langConfig.speechLang,
         () => {
-          setTimeout(() => onEnd && onEnd(), fast ? 45 : 100);
+          // 每个真实音素放完后，留出 120ms 的呼吸间隔，保证韵律清晰自然
+          setTimeout(() => onEnd && onEnd(), fast ? 120 : 180);
         },
         fast
       );
       return;
     }
-    // 快速拼读模式下语速 1.06x，音节间隔仅 55ms，连贯自然
-    const rate = fast ? 1.06 : 0.82;
+    // 西班牙语或日语音节拼读
+    const rate = fast ? 1.0 : 0.88;
     return speakText(
       step.text,
       rate,
       1.0,
       () => {
-        setTimeout(() => onEnd && onEnd(), fast ? 55 : 120);
+        setTimeout(() => onEnd && onEnd(), fast ? 90 : 150);
       },
       langConfig.speechLang
     );
   };
 
-  // 拼读：紧凑连贯读出各个音素/音节，最后平滑连读出整个单词
+  // 拼读：纯正真实音素自然逐个发音，短暂吸气停顿后，以真人原声录音饱满读出整个单词
   const spellOut = (item, units) => {
     stopAllAudio();
     const steps = units.map((u) => u.step).filter(Boolean);
     let i = 0;
     const next = () => {
       if (i >= steps.length) {
+        // 音素念完后，留出 320ms 自然呼吸停顿（拼读心理学：从分解音素自然融合成整词）
         setTimeout(() => {
-          speakText(cleanWord(item.w), 0.88, 1.0, null, langConfig.speechLang);
-        }, 180);
+          const wordText = cleanWord(item.w);
+          const wordAudio = getWordAudioUrl(wordText, targetLang);
+          speakText(wordText, 1.0, 1.0, null, langConfig.speechLang, wordAudio);
+        }, 320);
         markRead(item);
         return;
       }
