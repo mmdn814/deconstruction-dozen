@@ -138,7 +138,60 @@ const Frame = ({ children }) => (
 
 const SELF = [3, 6];
 
-// --- 完整的 10 阶 Richards 图景库 ---
+const Window = ({ x = 185, y = 35 }) => (
+  <g stroke="#0284c7" strokeWidth={2.5} fill="#f0f9ff">
+    <rect x={x - 22} y={y} width={44} height={52} rx={2} stroke="#334155" strokeWidth={3} fill="#e0f2fe" />
+    <line x1={x} y1={y} x2={x} y2={y + 52} stroke="#334155" strokeWidth={2.5} />
+    <line x1={x - 22} y1={y + 26} x2={x + 22} y2={y + 26} stroke="#334155" strokeWidth={2.5} />
+    <ellipse cx={x - 8} cy={y + 14} rx={7} ry={4} fill="#fff" stroke="none" />
+    <ellipse cx={x + 8} cy={y + 38} rx={6} ry={3} fill="#fff" stroke="none" />
+  </g>
+);
+
+const FaceBase = ({ focus = null }) => (
+  <g>
+    <path d="M106 102 L106 126 M134 102 L134 126" stroke={INK} strokeWidth={3} strokeLinecap="round" />
+    <path d="M80 126 Q120 120 160 126" stroke={INK} strokeWidth={3} strokeLinecap="round" fill="none" />
+    <circle cx={120} cy={66} r={38} stroke={INK} strokeWidth={3} fill="#fff" />
+    <path
+      d="M82 60 Q80 26 120 24 Q160 26 158 60 Q142 38 120 40 Q98 38 82 60 Z"
+      fill="#334155"
+      stroke={INK}
+      strokeWidth={1.5}
+    />
+    <path d="M82 60 C76 60 76 74 82 74" stroke={INK} strokeWidth={2.8} fill="#fff" strokeLinecap="round" />
+    <path d="M158 60 C164 60 164 74 158 74" stroke={INK} strokeWidth={2.8} fill="#fff" strokeLinecap="round" />
+    <path d="M98 56 Q106 53 114 56 M126 56 Q134 53 142 56" stroke={INK} strokeWidth={2.2} strokeLinecap="round" fill="none" />
+    <ellipse cx={106} cy={64} rx={3.5} ry={4.5} fill={INK} />
+    <ellipse cx={134} cy={64} rx={3.5} ry={4.5} fill={INK} />
+    <path d="M120 63 L123 75 L117 76" stroke={INK} strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <path d="M111 86 Q120 94 129 86" stroke={INK} strokeWidth={2.8} strokeLinecap="round" fill="none" />
+
+    {focus === 'face' && (
+      <ellipse cx={120} cy={72} rx={44} ry={44} fill="none" stroke={ACCENT} strokeWidth={2.5} strokeDasharray="4 4" />
+    )}
+    {focus === 'eyes' && (
+      <>
+        <circle cx={106} cy={64} r={9} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+        <circle cx={134} cy={64} r={9} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+      </>
+    )}
+    {focus === 'nose' && (
+      <circle cx={120} cy={72} r={11} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+    )}
+    {focus === 'mouth' && (
+      <ellipse cx={120} cy={88} rx={16} ry={9} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+    )}
+    {focus === 'ears' && (
+      <>
+        <circle cx={79} cy={67} r={9} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+        <circle cx={161} cy={67} r={9} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+      </>
+    )}
+  </g>
+);
+
+// --- 完整的 13 阶 Richards 图景库 ---
 const art = {
   i: () => (
     <Frame>
@@ -439,6 +492,119 @@ const art = {
       <path d="M100 38 Q115 20 135 25 Q145 35 130 45 L115 48 Z" fill="#dbeafe" stroke={ACCENT} strokeWidth={2} />
       <text x={112} y={34} fontSize="9" fontWeight="bold" fill={ACCENT}>Hi</text>
     </Frame>
+  ),
+
+  // --- 身体与五官 (Body Parts & Face) ---
+  faceAll: () => (
+    <Frame>
+      <FaceBase focus="face" />
+    </Frame>
+  ),
+  eyes: () => (
+    <Frame>
+      <FaceBase focus="eyes" />
+    </Frame>
+  ),
+  nose: () => (
+    <Frame>
+      <FaceBase focus="nose" />
+    </Frame>
+  ),
+  mouth: () => (
+    <Frame>
+      <FaceBase focus="mouth" />
+    </Frame>
+  ),
+  ears: () => (
+    <Frame>
+      <FaceBase focus="ears" />
+    </Frame>
+  ),
+  armsAndLegs: () => (
+    <Frame>
+      <Person x={120} y={32} l={[-34, 4]} r={[34, 4]} />
+      <ellipse cx={86} cy={54} rx={16} ry={8} fill="none" stroke={ACCENT} strokeWidth={2} strokeDasharray="3 3" />
+      <ellipse cx={154} cy={54} rx={16} ry={8} fill="none" stroke={ACCENT} strokeWidth={2} strokeDasharray="3 3" />
+      <ellipse cx={111} cy={95} rx={9} ry={18} fill="none" stroke={EMERALD} strokeWidth={2} strokeDasharray="3 3" />
+      <ellipse cx={129} cy={95} rx={9} ry={18} fill="none" stroke={EMERALD} strokeWidth={2} strokeDasharray="3 3" />
+    </Frame>
+  ),
+  handsAndFeet: () => (
+    <Frame>
+      <Person x={120} y={32} l={[-24, -4]} r={[24, 20]} />
+      <circle cx={96} cy={50} r={9} fill="none" stroke={ACCENT} strokeWidth={2.5} />
+      <circle cx={129} cy={104} r={9} fill="none" stroke={RED} strokeWidth={2.5} />
+      <Pointer from={[70, 40]} to={[88, 48]} />
+      <Pointer from={[160, 115]} to={[138, 107]} color={RED} />
+    </Frame>
+  ),
+
+  // --- 容器与进出介词 (Containers & In / Into / Out of) ---
+  waterInGlass: () => (
+    <Frame>
+      <Table x={120} w={90} />
+      <path d="M110 70 L113 96 L127 96 L130 70 Z" fill="#e0f2fe" stroke="#0284c7" strokeWidth={2.5} strokeLinejoin="round" />
+      <path d="M111.5 82 L113 96 L127 96 L128.5 82 Z" fill="#38bdf8" opacity={0.65} />
+      <ellipse cx={120} cy={82} rx={8.5} ry={2} fill="#7dd3fc" />
+    </Frame>
+  ),
+  putIntoPocket: () => (
+    <Frame>
+      <Person x={120} y={38} l={[-12, 22]} r={[8, 12]} />
+      <path d="M120 70 Q128 72 132 82 Q126 84 120 80" stroke="#475569" strokeWidth={2} fill="#e2e8f0" />
+      <path d="M128 58 L128 72 M125 68 L128 73 L131 68" stroke={ACCENT} strokeWidth={2.2} strokeLinecap="round" />
+    </Frame>
+  ),
+  handInPocket: () => (
+    <Frame>
+      <Person x={120} y={38} l={[-12, 22]} r={[6, 18]} />
+      <path d="M120 70 Q128 72 132 82 Q126 84 120 80" stroke="#475569" strokeWidth={2} fill="#e2e8f0" />
+    </Frame>
+  ),
+  takeOutOfPocket: () => (
+    <Frame>
+      <Person x={120} y={38} l={[-12, 22]} r={[10, 8]} />
+      <path d="M120 70 Q128 72 132 82 Q126 84 120 80" stroke="#475569" strokeWidth={2} fill="#e2e8f0" />
+      <path d="M128 72 L128 58 M125 62 L128 57 L131 62" stroke={ACCENT} strokeWidth={2.2} strokeLinecap="round" />
+    </Frame>
+  ),
+  shipInBottle: () => (
+    <Frame>
+      <Table x={120} w={120} />
+      <rect x={82} y={78} width={68} height={18} rx={7} fill="#f0f9ff" stroke="#0284c7" strokeWidth={2.5} />
+      <rect x={150} y={82} width={12} height={10} fill="#f0f9ff" stroke="#0284c7" strokeWidth={2} />
+      <rect x={160} y={83} width={6} height={8} fill={WOOD} stroke={WOOD} strokeWidth={1} rx={1} />
+      <path d="M96 90 L126 90 L122 93 L100 93 Z" fill={WOOD} stroke={WOOD} strokeWidth={1.5} />
+      <line x1={110} y1={90} x2={110} y2={82} stroke="#334155" strokeWidth={1.5} />
+      <path d="M110 83 L120 88 L110 88 Z" fill="#fff" stroke="#334155" strokeWidth={1} />
+    </Frame>
+  ),
+
+  // --- 走向与位移 (From / To / Off) ---
+  doorToWindow: () => (
+    <Frame>
+      <Door x={45} open={true} />
+      <Window x={195} y={45} />
+      <Person x={115} y={40} l={[-16, 20]} r={[18, 16]} />
+      <Pointer from={[65, 120]} to={[175, 120]} color={ACCENT} />
+    </Frame>
+  ),
+  atWindow: () => (
+    <Frame>
+      <Window x={175} y={45} />
+      <Person x={135} y={40} r={[24, 6]} />
+      <Pointer from={[145, 60]} to={[165, 68]} color={ACCENT} />
+    </Frame>
+  ),
+  offTheTable: () => (
+    <Frame>
+      <Table x={85} w={75} />
+      <ellipse cx={170} cy={124} rx={22} ry={4} fill="#bae6fd" opacity={0.8} />
+      <g transform="translate(162, 115) rotate(70)">
+        <path d="M-8 -12 L-6 12 L6 12 L8 -12 Z" fill="#e0f2fe" stroke="#0284c7" strokeWidth={2.5} strokeLinejoin="round" />
+      </g>
+      <path d="M115 96 Q145 98 160 116" stroke="#94a3b8" strokeWidth={2} strokeDasharray="3 3" fill="none" />
+    </Frame>
   )
 };
 
@@ -570,6 +736,42 @@ export const PICTURE_STAGES = [
     scenes: [
       { art: 'personSleeping', ...S('He is sleeping.', 'かれは ねています。', '彼は寝ています。', 'kare wa nete imasu', 'Él está durmiendo.', '他正在睡觉。') },
       { art: 'sayHello', ...S('He says hello to her.', 'かれは かのじょに あいさつします。', '彼は彼女に挨拶します。', 'kare wa kanojo ni aisatsu shimasu', 'Él le dice hola a ella.', '他向她打招呼。') }
+    ]
+  },
+  {
+    id: 'body_parts',
+    title: '⑪ 身体与五官',
+    hint: 'Richards 原书核心：从五官、头部到四肢（Face, Eyes, Nose, Mouth, Arms, Legs, Feet）。',
+    scenes: [
+      { art: 'faceAll', ...S('This is his face.', 'これは かれの かお です。', 'これは彼の顔です。', 'kore wa kare no kao desu', 'Esta es su cara.', '这是他的脸。') },
+      { art: 'eyes', ...S('These are his eyes.', 'これらは かれの め です。', 'これらは彼の目です。', 'korera wa kare no me desu', 'Estos son sus ojos.', '这些是他的眼睛。') },
+      { art: 'nose', ...S('This is his nose. It is between his eyes.', 'これは かれの はな です。めの あいだに あります。', 'これは彼の鼻です。目の間にあります。', 'kore wa kare no hana desu. me no aida ni arimasu', 'Esta es su nariz. Está entre sus ojos.', '这是他的鼻子，在两眼之间。') },
+      { art: 'mouth', ...S('This is his mouth. It is under his nose.', 'これは かれの くち です。はなの したに あります。', '这是他的嘴巴。鼻の下にあります。', 'kore wa kare no kuchi desu. hana no shita ni arimasu', 'Esta es su boca. Está debajo de su nariz.', '这是他的嘴巴，在鼻子下方。') },
+      { art: 'ears', ...S('These are his ears.', 'これらは かれの みみ です。', 'これらは彼の耳です。', 'korera wa kare no mimi desu', 'Estas son sus orejas.', '这些是他的耳朵。') },
+      { art: 'armsAndLegs', ...S('These are his arms, and these are his legs.', 'これらは かれの うで で、これらは あし です。', 'これらは彼の腕で、これらは足です。', 'korera wa kare no ude de, korera wa ashi desu', 'Estos son sus brazos, y estas son sus piernas.', '这些是他的手臂，这些是他的腿。') },
+      { art: 'handsAndFeet', ...S('This is his hand. That is his foot.', 'これは かれの て です。あれは あし です。', 'これは彼の手です。あれは足です。', 'kore wa kare no te desu. are wa ashi desu', 'Esta es su mano. Ese es su pie.', '这是他的手，那是他的脚。') }
+    ]
+  },
+  {
+    id: 'in_into_out',
+    title: '⑫ 容器与进出介词',
+    hint: '动态进出与空间容纳：In（在里面）、Into（放入/进入）、Out of（拿出来）。',
+    scenes: [
+      { art: 'waterInGlass', ...S('The water is in the glass.', 'みずは コップの なかに あります。', '水はコップの中にあります。', 'mizu wa koppu no naka ni arimasu', 'El agua está en el vaso.', '水在玻璃杯里。') },
+      { art: 'putIntoPocket', phase: '动作中', ...S('He is putting his hand into his pocket.', 'かれは てを ポケットに いれています。', '彼は手をポケットに入れています。', 'kare wa te o poketto ni irete imasu', 'Él está metiendo la mano en el bolsillo.', '他正把手伸进口袋里。') },
+      { art: 'handInPocket', phase: '状态', ...S('His hand is in his pocket.', 'かれの ては ポケットの なかに あります。', '彼の手はポケットの中にあります。', 'kare no te wa poketto no naka ni arimasu', 'Su mano está en su bolsillo.', '他的手在口袋里。') },
+      { art: 'takeOutOfPocket', phase: '动作中', ...S('He is taking his hand out of his pocket.', 'かれは てを ポケットから だしています。', '彼は手をポケットから出しています。', 'kare wa te o poketto kara dashite imasu', 'Él está sacando la mano de su bolsillo.', '他正把手从口袋里拿出来。') },
+      { art: 'shipInBottle', ...S('This ship is in the bottle.', 'この ふねは ビンの なかに あります。', 'この船は瓶の中にあります。', 'kono fune wa bin no naka ni arimasu', 'Este barco está en la botella.', '这艘小船在瓶子里面。') }
+    ]
+  },
+  {
+    id: 'motion_from_to',
+    title: '⑬ 空间位移与走向',
+    hint: '起点与终点：From（从某处）与 To（到某处），空间脱离 Off。',
+    scenes: [
+      { art: 'doorToWindow', ...S('He is walking from the door to the window.', 'かれは ドアから まどへ あるいています。', '彼はドアから窓へ歩いています。', 'kare wa doa kara mado e aruite imasu', 'Él está caminando desde la puerta hacia la ventana.', '他正从门口走向窗前。') },
+      { art: 'atWindow', ...S('He is at the window.', 'かれは まどの ところに います。', '彼は窓の所にいます。', 'kare wa mado no tokoro ni imasu', 'Él está en la ventana.', '他站在窗户旁。') },
+      { art: 'offTheTable', ...S('The glass is off the table. It is on the floor.', 'コップは テーブルから おちて、ゆかに あります。', 'コップはテーブルから落ちて、床にあります。', 'koppu wa teeburu kara ochite, yuka ni arimasu', 'El vaso se cayó de la mesa. Está en el suelo.', '玻璃杯离开了桌子，掉在了地板上。') }
     ]
   }
 ];
