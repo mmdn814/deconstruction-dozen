@@ -199,6 +199,8 @@ export default function App() {
               targetLang={targetLang}
               getReadCount={getReadCount}
               onIncrementReadCount={handleIncrementReadCount}
+              isSentenceSaved={isSentenceSaved}
+              onToggleSaveSentence={handleToggleSaveSentence}
             />
           )}
           {activeTab === 'deconstruction' && (

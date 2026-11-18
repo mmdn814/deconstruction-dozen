@@ -1,0 +1,1192 @@
+[
+  {
+    "page": 1,
+    "img": "/richards/p_1.webp",
+    "quadrants": {
+      "TL": "I",
+      "TR": "YOU",
+      "BL": "I",
+      "BR": "YOU"
+    }
+  },
+  {
+    "page": 2,
+    "img": "/richards/p_2.webp",
+    "quadrants": {
+      "TL": "HE",
+      "TR": "SHE",
+      "BL": "IT",
+      "BR": "THEY"
+    }
+  },
+  {
+    "page": 3,
+    "img": "/richards/p_3.webp",
+    "quadrants": {
+      "TL": "HE",
+      "TR": "THEY",
+      "BL": "IT",
+      "BR": "THEY"
+    }
+  },
+  {
+    "page": 4,
+    "img": "/richards/p_4.webp",
+    "quadrants": {
+      "TL": "I am here.",
+      "TR": "He is there.",
+      "BL": "She is here.",
+      "BR": "She is there."
+    }
+  },
+  {
+    "page": 5,
+    "img": "/richards/p_5.webp",
+    "quadrants": {
+      "TL": "It is here.",
+      "TR": "It is there.",
+      "BL": "They are here.",
+      "BR": "They are there."
+    }
+  },
+  {
+    "page": 6,
+    "img": "/richards/p_6.webp",
+    "quadrants": {
+      "TL": "You are there.",
+      "TR": "You are there.",
+      "BL": "You are here.",
+      "BR": "We are here."
+    }
+  },
+  {
+    "page": 7,
+    "img": "/richards/p_7.webp",
+    "quadrants": {
+      "TL": "It is there.",
+      "TR": "They are there.",
+      "BL": "We are here.",
+      "BR": "They are here."
+    }
+  },
+  {
+    "page": 8,
+    "img": "/richards/p_8.webp",
+    "quadrants": {
+      "TL": "This is a man.",
+      "TR": "This is a woman.",
+      "BL": "That is a man.",
+      "BR": "That is a woman."
+    }
+  },
+  {
+    "page": 9,
+    "img": "/richards/p_9.webp",
+    "quadrants": {
+      "TL": "This man is here.",
+      "TR": "That man is there.",
+      "BL": "This woman is here.",
+      "BR": "That woman is there."
+    }
+  },
+  {
+    "page": 10,
+    "img": "/richards/p_10.webp",
+    "quadrants": {
+      "TL": "This is a table. This table is here. It is here.",
+      "TR": "That is a table. That table is there. It is there.",
+      "BL": "This is a hat. It is a hat.",
+      "BR": "This is a hand. This is the thumb. These are the fingers."
+    }
+  },
+  {
+    "page": 11,
+    "img": "/richards/p_11.webp",
+    "quadrants": {
+      "TL": "This is my head.",
+      "TR": "This is my hat.",
+      "BL": "My hat is in my hand. It is in my hand.",
+      "BR": "My hat is on my head. It is on my head."
+    }
+  },
+  {
+    "page": 12,
+    "img": "/richards/p_12.webp",
+    "quadrants": {
+      "TL": "This is my hat.",
+      "TR": "That is his hat.",
+      "BL": "His hat is on his head.",
+      "BR": "Her hat is in her hand."
+    }
+  },
+  {
+    "page": 13,
+    "img": "/richards/p_13.webp",
+    "quadrants": {
+      "TL": "That is your hat. It is on the table.",
+      "TR": "Those are your hats. They are on the table.",
+      "BL": "These are my hands. This is This my is my right left hand. hand.",
+      "BR": "Those are your hands. That is your right hand. That is your left hand."
+    }
+  },
+  {
+    "page": 14,
+    "img": "/richards/p_14.webp",
+    "quadrants": {
+      "TL": "His hat is on the table.",
+      "TR": "He will take his hat off the table.",
+      "BL": "He is taking it off the table.",
+      "BR": "He took it off the table."
+    }
+  },
+  {
+    "page": 15,
+    "img": "/richards/p_15.webp",
+    "quadrants": {
+      "TL": "He will put his hat on his head.",
+      "TR": "He is putting his hat on his head.",
+      "BL": "He put his hat on his head. He put it on.",
+      "BR": "It was on the table. It is on his head."
+    }
+  },
+  {
+    "page": 16,
+    "img": "/richards/p_16.webp",
+    "quadrants": {
+      "TL": "He will take his hat off his head.",
+      "TR": "He is taking his hat off his head.",
+      "BL": "His hat is in his hand. It was on his head.",
+      "BR": "He took his hat off. It is in his hand."
+    }
+  },
+  {
+    "page": 17,
+    "img": "/richards/p_17.webp",
+    "quadrants": {
+      "TL": "This is a hat. These are hats. This is a hand. These are hands.",
+      "TR": "This is a table. These are tables.",
+      "BL": "This is a man. These are men.",
+      "BR": "This is a woman. These are women."
+    }
+  },
+  {
+    "page": 18,
+    "img": "/richards/p_18.webp",
+    "quadrants": {
+      "TL": "This is a man. This is his hand. It is the man’s hand.",
+      "TR": "This is a woman. This is her hand. It is the woman’s hand.",
+      "BL": "This is a man’s hat. It is on a man’s head. Now it is in the man’s hands. It is in his hands.",
+      "BR": "This is a woman’s hat. It is on a woman’s head. Now it is in the woman’s hands. It is in her hands."
+    }
+  },
+  {
+    "page": 19,
+    "img": "/richards/p_19.webp",
+    "quadrants": {
+      "TL": "He will give his hat to the man.",
+      "TR": "He is giving his hat to the man.",
+      "BL": "He gave it to the man. He gave it to him.",
+      "BR": "It is in the man’s hands now."
+    }
+  },
+  {
+    "page": 20,
+    "img": "/richards/p_20.webp",
+    "quadrants": {
+      "TL": "The man will give his hat to the woman.",
+      "TR": "He is giving his hat to the woman.",
+      "BL": "He gave it to the woman. He gave it to her.",
+      "BR": "It is in the woman’s hands now."
+    }
+  },
+  {
+    "page": 21,
+    "img": "/richards/p_21.webp",
+    "quadrants": {
+      "TL": "The woman will put the hat on the table.",
+      "TR": "She is putting it on the table.",
+      "BL": "She put it there.",
+      "BR": "It was in her hand. It is on the table."
+    }
+  },
+  {
+    "page": 22,
+    "img": "/richards/p_22.webp",
+    "quadrants": {
+      "TL": "This is a ship.",
+      "TR": "These are ships.",
+      "BL": "This ship is in the bottle.",
+      "BR": "These ships are on the water. This is water."
+    }
+  },
+  {
+    "page": 23,
+    "img": "/richards/p_23.webp",
+    "quadrants": {
+      "TL": "This is water. This is a bottle. The bottle is in a man’s hand.",
+      "TR": "This is a glass. It is on the table.",
+      "BL": "Now the glass is off the table.",
+      "BR": "The glass and the water are on the floor."
+    }
+  },
+  {
+    "page": 24,
+    "img": "/richards/p_24.webp",
+    "quadrants": {
+      "TL": "This is a bottle and this is a bottle. This and this are bottles.",
+      "TR": "This is a glass and this is a glass. These are glasses.",
+      "BL": "That is a bird and that is a bird. Those are birds. They are birds.",
+      "BR": "That man and that woman are there. This man and this woman are here."
+    }
+  },
+  {
+    "page": 25,
+    "img": "/richards/p_25.webp",
+    "quadrants": {
+      "TL": "This is a man. These are his arms. These are his legs. These are his feet.",
+      "TR": "This is an arm. This is a leg. This is a foot.",
+      "BL": "This is a table. These are its legs Its feet are on the floor.",
+      "BR": "This is a seat. These are its arms. These are its legs. Its feet are on the floor."
+    }
+  },
+  {
+    "page": 26,
+    "img": "/richards/p_26.webp",
+    "quadrants": {
+      "TL": "This is a This is a door. is the windows are These This is the floor",
+      "TR": "room. This is a This door. a picture. of the room.",
+      "BL": "These are the windows This is a window and This window is shut.",
+      "BR": "of the room. this is a window. This window is open."
+    }
+  },
+  {
+    "page": 27,
+    "img": "/richards/p_27.webp",
+    "quadrants": {
+      "TL": "This door is open.",
+      "TR": "This door is shut.",
+      "BL": "This is a wall of the room. This is a wall. A picture is on this wall. This is the floor of the room.",
+      "BR": "This is a picture of a man and a woman. This is the cord of the picture. This is a hook. This is the frame of the picture."
+    }
+  },
+  {
+    "page": 28,
+    "img": "/richards/p_28.webp",
+    "quadrants": {
+      "TL": "This is a This is a window of the house. This is the door of",
+      "TR": "house. These are windows of the house. the house.",
+      "BL": "These are This man That",
+      "BR": "houses. This is a street. is in the street. is his house."
+    }
+  },
+  {
+    "page": 29,
+    "img": "/richards/p_29.webp",
+    "quadrants": {
+      "TL": "The man will go to his house.",
+      "TR": "He is going to his house.",
+      "BL": "The man went to his house. He is there. He went there. He was here.",
+      "BR": "He is at his door. He is at the door of his house."
+    }
+  },
+  {
+    "page": 30,
+    "img": "/richards/p_30.webp",
+    "quadrants": {
+      "TL": "What is this? “It is a hat. “What is this?”is a question. “It is a hat,”is an answer.",
+      "TR": "This is a question mark. We put question marks after questions.",
+      "BL": "“Is this a hat?” That is a question. “Yes, it is.” That is an answer.",
+      "BR": "“Is this a hat?” “No, it is not a hat. It is a hand.” That is an answer."
+    }
+  },
+  {
+    "page": 31,
+    "img": "/richards/p_31.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a What is this? It is a c What is this?",
+      "TR": "b What is this? d What is this?",
+      "BL": "e What is this? g What is this? This page is page 31.The answers",
+      "BR": "f What is this? h What is this? are on page 34."
+    }
+  },
+  {
+    "page": 32,
+    "img": "/richards/p_32.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a What are these? And what is this? c What are these? And what is this?",
+      "TR": "b What are these? And what is this? d What are these? And what is this?",
+      "BL": "e What are these? And what is this? g What are these? And what is this? This page is page 32.The answers",
+      "BR": "f What is this? And what is this? h What is this? What is in it? are on page 34."
+    }
+  },
+  {
+    "page": 33,
+    "img": "/richards/p_33.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a Is the hat on the table? c Is the picture on the wall?",
+      "TR": "b Is the man in the room? d Is the bird on the seat?",
+      "BL": "e Is the glass in the woman’s hand? g Is this ship in a bottle? This page is page 33.The answers",
+      "BR": "f Is the water in the glass? h Are the man and the woman at the door? are on page 34."
+    }
+  },
+  {
+    "page": 34,
+    "img": "/richards/p_34.webp",
+    "quadrants": {
+      "TL": "These are answers to questions This page is page 34. Page 31 a It is a house. b It is a ship. c It is a table. d It is a bottle. e It is a leg. f It is an arm. g It is a leg of a table. h It is an arm of a seat. Page 32 a They are three men.",
+      "TR": "on pages 31, 32, and 33. Page 33 a Yes, it is. b Yes, he is. c No, it is not. It is on the floor. d No, it is not. It is on the floor. e No. It is in the man’s hand. f No, it is not in the glass. g No. It is on the water.",
+      "BL": "That is a woman. b They are glasses. That is a glass. c They are fingers. That is the thumb. d They are windows. That is a door. e They are houses. That is a street. f It is a picture of a man and a house. That is the frame of the picture. (Its frame) g They are feet. That is a foot. h That is a room. A table is in it.",
+      "BR": "h Yes, they are at the door."
+    }
+  },
+  {
+    "page": 35,
+    "img": "/richards/p_35.webp",
+    "quadrants": {
+      "TL": "What is this? This is a clock. What is the time? The time is one (1:00). One hand is at one.",
+      "TR": "What is the time? The time is two (2:00). It was one (1:00). It will be three (3:00).",
+      "BL": "What is the time? The time is four (4:00). It was three (3:00). It will be five (5:00).",
+      "BR": "What is the time? Now the time is six (6:00). It was five (5:00). It will be seven (7:00)."
+    }
+  },
+  {
+    "page": 36,
+    "img": "/richards/p_36.webp",
+    "quadrants": {
+      "TL": "What is the time? Now the time is eight (8:00). It was seven (7:00). It will be nine (9:00).",
+      "TR": "What is the time? Now the time is ten (10:00). It was nine (9:00). It will be eleven (11:00).",
+      "BL": "What is the time? The time is twelve (12:00). It was eleven (11:00). It will be one (1:00). The two hands are at twelve now.",
+      "BR": "These are the numbers from one to twelve. One, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve."
+    }
+  },
+  {
+    "page": 37,
+    "img": "/richards/p_37.webp",
+    "quadrants": {
+      "TL": "What are things? A house is a thing. Houses are things. A hat is a thing. Hats are things. Doors and windows are things. Tables and seats are things.",
+      "TR": "This is a man. This is a woman. This is a boy. This is a girl. Men and women and boys and girls are not things.They are persons. You are a person.",
+      "BL": "There are two persons in this room. They are a boy and a girl. The girl is at the door. The boy is at the window.",
+      "BR": "The girl will go to the window. She will be with the boy at the window. She will be with him at the window."
+    }
+  },
+  {
+    "page": 38,
+    "img": "/richards/p_38.webp",
+    "quadrants": {
+      "TL": "The girl is going to the window. Where was she? She was at the door.",
+      "TR": "She went to the window. Where is she now? She is at the window now. She is with the boy.",
+      "BL": "They are at the window together. She is with him at the window. He is with her at the window.",
+      "BR": "These books are together on the shelf. These books are not together.They are on the shelf, but they are not together."
+    }
+  },
+  {
+    "page": 39,
+    "img": "/richards/p_39.webp",
+    "quadrants": {
+      "TL": "The girl and the boy will go from the window.",
+      "TR": "They are going from the window.They were at the window.",
+      "BL": "They went from the window. She went with him and he went with her.",
+      "BR": "Now they are at the door together. The boy is with the girl at the door. She is at the door again."
+    }
+  },
+  {
+    "page": 40,
+    "img": "/richards/p_40.webp",
+    "quadrants": {
+      "TL": "This is my head.",
+      "TR": "That is her head.",
+      "BL": "These are my eyes. This is This is the one eye. other eye.",
+      "BR": "Her eyes are open. Her eyes are shut."
+    }
+  },
+  {
+    "page": 41,
+    "img": "/richards/p_41.webp",
+    "quadrants": {
+      "TL": "My eyes are open. I see. Her eyes are shut. She does not see. I see her. She does not see me.",
+      "TR": "Now her eyes are open. She sees. What does she see? She sees me. I see her. Our eyes are open.",
+      "BL": "Her eyes are open. She sees. They were shut. She did not see. She did not see me.",
+      "BR": "Her eyes are shut. They were open. She saw. What did she see? She saw me."
+    }
+  },
+  {
+    "page": 42,
+    "img": "/richards/p_42.webp",
+    "quadrants": {
+      "TL": "A man has two eyes. I have two eyes. These are my eyes. A man has a nose. I have a nose. This is my nose.",
+      "TR": "A man has a mouth. I have a mouth. This is my mouth.",
+      "BL": "This man’s mouth is open. He is saying “mouth.” His mouth is shut. He is not saying “mouth.”",
+      "BR": "His mouth is shut. He will say “mouths.” He is saying “mouths.” He said “mouths.” He is not saying “mouths”now. His mouth is shut again."
+    }
+  },
+  {
+    "page": 43,
+    "img": "/richards/p_43.webp",
+    "quadrants": {
+      "TL": "These are three books. They are on a shelf. This book is between the other two books.",
+      "TR": "I have the book in my hand now. It was on the shelf. It was between the other two books on the shelf.",
+      "BL": "These are the pages of the book. These are the covers of the book. The pages are between the covers of the book.",
+      "BR": "These are the fingers of my hand. This finger is between these other two fingers of my hand."
+    }
+  },
+  {
+    "page": 44,
+    "img": "/richards/p_44.webp",
+    "quadrants": {
+      "TL": "My nose is between my eyes. And it is between my eyes and my mouth.",
+      "TR": "My mouth is under my nose. My nose is over my mouth. Our noses are over our mouths.",
+      "BL": "The light is over the table. The dog is under the table.",
+      "BR": "This is a clock. It is on the wall. It is over the bookshelves. The bookshelves are under the clock."
+    }
+  },
+  {
+    "page": 45,
+    "img": "/richards/p_45.webp",
+    "quadrants": {
+      "TL": "This is his hair. It is short. This is her hair. It is long.",
+      "TR": "These are his ears. Where are her ears? They are under her hair. Her hair is over her ears.",
+      "BL": "This is his head. This is his face. His eyes, his nose, and his mouth are parts of his face.",
+      "BR": "This is a clock. It has a face. This is the face of the clock.The clock has two hands, a long hand and a short hand.The long hand is at 5.The short hand is between 7 and 8."
+    }
+  },
+  {
+    "page": 46,
+    "img": "/richards/p_46.webp",
+    "quadrants": {
+      "TL": "A clock has a face. It has no nose. It has no eyes. It has no mouth.",
+      "TR": "It has no ears. It has no hair but it has a face. It has a face and two hands, the long hand and the short hand.",
+      "BL": "The long hand of the clock is between one and two. One is before two.Two is between one and three. Three is after two and two is after one.",
+      "BR": "I have this book in my hands. It was on the shelf with the other books. It was between the other two books before I took it from the shelf."
+    }
+  },
+  {
+    "page": 47,
+    "img": "/richards/p_47.webp",
+    "quadrants": {
+      "TL": "I have it in my hand. I am putting it between the other two books. Then it will be with the other books.",
+      "TR": "Now it is on the shelf again. It was in my hand. I had it in my hand. It is not in my hand.Where is it?",
+      "BL": "This is a room. What do you see in the room? Do you see the floor and three walls of the room? Do you see them?",
+      "BR": "Do you see a door and two windows? Is one of the windows open? Is the other window shut? Do you see two seats and the bookshelves between them? Do you see the clock over the bookshelves? Yes. I see them. These things are in the room.The room is in a house."
+    }
+  },
+  {
+    "page": 48,
+    "img": "/richards/p_48.webp",
+    "quadrants": {
+      "TL": "This is a face. Eyes, nose, and mouth are parts of a face. Which are the eyes? Which is the nose? Which is the mouth?",
+      "TR": "These are my hands. Which is my right hand? Which is my left hand? Which are my thumbs? Which are my fingers?",
+      "BL": "This is a man. Which are his arms? Which are his hands? Which are his legs? Which are his feet?",
+      "BR": "This is his head. These are his arms. These are his legs. These are his feet. What is this?"
+    }
+  },
+  {
+    "page": 49,
+    "img": "/richards/p_49.webp",
+    "quadrants": {
+      "TL": "This is his body. His head, his arms, his legs, and his body are parts of a man.",
+      "TR": "He has a body. She has a body. All men and women and boys and girls have bodies. This baby has a body.",
+      "BL": "This dog has a body. This is his tail. This is his body. He has four legs and a head and a tail. He has no arms or hands, but he has feet. His head, his body, his legs, and his tail are parts of a dog.",
+      "BR": "This is a dog’s head. Which is his mouth? Which are his eyes? Which are his ears? Which is his nose?"
+    }
+  },
+  {
+    "page": 50,
+    "img": "/richards/p_50.webp",
+    "quadrants": {
+      "TL": "This is a foot. These are toes. They are parts of a foot. These parts of a foot are its toes. This is a toe.",
+      "TR": "This is a leg. This is a knee. It is part of a leg. This part of a leg is its knee. Our legs are parts of us.",
+      "BL": "This is a neck. It is a part of a man. It is between his head and his body. The part which is between his head and his body is his neck.",
+      "BR": "This is a man’s head. This is his chin. It is under his mouth. It is a part of his face. The part which is under his mouth is his chin."
+    }
+  },
+  {
+    "page": 51,
+    "img": "/richards/p_51.webp",
+    "quadrants": {
+      "TL": "This is a man’s body. The part which is between his head, his arms, and his legs is his body.",
+      "TR": "This is his body. This part of him is his chest. This is a chest of drawers.",
+      "BL": "This man has his finger on his chin. This man has his hand on his chest.",
+      "BR": "This baby is on his hands and knees. This baby is on his hands and feet. This baby is on his knees. This baby is on his feet."
+    }
+  },
+  {
+    "page": 52,
+    "img": "/richards/p_52.webp",
+    "quadrants": {
+      "TL": "QUESTIONS Where is a c",
+      "TR": "the dog? b d",
+      "BL": "e g This page is page 52.The answers",
+      "BR": "f h are on page 56."
+    }
+  },
+  {
+    "page": 53,
+    "img": "/richards/p_53.webp",
+    "quadrants": {
+      "TL": "QUESTIONS What do a c",
+      "TR": "you see? b d",
+      "BL": "e g This page is page 53.The answers",
+      "BR": "f h are on page 56."
+    }
+  },
+  {
+    "page": 54,
+    "img": "/richards/p_54.webp",
+    "quadrants": {
+      "TL": "QUESTIONS What is he a c",
+      "TR": "saying? b d",
+      "BL": "e g This page is page 54.The answers",
+      "BR": "f h are on page 57."
+    }
+  },
+  {
+    "page": 55,
+    "img": "/richards/p_55.webp",
+    "quadrants": {
+      "TL": "QUESTIONS What do a",
+      "TR": "you see? b",
+      "BL": "c This page is page 55.The answers",
+      "BR": "d are on page 57."
+    }
+  },
+  {
+    "page": 56,
+    "img": "/richards/p_56.webp",
+    "quadrants": {
+      "TL": "Answers to questions on pages Page 52 a The dog is in the room. b The dog is at the door. c The dog is at the window. d The dog is under the chair. e The dog is under the table. f The dog is on the table. g The dog is between the chair and the table. h The dog is on the",
+      "TR": "52–53. Page 53 a I see a clock. b I see a man. c I see a woman. d I see a baby. e I see two books. f I see two girls and a book. g I see two babies. h I see a chest of drawers.",
+      "BL": "chair.",
+      "BR": ""
+    }
+  },
+  {
+    "page": 57,
+    "img": "/richards/p_57.webp",
+    "quadrants": {
+      "TL": "Answers to questions on pages Page 54 a He is saying,“These are my ears.” b He is saying,“This is my mouth.” c He is saying,“These are my eyes.” d He is saying,“This is my thumb.” e He is saying,“This fin- ger is between these fingers.” f He is saying,“This is my nose.”",
+      "TR": "54–55. Page 55 a I see a boy and a girl. They are at a window. b I see a clock on a table. The time is four. c I see a room. It has two seats in it. It has two windows and a door. One of the windows is open.The other win- dow is shut.The door of the room is open. A picture is on the wall. d I see a man. He has his",
+      "BL": "g He is saying,“This is my hair.” h He is saying.“This is my head.”",
+      "BR": "finger on his chin. One of his eyes is open.The other eye is shut. His mouth is shut. He has no hair on his head."
+    }
+  },
+  {
+    "page": 58,
+    "img": "/richards/p_58.webp",
+    "quadrants": {
+      "TL": "Who is this? He is John Smith. His name is John Smith. Where is John Smith? He is at the door of his house.",
+      "TR": "He has his hand in his pocket.",
+      "BL": "He is taking a key from his pocket.",
+      "BR": "This is a key. These are other keys."
+    }
+  },
+  {
+    "page": 59,
+    "img": "/richards/p_59.webp",
+    "quadrants": {
+      "TL": "He will put the key in the lock of the door.",
+      "TR": "He is putting the key in the lock.",
+      "BL": "He is giving a turn to the key.",
+      "BR": "He is giving a push to the door. The door is open now."
+    }
+  },
+  {
+    "page": 60,
+    "img": "/richards/p_60.webp",
+    "quadrants": {
+      "TL": "John took the key from the lock. He is putting it in his pocket. He will go into his house.",
+      "TR": "He is going into the house.",
+      "BL": "He went into the house. He is in the house. The door is shut.",
+      "BR": "This is a room in the house. Is John in the room? No, he is not. He will come into the room."
+    }
+  },
+  {
+    "page": 61,
+    "img": "/richards/p_61.webp",
+    "quadrants": {
+      "TL": "He is coming into the room. He will go to the table.",
+      "TR": "Mr. Smith came into the room. He went to the table.",
+      "BL": "Is Ms. Smith in the room? No, she is not.",
+      "BR": "She is in the house but she is not in the room. She is in another room in the house. Who is this? This is Mary Smith. She is Ms. Smith. Her name is Mary Smith."
+    }
+  },
+  {
+    "page": 62,
+    "img": "/richards/p_62.webp",
+    "quadrants": {
+      "TL": "This is one of the doors of the room. This is the other door.",
+      "TR": "This is one of the windows of the room. This is another window. And this is another window. One window is open. The other windows are shut.",
+      "BL": "This is one of my hands. It is my left hand. This is my other hand. It is my right hand.",
+      "BR": "This is one of my fingers. This is my left thumb. These are the other fingers of my left hand."
+    }
+  },
+  {
+    "page": 63,
+    "img": "/richards/p_63.webp",
+    "quadrants": {
+      "TL": "Ms. Smith is not in the room. She went out of the room. She went through this door.",
+      "TR": "Mr. Smith is in the room. He came into the room. He came through this door.",
+      "BL": "Mr. Smith is putting his hat on the table. He will go out of the room through this door.",
+      "BR": "He put his hat on the table. It is on the table now. He went out of the room through this door."
+    }
+  },
+  {
+    "page": 64,
+    "img": "/richards/p_64.webp",
+    "quadrants": {
+      "TL": "Mary is coming into the room.",
+      "TR": "She is going to the table.",
+      "BL": "She will see the hat.",
+      "BR": "She sees it."
+    }
+  },
+  {
+    "page": 65,
+    "img": "/richards/p_65.webp",
+    "quadrants": {
+      "TL": "She saw it. When did she see it? She saw it after she went to the table.",
+      "TR": "What is that?",
+      "BL": "John’s hat!",
+      "BR": "What is that? John’s hat!"
+    }
+  },
+  {
+    "page": 66,
+    "img": "/richards/p_66.webp",
+    "quadrants": {
+      "TL": "She will take the hat in her hand.",
+      "TR": "She is taking it.",
+      "BL": "She took it in her hand. She is going out of the room. She has the hat in her hand.",
+      "BR": "She went out of the room with John’s hat."
+    }
+  },
+  {
+    "page": 67,
+    "img": "/richards/p_67.webp",
+    "quadrants": {
+      "TL": "She is in another room now. She came into this room through this door. She has the hat with her.",
+      "TR": "What are these? They are hooks. That is another hat. It is on a hook.",
+      "BL": "She will put John’s hat on a hook. She will put it on a hook with the other hat.",
+      "BR": "She put it on the hook. Now it is with the other hat. The other hat is one of Mary’s hats."
+    }
+  },
+  {
+    "page": 68,
+    "img": "/richards/p_68.webp",
+    "quadrants": {
+      "TL": "John is coming into the room again.",
+      "TR": "He came into the room. He went to the table. He is there now.",
+      "BL": "The hat is not on the table.",
+      "BR": "He is saying, Where is my hat? I put it on the table."
+    }
+  },
+  {
+    "page": 69,
+    "img": "/richards/p_69.webp",
+    "quadrants": {
+      "TL": "“Where is my hat? It is not on my head. It isn’t here.”",
+      "TR": "“It isn’t (is not) here.”",
+      "BL": "“Where is it? Mary, where is my hat? Where are you, Mary?”",
+      "BR": "Here is Mary. She is coming into the room. She says,“Here I am.”"
+    }
+  },
+  {
+    "page": 70,
+    "img": "/richards/p_70.webp",
+    "quadrants": {
+      "TL": "“Where is your hat?”",
+      "TR": "“You put it on the table. It was on the table.”",
+      "BL": "“I took it. I put it in the other room.”",
+      "BR": "“It is on a hook there.You will see it there.”"
+    }
+  },
+  {
+    "page": 71,
+    "img": "/richards/p_71.webp",
+    "quadrants": {
+      "TL": "John says,“I will get my hat.”",
+      "TR": "He is getting it.",
+      "BL": "Did he get it? Yes. He has it.",
+      "BR": "He went out of the room."
+    }
+  },
+  {
+    "page": 72,
+    "img": "/richards/p_72.webp",
+    "quadrants": {
+      "TL": "When he saw the hat he took it off the hook.",
+      "TR": "He came into the room again with the hat in his hands. He got it.",
+      "BL": "He is giving the hat to Mary.",
+      "BR": "See what is in the hat, Mary!"
+    }
+  },
+  {
+    "page": 73,
+    "img": "/richards/p_73.webp",
+    "quadrants": {
+      "TL": "What is in the hat? Mary will see.",
+      "TR": "What is she taking from the hat?",
+      "BL": "What is that in her hand? It is money.",
+      "BR": "Do you see? She sees."
+    }
+  },
+  {
+    "page": 74,
+    "img": "/richards/p_74.webp",
+    "quadrants": {
+      "TL": "What does she see? One thousand dollars. The money is in her hand. It was in the hat.",
+      "TR": "Where was the hat? It was on the table. What did she see? She saw the hat. She did not see the money.",
+      "BL": "She put the hat in the other room. John went there and got it. Who got it? John did.",
+      "BR": "Does she see the money now? Yes, she sees it. Oh John! Where did you get it?"
+    }
+  },
+  {
+    "page": 75,
+    "img": "/richards/p_75.webp",
+    "quadrants": {
+      "TL": "I was in the street. I was coming here.",
+      "TR": "The wind came. It took my hat off.",
+      "BL": "I went after my hat.",
+      "BR": "When I took it up, there was this money."
+    }
+  },
+  {
+    "page": 76,
+    "img": "/richards/p_76.webp",
+    "quadrants": {
+      "TL": "The money was under the hat. The hat was over the money.",
+      "TR": "The wind came. My hat went up. When the wind came, my hat went up. UP",
+      "BL": "The hat came down again. UP DOWN",
+      "BR": "It was over the money. The money was under the hat."
+    }
+  },
+  {
+    "page": 77,
+    "img": "/richards/p_77.webp",
+    "quadrants": {
+      "TL": "What is Mary doing? She is taking things from a drawer. What are those things in the drawer?",
+      "TR": "They are knives, forks and spoons. knife fork spoon The drawer has knives, forks and spoons in it.",
+      "BL": "Mary has a knife, a fork and a spoon in her right hand.",
+      "BR": "She took them from the drawer. She will put them on the table. These are drawers. One of them is open. The other two drawers are shut."
+    }
+  },
+  {
+    "page": 78,
+    "img": "/richards/p_78.webp",
+    "quadrants": {
+      "TL": "Mary is getting the soup. These are plates of soup.",
+      "TR": "John is taking the seats to the table.",
+      "BL": "Mary is in her seat at the table.",
+      "BR": "John is in his seat. They are in their seats at the table."
+    }
+  },
+  {
+    "page": 79,
+    "img": "/richards/p_79.webp",
+    "quadrants": {
+      "TL": "Now they are taking their soup. They have their spoons in their hands.",
+      "TR": "“John is saying to Mary, “I took the hat up.” “Mary is saying to John, “Where did the money “come from?”",
+      "BL": "John said, “I saw it there under the hat.” Mary said, “But who put it there?”",
+      "BR": "John said, “Nobody put it there.The money was there and the wind came and put the hat down over the money.” Nobody = no man or woman or boy or girl or baby."
+    }
+  },
+  {
+    "page": 80,
+    "img": "/richards/p_80.webp",
+    "quadrants": {
+      "TL": "What will we do What will with our you do? money?",
+      "TR": "I will get a new dress. This dress is new. This dress is old.",
+      "BL": "And what will you get?",
+      "BR": "I will get a new pipe. This pipe is new. This pipe is old."
+    }
+  },
+  {
+    "page": 81,
+    "img": "/richards/p_81.webp",
+    "quadrants": {
+      "TL": "Mary is getting the new dress. She is in a store. The other woman has two dresses in her hands.",
+      "TR": "This is the store. CLOTHING STORE Dresses and hats and shoes are in the window of the store.",
+      "BL": "These are shoes. They are women’s shoes. These are stockings.",
+      "BR": "These are gloves. Dresses and stockings and shoes and gloves are clothing."
+    }
+  },
+  {
+    "page": 82,
+    "img": "/richards/p_82.webp",
+    "quadrants": {
+      "TL": "This is a tree. This is a branch of the tree. An apple is on this branch. It is over the girl’s head. She will take the apple from the branch. She will put her hand up.",
+      "TR": "She put her hand up. She took the apple. It is in her hand. She took the apple which is in her hand. She has it in her hand. She is putting it in her basket.",
+      "BL": "She put it in her basket. She had it in her hand before she put it in her basket. It was on the branch before she put her hand up and took it.",
+      "BR": "After she took the apple she put it in the basket. Then she put her basket down.The apple was up on the tree. Now it is down in the basket."
+    }
+  },
+  {
+    "page": 83,
+    "img": "/richards/p_83.webp",
+    "quadrants": {
+      "TL": "When was the apple on the branch? When was it over her head? It was on the branch before she took it. It was on the branch then.",
+      "TR": "When did she take it? She took it after she put her hand up. She took it then.",
+      "BL": "When did she put it in the basket? She put it in the basket after she took it from the branch.",
+      "BR": "When did she have the apple in her hand? She had it in her hand after she took it from the branch and before she put it in the basket."
+    }
+  },
+  {
+    "page": 84,
+    "img": "/richards/p_84.webp",
+    "quadrants": {
+      "TL": "This is a box. This is the front of the box.",
+      "TR": "This is a house. This is the front of the house. This is the front door.",
+      "BL": "This is the back of the box. And these are the sides of the box.",
+      "BR": "This is a coat. This is the front of the coat."
+    }
+  },
+  {
+    "page": 85,
+    "img": "/richards/p_85.webp",
+    "quadrants": {
+      "TL": "These are the arms of the coat. These are the sides of the coat.",
+      "TR": "And this is the back of the coat.",
+      "BL": "These are a man’s arms. These are his sides.",
+      "BR": "And this is his back."
+    }
+  },
+  {
+    "page": 86,
+    "img": "/richards/p_86.webp",
+    "quadrants": {
+      "TL": "Who is this? This is Ms. Smith. She is Mary Smith. “Mary Smith”is her name.",
+      "TR": "What is that? What is in her hands? It is a tray. She has a tray in her hands.",
+      "BL": "She will put the tray on the table.",
+      "BR": "She is putting the tray on the table."
+    }
+  },
+  {
+    "page": 87,
+    "img": "/richards/p_87.webp",
+    "quadrants": {
+      "TL": "She put the tray on the table. It was in her hands. It is on the table now.",
+      "TR": "Here is the tray. What are these things on the tray?",
+      "BL": "These are glasses. What are these? They are forks. What is this? It is a knife. What are these? They are two other knives.",
+      "BR": "What are these? They are spoons. What is this? It is another spoon. What is this? It is a plate. These are three other plates."
+    }
+  },
+  {
+    "page": 88,
+    "img": "/richards/p_88.webp",
+    "quadrants": {
+      "TL": "Ms. Smith is taking a knife and fork off the tray. She has them in her hands.",
+      "TR": "She is putting them on the table.",
+      "BL": "Now she is putting the plates on the table.",
+      "BR": "She put the knives and forks and spoons and plates and glasses on the table. She put these things on the table."
+    }
+  },
+  {
+    "page": 89,
+    "img": "/richards/p_89.webp",
+    "quadrants": {
+      "TL": "Mary Smith will go from the table to the door.",
+      "TR": "She is going to the door. The door is shut.",
+      "BL": "She went out of the room. The door is open now. It was shut.",
+      "BR": "Mary Smith is not in the room. She was in the room. She went out of the room."
+    }
+  },
+  {
+    "page": 90,
+    "img": "/richards/p_90.webp",
+    "quadrants": {
+      "TL": "What is this? It is a knife. What is this? What is this? What is this? What are these?",
+      "TR": "What is this? What is this? What is this? What is this?",
+      "BL": "What are these? What is this? What is this?",
+      "BR": "What is this? What are these things?"
+    }
+  },
+  {
+    "page": 91,
+    "img": "/richards/p_91.webp",
+    "quadrants": {
+      "TL": "Mary is making soup. This is a plate of soup. She will make the soup from milk and potatoes.",
+      "TR": "These are potatoes. This is a bottle of milk. It is cow’s milk. This is a cow.",
+      "BL": "Cows are animals. These are some other animals. a pig a sheep a horse",
+      "BR": "We get milk from cows. Mary is putting some milk in a cup. The milk is going into the cup."
+    }
+  },
+  {
+    "page": 92,
+    "img": "/richards/p_92.webp",
+    "quadrants": {
+      "TL": "Mary has a potato in her hand. She is taking its skin off with a knife.",
+      "TR": "We get potatoes from the roots of a plant. Here they are in the earth. We get them up with a fork.",
+      "BL": "This is a plant. This is its flower. These are its leaves. These are its fruit. This is a branch. This is its stem. These are its roots.",
+      "BR": "These are roots of other plants."
+    }
+  },
+  {
+    "page": 93,
+    "img": "/richards/p_93.webp",
+    "quadrants": {
+      "TL": "Mary is making the soup.",
+      "TR": "This is the pot. This is the cover of the pot. She will make the soup in this pot.",
+      "BL": "She put the potatoes in the pot. The water in the pot is boiling. This is steam.",
+      "BR": "This is a flame. The pot is over the flame. The flame is under the pot."
+    }
+  },
+  {
+    "page": 94,
+    "img": "/richards/p_94.webp",
+    "quadrants": {
+      "TL": "This water is boiling. It is giving off steam. The heat of the flame is making it give off steam.",
+      "TR": "Ice is solid. This is ice. Water is a liquid. This is water.",
+      "BL": "This is a tray. It is a tray of ice. Ice is cold.",
+      "BR": "The room is warm. The heat of the flame is making the room warm. The things in the room are warm. Ice is not warm. It is cold."
+    }
+  },
+  {
+    "page": 95,
+    "img": "/richards/p_95.webp",
+    "quadrants": {
+      "TL": "This is a bird. It is on a tree. The other birds are not on the tree. They are in the air.",
+      "TR": "This is a plane. It is in the air. It is an airplane. It is going through the air. These are airplanes.",
+      "BL": "We take in air through our mouths and through our noses. The air comes in.Then it goes out.That is a breath. in out one breath in out two breaths in out",
+      "BR": "The air is coming out. It is warm. When it comes out it is warm. Put your hand here.Your breath is warm."
+    }
+  },
+  {
+    "page": 96,
+    "img": "/richards/p_96.webp",
+    "quadrants": {
+      "TL": "The room is warm. The water in the pot is very warm. It is boiling. 212° 100°",
+      "TR": "The air over the flame is very warm. It goes up. The air under the flame is not very warm. It goes up to the flame.",
+      "BL": "This is the icebox. It has ice in it. The air in the icebox is cold. This is These are milk. eggs.",
+      "BR": "This is the icebox. Mary keeps the milk in the icebox. She keeps it in the cold air. The air in the icebox is cold. The cold air keeps the milk cold."
+    }
+  },
+  {
+    "page": 97,
+    "img": "/richards/p_97.webp",
+    "quadrants": {
+      "TL": "This is a clock. A clock is an instrument for measuring time.",
+      "TR": "This is an instrument for measuring heat. Very warm Warm Cold Very cold",
+      "BL": "This is a measure. It is a yard measure. There are three feet in a yard. There are twelve inches in a foot.",
+      "BR": "This is Mary’s foot. These are her feet. This is John’s foot. It is ten inches long."
+    }
+  },
+  {
+    "page": 98,
+    "img": "/richards/p_98.webp",
+    "quadrants": {
+      "TL": "The walls and floor of the icebox are thick. This is a thin line. This is a thick line.",
+      "TR": "Warm Cold Warm air air air The thick walls keep the heat of the room out of the icebox. They keep the heat from the milk. The cold air in the icebox keeps the milk good.",
+      "BL": "John is having a drink. He is having a drink of milk from a glass. The milk is good. John is happy.",
+      "BR": "This milk is not good. It is bad. John is not happy."
+    }
+  },
+  {
+    "page": 99,
+    "img": "/richards/p_99.webp",
+    "quadrants": {
+      "TL": "This is meat. Mary keeps the meat in the icebox.",
+      "TR": "This is bread. Mary does not keep the bread in the icebox. She keeps it in a bread-box.",
+      "BL": "This is cheese. We make cheese from milk. We get milk from cows.",
+      "BR": "This is butter. We make butter from milk. Mary keeps the butter with the milk in the icebox. She keeps the cheese there."
+    }
+  },
+  {
+    "page": 100,
+    "img": "/richards/p_100.webp",
+    "quadrants": {
+      "TL": "These are apples. These are oranges. Apples and oranges are fruit. Does Mary keep the fruit in the icebox?",
+      "TR": "What is the time? The time is five (5:00). It is five. Mary will make the soup.",
+      "BL": "What is the time? It’s five-thirty (5:30). Mary is making the soup. The potatoes are in the pot.The water in the pot is boiling.",
+      "BR": "It is five-forty (5:40). Mary has a fork in her hand. She is putting the fork into the potatoes."
+    }
+  },
+  {
+    "page": 101,
+    "img": "/richards/p_101.webp",
+    "quadrants": {
+      "TL": "The potatoes are hard. The fork does not go into them.",
+      "TR": "It is five-fifty (5:50). Mary is putting the fork in again. She is doing it again.",
+      "BL": "The potatoes are soft. The fork goes into them.",
+      "BR": "She is taking them out of the pot and putting them on a plate."
+    }
+  },
+  {
+    "page": 102,
+    "img": "/richards/p_102.webp",
+    "quadrants": {
+      "TL": "The potatoes are on the plate. They were in the pot. They were hard. They are soft now.",
+      "TR": "Mary is crushing them with a fork. They are not hard now. They are soft.",
+      "BL": "Bread is soft. Meat is soft.",
+      "BR": "Glass is hard. Butter is soft."
+    }
+  },
+  {
+    "page": 103,
+    "img": "/richards/p_103.webp",
+    "quadrants": {
+      "TL": "John has a bit of cheese in his fingers.",
+      "TR": "He is putting the bit of cheese in his mouth.",
+      "BL": "Now it is between his teeth. This is his mouth. This is a tooth. These are teeth.",
+      "BR": "The cheese is not soft. It is hard. John’s teeth do not go into the cheese."
+    }
+  },
+  {
+    "page": 104,
+    "img": "/richards/p_104.webp",
+    "quadrants": {
+      "TL": "Mary put the potatoes and the milk and other things into the pot. This is salt.",
+      "TR": "She put the pot over a low flame. She put the cover on the pot. The low flame is under the pot.",
+      "BL": "This flame is low. This flame is high.",
+      "BR": "This building is high. This building is low."
+    }
+  },
+  {
+    "page": 105,
+    "img": "/richards/p_105.webp",
+    "quadrants": {
+      "TL": "What is the time? It is six (6:00). Mary is tasting the soup. It has a good taste. The soup is ready.",
+      "TR": "Now she is putting the soup in the plates. It was in the pot. Now it is in the plates.",
+      "BL": "She made the soup. She put it in the plates. She took them to the table.",
+      "BR": "The plates are on the table. The soup is ready. It is good soup. Mary made it."
+    }
+  },
+  {
+    "page": 106,
+    "img": "/richards/p_106.webp",
+    "quadrants": {
+      "TL": "Soup, potatoes, milk, meat, bread, butter, cheese, apples, oranges are food. They are different sorts of food.",
+      "TR": "An apple An orange Apples and oranges are different sorts of fruit.",
+      "BL": "These are different sorts of glasses. These are different sorts of boxes.",
+      "BR": "Glasses and boxes and fingers and dresses and flames are things. They are different sorts of things."
+    }
+  },
+  {
+    "page": 107,
+    "img": "/richards/p_107.webp",
+    "quadrants": {
+      "TL": "Cows and sheep and pigs and horses and goats are animals. They are different sorts of animals.",
+      "TR": "These are different sorts of plants. This is the leaf of one sort of plant. This is the leaf of another sort of plant.",
+      "BL": "These are the same. These are different. These are the same. These are different.",
+      "BR": "These plates are the same. These plates are different. These glasses are the same. These are different."
+    }
+  },
+  {
+    "page": 108,
+    "img": "/richards/p_108.webp",
+    "quadrants": {
+      "TL": "Here are a woman and a boy. The boy is the woman’s son. She is his mother. He is her son.",
+      "TR": "Here are a woman and a girl. The girl is the woman’s daughter. The woman is her mother.",
+      "BL": "Here are a man and his son. The man is the father of the boy. He is the boy’s father.",
+      "BR": "Here are a man and his daughter. He is the father of the girl. He is the girl’s father. She is his daughter."
+    }
+  },
+  {
+    "page": 109,
+    "img": "/richards/p_109.webp",
+    "quadrants": {
+      "TL": "The boy is the brother of the girl. He is the girl’s brother. He is her brother.",
+      "TR": "The girl is the sister of the boy. She is the boy’s sister. She is his sister.",
+      "BL": "This man and woman have two sons and three daughters.",
+      "BR": "This boy has one brother and three sisters. This girl has two brothers and two sisters. They are a family of seven (7)."
+    }
+  },
+  {
+    "page": 110,
+    "img": "/richards/p_110.webp",
+    "quadrants": {
+      "TL": "Here are Ms. Smith, her daughter Jane, and her son Tom. They are at the table. They are having their potato soup.",
+      "TR": "Potato soup is a thick soup. It is not clear. Thick soup and clear soup are two different sorts of soup.",
+      "BL": "This water is clear. When a liquid is clear we see through it. Milk is not a clear liquid. We do not see through it.",
+      "BR": "The air is clear. I see the mountains. When the air is not clear I do not see them."
+    }
+  },
+  {
+    "page": 111,
+    "img": "/richards/p_111.webp",
+    "quadrants": {
+      "TL": "This soup is clear. We see the spoon through it. Potato soup is a thick soup.We do not see the spoon through it.",
+      "TR": "Who is this? This is Mary Smith. She made the soup. This is Mary who made the soup.",
+      "BL": "This is the soup. Mary made it. This is the soup which Mary made.",
+      "BR": "This is the milk. Mary put it in the soup. This is the milk which Mary put in the soup."
+    }
+  },
+  {
+    "page": 112,
+    "img": "/richards/p_112.webp",
+    "quadrants": {
+      "TL": "This is a spoon. It is in my hand. This is a spoon which is in my hand.",
+      "TR": "That is a glass of water. It is on the table. That is a glass of water which is on the table.",
+      "BL": "This is a bone. It was in the dog’s mouth. This is a bone which was in the dog’s mouth.",
+      "BR": "This is a dog. He had the bone. This is the dog who had it."
+    }
+  },
+  {
+    "page": 113,
+    "img": "/richards/p_113.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a What is the time? c What is this?",
+      "TR": "b What are these? d What are these?",
+      "BL": "e What are these? g What is this? This page is page 113.The answers",
+      "BR": "f What is this? h What is this? are on page 116."
+    }
+  },
+  {
+    "page": 114,
+    "img": "/richards/p_114.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a What is this? c What are these?",
+      "TR": "b What is this? d What is this?",
+      "BL": "e What is this? g What is this? This page is page 114.The answers",
+      "BR": "f What are these? h What is this? are on page 116."
+    }
+  },
+  {
+    "page": 115,
+    "img": "/richards/p_115.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a This is a family. a What do you see? c This is an icebox. c What do you see in it?",
+      "TR": "b b This is a plant. b Which parts of the plant do you see? d This is a dog. d Which parts of the dog do you see?",
+      "BL": "e What do you see? g What do you see? This page is page 115.The answers",
+      "BR": "f What do you see? h What do you see? are on page 116."
+    }
+  },
+  {
+    "page": 116,
+    "img": "/richards/p_116.webp",
+    "quadrants": {
+      "TL": "Answers to questions on pages Page 113 a The time is four-forty- two (4:42). b They are apples. c It is a pot. d They are leaves. e They are roots. f It is a bottle of milk. g It is butter. h It is bread. Page 114 a It is cheese.",
+      "TR": "113–115. Page 115 a I see a father and mother and their son and daughter. b I see its roots and its stem and its leaves and its flower. c I see a bottle of milk and four eggs and two roots. d I see its head and ears and nose, its body, its legs, and its tail. e I see a bone. It is on the",
+      "BL": "b It is a cup. c They are flames. d It is a horse. e It is a high building. f They are a box and its cover. g It is a pig. h It is a sheep.",
+      "BR": "floor. And I see the leg of a table. f I see two glasses. One of them has liquid in it. g I see a woman. She has a spoon in her hand. She is tasting the soup. h I see a man. He has a glass in his hand. He is having a drink from the glass."
+    }
+  },
+  {
+    "page": 117,
+    "img": "/richards/p_117.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a Where are the women? a What has one woman in her hands? c What is the girl doing?",
+      "TR": "b b What are these? d Where will she put the apple? Where was it before she took it?",
+      "BL": "Where is the apple? e What are some different sorts of food? g What are some different sorts of fruits? This page is page 117.The answers",
+      "BR": "(See pages 82-83) f What are some different sorts of animals? h What are some different sorts of persons? are on page 120."
+    }
+  },
+  {
+    "page": 118,
+    "img": "/richards/p_118.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a This is a glass of milk. Is it clear? Do you see through it? c Is glass hard? e Is ice warm?",
+      "TR": "b Is the glass in this window clear? What do you see through the window? d Is meat soft? f Are flames cold?",
+      "BL": "g What is he doing? This page is page 118.The answers",
+      "BR": "h What is she doing? are on page 121."
+    }
+  },
+  {
+    "page": 119,
+    "img": "/richards/p_119.webp",
+    "quadrants": {
+      "TL": "QUESTIONS a What do you see? c What are they doing?",
+      "TR": "b What is he doing? d What are these?",
+      "BL": "e What do we keep in the icebox? This page is page 119.The answers",
+      "BR": "f What are some different sorts of things? Give the names of ten different things which you see in a house. are on page 121."
+    }
+  }
+]
