@@ -230,6 +230,8 @@ export const TabPictures = ({
 
               const currentSpeechLang = langConfig.speechLang || 'en-US';
               const isSaved = isSentenceSaved ? isSentenceSaved(currentSentence) : false;
+              const audioUrl = `/audio/richards/${targetLang}/${panel.id}.mp3`;
+              const enAudioUrl = `/audio/richards/en/${panel.id}.mp3`;
 
               return (
                 <div
@@ -276,7 +278,7 @@ export const TabPictures = ({
                     {/* 句子主体 (大字，直接对应当前所选语言，点击可直接朗读当前语言) */}
                     <button
                       type="button"
-                      onClick={() => speakText(currentSentence, 0.95, 1.0, null, currentSpeechLang)}
+                      onClick={() => speakText(currentSentence, 0.95, 1.0, null, currentSpeechLang, audioUrl)}
                       className="block w-full text-left group"
                     >
                       <div className="text-base font-black text-slate-900 leading-snug group-hover:text-amber-700 transition-colors">
@@ -295,7 +297,7 @@ export const TabPictures = ({
                         </div>
                         <button
                           type="button"
-                          onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                          onClick={() => speakText(panel.en, 0.95, 1.0, null, 'en-US', enAudioUrl)}
                           className="text-blue-600 hover:text-blue-800 p-0.5 shrink-0 flex items-center gap-0.5 text-[10.5px] font-bold"
                           title="朗读原书英文原声"
                         >
@@ -322,7 +324,7 @@ export const TabPictures = ({
                   <div className="flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-slate-100">
                     <button
                       type="button"
-                      onClick={() => speakText(currentSentence, 0.95, 1.0, null, currentSpeechLang)}
+                      onClick={() => speakText(currentSentence, 0.95, 1.0, null, currentSpeechLang, audioUrl)}
                       className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold transition-colors"
                       title={`朗读${langConfig.name}常速`}
                     >
@@ -331,7 +333,7 @@ export const TabPictures = ({
                     </button>
                     <button
                       type="button"
-                      onClick={() => speakText(currentSentence, 0.58, 1.0, null, currentSpeechLang)}
+                      onClick={() => speakText(currentSentence, 0.58, 1.0, null, currentSpeechLang, audioUrl)}
                       className="px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold transition-colors"
                       title={`慢速朗读${langConfig.name}`}
                     >
@@ -354,7 +356,7 @@ export const TabPictures = ({
                     {targetLang !== 'en' && panel.en && (
                       <button
                         type="button"
-                        onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                        onClick={() => speakText(panel.en, 0.95, 1.0, null, 'en-US', enAudioUrl)}
                         className="px-2 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-bold transition-colors"
                         title="朗读原书英文标准原声"
                       >

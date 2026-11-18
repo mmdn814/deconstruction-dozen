@@ -62,6 +62,8 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
           const workplaceWords = item.workplace.split(' ');
           const saved = isSentenceSaved(item.workplace);
           const isExpanded = expandedMap[item.id] !== undefined ? expandedMap[item.id] : allExpanded;
+          const coreAudioUrl = `/audio/core/${targetLang}/core_${item.id}.mp3`;
+          const workplaceAudioUrl = `/audio/core/${targetLang}/workplace_${item.id}.mp3`;
 
           return (
             <div
@@ -83,7 +85,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                     <div className="flex items-center gap-1 shrink-0">
                       <button
                         type="button"
-                        onClick={() => speakText(fullCoreSentence, 0.95, 1.0, null, langConfig.speechLang)}
+                        onClick={() => speakText(fullCoreSentence, 0.95, 1.0, null, langConfig.speechLang, coreAudioUrl)}
                         className="p-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
                         title="常速整句朗读"
                       >
@@ -91,7 +93,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                       </button>
                       <button
                         type="button"
-                        onClick={() => speakText(fullCoreSentence, 0.62, 1.0, null, langConfig.speechLang)}
+                        onClick={() => speakText(fullCoreSentence, 0.62, 1.0, null, langConfig.speechLang, coreAudioUrl)}
                         className="px-1.5 py-0.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold transition-colors"
                         title="0.65x 慢速朗读"
                       >
@@ -140,7 +142,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                           </span>
                           <button
                             type="button"
-                            onClick={() => speakText(item.workplace, 0.95, 1.0, null, langConfig.speechLang)}
+                            onClick={() => speakText(item.workplace, 0.95, 1.0, null, langConfig.speechLang, workplaceAudioUrl)}
                             className="text-emerald-600 hover:text-emerald-700 p-0.5 shrink-0"
                             title="朗读职场例句"
                           >
@@ -151,7 +153,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                           ))}
                           <button
                             type="button"
-                            onClick={() => speakText(item.workplace, 0.62, 1.0, null, langConfig.speechLang)}
+                            onClick={() => speakText(item.workplace, 0.62, 1.0, null, langConfig.speechLang, workplaceAudioUrl)}
                             className="px-1.5 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-bold ml-1 shrink-0"
                           >
                             🐢 慢速

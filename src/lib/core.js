@@ -346,21 +346,23 @@ const speakViaLocalSpeechSynthesis = (cleanText, rate = 0.95, pitch = 1.0, onEnd
 };
 
 // --- Instant 0-Latency High-Fidelity Speech Engine ---
-export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, langCode = null) => {
+export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, langCode = null, audioUrl = null) => {
   if (typeof window === 'undefined') {
     if (onEndCallback) onEndCallback();
     return;
   }
 
-  // 停止正在播放的 HTML5 独立音频（不强杀当前语音合成，交由 speakViaLocalSpeechSynthesis 平滑调度）
+  // 停止正在播放的 HTML5 独立音频
   if (currentActiveAudio) {
-    currentActiveAudio.pause();
-    currentActiveAudio.currentTime = 0;
+    try {
+      currentActiveAudio.pause();
+      currentActiveAudio.currentTime = 0;
+    } catch (e) {}
     currentActiveAudio = null;
   }
 
   let cleanText = String(text || '').replace(/\(.*?\)|（.*?）/g, '').trim();
-  if (!cleanText) {
+  if (!cleanText && !audioUrl) {
     if (onEndCallback) onEndCallback();
     return;
   }
@@ -368,14 +370,54 @@ export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, l
   const targetLang = detectLang(cleanText, langCode || currentSpeechLang);
 
   // 日语连贯朗读优化：剔除假名之间因展示需要添加的空格，还原原生流畅语流
-  if (targetLang === 'ja-JP') {
+  if (targetLang === 'ja-JP' && cleanText) {
     cleanText = cleanText.replace(/([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])\s+([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF])/g, '$1$2');
   }
 
-  // 西班牙语标准语速微调：西语语速较快，默认 0.92x 更清脆易辨
+  // 西班牙语标准语速微调
   let finalRate = rate;
   if (targetLang === 'es-ES' && rate === 1.0) {
     finalRate = 0.92;
+  }
+
+  // 若传入预生成的高清神经网络主播音频，优先使用 HTML5 Audio 极速原声秒播（真实主播原声，iOS 兼容最佳）
+  if (audioUrl) {
+    const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
+    const normalizedUrl = audioUrl.startsWith('http') || audioUrl.startsWith('/')
+      ? audioUrl
+      : `${base.replace(/\/+$/, '')}/${audioUrl.replace(/^\/+/, '')}`;
+
+    const audio = new Audio(normalizedUrl);
+    currentActiveAudio = audio;
+
+    if (rate && rate !== 1.0) {
+      audio.playbackRate = Math.max(0.4, Math.min(rate, 2.0));
+    }
+
+    let hasFallback = false;
+    const fallbackToTTS = () => {
+      if (hasFallback) return;
+      hasFallback = true;
+      if (currentActiveAudio === audio) currentActiveAudio = null;
+      speakViaLocalSpeechSynthesis(cleanText, finalRate, pitch, onEndCallback, targetLang);
+    };
+
+    audio.onended = () => {
+      if (currentActiveAudio === audio) currentActiveAudio = null;
+      if (onEndCallback) onEndCallback();
+    };
+
+    audio.onerror = () => {
+      fallbackToTTS();
+    };
+
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        fallbackToTTS();
+      });
+    }
+    return;
   }
 
   // 毫秒级极速直出 (0ms 延迟，直接调用设备原生绑定的母语发音人，杜绝任何外部网络卡顿)
