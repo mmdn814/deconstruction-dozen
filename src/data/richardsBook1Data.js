@@ -80,9 +80,9 @@ export const RICHARDS_BOOK1_PAGES = [
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "IT",
-        "cn": "信息技术",
-        "ja": "IT",
-        "es": "eso"
+        "cn": "它",
+        "ja": "それ",
+        "es": "Eso"
       },
       {
         "id": "p2_br",
@@ -127,9 +127,9 @@ export const RICHARDS_BOOK1_PAGES = [
         "pos": "bottom-left",
         "label": "③ 左下",
         "en": "IT",
-        "cn": "信息技术",
-        "ja": "IT",
-        "es": "eso"
+        "cn": "它",
+        "ja": "それ",
+        "es": "Eso"
       },
       {
         "id": "p3_br",
@@ -2627,10 +2627,10 @@ export const RICHARDS_BOOK1_PAGES = [
         "img": "/richards_panels/p_56_br.webp",
         "pos": "bottom-right",
         "label": "④ 右下",
-        "en": "",
-        "cn": "",
-        "ja": "",
-        "es": ""
+        "en": "（Blank）",
+        "cn": "（原书答案页空白格）",
+        "ja": "（解答ページ余白）",
+        "es": "（Espacio en blanco）"
       }
     ]
   },

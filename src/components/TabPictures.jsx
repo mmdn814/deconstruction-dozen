@@ -222,11 +222,14 @@ export const TabPictures = ({
               const key = panel.id;
               const cnShown = !!shownCn[key];
               const practicing = practiceKey === key;
-              const isSaved = isSentenceSaved ? isSentenceSaved(panel.en) : false;
 
-              let targetText = '';
-              if (targetLang === 'ja') targetText = panel.ja;
-              else if (targetLang === 'es') targetText = panel.es;
+              // 严格对应当前所选语言：英语 en、日语 ja、西语 es
+              let currentSentence = panel.en;
+              if (targetLang === 'ja') currentSentence = panel.ja || panel.en;
+              else if (targetLang === 'es') currentSentence = panel.es || panel.en;
+
+              const currentSpeechLang = langConfig.speechLang || 'en-US';
+              const isSaved = isSentenceSaved ? isSentenceSaved(currentSentence) : false;
 
               return (
                 <div
@@ -238,7 +241,7 @@ export const TabPictures = ({
                     <div className="relative rounded-lg overflow-hidden border border-slate-100 bg-slate-50/80 flex items-center justify-center p-2 min-h-[170px]">
                       <img
                         src={panel.img}
-                        alt={panel.en}
+                        alt={currentSentence}
                         className="max-h-44 w-auto object-contain select-none transition-transform hover:scale-102"
                         loading="lazy"
                       />
@@ -247,15 +250,15 @@ export const TabPictures = ({
                       </span>
 
                       {/* 收藏按钮 */}
-                      {onToggleSaveSentence && panel.en && (
+                      {onToggleSaveSentence && currentSentence && (
                         <button
                           type="button"
                           onClick={() =>
                             onToggleSaveSentence({
-                              en: panel.en,
-                              cn: panel.cn || `《看图学英语》第 ${bookPage} 课`,
+                              en: currentSentence,
+                              cn: panel.cn || `《看图学${langConfig.name}》第 ${bookPage} 课`,
                               skeletonId: bookPage,
-                              tag: 'Richards 原著'
+                              tag: `${langConfig.name}原著看图`
                             })
                           }
                           className={`absolute top-1.5 right-1.5 px-2 py-0.5 rounded-md text-[10.5px] font-bold border transition-all shadow-2xs ${
@@ -270,24 +273,35 @@ export const TabPictures = ({
                       )}
                     </div>
 
-                    {/* 句子主体 (点击可直接朗读，与原来功能一致) */}
+                    {/* 句子主体 (大字，直接对应当前所选语言，点击可直接朗读当前语言) */}
                     <button
                       type="button"
-                      onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                      onClick={() => speakText(currentSentence, 0.95, 1.0, null, currentSpeechLang)}
                       className="block w-full text-left group"
                     >
                       <div className="text-base font-black text-slate-900 leading-snug group-hover:text-amber-700 transition-colors">
-                        {panel.en || <span className="text-slate-400 font-normal italic">（插画过渡画框）</span>}
+                        {currentSentence || <span className="text-slate-400 font-normal italic">（插画过渡画框）</span>}
                       </div>
                     </button>
 
-                    {/* 目标语言对照 (若为日文或西文) */}
-                    {targetLang !== 'en' && targetText && (
-                      <div className="text-xs text-indigo-700 font-semibold flex items-baseline gap-1 bg-indigo-50/70 p-1.5 rounded-lg border border-indigo-100">
-                        <span className="text-[10px] font-bold bg-indigo-100 text-indigo-800 px-1 py-0.2 rounded shrink-0">
-                          {langConfig.name}
-                        </span>
-                        <span>{targetText}</span>
+                    {/* 当学习日语或西语时，展示原书英文对照行与原声播放 */}
+                    {targetLang !== 'en' && panel.en && (
+                      <div className="flex items-center justify-between text-xs text-slate-500 bg-slate-50/90 px-2.5 py-1 rounded-lg border border-slate-200/60">
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <span className="text-[10px] font-bold text-slate-400 bg-slate-200/80 px-1 py-0.2 rounded shrink-0">
+                            原版英文
+                          </span>
+                          <span className="font-semibold text-slate-700 truncate">{panel.en}</span>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                          className="text-blue-600 hover:text-blue-800 p-0.5 shrink-0 flex items-center gap-0.5 text-[10.5px] font-bold"
+                          title="朗读原书英文原声"
+                        >
+                          <Volume2 className="w-3 h-3" />
+                          <span>原声</span>
+                        </button>
                       </div>
                     )}
 
@@ -308,16 +322,18 @@ export const TabPictures = ({
                   <div className="flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-slate-100">
                     <button
                       type="button"
-                      onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                      onClick={() => speakText(currentSentence, 0.95, 1.0, null, currentSpeechLang)}
                       className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold transition-colors"
+                      title={`朗读${langConfig.name}常速`}
                     >
                       <Volume2 className="w-3.5 h-3.5" />
                       <span>常速</span>
                     </button>
                     <button
                       type="button"
-                      onClick={() => speakText(panel.en, 0.55, 1.0, null, 'en-US')}
+                      onClick={() => speakText(currentSentence, 0.58, 1.0, null, currentSpeechLang)}
                       className="px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold transition-colors"
+                      title={`慢速朗读${langConfig.name}`}
                     >
                       🐢 慢速
                     </button>
@@ -334,14 +350,15 @@ export const TabPictures = ({
                       <span>跟读</span>
                     </button>
 
-                    {/* 目标语言发音 (若为日文/西文) */}
-                    {targetLang !== 'en' && targetText && (
+                    {/* 非英语时，提供快捷英文原声按钮 */}
+                    {targetLang !== 'en' && panel.en && (
                       <button
                         type="button"
-                        onClick={() => speakText(targetText, 0.9, 1.0, null, langConfig.speechLang)}
-                        className="px-2 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold transition-colors"
+                        onClick={() => speakText(panel.en, 0.9, 1.0, null, 'en-US')}
+                        className="px-2 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-bold transition-colors"
+                        title="朗读原书英文标准原声"
                       >
-                        <span>{langConfig.name}读音</span>
+                        <span>🇺🇸 英文原声</span>
                       </button>
                     )}
 
@@ -356,13 +373,13 @@ export const TabPictures = ({
                     </button>
                   </div>
 
-                  {/* 录音跟读评测器 */}
-                  {practicing && panel.en && (
+                  {/* 录音跟读评测器：针对当前所选语言 targetLang 与文本 currentSentence */}
+                  {practicing && currentSentence && (
                     <div className="pt-2 border-t border-rose-100">
                       <PronunciationEvaluator
-                        targetSentence={panel.en}
-                        targetLang="en"
-                        readCount={getReadCount ? getReadCount(panel.en) : 0}
+                        targetSentence={currentSentence}
+                        targetLang={targetLang}
+                        readCount={getReadCount ? getReadCount(currentSentence) : 0}
                         onIncrementCount={onIncrementReadCount}
                       />
                     </div>
