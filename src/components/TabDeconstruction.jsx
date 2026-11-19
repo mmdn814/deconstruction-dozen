@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown, Headphones, Pause } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
 import { sentencesByLang } from '../data/sentences.js';
 import { MiniSentenceVisualizer, WordWithTooltip } from './SentenceVisualizer.jsx';
+import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
+import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 
 // --- TAB 2: 12 Sentences Deconstruction (2-Column Grid with Expandable Trap & Workplace) ---
 export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSentence }) => {
@@ -10,6 +12,43 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
   const [expandedMap, setExpandedMap] = useState({});
   const [allExpanded, setAllExpanded] = useState(true);
+
+  const player = useContinuousPlayer();
+
+  const playlist = useMemo(() => {
+    return sentences.map((s) => {
+      const fullText = targetLang === 'ja' ? s.en.join('') : s.en.join(' ');
+      return {
+        id: s.id,
+        text: fullText,
+        cn: s.cn,
+        audioUrl: `/audio/core/${targetLang}/core_${s.id}.mp3`,
+        speechLang: langConfig.speechLang,
+        title: `核心句 #${s.id} · ${s.cn}`
+      };
+    });
+  }, [sentences, targetLang, langConfig.speechLang]);
+
+  useEffect(() => {
+    if (player.isPlaying && player.currentItem) {
+      const el = document.getElementById(`sentence-${player.currentItem.id}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  }, [player.currentItem, player.isPlaying]);
+
+  useEffect(() => {
+    player.stop();
+  }, [targetLang]);
+
+  const handleToggleAutoPlay = () => {
+    if (player.isPlaying) {
+      player.togglePlay();
+      return;
+    }
+    player.start(playlist, 0);
+  };
 
   const toggleExpand = (id) => {
     setExpandedMap((prev) => ({
@@ -45,14 +84,40 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
           ))}
         </div>
 
-        <button
-          type="button"
-          onClick={toggleAll}
-          className="px-2.5 py-1 rounded-lg bg-white hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 flex items-center gap-1 shrink-0 self-end sm:self-auto transition-colors shadow-2xs"
-        >
-          <ChevronsUpDown className="w-3.5 h-3.5 text-blue-600" />
-          <span>{allExpanded ? '收起所有解析' : '展开所有解析'}</span>
-        </button>
+        <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+          {/* 连续朗读 12 核心句按钮 */}
+          <button
+            type="button"
+            onClick={handleToggleAutoPlay}
+            className={`px-3 py-1.5 rounded-lg text-xs font-black flex items-center gap-1.5 transition-all shadow-2xs ${
+              player.isPlaying
+                ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
+                : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white'
+            }`}
+            title="自动连续贯通朗读全 12 句"
+          >
+            {player.isPlaying ? (
+              <>
+                <Pause className="w-3.5 h-3.5 fill-current" />
+                <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
+              </>
+            ) : (
+              <>
+                <Headphones className="w-3.5 h-3.5" />
+                <span>▶ 连读 12 核心句</span>
+              </>
+            )}
+          </button>
+
+          <button
+            type="button"
+            onClick={toggleAll}
+            className="px-2.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 flex items-center gap-1 transition-colors shadow-2xs"
+          >
+            <ChevronsUpDown className="w-3.5 h-3.5 text-blue-600" />
+            <span>{allExpanded ? '收起所有解析' : '展开所有解析'}</span>
+          </button>
+        </div>
       </div>
 
       {/* 2-Column Sentence Grid */}
@@ -64,12 +129,17 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
           const isExpanded = expandedMap[item.id] !== undefined ? expandedMap[item.id] : allExpanded;
           const coreAudioUrl = `/audio/core/${targetLang}/core_${item.id}.mp3`;
           const workplaceAudioUrl = `/audio/core/${targetLang}/workplace_${item.id}.mp3`;
+          const isCurrentActive = player.isPlaying && player.currentItem?.id === item.id;
 
           return (
             <div
               key={item.id}
               id={`sentence-${item.id}`}
-              className="bg-white rounded-xl border border-slate-200/90 hover:border-blue-300 transition-all p-3.5 flex flex-col justify-between space-y-2.5 shadow-2xs"
+              className={`rounded-xl border transition-all p-3.5 flex flex-col justify-between space-y-2.5 shadow-2xs ${
+                isCurrentActive
+                  ? 'bg-blue-50/20 border-blue-500 ring-2 ring-blue-400/90 shadow-md'
+                  : 'bg-white border-slate-200/90 hover:border-blue-300'
+              }`}
             >
               {/* Top Area: Number Badge + 3-Layer Colored Line Visualizer + Normal/Slow Audio */}
               <div className="flex items-start gap-2.5">
@@ -196,6 +266,22 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
           );
         })}
       </div>
+
+      {/* 底部悬浮连续播放控制条 */}
+      <ContinuousPlayerBar
+        isPlaying={player.isPlaying}
+        isPaused={player.isPaused}
+        mode={player.mode}
+        onToggleMode={player.toggleMode}
+        title={player.currentItem?.title || '12 句核心拆解'}
+        progressText={`${player.currentIndex + 1} / ${playlist.length}`}
+        currentText={player.currentItem?.text}
+        currentCn={player.currentItem?.cn}
+        onPrev={player.prev}
+        onTogglePlay={player.togglePlay}
+        onNext={player.next}
+        onStop={player.stop}
+      />
     </div>
   );
 };

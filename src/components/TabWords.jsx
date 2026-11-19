@@ -1,5 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Check, ChevronLeft, ChevronRight, Loader2, Sparkles, ChevronDown, ChevronUp, Layers } from 'lucide-react';
+import {
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  Loader2,
+  Sparkles,
+  ChevronDown,
+  ChevronUp,
+  Layers,
+  Headphones,
+  Pause,
+  Volume2
+} from 'lucide-react';
 import {
   LANGUAGE_CONFIG,
   speakText,
@@ -16,6 +28,8 @@ import { WORD_THEMES, CORE_THEME_ID, parseWordFile } from '../data/wordThemes.js
 import { splitMora, moraSpeakUnits } from '../lib/kana.js';
 import { splitIpa, splitEsSyllables } from '../lib/spell.js';
 import wordIndex from '../data/words/index.json';
+import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
+import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 
 // 每个主题舱是一个独立的小文件，点开才加载，首页不受 3000 词拖累
 const wordFiles = import.meta.glob('../data/words/*/*.txt', { query: '?raw', import: 'default' });
@@ -96,6 +110,56 @@ export const TabWords = ({ targetLang }) => {
     if (!readOfLang[wordId(item)]) {
       setReadMap((prev) => ({ ...prev, [targetLang]: { ...(prev[targetLang] || {}), [wordId(item)]: 1 } }));
     }
+  };
+
+  const player = useContinuousPlayer();
+
+  const playlist = useMemo(() => {
+    return words.map((w, idx) => {
+      const clean = cleanWord(w.w);
+      return {
+        id: wordId(w),
+        index: idx,
+        text: clean,
+        displayText: w.w,
+        subText: w.r,
+        cn: w.cn,
+        audioUrl: getWordAudioUrl(clean, targetLang),
+        speechLang: langConfig.speechLang,
+        rawItem: w
+      };
+    });
+  }, [words, targetLang, langConfig.speechLang]);
+
+  useEffect(() => {
+    if (player.isPlaying && player.currentItem) {
+      const targetPage = Math.floor(player.currentItem.index / PAGE_SIZE);
+      if (targetPage !== page) {
+        setPage(targetPage);
+      }
+      if (player.currentItem.rawItem) {
+        markRead(player.currentItem.rawItem);
+      }
+      requestAnimationFrame(() => {
+        const el = document.getElementById(`word-${player.currentItem.id}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+  }, [player.currentItem, player.isPlaying]);
+
+  useEffect(() => {
+    player.stop();
+  }, [themeId, targetLang]);
+
+  const handleToggleAutoPlay = () => {
+    if (player.isPlaying) {
+      player.togglePlay();
+      return;
+    }
+    const startIdx = safePage * PAGE_SIZE;
+    player.start(playlist, startIdx);
   };
 
   const themeName = (t) => (targetLang !== 'ja' && t.alt) || t.name;
@@ -314,11 +378,38 @@ export const TabWords = ({ targetLang }) => {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-2 px-1">
-        <div className="text-sm font-black text-slate-900">
-          {isCore ? '⭐ 第0关 核心词砖' : `${theme.emoji} ${themeName(theme)}`}
-          <span className="ml-2 text-xs font-bold text-slate-500">
-            本舱已拼读 {themeRead}/{words.length}
-          </span>
+        <div className="flex items-center gap-2 flex-wrap">
+          <div className="text-sm font-black text-slate-900">
+            {isCore ? '⭐ 第0关 核心词砖' : `${theme.emoji} ${themeName(theme)}`}
+            <span className="ml-2 text-xs font-bold text-slate-500">
+              本舱已拼读 {themeRead}/{words.length}
+            </span>
+          </div>
+
+          {words.length > 0 && (
+            <button
+              type="button"
+              onClick={handleToggleAutoPlay}
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                player.isPlaying
+                  ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
+                  : 'bg-emerald-100 hover:bg-emerald-200 text-emerald-900 border border-emerald-300/80'
+              }`}
+              title="自动顺序朗读本舱词汇"
+            >
+              {player.isPlaying ? (
+                <>
+                  <Pause className="w-3.5 h-3.5 fill-current" />
+                  <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
+                </>
+              ) : (
+                <>
+                  <Headphones className="w-3.5 h-3.5" />
+                  <span>▶ 连读本舱词汇</span>
+                </>
+              )}
+            </button>
+          )}
         </div>
         {pageCount > 1 && (
           <div className="flex items-center gap-1 text-xs font-bold text-slate-600">
@@ -361,20 +452,31 @@ export const TabWords = ({ targetLang }) => {
           {pageWords.map((item) => {
             const done = !!readOfLang[wordId(item)];
             const mora = unitsOf(item);
+            const isCurrentActive = player.isPlaying && player.currentItem?.id === wordId(item);
             return (
               <div
                 key={wordId(item)}
+                id={`word-${wordId(item)}`}
                 className={`relative rounded-xl border p-2.5 transition-all ${
-                  done ? 'bg-emerald-50/70 border-emerald-200' : 'bg-white border-slate-200 hover:border-blue-300'
+                  isCurrentActive
+                    ? 'border-emerald-500 ring-2 ring-emerald-400/90 shadow-md bg-emerald-50/40'
+                    : done
+                      ? 'bg-emerald-50/70 border-emerald-200'
+                      : 'bg-white border-slate-200 hover:border-blue-300'
                 }`}
               >
                 <button type="button" onClick={() => handleCard(item)} className="block w-full text-left active:opacity-60">
-                  {done && (
+                  {isCurrentActive ? (
+                    <span className="absolute top-1.5 right-1.5 flex items-center gap-1 text-[10px] font-extrabold text-emerald-700 bg-white/90 px-1.5 py-0.5 rounded shadow-xs animate-pulse">
+                      <Volume2 className="w-3 h-3" />
+                      连读中
+                    </span>
+                  ) : done ? (
                     <span className="absolute top-1.5 right-1.5 flex items-center gap-0.5 text-[10px] font-extrabold text-emerald-600">
                       <Check className="w-3 h-3" />
                       已拼读
                     </span>
-                  )}
+                  ) : null}
                   <div className="text-lg font-black text-slate-900 leading-tight pr-12 break-words">{item.w}</div>
                   {item.r && <div className="text-xs text-blue-700 font-semibold mt-0.5 break-words">{item.r}</div>}
                   <div className="text-xs text-slate-600 mt-0.5">{item.cn}</div>
@@ -431,6 +533,22 @@ export const TabWords = ({ targetLang }) => {
         {extras.length > 0 && <span className="text-[11px] text-slate-500">本舱已用 AI 加了 {extras.length} 个词，保存在本机</span>}
         {aiState.error && <span className="text-[11px] font-bold text-rose-600 text-center">{aiState.error}</span>}
       </div>
+
+      {/* 底部悬浮连续播放控制条 */}
+      <ContinuousPlayerBar
+        isPlaying={player.isPlaying}
+        isPaused={player.isPaused}
+        mode={player.mode}
+        onToggleMode={player.toggleMode}
+        title={`3000词 · ${isCore ? '核心词砖' : themeName(theme)}`}
+        progressText={`${player.currentIndex + 1} / ${playlist.length}`}
+        currentText={`${player.currentItem?.displayText || ''} ${player.currentItem?.subText ? `(${player.currentItem.subText})` : ''}`}
+        currentCn={player.currentItem?.cn}
+        onPrev={player.prev}
+        onTogglePlay={player.togglePlay}
+        onNext={player.next}
+        onStop={player.stop}
+      />
     </div>
   );
 };

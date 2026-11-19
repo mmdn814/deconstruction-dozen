@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   Volume2,
   Mic,
@@ -10,12 +10,17 @@ import {
   Layers,
   Star,
   FileText,
-  X
+  X,
+  Headphones,
+  Play,
+  Pause
 } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
 import { PICTURE_STAGES, SceneArt } from '../data/pictures.jsx';
 import { RICHARDS_BOOK1_PAGES } from '../data/richardsBook1Data.js';
 import { PronunciationEvaluator } from './PronunciationEvaluator.jsx';
+import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
+import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 
 const PHASE_STYLE = {
   将要: 'bg-sky-100 text-sky-700 border-sky-200',
@@ -86,6 +91,99 @@ export const TabPictures = ({
     setPracticeKey(null);
     setShownCn({});
   }, [bookPage, viewMode, targetLang, stageIdx]);
+
+  const player = useContinuousPlayer();
+
+  // 1. 构建全书 119 页逐框播放列表
+  const bookPlaylist = useMemo(() => {
+    const list = [];
+    RICHARDS_BOOK1_PAGES.forEach((pageData) => {
+      pageData.panels.forEach((p) => {
+        let text = p.en;
+        if (targetLang === 'ja') text = p.ja || p.en;
+        else if (targetLang === 'es') text = p.es || p.en;
+
+        if (text && text.trim()) {
+          list.push({
+            id: p.id,
+            page: pageData.page,
+            topic: pageData.topic,
+            pos: p.pos,
+            label: p.label,
+            text,
+            cn: p.cn,
+            audioUrl: `/audio/richards/${targetLang}/${p.id}.mp3`,
+            speechLang: langConfig.speechLang
+          });
+        }
+      });
+    });
+    return list;
+  }, [targetLang, langConfig.speechLang]);
+
+  // 2. 构建 13 阶句型播放列表
+  const stagesPlaylist = useMemo(() => {
+    const list = [];
+    let globalIdx = 0;
+    PICTURE_STAGES.forEach((stg, sIdx) => {
+      stg.scenes.forEach((scn, scnIdx) => {
+        const line = scn[targetLang] || scn.en;
+        const speechLang = scn[targetLang] ? langConfig.speechLang : 'en-US';
+        list.push({
+          id: `${stg.id}-${scnIdx}`,
+          stageIdx: sIdx,
+          stageTitle: stg.title,
+          text: line.say || line.text,
+          displayText: line.text,
+          cn: scn.cn,
+          audioUrl: `/audio/stages/${targetLang}/scene_${globalIdx}.mp3`,
+          speechLang
+        });
+        globalIdx++;
+      });
+    });
+    return list;
+  }, [targetLang, langConfig.speechLang]);
+
+  // 连读切换或当前项改变时，自动翻页与平滑跟随视口
+  useEffect(() => {
+    if (player.isPlaying && player.currentItem) {
+      if (viewMode === 'book' && player.currentItem.page && player.currentItem.page !== bookPage) {
+        setBookPage(player.currentItem.page);
+      } else if (viewMode === 'stages' && player.currentItem.stageIdx !== undefined && player.currentItem.stageIdx !== stageIdx) {
+        setStageIdx(player.currentItem.stageIdx);
+      }
+      requestAnimationFrame(() => {
+        const el = document.getElementById(`panel-${player.currentItem.id}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+  }, [player.currentItem, player.isPlaying, viewMode]);
+
+  // 切换模式或语种时停止播放
+  useEffect(() => {
+    player.stop();
+  }, [viewMode, targetLang]);
+
+  const handleToggleAutoPlayBook = () => {
+    if (player.isPlaying && viewMode === 'book') {
+      player.togglePlay();
+      return;
+    }
+    const startIdx = bookPlaylist.findIndex((item) => item.page >= bookPage);
+    player.start(bookPlaylist, Math.max(0, startIdx));
+  };
+
+  const handleToggleAutoPlayStages = () => {
+    if (player.isPlaying && viewMode === 'stages') {
+      player.togglePlay();
+      return;
+    }
+    const startIdx = stagesPlaylist.findIndex((item) => item.stageIdx >= stageIdx);
+    player.start(stagesPlaylist, Math.max(0, startIdx));
+  };
 
   return (
     <div className="space-y-3.5">
@@ -200,6 +298,30 @@ export const TabPictures = ({
                 <FileText className="w-3.5 h-3.5" />
                 <span>原版整页</span>
               </button>
+
+              {/* 自动连读（磨耳朵 / 影子跟读） */}
+              <button
+                type="button"
+                onClick={handleToggleAutoPlayBook}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && viewMode === 'book'
+                    ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
+                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white'
+                }`}
+                title="自动顺序朗读，读完本页 4 框后自动翻到下一页接着读"
+              >
+                {player.isPlaying && viewMode === 'book' ? (
+                  <>
+                    <Pause className="w-3.5 h-3.5 fill-current" />
+                    <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
+                  </>
+                ) : (
+                  <>
+                    <Headphones className="w-3.5 h-3.5" />
+                    <span>▶ 自动连读（自动翻页）</span>
+                  </>
+                )}
+              </button>
             </div>
           </div>
         )}
@@ -232,11 +354,17 @@ export const TabPictures = ({
               const isSaved = isSentenceSaved ? isSentenceSaved(currentSentence) : false;
               const audioUrl = `/audio/richards/${targetLang}/${panel.id}.mp3`;
               const enAudioUrl = `/audio/richards/en/${panel.id}.mp3`;
+              const isCurrentActive = player.isPlaying && player.currentItem?.id === panel.id;
 
               return (
                 <div
                   key={key}
-                  className="bg-white border border-slate-200 rounded-xl p-3 space-y-2.5 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between"
+                  id={`panel-${key}`}
+                  className={`bg-white border rounded-xl p-3 space-y-2.5 transition-all flex flex-col justify-between ${
+                    isCurrentActive
+                      ? 'border-blue-500 ring-2 ring-blue-400/90 shadow-lg bg-blue-50/20'
+                      : 'border-slate-200 shadow-2xs hover:border-slate-300'
+                  }`}
                 >
                   <div className="space-y-2">
                     {/* 原稿手绘插画图片 */}
@@ -250,6 +378,14 @@ export const TabPictures = ({
                       <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-md bg-white/90 text-slate-700 border border-slate-200 text-[10.5px] font-black shadow-2xs">
                         {panel.label}
                       </span>
+
+                      {/* 连读中高亮状态徽章 */}
+                      {isCurrentActive && (
+                        <span className="absolute bottom-1.5 right-1.5 px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10px] font-black shadow-md flex items-center gap-1 animate-pulse">
+                          <Volume2 className="w-3 h-3" />
+                          <span>连读中</span>
+                        </span>
+                      )}
 
                       {/* 收藏按钮 */}
                       {onToggleSaveSentence && currentSentence && (
@@ -473,7 +609,31 @@ export const TabPictures = ({
             ))}
           </div>
 
-          <p className="text-xs text-slate-600 px-1 font-medium">{stage.hint}</p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-1">
+            <p className="text-xs text-slate-600 font-medium">{stage.hint}</p>
+            <button
+              type="button"
+              onClick={handleToggleAutoPlayStages}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black shrink-0 transition-all shadow-2xs ${
+                player.isPlaying && viewMode === 'stages'
+                  ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
+                  : 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300/80'
+              }`}
+              title="自动连续朗读 13 阶语法精选场景"
+            >
+              {player.isPlaying && viewMode === 'stages' ? (
+                <>
+                  <Pause className="w-3.5 h-3.5 fill-current" />
+                  <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
+                </>
+              ) : (
+                <>
+                  <Headphones className="w-3.5 h-3.5" />
+                  <span>▶ 连读本阶段</span>
+                </>
+              )}
+            </button>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {(() => {
@@ -486,10 +646,17 @@ export const TabPictures = ({
                 const key = `${stage.id}-${i}`;
                 const cnShown = !!shownCn[key];
                 const practicing = practiceKey === key;
+                const isCurrentActive = player.isPlaying && player.currentItem?.id === key;
+
                 return (
                   <div
                     key={key}
-                    className="bg-white border border-slate-200 rounded-xl p-2.5 space-y-2 shadow-2xs hover:border-slate-300 transition-all"
+                    id={`panel-${key}`}
+                    className={`bg-white border rounded-xl p-2.5 space-y-2 transition-all ${
+                      isCurrentActive
+                        ? 'border-blue-500 ring-2 ring-blue-400/90 shadow-md bg-blue-50/20'
+                        : 'border-slate-200 shadow-2xs hover:border-slate-300'
+                    }`}
                   >
                     <div className="relative">
                       <SceneArt name={scene.art} />
@@ -498,6 +665,12 @@ export const TabPictures = ({
                           className={`absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-md border text-[10.5px] font-extrabold ${PHASE_STYLE[scene.phase]}`}
                         >
                           {scene.phase}
+                        </span>
+                      )}
+                      {isCurrentActive && (
+                        <span className="absolute top-1.5 right-1.5 px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10px] font-black shadow-md flex items-center gap-1 animate-pulse">
+                          <Volume2 className="w-3 h-3" />
+                          <span>连读中</span>
                         </span>
                       )}
                     </div>
@@ -574,6 +747,30 @@ export const TabPictures = ({
           </div>
         </div>
       )}
+
+      {/* 底部悬浮迷你连续播放控制条 */}
+      <ContinuousPlayerBar
+        isPlaying={player.isPlaying}
+        isPaused={player.isPaused}
+        mode={player.mode}
+        onToggleMode={player.toggleMode}
+        title={
+          viewMode === 'book'
+            ? `看图短句 · 第 ${player.currentItem?.page || bookPage} 课 · ${player.currentItem?.topic || ''}`
+            : `语法 13 阶 · ${player.currentItem?.stageTitle || ''}`
+        }
+        progressText={
+          viewMode === 'book'
+            ? `${player.currentItem?.label || ''} (第 ${player.currentItem?.page || 1}/119 课)`
+            : `${(player.currentIndex + 1)} / ${stagesPlaylist.length} 场景`
+        }
+        currentText={player.currentItem?.displayText || player.currentItem?.text}
+        currentCn={player.currentItem?.cn}
+        onPrev={player.prev}
+        onTogglePlay={player.togglePlay}
+        onNext={player.next}
+        onStop={player.stop}
+      />
     </div>
   );
 };
