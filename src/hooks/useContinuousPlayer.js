@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { speakText, stopAllAudio } from '../lib/core.js';
+import { speakText, stopAllAudio, resolveAudioUrl } from '../lib/core.js';
 
 // 智能自适应阶梯留白时间：
 // 1. 纯单音 / 假名 (phoneme):   磨耳朵 0.4s (400ms) / 跟读 1.2s (1200ms)
@@ -137,7 +137,7 @@ export const useContinuousPlayer = () => {
             audio.pause();
           } catch (e) {}
         }
-        audio.src = item.audioUrl;
+        audio.src = resolveAudioUrl(item.audioUrl);
         audio.currentTime = 0;
 
         let isAborted = false;

@@ -123,9 +123,32 @@ export const IPA_AUDIO_MAP = {
   'RR rr': 'rr_isolation.mp3'
 };
 
-export const getIpaAudioUrl = (filename) => {
+// 智能多端音频资源路径解析器（完美适配 GitHub Pages 子路径部署、本地开发与独立域名）
+export const resolveAudioUrl = (url) => {
+  if (!url) return null;
+  const str = String(url).trim();
+  if (!str) return null;
+  // 已经是网络完整协议、Blob 或 Data URI，直接使用
+  if (/^(https?:|blob:|data:|\/\/)/i.test(str)) {
+    return str;
+  }
+
+  // 剔除路径前置的 ./ 或 /，规范化为纯相对路径
+  const cleanPath = str.replace(/^(\.\/|\/)+/, '');
+
+  if (typeof window !== 'undefined') {
+    // 动态嗅探部署根目录（例如 GitHub Pages 下为 /deconstruction-dozen/，本地为 /）
+    const pathname = window.location.pathname || '/';
+    const basePath = pathname.endsWith('/') ? pathname : pathname.slice(0, pathname.lastIndexOf('/') + 1);
+    return `${window.location.origin}${basePath}${cleanPath}`;
+  }
+
   const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
-  return `${base.replace(/\/+$/, '')}/audio/ipa/${filename}`;
+  return `${base.replace(/\/+$/, '')}/${cleanPath}`;
+};
+
+export const getIpaAudioUrl = (filename) => {
+  return resolveAudioUrl(`audio/ipa/${filename}`);
 };
 
 // 预先建立日语全假名离线高清录音映射表（清音/浊音/拗音 85音全覆盖，杜绝浏览器合成静音）
@@ -134,7 +157,7 @@ export const KANA_AUDIO_MAP = (() => {
   const jaCats = zeroToOneDataByLang?.ja?.phoneticCategories || [];
   jaCats.forEach((cat) => {
     cat.items.forEach((item, idx) => {
-      const url = `/audio/phonemes/ja/${cat.id}_${idx}.mp3`;
+      const url = resolveAudioUrl(`audio/phonemes/ja/${cat.id}_${idx}.mp3`);
       if (item.sound) map[item.sound] = url;
       const chars = String(item.char || '')
         .split('/')
@@ -163,7 +186,7 @@ export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEn
       : null);
 
     if (targetUrl) {
-      const audio = new Audio(targetUrl);
+      const audio = new Audio(resolveAudioUrl(targetUrl));
       currentActiveAudio = audio;
       audio.playbackRate = 1.0;
 
@@ -468,11 +491,7 @@ export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, l
 
   // 若传入预生成的高清神经网络主播音频，优先使用 HTML5 Audio 极速原声秒播（真实主播原声，iOS 兼容最佳）
   if (effectiveAudioUrl) {
-    const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
-    const normalizedUrl = effectiveAudioUrl.startsWith('http') || effectiveAudioUrl.startsWith('/')
-      ? effectiveAudioUrl
-      : `${base.replace(/\/+$/, '')}/${effectiveAudioUrl.replace(/^\/+/, '')}`;
-
+    const normalizedUrl = resolveAudioUrl(effectiveAudioUrl);
     const audio = new Audio(normalizedUrl);
     currentActiveAudio = audio;
 
