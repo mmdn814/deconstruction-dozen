@@ -97,9 +97,12 @@ export const useContinuousPlayer = () => {
     }
   }, [stop]);
 
-  const start = useCallback((items, startIndex = 0) => {
+  const start = useCallback((items, startIndex = 0, initialMode = null) => {
     if (!items || items.length === 0) return;
     const validStart = Math.max(0, Math.min(startIndex, items.length - 1));
+    if (initialMode) {
+      setMode(initialMode);
+    }
     setPlaylist(items);
     setIsPlaying(true);
     setIsPaused(false);
@@ -130,6 +133,22 @@ export const useContinuousPlayer = () => {
       }
     }
   }, [isPlaying, isPaused, playItemAtIndex]);
+
+  const startOrToggle = useCallback((items, startIndex = 0, targetMode = 'listen') => {
+    const { isPlaying: playing, isPaused: paused, mode: currentMode } = stateRef.current;
+    if (playing) {
+      if (currentMode === targetMode) {
+        togglePlay();
+      } else {
+        setMode(targetMode);
+        if (paused) {
+          togglePlay();
+        }
+      }
+    } else {
+      start(items, startIndex, targetMode);
+    }
+  }, [start, togglePlay]);
 
   const next = useCallback(() => {
     const { playlist: list, currentIndex: idx } = stateRef.current;
@@ -171,6 +190,7 @@ export const useContinuousPlayer = () => {
     currentIndex,
     currentItem,
     start,
+    startOrToggle,
     stop,
     togglePlay,
     next,

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useMemo, useEffect } from 'react';
+import { Headphones, Mic } from 'lucide-react';
 import { say, SlowToggle, WholeLine, Poster, SubTitle, DataMap } from './mapKit.jsx';
 import { MAP_EN } from '../data/langMapEn.js';
 import { MAP_ES } from '../data/langMapEs.js';
+import { LANGUAGE_CONFIG } from '../lib/core.js';
+import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
+import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 import {
   KANA_TABLES,
   YOON_ROWS,
@@ -58,7 +62,7 @@ const KanaCell = ({ cell, first }) =>
   cell ? (
     <button
       type="button"
-      onClick={() => say(cell.k, 0.8)}
+      onClick={() => say(cell.k, 0.8, 'ja')}
       className="flex items-baseline justify-center gap-1 py-1 border-b border-r border-dashed border-emerald-200 active:bg-emerald-50"
     >
       <span className={`text-2xl font-black leading-none ${first ? 'text-slate-900' : 'text-rose-600'}`}>{cell.k}</span>
@@ -85,7 +89,7 @@ const KanaPoster = () => (
         <button
           key={cell.k}
           type="button"
-          onClick={() => say(cell.k, 0.8)}
+          onClick={() => say(cell.k, 0.8, 'ja')}
           className="flex items-baseline justify-center gap-1.5 py-1 border-b border-r border-dashed border-emerald-200 active:bg-emerald-50"
         >
           <span className={`text-lg font-black leading-none ${i % 3 === 0 ? 'text-slate-900' : 'text-rose-600'}`}>{cell.k}</span>
@@ -117,14 +121,22 @@ const ROLE_TEXT = {
 
 const PARTICLE_GLOSS = { は: '谁', に: '几点', で: '在哪', と: '和谁', を: '对象' };
 
-const SentencePoster = () => (
+const SentencePoster = ({ activeId = null }) => (
   <Poster title="一分钟看懂日语句子" note="彩色是词，灰色虚线框是「助词」：贴在前一个词后面，标明它的角色。点词读单个词，点中文读整句。">
     <div className="space-y-2.5">
       {STAGES.map((stage, si) => {
+        const ladderId = `map-ladder-${si}`;
+        const isCurrentActive = activeId === ladderId;
         const parts = stage.ids.map((id) => SENTENCE_PARTS.find((p) => p.id === id));
         const text = parts.map((p) => p.w + p.p).join('') + '。';
         return (
-          <div key={si}>
+          <div
+            key={si}
+            id={ladderId}
+            className={`rounded-xl p-1.5 transition-all ${
+              isCurrentActive ? 'ring-2 ring-blue-500 bg-blue-50/70 shadow-sm' : ''
+            }`}
+          >
             <div className="flex flex-wrap items-end gap-x-1 gap-y-1">
               {parts.map((p) => (
                 <React.Fragment key={p.id}>
@@ -347,18 +359,138 @@ const ParticlePoster = () => (
 );
 
 export const TabMap = ({ targetLang }) => {
-  if (targetLang === 'en') return <DataMap spec={MAP_EN} />;
-  if (targetLang === 'es') return <DataMap spec={MAP_ES} />;
+  const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
+  const player = useContinuousPlayer();
+
+  const ladderPlaylist = useMemo(() => {
+    if (targetLang === 'ja') {
+      return STAGES.map((stage, si) => {
+        const parts = stage.ids.map((id) => SENTENCE_PARTS.find((p) => p.id === id));
+        const text = parts.map((p) => p.w + p.p).join('') + '。';
+        return {
+          id: `map-ladder-${si}`,
+          text,
+          displayText: text,
+          cn: `一分钟日语句子 · 第 ${si + 1} 阶 (${stage.cn})`,
+          audioUrl: `/audio/map/ja/ladder_${si}.mp3`,
+          speechLang: 'ja-JP'
+        };
+      });
+    }
+    const spec = targetLang === 'es' ? MAP_ES : MAP_EN;
+    const ladderBlock = spec.posters.flatMap((p) => p.blocks).find((b) => b.t === 'ladder');
+    if (!ladderBlock) return [];
+    return ladderBlock.lines.map((line, li) => {
+      const fullSentence = line.parts.map((p) => p[1]).join(' ');
+      return {
+        id: `map-ladder-${li}`,
+        text: fullSentence,
+        displayText: fullSentence,
+        cn: `一分钟长句 · 第 ${li + 1} 阶 (${line.cn})`,
+        audioUrl: `/audio/map/${targetLang}/ladder_${li}.mp3`,
+        speechLang: langConfig.speechLang
+      };
+    });
+  }, [targetLang, langConfig.speechLang]);
+
+  useEffect(() => {
+    if (player.isPlaying && player.currentItem) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(player.currentItem.id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+  }, [player.currentItem, player.isPlaying]);
+
+  useEffect(() => {
+    player.stop();
+  }, [targetLang]);
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
-      <SlowToggle />
-      <KanaPoster />
-      <div className="space-y-3">
-        <SentencePoster />
-        <TensePoster />
-        <SystemPoster />
+    <div className="space-y-3">
+      {/* Top Header & Continuous Play Toolbar */}
+      <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-emerald-50 border border-blue-200/80 rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+        <div>
+          <div className="flex items-center gap-1.5">
+            <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10.5px] font-extrabold">
+              STEP 0 · 语言全景地图
+            </span>
+            <h2 className="text-sm font-black text-slate-900">
+              {langConfig.flag} {langConfig.name} · 一眼看清语言脉络
+            </h2>
+          </div>
+          <p className="text-[11px] text-slate-600 mt-1">
+            点哪里读哪里，认清句子生长逻辑与语法小零件。支持全句阶梯自动连读训练！
+          </p>
+        </div>
+
+        {/* 两个直接连读模式按钮 + 龟速切换 */}
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5">
+            <button
+              type="button"
+              onClick={() => player.startOrToggle(ladderPlaylist, 0, 'listen')}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                player.isPlaying && player.mode === 'listen'
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+                  : 'bg-white hover:bg-blue-50 text-blue-700 border border-blue-200'
+              }`}
+              title="自动连续播放长句阶梯：单句停顿 1.2 秒"
+            >
+              <Headphones className="w-3.5 h-3.5" />
+              <span>
+                {player.isPlaying && player.mode === 'listen'
+                  ? (player.isPaused ? '▶ 继续磨耳朵' : '⏸ 暂停磨耳朵')
+                  : '🎧 磨耳朵连读'}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => player.startOrToggle(ladderPlaylist, 0, 'shadow')}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                player.isPlaying && player.mode === 'shadow'
+                  ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
+                  : 'bg-white hover:bg-purple-50 text-purple-700 border border-purple-200'
+              }`}
+              title="自动连续播放长句阶梯：单句停顿 3.0 秒留足跟读时间"
+            >
+              <Mic className="w-3.5 h-3.5" />
+              <span>
+                {player.isPlaying && player.mode === 'shadow'
+                  ? (player.isPaused ? '▶ 继续跟读' : '⏸ 暂停跟读')
+                  : '🗣️ 跟读留白连读'}
+              </span>
+            </button>
+          </div>
+
+          <SlowToggle />
+        </div>
       </div>
-      <ParticlePoster />
+
+      {/* Main Map Posters Grid */}
+      {targetLang === 'en' && <DataMap spec={MAP_EN} activeId={player.currentItem?.id} />}
+      {targetLang === 'es' && <DataMap spec={MAP_ES} activeId={player.currentItem?.id} />}
+      {targetLang === 'ja' && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
+          <KanaPoster />
+          <div className="space-y-3">
+            <SentencePoster activeId={player.currentItem?.id} />
+            <TensePoster />
+            <SystemPoster />
+          </div>
+          <ParticlePoster />
+        </div>
+      )}
+
+      {/* Floating Bottom Mini Player */}
+      <ContinuousPlayerBar
+        player={player}
+        title="语言地图 · 一分钟长句阶梯"
+        progressText={`第 ${player.currentIndex + 1} / ${ladderPlaylist.length} 阶`}
+      />
     </div>
   );
 };

@@ -32,7 +32,7 @@ import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
 import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 
 // 每个主题舱是一个独立的小文件，点开才加载，首页不受 3000 词拖累
-const wordFiles = import.meta.glob('../data/words/*/*.txt', { query: '?raw', import: 'default' });
+const wordFiles = import.meta.glob('../data/words/*/*.txt', { query: '?raw', import: 'default', eager: true });
 
 // 英语音标 → 「发音与辨音」里的单音发音
 const EN_SOUNDS = Object.fromEntries(
@@ -54,7 +54,6 @@ export const TabWords = ({ targetLang }) => {
   const [themeId, setThemeId] = useState(CORE_THEME_ID);
   const [showAllThemes, setShowAllThemes] = useState(false);
   const [page, setPage] = useState(0);
-  const [loaded, setLoaded] = useState({}); // `${lang}/${theme}` -> words
   const [readMap, setReadMap] = useState(() => loadFromStorage(READ_KEY, {}));
   const [extraMap, setExtraMap] = useState(() => loadFromStorage(EXTRA_KEY, {}));
   const [aiState, setAiState] = useState({ loading: false, error: '' });
@@ -70,17 +69,6 @@ export const TabWords = ({ targetLang }) => {
   useEffect(() => {
     setPage(0);
     setAiState({ loading: false, error: '' });
-    if (themeId === CORE_THEME_ID) return;
-    const key = `${targetLang}/${themeId}`;
-    const loader = wordFiles[`../data/words/${targetLang}/${themeId}.txt`];
-    if (!loader || loaded[key]) return;
-    let alive = true;
-    loader().then((raw) => {
-      if (alive) setLoaded((prev) => ({ ...prev, [key]: parseWordFile(raw) }));
-    });
-    return () => {
-      alive = false;
-    };
   }, [targetLang, themeId]);
 
   const coreWords = useMemo(() => {
@@ -92,19 +80,25 @@ export const TabWords = ({ targetLang }) => {
     }));
   }, [targetLang]);
 
+  const getThemeWords = useCallback((tid) => {
+    if (tid === CORE_THEME_ID) return coreWords;
+    const raw = wordFiles[`../data/words/${targetLang}/${tid}.txt`];
+    return raw ? parseWordFile(raw) : [];
+  }, [targetLang, coreWords]);
+
   const readOfLang = readMap[targetLang] || {};
   const extras = (extraMap[targetLang] || {})[themeId] || [];
   const isCore = themeId === CORE_THEME_ID;
-  const hasFile = !!wordFiles[`../data/words/${targetLang}/${themeId}.txt`];
-  const builtIn = isCore ? coreWords : loaded[`${targetLang}/${themeId}`];
-  const loadingTheme = !isCore && hasFile && !builtIn;
-  const words = [...(builtIn || []), ...extras];
+  const builtIn = getThemeWords(themeId);
+  const words = [...builtIn, ...extras];
   const pageCount = Math.max(1, Math.ceil(words.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount - 1);
   const pageWords = words.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE);
   const totalRead = Object.keys(readOfLang).length;
   const themeRead = words.filter((x) => readOfLang[wordId(x)]).length;
   const theme = WORD_THEMES.find((t) => t.id === themeId);
+
+  const themeName = (t) => (targetLang !== 'ja' && t.alt) || t.name;
 
   const markRead = (item) => {
     if (!readOfLang[wordId(item)]) {
@@ -114,12 +108,17 @@ export const TabWords = ({ targetLang }) => {
 
   const player = useContinuousPlayer();
 
-  const playlist = useMemo(() => {
-    return words.map((w, idx) => {
+  // 全量 3000 词贯通播放列表（涵盖核心词砖 + 全主题舱）
+  const full3000Playlist = useMemo(() => {
+    const list = [];
+    // 1. 核心词砖
+    coreWords.forEach((w, idx) => {
       const clean = cleanWord(w.w);
-      return {
+      list.push({
         id: wordId(w),
-        index: idx,
+        themeId: CORE_THEME_ID,
+        themeTitle: '⭐ 核心词砖',
+        pageIndex: Math.floor(idx / PAGE_SIZE),
         text: clean,
         displayText: w.w,
         subText: w.r,
@@ -127,15 +126,42 @@ export const TabWords = ({ targetLang }) => {
         audioUrl: getWordAudioUrl(clean, targetLang),
         speechLang: langConfig.speechLang,
         rawItem: w
-      };
+      });
     });
-  }, [words, targetLang, langConfig.speechLang]);
+
+    // 2. 依次加入各个主题舱全部词汇
+    WORD_THEMES.forEach((t) => {
+      const themeWordList = getThemeWords(t.id);
+      const extraList = (extraMap[targetLang] || {})[t.id] || [];
+      const combined = [...themeWordList, ...extraList];
+      combined.forEach((w, idx) => {
+        const clean = cleanWord(w.w);
+        list.push({
+          id: wordId(w),
+          themeId: t.id,
+          themeTitle: `${t.emoji} ${themeName(t)}`,
+          pageIndex: Math.floor(idx / PAGE_SIZE),
+          text: clean,
+          displayText: w.w,
+          subText: w.r,
+          cn: w.cn,
+          audioUrl: getWordAudioUrl(clean, targetLang),
+          speechLang: langConfig.speechLang,
+          rawItem: w
+        });
+      });
+    });
+
+    return list;
+  }, [coreWords, targetLang, langConfig.speechLang, getThemeWords, extraMap]);
 
   useEffect(() => {
     if (player.isPlaying && player.currentItem) {
-      const targetPage = Math.floor(player.currentItem.index / PAGE_SIZE);
-      if (targetPage !== page) {
-        setPage(targetPage);
+      if (player.currentItem.themeId && player.currentItem.themeId !== themeId) {
+        setThemeId(player.currentItem.themeId);
+      }
+      if (player.currentItem.pageIndex !== undefined && player.currentItem.pageIndex !== page) {
+        setPage(player.currentItem.pageIndex);
       }
       if (player.currentItem.rawItem) {
         markRead(player.currentItem.rawItem);
@@ -151,18 +177,12 @@ export const TabWords = ({ targetLang }) => {
 
   useEffect(() => {
     player.stop();
-  }, [themeId, targetLang]);
+  }, [targetLang]);
 
-  const handleToggleAutoPlay = () => {
-    if (player.isPlaying) {
-      player.togglePlay();
-      return;
-    }
-    const startIdx = safePage * PAGE_SIZE;
-    player.start(playlist, startIdx);
+  const handleAutoPlayWords = (targetMode) => {
+    const startIdx = Math.max(0, full3000Playlist.findIndex((item) => item.themeId === themeId && item.pageIndex >= safePage));
+    player.startOrToggle(full3000Playlist, startIdx, targetMode);
   };
-
-  const themeName = (t) => (targetLang !== 'ja' && t.alt) || t.name;
 
   const handleCard = (item) => {
     const wordText = cleanWord(item.w);
@@ -387,28 +407,43 @@ export const TabWords = ({ targetLang }) => {
           </div>
 
           {words.length > 0 && (
-            <button
-              type="button"
-              onClick={handleToggleAutoPlay}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-black transition-all shadow-2xs ${
-                player.isPlaying
-                  ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
-                  : 'bg-emerald-100 hover:bg-emerald-200 text-emerald-900 border border-emerald-300/80'
-              }`}
-              title="自动顺序朗读本舱词汇"
-            >
-              {player.isPlaying ? (
-                <>
-                  <Pause className="w-3.5 h-3.5 fill-current" />
-                  <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
-                </>
-              ) : (
-                <>
-                  <Headphones className="w-3.5 h-3.5" />
-                  <span>▶ 连读本舱词汇</span>
-                </>
-              )}
-            </button>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <button
+                type="button"
+                onClick={() => handleAutoPlayWords('listen')}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && player.mode === 'listen'
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+                    : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200'
+                }`}
+                title="自动连读：自动翻页与自动翻舱读完3000词，单词停顿 1.2 秒"
+              >
+                <Headphones className="w-3.5 h-3.5" />
+                <span>
+                  {player.isPlaying && player.mode === 'listen'
+                    ? (player.isPaused ? '▶ 继续磨耳朵' : '⏸ 暂停磨耳朵')
+                    : '🎧 磨耳朵连读 (3000词全本)'}
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleAutoPlayWords('shadow')}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && player.mode === 'shadow'
+                    ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
+                    : 'bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200'
+                }`}
+                title="自动连读：自动翻页与自动翻舱读完3000词，单词停顿 3.0 秒留足跟读时间"
+              >
+                <Mic className="w-3.5 h-3.5" />
+                <span>
+                  {player.isPlaying && player.mode === 'shadow'
+                    ? (player.isPaused ? '▶ 继续跟读' : '⏸ 暂停跟读')
+                    : '🗣️ 跟读留白连读 (3000词全本)'}
+                </span>
+              </button>
+            </div>
           )}
         </div>
         {pageCount > 1 && (
@@ -540,8 +575,8 @@ export const TabWords = ({ targetLang }) => {
         isPaused={player.isPaused}
         mode={player.mode}
         onToggleMode={player.toggleMode}
-        title={`3000词 · ${isCore ? '核心词砖' : themeName(theme)}`}
-        progressText={`${player.currentIndex + 1} / ${playlist.length}`}
+        title={`3000词 · ${player.currentItem?.themeTitle || (isCore ? '核心词砖' : themeName(theme))}`}
+        progressText={`第 ${player.currentIndex + 1} / ${full3000Playlist.length} 词`}
         currentText={`${player.currentItem?.displayText || ''} ${player.currentItem?.subText ? `(${player.currentItem.subText})` : ''}`}
         currentCn={player.currentItem?.cn}
         onPrev={player.prev}

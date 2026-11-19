@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Volume2 } from 'lucide-react';
-import { speakText, playPurePhoneme, getWordAudioUrl } from '../lib/core.js';
+import { speakText, playPurePhoneme, getWordAudioUrl, detectLang } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 
 // 语言地图的公用零件。地图只用来看、听、读：没有选项，没有跳转，点哪里读哪里。
@@ -9,8 +9,9 @@ import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 let slowMode = false;
 export const say = (text, rate = 0.85, langCode = null, audioUrl = null) => {
   const clean = String(text || '').replace(/[（(].*?[）)]/g, '').trim();
-  const wordAudio = audioUrl || getWordAudioUrl(clean, langCode || 'en');
-  return speakText(clean, slowMode ? 0.6 : rate, 1.0, null, langCode, wordAudio);
+  const detectedLang = langCode || (detectLang(clean).split('-')[0]);
+  const wordAudio = audioUrl || getWordAudioUrl(clean, detectedLang);
+  return speakText(clean, slowMode ? 0.6 : rate, 1.0, null, detectedLang, wordAudio);
 };
 
 export const SlowToggle = () => {
@@ -97,20 +98,21 @@ const SoundsBlock = ({ lang }) => {
     <React.Fragment key={cat.id}>
       <SubTitle>{cat.name.replace(/\s*[(（].*$/, '')}</SubTitle>
       <div className="grid grid-cols-2 sm:grid-cols-3 border-t border-l border-dashed border-emerald-200">
-        {cat.items.map((it) => {
+        {cat.items.map((it, itemIdx) => {
           const key = it.char.startsWith('/') ? it.char.split(' ')[0] : it.char;
+          const phonemeAudio = lang === 'en' ? null : `/audio/phonemes/${lang}/${cat.id}_${itemIdx}.mp3`;
           return (
             <div key={it.char} className="flex items-center gap-1.5 px-1 py-1 border-b border-r border-dashed border-emerald-200">
               <button
                 type="button"
-                onClick={() => (slowMode ? speakText(it.sound, 0.45) : playPurePhoneme(key, it.sound))}
+                onClick={() => (slowMode ? speakText(it.sound, 0.45, 1.0, null, lang, phonemeAudio) : playPurePhoneme(key, it.sound, lang, null, false, phonemeAudio))}
                 className={`shrink-0 min-w-[2.6rem] max-w-[5rem] text-center font-black leading-none active:opacity-60 ${key.length > 5 ? 'text-xs' : 'text-lg'} ${
                   ci % 2 === 0 ? 'text-rose-600' : 'text-slate-900'
                 }`}
               >
                 {key}
               </button>
-              <button type="button" onClick={() => say(it.sample)} className="min-w-0 text-left leading-tight active:opacity-60">
+              <button type="button" onClick={() => say(it.sample, 0.85, lang)} className="min-w-0 text-left leading-tight active:opacity-60">
                 <span className="block text-[10px] text-slate-400 truncate">{it.sub}</span>
                 <span className="block text-xs font-bold text-slate-800 truncate">
                   {it.sample} <span className="font-normal text-slate-500">{it.sampleCn}</span>
@@ -175,14 +177,22 @@ const ROLE_TONE = {
 };
 
 // 一句话逐行长大。part = [角色, 词]；不在上表里的角色（冠词、介词）画成灰色虚线框
-const LadderBlock = ({ lines, foot, lang = 'en' }) => (
+const LadderBlock = ({ lines, foot, lang = 'en', activeId = null }) => (
   <>
     <div className="space-y-2.5">
       {lines.map((line, li) => {
+        const ladderId = `map-ladder-${li}`;
+        const isCurrentActive = activeId === ladderId;
         const ladderAudioUrl = `/audio/map/${lang}/ladder_${li}.mp3`;
         const fullSentence = line.parts.map((p) => p[1]).join(' ');
         return (
-          <div key={li}>
+          <div
+            key={li}
+            id={ladderId}
+            className={`rounded-xl p-1.5 transition-all ${
+              isCurrentActive ? 'ring-2 ring-blue-500 bg-blue-50/70 shadow-sm' : ''
+            }`}
+          >
             <div className="flex flex-wrap items-end gap-x-1 gap-y-1">
               {line.parts.map(([role, w], pi) => {
                 const tone = ROLE_TONE[role];
@@ -269,30 +279,30 @@ const UsageBlock = ({ items, lang = 'en' }) => (
   </div>
 );
 
-const Block = ({ b, lang = 'en' }) => {
+const Block = ({ b, lang = 'en', activeId = null }) => {
   if (b.t === 'sub') return <SubTitle>{b.text}</SubTitle>;
   if (b.t === 'note') return <p className="text-xs text-slate-700 leading-relaxed mt-1.5">{b.text}</p>;
   if (b.t === 'sounds') return <SoundsBlock lang={b.lang || lang} />;
   if (b.t === 'table') return <TableBlock {...b} lang={lang} />;
-  if (b.t === 'ladder') return <LadderBlock {...b} lang={lang} />;
+  if (b.t === 'ladder') return <LadderBlock {...b} lang={lang} activeId={activeId} />;
   if (b.t === 'usage') return <UsageBlock {...b} lang={lang} />;
   return null;
 };
 
 /** spec.posters：第 1 张放左栏，中间几张叠在右栏，最后一张通栏。 */
-export const DataMap = ({ spec }) => {
+export const DataMap = ({ spec, activeId = null, showSlowToggle = false }) => {
   const posters = spec.posters;
   const lang = spec.lang || 'en';
   const render = (p) => (
     <Poster key={p.title} title={p.title} note={p.note} wide={p.wide}>
       {p.blocks.map((b, i) => (
-        <Block key={i} b={b} lang={lang} />
+        <Block key={i} b={b} lang={lang} activeId={activeId} />
       ))}
     </Poster>
   );
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
-      <SlowToggle />
+      {showSlowToggle && <SlowToggle />}
       {render(posters[0])}
       <div className="space-y-3">{posters.slice(1, -1).map(render)}</div>
       {render({ ...posters[posters.length - 1], wide: true })}

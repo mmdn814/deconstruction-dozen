@@ -184,11 +184,43 @@ async def generate_richards(start_page=1, end_page=119):
 
     print(f"Richards Audio Pages {start_page}..{end_page} Completed!")
 
+async def generate_phonemes_audio():
+    print("Generating Japanese Kana & Spanish Phonics Audio...")
+    p = subprocess.run(['node', '-e', """
+const fs = require('fs');
+const { zeroToOneDataByLang } = require('./src/data/zeroToOne.js');
+const res = { ja: [], es: [] };
+['ja', 'es'].forEach(lang => {
+  const data = zeroToOneDataByLang[lang];
+  if (!data) return;
+  data.phoneticCategories.forEach(cat => {
+    cat.items.forEach((it, idx) => {
+      let sound = it.sound || it.char;
+      if (lang === 'ja' && sound === 'っ') sound = 'あっ';
+      if (lang === 'ja' && sound === 'ー') sound = 'ああ';
+      res[lang].push({ catId: cat.id, idx, sound, char: it.char });
+    });
+  });
+});
+console.log(JSON.stringify(res));
+"""], capture_output=True, text=True)
+    if p.returncode == 0:
+        data = json.loads(p.stdout)
+        tasks = []
+        for lang, items in data.items():
+            voice = VOICES[lang]
+            for it in items:
+                out_path = f"public/audio/phonemes/{lang}/{it['catId']}_{it['idx']}.mp3"
+                tasks.append(synthesize_one(it['sound'], voice, out_path, lang))
+        await asyncio.gather(*tasks)
+        print(f"Phonemes Audio Done! Total: {len(tasks)}")
+
 async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--core', action='store_true')
     parser.add_argument('--map', action='store_true')
     parser.add_argument('--zerotoone', action='store_true')
+    parser.add_argument('--phonemes', action='store_true')
     parser.add_argument('--stages', action='store_true')
     parser.add_argument('--richards', action='store_true')
     parser.add_argument('--start-page', type=int, default=1)
@@ -202,6 +234,8 @@ async def main():
         await generate_map_audio()
     if args.zerotoone or args.all:
         await generate_zerotoone_sentences()
+    if args.phonemes or args.all:
+        await generate_phonemes_audio()
     if args.stages or args.all:
         await generate_stages_audio()
     if args.richards or args.all:

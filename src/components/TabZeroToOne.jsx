@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Volume2, Mic, Play } from 'lucide-react';
-import { LANGUAGE_CONFIG, playPurePhoneme, speakText, getWordAudioUrl } from '../lib/core.js';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Volume2, Mic, Play, Headphones, Pause } from 'lucide-react';
+import { LANGUAGE_CONFIG, playPurePhoneme, speakText, getWordAudioUrl, IPA_AUDIO_MAP, getIpaAudioUrl } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { PronunciationEvaluator } from './PronunciationEvaluator.jsx';
+import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
+import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 
 // --- TAB 1: Comprehensive Sound & Ear Training Hub (Decoder + Minimal Pairs + Sound Clusters) ---
 export const TabZeroToOne = ({
@@ -26,6 +28,85 @@ export const TabZeroToOne = ({
   const data = zeroToOneDataByLang[targetLang] || zeroToOneDataByLang.en;
   const phoneticCategories = data.phoneticCategories || [];
   const activePhoneticCat = phoneticCategories[activePhoneticCatIdx] || phoneticCategories[0];
+
+  const player = useContinuousPlayer();
+
+  const decoderPlaylist = useMemo(() => {
+    if (!activePhoneticCat) return [];
+    return activePhoneticCat.items.map((c, idx) => {
+      const primaryChar = c.char.split('/')[0].replace(/（.*?）|\(.*?\)/g, '').trim();
+      const soundText = c.sound || primaryChar;
+      const cleanKey = c.char.replace(/\s*[\(（].*$/, '').replace(/\s*(清|浊).*$/, '').trim();
+      const slashKey = `/${cleanKey.replace(/^\/+|\/+$/g, '')}/`;
+      const enFile = IPA_AUDIO_MAP[c.char] || IPA_AUDIO_MAP[cleanKey] || IPA_AUDIO_MAP[slashKey];
+      const audioUrl = targetLang === 'en'
+        ? (enFile ? getIpaAudioUrl(enFile) : null)
+        : `/audio/phonemes/${targetLang}/${activePhoneticCat.id}_${idx}.mp3`;
+
+      return {
+        id: `phoneme-${activePhoneticCat.id}-${idx}`,
+        idx,
+        text: soundText,
+        displayText: c.char,
+        subText: c.sub,
+        cn: `${c.tip || ''} · 例: ${c.sample || ''} (${c.sampleCn || ''})`,
+        audioUrl,
+        speechLang: langConfig.speechLang
+      };
+    });
+  }, [activePhoneticCat, targetLang, langConfig.speechLang]);
+
+  const pairsPlaylist = useMemo(() => {
+    return (data.minimalPairs || []).map((p, idx) => {
+      return {
+        id: `pair-${idx}`,
+        idx,
+        text: p.sentence,
+        displayText: `${p.w1} vs ${p.w2}`,
+        cn: p.sentenceCn,
+        audioUrl: `/audio/zerotoone/${targetLang}/pair_${idx}.mp3`,
+        speechLang: langConfig.speechLang
+      };
+    });
+  }, [data.minimalPairs, targetLang, langConfig.speechLang]);
+
+  const clustersPlaylist = useMemo(() => {
+    return (data.soundClusters || []).flatMap((cluster, cIdx) =>
+      cluster.words.map((w, wIdx) => {
+        const clean = String(w.w || '').split('(')[0].split('/')[0].trim();
+        return {
+          id: `cluster-${cIdx}-${wIdx}`,
+          text: clean,
+          displayText: w.w,
+          subText: w.pron,
+          cn: `${cluster.title} · ${w.cn}`,
+          audioUrl: getWordAudioUrl(clean, targetLang),
+          speechLang: langConfig.speechLang
+        };
+      })
+    );
+  }, [data.soundClusters, targetLang, langConfig.speechLang]);
+
+  const currentPlaylist = subStage === 'decoder'
+    ? decoderPlaylist
+    : subStage === 'pairs'
+      ? pairsPlaylist
+      : clustersPlaylist;
+
+  useEffect(() => {
+    if (player.isPlaying && player.currentItem) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(player.currentItem.id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+  }, [player.currentItem, player.isPlaying]);
+
+  useEffect(() => {
+    player.stop();
+  }, [subStage, activePhoneticCatIdx, targetLang]);
 
   useEffect(() => {
     setEarQuiz(null);
@@ -96,26 +177,67 @@ export const TabZeroToOne = ({
           </p>
         </div>
 
-        {/* 3 Sub-stage Switcher Buttons */}
-        <div className="flex items-center gap-1.5 bg-white/90 p-1 rounded-xl border border-blue-200/80 shrink-0 overflow-x-auto scrollbar-none max-w-full">
-          {[
-            { id: 'decoder', label: '① 全景发音表与密码' },
-            { id: 'pairs', label: `② 易混相似音对决 (${data.minimalPairs.length}组)` },
-            { id: 'clusters', label: `③ 同音词族串串烧 (${data.soundClusters.length}族)` }
-          ].map((tab) => (
+        {/* 3 Sub-stage Switcher Buttons + 2 Continuous Play Buttons */}
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5 bg-white/90 p-1 rounded-xl border border-blue-200/80 overflow-x-auto scrollbar-none max-w-full">
+            {[
+              { id: 'decoder', label: '① 全景发音表与密码' },
+              { id: 'pairs', label: `② 易混相似音对决 (${data.minimalPairs.length}组)` },
+              { id: 'clusters', label: `③ 同音词族串串烧 (${data.soundClusters.length}族)` }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setSubStage(tab.id)}
+                className={`px-2.5 py-1.5 rounded-lg text-xs font-extrabold transition-all whitespace-nowrap shrink-0 ${
+                  subStage === tab.id
+                    ? 'bg-blue-600 text-white shadow-2xs'
+                    : 'text-slate-600 hover:bg-slate-100'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* 两个直接连读按钮：磨耳朵 (1.2s) vs 跟读留白 (3.0s) */}
+          <div className="flex items-center gap-1.5 shrink-0">
             <button
-              key={tab.id}
               type="button"
-              onClick={() => setSubStage(tab.id)}
-              className={`px-2.5 py-1.5 rounded-lg text-xs font-extrabold transition-all whitespace-nowrap shrink-0 ${
-                subStage === tab.id
-                  ? 'bg-blue-600 text-white shadow-2xs'
-                  : 'text-slate-600 hover:bg-slate-100'
+              onClick={() => player.startOrToggle(currentPlaylist, 0, 'listen')}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                player.isPlaying && player.mode === 'listen'
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+                  : 'bg-white hover:bg-blue-50 text-blue-700 border border-blue-200'
               }`}
+              title="自动连续播放当前板块：单音/单句停顿 1.2 秒"
             >
-              {tab.label}
+              <Headphones className="w-3.5 h-3.5" />
+              <span>
+                {player.isPlaying && player.mode === 'listen'
+                  ? (player.isPaused ? '▶ 继续磨耳朵' : '⏸ 暂停磨耳朵')
+                  : '🎧 磨耳朵连读'}
+              </span>
             </button>
-          ))}
+
+            <button
+              type="button"
+              onClick={() => player.startOrToggle(currentPlaylist, 0, 'shadow')}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                player.isPlaying && player.mode === 'shadow'
+                  ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
+                  : 'bg-white hover:bg-purple-50 text-purple-700 border border-purple-200'
+              }`}
+              title="自动连续播放当前板块：单音/单句停顿 3.0 秒留足跟读时间"
+            >
+              <Mic className="w-3.5 h-3.5" />
+              <span>
+                {player.isPlaying && player.mode === 'shadow'
+                  ? (player.isPaused ? '▶ 继续跟读' : '⏸ 暂停跟读')
+                  : '🗣️ 跟读留白连读'}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -164,11 +286,20 @@ export const TabZeroToOne = ({
                 {activePhoneticCat.items.map((c, idx) => {
                   const primaryChar = c.char.split('/')[0].replace(/（.*?）|\(.*?\)/g, '').trim();
                   const singleSoundText = c.sound || primaryChar;
+                  const phonemeAudioUrl = targetLang === 'en' ? null : `/audio/phonemes/${targetLang}/${activePhoneticCat.id}_${idx}.mp3`;
+                  const cardId = `phoneme-${activePhoneticCat.id}-${idx}`;
+                  const isCurrentActive = player.isPlaying && player.currentItem?.id === cardId;
+
                   return (
                     <div
                       key={idx}
-                      onClick={() => playPurePhoneme(c.char, singleSoundText, langConfig.speechLang)}
-                      className="bg-white hover:bg-blue-50/50 border border-slate-200/90 hover:border-blue-400 rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between gap-1.5"
+                      id={cardId}
+                      onClick={() => playPurePhoneme(c.char, singleSoundText, langConfig.speechLang, null, false, phonemeAudioUrl)}
+                      className={`rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between gap-1.5 ${
+                        isCurrentActive
+                          ? 'border-blue-500 ring-2 ring-blue-400 shadow-md bg-blue-50/40'
+                          : 'bg-white hover:bg-blue-50/50 border border-slate-200/90 hover:border-blue-400'
+                      }`}
                     >
                       {/* Row 1: Phonetic Symbol / Kana + Pure Phoneme Single Sound Button + Spelling Rule Badge */}
                       <div className="flex items-center justify-between gap-1 flex-wrap">
@@ -180,14 +311,19 @@ export const TabZeroToOne = ({
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              playPurePhoneme(c.char, singleSoundText, langConfig.speechLang);
+                              playPurePhoneme(c.char, singleSoundText, langConfig.speechLang, null, false, phonemeAudioUrl);
                             }}
                             className="px-1.5 py-0.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold flex items-center gap-0.5 shrink-0 transition-colors shadow-2xs"
-                            title={`播放 ${c.char} 的纯粹音标单音`}
+                            title={`播放 ${c.char} 的纯粹单音`}
                           >
                             <Volume2 className="w-2.5 h-2.5" />
                             <span>纯单音</span>
                           </button>
+                          {isCurrentActive && (
+                            <span className="px-1.5 py-0.2 rounded bg-blue-600 text-white text-[9.5px] font-extrabold animate-pulse">
+                              连读中
+                            </span>
+                          )}
                         </div>
                         <span className="text-[10px] font-mono font-bold text-blue-700 bg-blue-50 border border-blue-100 px-1.5 py-0.5 rounded shrink-0">
                           {c.sub}
@@ -291,11 +427,17 @@ export const TabZeroToOne = ({
               const cleanW1 = cleanSpeakWord(pair.w1);
               const cleanW2 = cleanSpeakWord(pair.w2);
               const bothWordsTarget = `${cleanW1}, ${cleanW2}`;
+              const isCurrentActive = player.isPlaying && player.currentItem?.id === `pair-${idx}`;
 
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-xl border border-slate-200/90 p-3 hover:border-blue-300 transition-all shadow-2xs space-y-2"
+                  id={`pair-${idx}`}
+                  className={`rounded-xl border p-3 transition-all shadow-2xs space-y-2 ${
+                    isCurrentActive
+                      ? 'border-blue-500 ring-2 ring-blue-400 shadow-md bg-blue-50/20'
+                      : 'bg-white border-slate-200/90 hover:border-blue-300'
+                  }`}
                 >
                   {/* Row 1: Tag + Word A & Word B + Action Buttons */}
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2">
@@ -725,6 +867,28 @@ export const TabZeroToOne = ({
           })}
         </div>
       )}
+
+      {/* 底部悬浮连续播放控制条 */}
+      <ContinuousPlayerBar
+        isPlaying={player.isPlaying}
+        isPaused={player.isPaused}
+        mode={player.mode}
+        onToggleMode={player.toggleMode}
+        title={
+          subStage === 'decoder'
+            ? `发音与辨音 · ${activePhoneticCat?.name || ''}`
+            : subStage === 'pairs'
+              ? `易混相似音对决 (${data.minimalPairs.length}组)`
+              : `同音词族串串烧 (${data.soundClusters.length}族)`
+        }
+        progressText={`${player.currentIndex + 1} / ${currentPlaylist.length}`}
+        currentText={player.currentItem?.displayText || player.currentItem?.text}
+        currentCn={player.currentItem?.cn}
+        onPrev={player.prev}
+        onTogglePlay={player.togglePlay}
+        onNext={player.next}
+        onStop={player.stop}
+      />
     </div>
   );
 };

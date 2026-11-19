@@ -1,3 +1,5 @@
+import { zeroToOneDataByLang } from '../data/zeroToOne.js';
+
 // --- LocalStorage Keys & Helpers ---
 export const STORAGE_KEYS = {
   NOTEBOOK: 'dd_english_notebook_v1',
@@ -121,20 +123,74 @@ export const IPA_AUDIO_MAP = {
   'RR rr': 'rr_isolation.mp3'
 };
 
-const getIpaAudioUrl = (filename) => {
+export const getIpaAudioUrl = (filename) => {
   const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
   return `${base.replace(/\/+$/, '')}/audio/ipa/${filename}`;
 };
 
+// 预先建立日语全假名离线高清录音映射表（清音/浊音/拗音 85音全覆盖，杜绝浏览器合成静音）
+export const KANA_AUDIO_MAP = (() => {
+  const map = {};
+  const jaCats = zeroToOneDataByLang?.ja?.phoneticCategories || [];
+  jaCats.forEach((cat) => {
+    cat.items.forEach((item, idx) => {
+      const url = `/audio/phonemes/ja/${cat.id}_${idx}.mp3`;
+      if (item.sound) map[item.sound] = url;
+      const chars = String(item.char || '')
+        .split('/')
+        .map((s) => s.replace(/（.*?）|\(.*?\)/g, '').trim())
+        .filter(Boolean);
+      chars.forEach((ch) => {
+        map[ch] = url;
+      });
+    });
+  });
+  return map;
+})();
+
 // --- Play Pure IPA Phoneme Sound (Priority 1: Local Oxford Isolated Recording -> Priority 2: Studio Audio) ---
-// --- Standard Oxford 44 IPA Pure Phoneme Audio Map (Local High-Fidelity MP3 Files) ---
-export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEnd = null, fast = false) => {
+// --- Standard Oxford 44 IPA Pure Phoneme & Kana Audio Resolver ---
+export const playPurePhoneme = (charKey, fallbackSoundText, lang = 'en-US', onEnd = null, fast = false, customAudioUrl = null) => {
   if (typeof window === 'undefined') {
     if (onEnd) onEnd();
     return;
   }
   try {
     stopAllAudio();
+
+    const targetUrl = customAudioUrl || (lang.toLowerCase().startsWith('ja') || /[\u3040-\u309F\u30A0-\u30FF]/.test(String(charKey || ''))
+      ? (KANA_AUDIO_MAP[String(charKey || '').trim()] || KANA_AUDIO_MAP[String(fallbackSoundText || '').trim()])
+      : null);
+
+    if (targetUrl) {
+      const audio = new Audio(targetUrl);
+      currentActiveAudio = audio;
+      audio.playbackRate = 1.0;
+
+      let finished = false;
+      const finish = () => {
+        if (!finished) {
+          finished = true;
+          if (currentActiveAudio === audio) currentActiveAudio = null;
+          if (onEnd) onEnd();
+        }
+      };
+
+      audio.onended = finish;
+      audio.onerror = () => {
+        finish();
+        speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
+      };
+
+      const playPromise = audio.play();
+      if (playPromise && playPromise.catch) {
+        playPromise.catch(() => {
+          finish();
+          speakText(fallbackSoundText, 1.0, 1.0, onEnd, lang);
+        });
+      }
+      return;
+    }
 
     const raw = String(charKey || '').trim();
     // 兼容 '/p/ 清'、'/p/'、'p' 等各种传入格式
@@ -189,8 +245,11 @@ export const getWordAudioUrl = (word, langCode = 'en') => {
     return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=2`;
   }
 
-  // 2. 日语：官方真人母语词汇原声发音
+  // 2. 日语：假名优先返回本地高清神经网络录音，词汇返回官方真人母语发音
   if (shortLang === 'ja') {
+    if (KANA_AUDIO_MAP[clean]) {
+      return KANA_AUDIO_MAP[clean];
+    }
     return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&le=jap`;
   }
 
@@ -392,12 +451,18 @@ export const speakText = (text, rate = 1.0, pitch = 1.0, onEndCallback = null, l
     finalRate = 0.92;
   }
 
+  // 若未传入音频且命中日语假名单音，自动采用对应离线录音
+  let effectiveAudioUrl = audioUrl;
+  if (!effectiveAudioUrl && targetLang === 'ja-JP' && KANA_AUDIO_MAP[cleanText]) {
+    effectiveAudioUrl = KANA_AUDIO_MAP[cleanText];
+  }
+
   // 若传入预生成的高清神经网络主播音频，优先使用 HTML5 Audio 极速原声秒播（真实主播原声，iOS 兼容最佳）
-  if (audioUrl) {
+  if (effectiveAudioUrl) {
     const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
-    const normalizedUrl = audioUrl.startsWith('http') || audioUrl.startsWith('/')
-      ? audioUrl
-      : `${base.replace(/\/+$/, '')}/${audioUrl.replace(/^\/+/, '')}`;
+    const normalizedUrl = effectiveAudioUrl.startsWith('http') || effectiveAudioUrl.startsWith('/')
+      ? effectiveAudioUrl
+      : `${base.replace(/\/+$/, '')}/${effectiveAudioUrl.replace(/^\/+/, '')}`;
 
     const audio = new Audio(normalizedUrl);
     currentActiveAudio = audio;

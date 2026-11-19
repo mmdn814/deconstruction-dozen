@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown, Headphones, Pause } from 'lucide-react';
+import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown, Headphones, Mic, Pause } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
 import { sentencesByLang } from '../data/sentences.js';
 import { MiniSentenceVisualizer, WordWithTooltip } from './SentenceVisualizer.jsx';
@@ -84,29 +84,42 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
           ))}
         </div>
 
-        <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
-          {/* 连续朗读 12 核心句按钮 */}
+        <div className="flex items-center gap-1.5 shrink-0 self-end sm:self-auto flex-wrap">
+          {/* 两个直接连读按钮：磨耳朵 (1.2s) vs 跟读留白 (3.0s) */}
           <button
             type="button"
-            onClick={handleToggleAutoPlay}
-            className={`px-3 py-1.5 rounded-lg text-xs font-black flex items-center gap-1.5 transition-all shadow-2xs ${
-              player.isPlaying
-                ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
-                : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white'
+            onClick={() => player.startOrToggle(playlist, 0, 'listen')}
+            className={`px-2.5 py-1.5 rounded-lg text-xs font-black flex items-center gap-1.5 transition-all shadow-2xs ${
+              player.isPlaying && player.mode === 'listen'
+                ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+                : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200'
             }`}
-            title="自动连续贯通朗读全 12 句"
+            title="自动顺序朗读 12 句：单句停顿 1.2 秒"
           >
-            {player.isPlaying ? (
-              <>
-                <Pause className="w-3.5 h-3.5 fill-current" />
-                <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
-              </>
-            ) : (
-              <>
-                <Headphones className="w-3.5 h-3.5" />
-                <span>▶ 连读 12 核心句</span>
-              </>
-            )}
+            <Headphones className="w-3.5 h-3.5" />
+            <span>
+              {player.isPlaying && player.mode === 'listen'
+                ? (player.isPaused ? '▶ 继续磨耳朵' : '⏸ 暂停磨耳朵')
+                : '🎧 磨耳朵连读'}
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => player.startOrToggle(playlist, 0, 'shadow')}
+            className={`px-2.5 py-1.5 rounded-lg text-xs font-black flex items-center gap-1.5 transition-all shadow-2xs ${
+              player.isPlaying && player.mode === 'shadow'
+                ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
+                : 'bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200'
+            }`}
+            title="自动顺序朗读 12 句：单句停顿 3.0 秒留足跟读时间"
+          >
+            <Mic className="w-3.5 h-3.5" />
+            <span>
+              {player.isPlaying && player.mode === 'shadow'
+                ? (player.isPaused ? '▶ 继续跟读' : '⏸ 暂停跟读')
+                : '🗣️ 跟读留白连读'}
+            </span>
           </button>
 
           <button

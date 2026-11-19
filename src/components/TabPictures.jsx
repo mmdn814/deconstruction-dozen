@@ -167,22 +167,14 @@ export const TabPictures = ({
     player.stop();
   }, [viewMode, targetLang]);
 
-  const handleToggleAutoPlayBook = () => {
-    if (player.isPlaying && viewMode === 'book') {
-      player.togglePlay();
-      return;
-    }
-    const startIdx = bookPlaylist.findIndex((item) => item.page >= bookPage);
-    player.start(bookPlaylist, Math.max(0, startIdx));
+  const handleAutoPlayBook = (targetMode) => {
+    const startIdx = Math.max(0, bookPlaylist.findIndex((item) => item.page >= bookPage));
+    player.startOrToggle(bookPlaylist, startIdx, targetMode);
   };
 
-  const handleToggleAutoPlayStages = () => {
-    if (player.isPlaying && viewMode === 'stages') {
-      player.togglePlay();
-      return;
-    }
-    const startIdx = stagesPlaylist.findIndex((item) => item.stageIdx >= stageIdx);
-    player.start(stagesPlaylist, Math.max(0, startIdx));
+  const handleAutoPlayStages = (targetMode) => {
+    const startIdx = Math.max(0, stagesPlaylist.findIndex((item) => item.stageIdx >= stageIdx));
+    player.startOrToggle(stagesPlaylist, startIdx, targetMode);
   };
 
   return (
@@ -299,28 +291,41 @@ export const TabPictures = ({
                 <span>原版整页</span>
               </button>
 
-              {/* 自动连读（磨耳朵 / 影子跟读） */}
+              {/* 两个直接连读按钮：磨耳朵 (1.2s) vs 跟读留白 (3.0s) */}
               <button
                 type="button"
-                onClick={handleToggleAutoPlayBook}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
-                  player.isPlaying && viewMode === 'book'
-                    ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
-                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white'
+                onClick={() => handleAutoPlayBook('listen')}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && viewMode === 'book' && player.mode === 'listen'
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+                    : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200'
                 }`}
-                title="自动顺序朗读，读完本页 4 框后自动翻到下一页接着读"
+                title="自动连读：单句停顿 1.2 秒，读完 4 格自动翻到下一页"
               >
-                {player.isPlaying && viewMode === 'book' ? (
-                  <>
-                    <Pause className="w-3.5 h-3.5 fill-current" />
-                    <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
-                  </>
-                ) : (
-                  <>
-                    <Headphones className="w-3.5 h-3.5" />
-                    <span>▶ 自动连读（自动翻页）</span>
-                  </>
-                )}
+                <Headphones className="w-3.5 h-3.5" />
+                <span>
+                  {player.isPlaying && viewMode === 'book' && player.mode === 'listen'
+                    ? (player.isPaused ? '▶ 继续磨耳朵' : '⏸ 暂停磨耳朵')
+                    : '🎧 磨耳朵连读'}
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleAutoPlayBook('shadow')}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && viewMode === 'book' && player.mode === 'shadow'
+                    ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
+                    : 'bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200'
+                }`}
+                title="自动连读：单句停顿 3.0 秒留出跟读时间，读完 4 格自动翻到下一页"
+              >
+                <Mic className="w-3.5 h-3.5" />
+                <span>
+                  {player.isPlaying && viewMode === 'book' && player.mode === 'shadow'
+                    ? (player.isPaused ? '▶ 继续跟读' : '⏸ 暂停跟读')
+                    : '🗣️ 跟读留白连读'}
+                </span>
               </button>
             </div>
           </div>
@@ -611,28 +616,43 @@ export const TabPictures = ({
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-1">
             <p className="text-xs text-slate-600 font-medium">{stage.hint}</p>
-            <button
-              type="button"
-              onClick={handleToggleAutoPlayStages}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black shrink-0 transition-all shadow-2xs ${
-                player.isPlaying && viewMode === 'stages'
-                  ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-200'
-                  : 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300/80'
-              }`}
-              title="自动连续朗读 13 阶语法精选场景"
-            >
-              {player.isPlaying && viewMode === 'stages' ? (
-                <>
-                  <Pause className="w-3.5 h-3.5 fill-current" />
-                  <span>{player.isPaused ? '▶ 继续连读' : '⏸ 连读中...'}</span>
-                </>
-              ) : (
-                <>
-                  <Headphones className="w-3.5 h-3.5" />
-                  <span>▶ 连读本阶段</span>
-                </>
-              )}
-            </button>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <button
+                type="button"
+                onClick={() => handleAutoPlayStages('listen')}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && viewMode === 'stages' && player.mode === 'listen'
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+                    : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200'
+                }`}
+                title="自动连读：单句停顿 1.2 秒"
+              >
+                <Headphones className="w-3.5 h-3.5" />
+                <span>
+                  {player.isPlaying && viewMode === 'stages' && player.mode === 'listen'
+                    ? (player.isPaused ? '▶ 继续磨耳朵' : '⏸ 暂停磨耳朵')
+                    : '🎧 磨耳朵连读'}
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleAutoPlayStages('shadow')}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
+                  player.isPlaying && viewMode === 'stages' && player.mode === 'shadow'
+                    ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
+                    : 'bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200'
+                }`}
+                title="自动连读：单句停顿 3.0 秒留足跟读时间"
+              >
+                <Mic className="w-3.5 h-3.5" />
+                <span>
+                  {player.isPlaying && viewMode === 'stages' && player.mode === 'shadow'
+                    ? (player.isPaused ? '▶ 继续跟读' : '⏸ 暂停跟读')
+                    : '🗣️ 跟读留白连读'}
+                </span>
+              </button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
