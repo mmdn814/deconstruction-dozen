@@ -79,6 +79,13 @@ export const useContinuousPlayer = () => {
     setIsPaused(false);
     setCurrentIndex(-1);
     setPlaylist([]);
+    stateRef.current = {
+      ...stateRef.current,
+      isPlaying: false,
+      isPaused: false,
+      currentIndex: -1,
+      playlist: []
+    };
   }, []);
 
   const playItemAtIndex = useCallback((list, index) => {
@@ -92,16 +99,27 @@ export const useContinuousPlayer = () => {
 
     const item = list[index];
     setCurrentIndex(index);
+    stateRef.current.currentIndex = index;
+    stateRef.current.playlist = list;
 
+    let hasEnded = false;
     const onAudioEnded = () => {
+      if (hasEnded) return;
+      hasEnded = true;
+
       const { isPlaying: playing, isPaused: paused, mode: currentMode, playlist: currentList } = stateRef.current;
       if (!playing || paused) return;
 
+      clearTimer();
       const gapMs = getGapMs(item, currentMode);
       timerRef.current = setTimeout(() => {
+        timerRef.current = null;
+        const { isPlaying: stillPlaying, isPaused: stillPaused, playlist: latestList } = stateRef.current;
+        if (!stillPlaying || stillPaused) return;
+
         const nextIdx = index + 1;
-        if (nextIdx < currentList.length) {
-          playItemAtIndex(currentList, nextIdx);
+        if (nextIdx < latestList.length) {
+          playItemAtIndex(latestList, nextIdx);
         } else {
           stop();
         }
@@ -112,17 +130,28 @@ export const useContinuousPlayer = () => {
       try {
         const audio = new Audio(item.audioUrl);
         audioRef.current = audio;
+
+        let isAborted = false;
         audio.onended = () => {
+          if (isAborted) return;
           if (audioRef.current === audio) audioRef.current = null;
           onAudioEnded();
         };
+
         audio.onerror = () => {
+          if (isAborted) return;
+          isAborted = true;
           // 若静态音频加载异常，平滑降级到系统发音
           speakText(item.text, 0.95, 1.0, onAudioEnded, item.speechLang);
         };
+
         const promise = audio.play();
         if (promise !== undefined) {
-          promise.catch(() => {
+          promise.catch((err) => {
+            if (isAborted) return;
+            // 若为用户主动切换或暂停造成的 AbortError，忽略无需降级
+            if (err && err.name === 'AbortError') return;
+            isAborted = true;
             speakText(item.text, 0.95, 1.0, onAudioEnded, item.speechLang);
           });
         }
@@ -137,26 +166,33 @@ export const useContinuousPlayer = () => {
   const start = useCallback((items, startIndex = 0, initialMode = null) => {
     if (!items || items.length === 0) return;
     const validStart = Math.max(0, Math.min(startIndex, items.length - 1));
-    if (initialMode) {
-      setMode(initialMode);
-    }
+    const targetMode = initialMode || stateRef.current.mode || 'listen';
+    setMode(targetMode);
     setPlaylist(items);
     setIsPlaying(true);
     setIsPaused(false);
+    stateRef.current = {
+      isPlaying: true,
+      isPaused: false,
+      mode: targetMode,
+      playlist: items,
+      currentIndex: validStart
+    };
     playItemAtIndex(items, validStart);
   }, [playItemAtIndex]);
 
   const togglePlay = useCallback(() => {
-    if (!isPlaying && !isPaused) return;
+    const { isPlaying: playing, isPaused: paused, playlist: list, currentIndex: idx } = stateRef.current;
+    if (!playing && !paused) return;
 
-    if (isPaused) {
+    if (paused) {
       // 恢复播放
       setIsPaused(false);
+      stateRef.current.isPaused = false;
       if (audioRef.current && audioRef.current.paused) {
         audioRef.current.play().catch(() => {});
       } else {
-        // 若在间隙定时器期间暂停，恢复时直接播放当前项或下一项
-        const { playlist: list, currentIndex: idx } = stateRef.current;
+        // 若在间隙定时器期间暂停，恢复时直接播放当前项
         if (list[idx]) {
           playItemAtIndex(list, idx);
         }
@@ -164,12 +200,13 @@ export const useContinuousPlayer = () => {
     } else {
       // 暂停播放
       setIsPaused(true);
+      stateRef.current.isPaused = true;
       clearTimer();
       if (audioRef.current) {
         audioRef.current.pause();
       }
     }
-  }, [isPlaying, isPaused, playItemAtIndex]);
+  }, [playItemAtIndex]);
 
   const startOrToggle = useCallback((items, startIndex = 0, targetMode = 'listen') => {
     const { isPlaying: playing, isPaused: paused, mode: currentMode } = stateRef.current;
@@ -178,6 +215,7 @@ export const useContinuousPlayer = () => {
         togglePlay();
       } else {
         setMode(targetMode);
+        stateRef.current.mode = targetMode;
         if (paused) {
           togglePlay();
         }
@@ -191,6 +229,7 @@ export const useContinuousPlayer = () => {
     const { playlist: list, currentIndex: idx } = stateRef.current;
     if (idx + 1 < list.length) {
       setIsPaused(false);
+      stateRef.current.isPaused = false;
       playItemAtIndex(list, idx + 1);
     } else {
       stop();
@@ -201,13 +240,38 @@ export const useContinuousPlayer = () => {
     const { playlist: list, currentIndex: idx } = stateRef.current;
     if (idx - 1 >= 0) {
       setIsPaused(false);
+      stateRef.current.isPaused = false;
       playItemAtIndex(list, idx - 1);
     }
   }, [playItemAtIndex]);
 
   const toggleMode = useCallback(() => {
-    setMode((prev) => (prev === 'listen' ? 'shadow' : 'listen'));
-  }, []);
+    const newMode = stateRef.current.mode === 'listen' ? 'shadow' : 'listen';
+    setMode(newMode);
+    stateRef.current.mode = newMode;
+
+    // 若当前恰好处于单音/单句播完后的留白等待间隙中，立即按新模式留白时长自适应平滑衔接
+    if (timerRef.current) {
+      clearTimer();
+      const { playlist: list, currentIndex: idx, isPlaying: playing, isPaused: paused } = stateRef.current;
+      if (playing && !paused && list[idx]) {
+        const currentItem = list[idx];
+        const newGapMs = getGapMs(currentItem, newMode);
+        timerRef.current = setTimeout(() => {
+          timerRef.current = null;
+          const { playlist: latestList, isPlaying: stillPlaying, isPaused: stillPaused } = stateRef.current;
+          if (!stillPlaying || stillPaused) return;
+
+          const nextIdx = idx + 1;
+          if (nextIdx < latestList.length) {
+            playItemAtIndex(latestList, nextIdx);
+          } else {
+            stop();
+          }
+        }, newGapMs);
+      }
+    }
+  }, [playItemAtIndex, stop]);
 
   // 页面卸载或重置时清理
   useEffect(() => {
