@@ -11,20 +11,22 @@ import {
   Volume2
 } from 'lucide-react';
 
-export const ContinuousPlayerBar = ({
-  isPlaying,
-  isPaused,
-  mode, // 'listen' | 'shadow'
-  onToggleMode,
-  title,
-  progressText,
-  currentText,
-  currentCn,
-  onPrev,
-  onTogglePlay,
-  onNext,
-  onStop
-}) => {
+export const ContinuousPlayerBar = (props) => {
+  const player = props.player;
+  const isPlaying = player ? player.isPlaying : props.isPlaying;
+  const isPaused = player ? player.isPaused : props.isPaused;
+  const mode = player ? player.mode : props.mode;
+  const onToggleMode = player ? player.toggleMode : props.onToggleMode;
+  const onPrev = player ? player.prev : props.onPrev;
+  const onTogglePlay = player ? player.togglePlay : props.onTogglePlay;
+  const onNext = player ? player.next : props.onNext;
+  const onStop = player ? player.stop : props.onStop;
+  const currentText = props.currentText || player?.currentItem?.displayText || player?.currentItem?.text;
+  const currentCn = props.currentCn || player?.currentItem?.cn;
+  const title = props.title;
+  const progressText = props.progressText;
+  const currentGapMs = props.currentGapMs || player?.currentGapMs;
+
   if (!isPlaying && !isPaused) return null;
 
   return (
@@ -77,7 +79,7 @@ export const ContinuousPlayerBar = ({
 
       {/* 底部行：模式切换 pill + 播放控制按键 */}
       <div className="flex items-center justify-between gap-2 pt-1">
-        {/* 模式切换 (磨耳朵 1.2s vs 跟读留白 3.0s) */}
+        {/* 模式切换 (自适应阶梯留白：音标 0.4s/1.2s · 单词 0.8s/2.0s · 句子 1.2s/3.0s) */}
         <button
           type="button"
           onClick={onToggleMode}
@@ -86,17 +88,17 @@ export const ContinuousPlayerBar = ({
               ? 'bg-purple-900/60 text-purple-200 border-purple-600/80 hover:bg-purple-900'
               : 'bg-blue-900/60 text-blue-200 border-blue-600/80 hover:bg-blue-900'
           }`}
-          title="点击切换连续朗读模式"
+          title="点击切换连续朗读模式（自适应阶梯留白：音标 0.4s/1.2s · 单词 0.8s/2s · 句子 1.2s/3s）"
         >
           {mode === 'shadow' ? (
             <>
               <Mic className="w-3 h-3 text-purple-300" />
-              <span>🗣️ 跟读 (3.0s)</span>
+              <span>🗣️ 跟读留白 {currentGapMs ? `(${(currentGapMs / 1000).toFixed(1)}s)` : ''}</span>
             </>
           ) : (
             <>
               <Headphones className="w-3 h-3 text-blue-300" />
-              <span>🎧 磨耳朵 (1.2s)</span>
+              <span>🎧 磨耳朵 {currentGapMs ? `(${(currentGapMs / 1000).toFixed(1)}s)` : ''}</span>
             </>
           )}
         </button>

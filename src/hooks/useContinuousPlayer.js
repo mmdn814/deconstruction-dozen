@@ -1,6 +1,43 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { speakText, stopAllAudio } from '../lib/core.js';
 
+// 智能自适应阶梯留白时间：
+// 1. 纯单音 / 假名 (phoneme):   磨耳朵 0.4s (400ms) / 跟读 1.2s (1200ms)
+// 2. 词汇 / 短语 (word):       磨耳朵 0.8s (800ms) / 跟读 2.0s (2000ms)
+// 3. 完整句子 / 阶梯 (sentence): 磨耳朵 1.2s (1200ms) / 跟读 3.0s (3000ms)
+export const getItemType = (item) => {
+  if (item?.type) return item.type;
+  const text = String(item?.text || '').trim();
+  const id = String(item?.id || '');
+  if (
+    id.includes('kana') ||
+    id.includes('phoneme') ||
+    id.includes('sound') ||
+    text.startsWith('/') ||
+    (text.length <= 3 && !text.includes(' ') && !/[.,!?;:。？！]/.test(text))
+  ) {
+    return 'phoneme';
+  }
+  if (!text.includes(' ') || (text.split(/\s+/).length <= 2 && !/[.,!?;:。？！]/.test(text))) {
+    return 'word';
+  }
+  return 'sentence';
+};
+
+export const getGapMs = (item, currentMode) => {
+  if (typeof item?.gapMs === 'number') return item.gapMs;
+  const type = getItemType(item);
+  if (currentMode === 'shadow') {
+    if (type === 'phoneme') return 1200;
+    if (type === 'word') return 2000;
+    return 3000;
+  }
+  // listen 磨耳朵模式
+  if (type === 'phoneme') return 400;
+  if (type === 'word') return 800;
+  return 1200;
+};
+
 export const useContinuousPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -60,7 +97,7 @@ export const useContinuousPlayer = () => {
       const { isPlaying: playing, isPaused: paused, mode: currentMode, playlist: currentList } = stateRef.current;
       if (!playing || paused) return;
 
-      const gapMs = currentMode === 'shadow' ? 3000 : 1200;
+      const gapMs = getGapMs(item, currentMode);
       timerRef.current = setTimeout(() => {
         const nextIdx = index + 1;
         if (nextIdx < currentList.length) {
@@ -181,6 +218,8 @@ export const useContinuousPlayer = () => {
   }, []);
 
   const currentItem = playlist[currentIndex] || null;
+  const currentType = currentItem ? getItemType(currentItem) : null;
+  const currentGapMs = currentItem ? getGapMs(currentItem, mode) : (mode === 'shadow' ? 3000 : 1200);
 
   return {
     isPlaying,
@@ -189,6 +228,8 @@ export const useContinuousPlayer = () => {
     playlist,
     currentIndex,
     currentItem,
+    currentType,
+    currentGapMs,
     start,
     startOrToggle,
     stop,

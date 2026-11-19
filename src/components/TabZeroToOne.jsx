@@ -210,7 +210,7 @@ export const TabZeroToOne = ({
                   ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
                   : 'bg-white hover:bg-blue-50 text-blue-700 border border-blue-200'
               }`}
-              title="自动连续播放当前板块：单音/单句停顿 1.2 秒"
+              title="自动连续播放当前板块：自适应阶梯留白（音标 0.4s · 单词 0.8s · 句子 1.2s）"
             >
               <Headphones className="w-3.5 h-3.5" />
               <span>
@@ -228,7 +228,7 @@ export const TabZeroToOne = ({
                   ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
                   : 'bg-white hover:bg-purple-50 text-purple-700 border border-purple-200'
               }`}
-              title="自动连续播放当前板块：单音/单句停顿 3.0 秒留足跟读时间"
+              title="自动连续跟读当前板块：自适应阶梯留白（音标 1.2s · 单词 2.0s · 句子 3.0s 留足复述时间）"
             >
               <Mic className="w-3.5 h-3.5" />
               <span>
