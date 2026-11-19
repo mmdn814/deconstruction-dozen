@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown, Headphones, Mic, Pause } from 'lucide-react';
-import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
+import { LANGUAGE_CONFIG, speakText, scrollIntoViewComfortably } from '../lib/core.js';
 import { sentencesByLang } from '../data/sentences.js';
 import { MiniSentenceVisualizer, WordWithTooltip } from './SentenceVisualizer.jsx';
 import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
@@ -33,7 +33,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
     if (player.isPlaying && player.currentItem) {
       const el = document.getElementById(`sentence-${player.currentItem.id}`);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        scrollIntoViewComfortably(el);
       }
     }
   }, [player.currentItem, player.isPlaying]);

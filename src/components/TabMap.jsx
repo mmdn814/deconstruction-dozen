@@ -3,7 +3,7 @@ import { Headphones, Mic } from 'lucide-react';
 import { say, SlowToggle, WholeLine, Poster, SubTitle, DataMap } from './mapKit.jsx';
 import { MAP_EN } from '../data/langMapEn.js';
 import { MAP_ES } from '../data/langMapEs.js';
-import { LANGUAGE_CONFIG, KANA_AUDIO_MAP, IPA_AUDIO_MAP, getIpaAudioUrl, getWordAudioUrl } from '../lib/core.js';
+import { LANGUAGE_CONFIG, KANA_AUDIO_MAP, IPA_AUDIO_MAP, getIpaAudioUrl, getWordAudioUrl, scrollIntoViewComfortably } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
 import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
@@ -485,7 +485,7 @@ export const TabMap = ({ targetLang }) => {
       requestAnimationFrame(() => {
         const el = document.getElementById(player.currentItem.id);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          scrollIntoViewComfortably(el);
         }
       });
     }

@@ -15,7 +15,7 @@ import {
   Play,
   Pause
 } from 'lucide-react';
-import { LANGUAGE_CONFIG, speakText } from '../lib/core.js';
+import { LANGUAGE_CONFIG, speakText, scrollIntoViewComfortably } from '../lib/core.js';
 import { PICTURE_STAGES, SceneArt } from '../data/pictures.jsx';
 import { RICHARDS_BOOK1_PAGES } from '../data/richardsBook1Data.js';
 import { PronunciationEvaluator } from './PronunciationEvaluator.jsx';
@@ -156,7 +156,7 @@ export const TabPictures = ({
       requestAnimationFrame(() => {
         const el = document.getElementById(`panel-${player.currentItem.id}`);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          scrollIntoViewComfortably(el);
         }
       });
     }

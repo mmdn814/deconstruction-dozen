@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Volume2, Mic, Play, Headphones, Pause } from 'lucide-react';
-import { LANGUAGE_CONFIG, playPurePhoneme, speakText, getWordAudioUrl, IPA_AUDIO_MAP, getIpaAudioUrl } from '../lib/core.js';
+import { LANGUAGE_CONFIG, playPurePhoneme, speakText, getWordAudioUrl, IPA_AUDIO_MAP, getIpaAudioUrl, scrollIntoViewComfortably } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { PronunciationEvaluator } from './PronunciationEvaluator.jsx';
 import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
@@ -56,26 +56,66 @@ export const TabZeroToOne = ({
     });
   }, [activePhoneticCat, targetLang, langConfig.speechLang]);
 
+  const cleanSpeakWord = (raw) =>
+    String(raw || '')
+      .split('(')[0]
+      .split('（')[0]
+      .split('/')[0]
+      .trim();
+
+  // 易混相似音对决连读列表：每组按顺序连读 ①词A ➔ ②词B ➔ ③同句实战句子，悬浮窗展示词与句子及释义
   const pairsPlaylist = useMemo(() => {
-    return (data.minimalPairs || []).map((p, idx) => {
-      return {
-        id: `pair-${idx}`,
-        idx,
-        text: p.sentence,
-        displayText: `${p.w1} vs ${p.w2}`,
-        cn: p.sentenceCn,
-        audioUrl: `/audio/zerotoone/${targetLang}/pair_${idx}.mp3`,
-        speechLang: langConfig.speechLang
-      };
+    return (data.minimalPairs || []).flatMap((p, idx) => {
+      const cleanW1 = cleanSpeakWord(p.w1);
+      const cleanW2 = cleanSpeakWord(p.w2);
+      return [
+        {
+          id: `pair-${idx}`,
+          stepKey: `pair-${idx}-w1`,
+          idx,
+          type: 'word',
+          text: cleanW1,
+          displayText: `${p.tag || '混淆音'} · ① ${p.w1}`,
+          subText: p.ipa1,
+          cn: `对比词 ①: ${p.w1} (${p.ipa1 || ''})`,
+          audioUrl: getWordAudioUrl(cleanW1, targetLang),
+          speechLang: langConfig.speechLang
+        },
+        {
+          id: `pair-${idx}`,
+          stepKey: `pair-${idx}-w2`,
+          idx,
+          type: 'word',
+          text: cleanW2,
+          displayText: `${p.tag || '混淆音'} · ② ${p.w2}`,
+          subText: p.ipa2,
+          cn: `对比词 ②: ${p.w2} (${p.ipa2 || ''})`,
+          audioUrl: getWordAudioUrl(cleanW2, targetLang),
+          speechLang: langConfig.speechLang
+        },
+        {
+          id: `pair-${idx}`,
+          stepKey: `pair-${idx}-sent`,
+          idx,
+          type: 'sentence',
+          text: p.sentence,
+          displayText: `${p.w1} vs ${p.w2} · ${p.sentence}`,
+          subText: p.tip,
+          cn: p.sentenceCn,
+          audioUrl: `/audio/zerotoone/${targetLang}/pair_${idx}.mp3`,
+          speechLang: langConfig.speechLang
+        }
+      ];
     });
   }, [data.minimalPairs, targetLang, langConfig.speechLang]);
 
   const clustersPlaylist = useMemo(() => {
     return (data.soundClusters || []).flatMap((cluster, cIdx) =>
       cluster.words.map((w, wIdx) => {
-        const clean = String(w.w || '').split('(')[0].split('/')[0].trim();
+        const clean = cleanSpeakWord(w.w);
         return {
           id: `cluster-${cIdx}-${wIdx}`,
+          type: 'word',
           text: clean,
           displayText: w.w,
           subText: w.pron,
@@ -98,7 +138,7 @@ export const TabZeroToOne = ({
       requestAnimationFrame(() => {
         const el = document.getElementById(player.currentItem.id);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          scrollIntoViewComfortably(el);
         }
       });
     }
@@ -115,12 +155,6 @@ export const TabZeroToOne = ({
     setActiveClusterPracticeIdx(null);
     setActivePhoneticCatIdx(0);
   }, [targetLang, subStage]);
-
-  const cleanSpeakWord = (raw) =>
-    String(raw || '')
-      .split('(')[0]
-      .split('/')[0]
-      .trim();
 
   const startEarQuiz = (pair, idx) => {
     const side = Math.random() < 0.5 ? 1 : 2;
@@ -428,6 +462,9 @@ export const TabZeroToOne = ({
               const cleanW2 = cleanSpeakWord(pair.w2);
               const bothWordsTarget = `${cleanW1}, ${cleanW2}`;
               const isCurrentActive = player.isPlaying && player.currentItem?.id === `pair-${idx}`;
+              const isPlayingW1 = player.isPlaying && player.currentItem?.stepKey === `pair-${idx}-w1`;
+              const isPlayingW2 = player.isPlaying && player.currentItem?.stepKey === `pair-${idx}-w2`;
+              const isPlayingSentence = player.isPlaying && player.currentItem?.stepKey === `pair-${idx}-sent`;
 
               return (
                 <div
@@ -447,7 +484,11 @@ export const TabZeroToOne = ({
 
                     <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {/* Word A */}
-                      <div className="flex items-center justify-between bg-slate-50 hover:bg-blue-50/70 border border-slate-200/80 rounded-lg px-2.5 py-1.5 transition-colors">
+                      <div className={`flex items-center justify-between rounded-lg px-2.5 py-1.5 transition-colors ${
+                        isPlayingW1
+                          ? 'bg-blue-100 border-2 border-blue-600 ring-2 ring-blue-300'
+                          : 'bg-slate-50 hover:bg-blue-50/70 border border-slate-200/80'
+                      }`}>
                         <button
                           type="button"
                           onClick={() => {
@@ -475,7 +516,11 @@ export const TabZeroToOne = ({
                       </div>
 
                       {/* Word B */}
-                      <div className="flex items-center justify-between bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 rounded-lg px-2.5 py-1.5 transition-colors">
+                      <div className={`flex items-center justify-between rounded-lg px-2.5 py-1.5 transition-colors ${
+                        isPlayingW2
+                          ? 'bg-emerald-100 border-2 border-emerald-600 ring-2 ring-emerald-300'
+                          : 'bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80'
+                      }`}>
                         <button
                           type="button"
                           onClick={() => {
@@ -536,7 +581,11 @@ export const TabZeroToOne = ({
                   {pair.sentence && (() => {
                     const pairAudioUrl = `/audio/zerotoone/${targetLang}/pair_${idx}.mp3`;
                     return (
-                      <div className="bg-slate-50/90 border border-slate-200/80 rounded-lg px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div className={`rounded-lg px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 transition-colors ${
+                        isPlayingSentence
+                          ? 'bg-amber-100/90 border-2 border-amber-600 ring-2 ring-amber-300'
+                          : 'bg-slate-50/90 border border-slate-200/80'
+                      }`}>
                         <div className="space-y-0.5">
                           <div className="flex items-center flex-wrap gap-1.5">
                             <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px]">
@@ -737,11 +786,17 @@ export const TabZeroToOne = ({
                   {cluster.words.map((item, wIdx) => {
                     const cleanSpeak = cleanSpeakWord(item.w);
                     const wordAudio = getWordAudioUrl(cleanSpeak, targetLang);
+                    const isPlayingWord = player.isPlaying && player.currentItem?.id === `cluster-${idx}-${wIdx}`;
                     return (
                       <div
                         key={wIdx}
+                        id={`cluster-${idx}-${wIdx}`}
                         onClick={() => speakText(cleanSpeak, 0.95, 1.0, null, langConfig.speechLang, wordAudio)}
-                        className="bg-white hover:bg-blue-50/70 border border-slate-200/90 hover:border-blue-400 rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between"
+                        className={`rounded-xl p-2.5 cursor-pointer transition-all shadow-2xs flex flex-col justify-between ${
+                          isPlayingWord
+                            ? 'bg-blue-100 border-2 border-blue-600 ring-2 ring-blue-300'
+                            : 'bg-white hover:bg-blue-50/70 border border-slate-200/90 hover:border-blue-400'
+                        }`}
                       >
                         <div className="flex items-start justify-between gap-1">
                           <span className="text-xs font-extrabold text-slate-900">{item.w}</span>

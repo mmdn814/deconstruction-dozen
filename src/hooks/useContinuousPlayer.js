@@ -132,13 +132,27 @@ export const useContinuousPlayer = () => {
         audioRef.current = audio;
 
         let isAborted = false;
+        let loadTimer = setTimeout(() => {
+          if (isAborted || hasEnded) return;
+          if (audio.paused && audio.currentTime === 0) {
+            isAborted = true;
+            try { audio.pause(); } catch (e) {}
+            speakText(item.text, 0.95, 1.0, onAudioEnded, item.speechLang);
+          }
+        }, 2200);
+
+        audio.onplay = () => clearTimeout(loadTimer);
+        audio.onplaying = () => clearTimeout(loadTimer);
+
         audio.onended = () => {
+          clearTimeout(loadTimer);
           if (isAborted) return;
           if (audioRef.current === audio) audioRef.current = null;
           onAudioEnded();
         };
 
         audio.onerror = () => {
+          clearTimeout(loadTimer);
           if (isAborted) return;
           isAborted = true;
           // 若静态音频加载异常，平滑降级到系统发音
@@ -148,6 +162,7 @@ export const useContinuousPlayer = () => {
         const promise = audio.play();
         if (promise !== undefined) {
           promise.catch((err) => {
+            clearTimeout(loadTimer);
             if (isAborted) return;
             // 若为用户主动切换或暂停造成的 AbortError，忽略无需降级
             if (err && err.name === 'AbortError') return;

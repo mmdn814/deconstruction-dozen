@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   Check,
   ChevronLeft,
@@ -21,7 +21,8 @@ import {
   callGemini,
   loadFromStorage,
   saveToStorage,
-  STORAGE_KEYS
+  STORAGE_KEYS,
+  scrollIntoViewComfortably
 } from '../lib/core.js';
 import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { WORD_THEMES, CORE_THEME_ID, parseWordFile } from '../data/wordThemes.js';
@@ -98,7 +99,7 @@ export const TabWords = ({ targetLang }) => {
   const themeRead = words.filter((x) => readOfLang[wordId(x)]).length;
   const theme = WORD_THEMES.find((t) => t.id === themeId);
 
-  const themeName = (t) => (targetLang !== 'ja' && t.alt) || t.name;
+  const themeName = (t) => (!t ? '' : (targetLang !== 'ja' && t.alt) || t.name || '');
 
   const markRead = (item) => {
     if (!readOfLang[wordId(item)]) {
@@ -169,7 +170,7 @@ export const TabWords = ({ targetLang }) => {
       requestAnimationFrame(() => {
         const el = document.getElementById(`word-${player.currentItem.id}`);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          scrollIntoViewComfortably(el);
         }
       });
     }
@@ -373,7 +374,7 @@ export const TabWords = ({ targetLang }) => {
               <span>当前主题舱:</span>
             </span>
             <span className="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 font-bold text-xs border border-emerald-200">
-              {isCore ? '⭐ 第0关 核心词砖' : `${theme.emoji} ${themeName(theme)}`} ({words.length}词)
+              {isCore ? '⭐ 第0关 核心词砖' : (theme ? `${theme.emoji} ${themeName(theme)}` : '')} ({words.length}词)
             </span>
           </div>
 
@@ -400,7 +401,7 @@ export const TabWords = ({ targetLang }) => {
       <div className="flex flex-wrap items-center justify-between gap-2 px-1">
         <div className="flex items-center gap-2 flex-wrap">
           <div className="text-sm font-black text-slate-900">
-            {isCore ? '⭐ 第0关 核心词砖' : `${theme.emoji} ${themeName(theme)}`}
+            {isCore ? '⭐ 第0关 核心词砖' : (theme ? `${theme.emoji} ${themeName(theme)}` : '')}
             <span className="ml-2 text-xs font-bold text-slate-500">
               本舱已拼读 {themeRead}/{words.length}
             </span>
@@ -575,7 +576,7 @@ export const TabWords = ({ targetLang }) => {
         isPaused={player.isPaused}
         mode={player.mode}
         onToggleMode={player.toggleMode}
-        title={`3000词 · ${player.currentItem?.themeTitle || (isCore ? '核心词砖' : themeName(theme))}`}
+        title={`3000词 · ${player.currentItem?.themeTitle || (isCore ? '核心词砖' : (theme ? themeName(theme) : ''))}`}
         progressText={`第 ${player.currentIndex + 1} / ${full3000Playlist.length} 词`}
         currentText={`${player.currentItem?.displayText || ''} ${player.currentItem?.subText ? `(${player.currentItem.subText})` : ''}`}
         currentCn={player.currentItem?.cn}

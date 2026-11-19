@@ -265,6 +265,15 @@ export const getWordAudioUrl = (word, langCode = 'en') => {
 let currentActiveAudio = null;
 let activeUtterance = null; // 防垃圾回收关键引用
 
+// 智能平滑视口居中滚动（避免连读时下一项贴在屏幕最底边缘或被悬浮窗遮挡）
+export const scrollIntoViewComfortably = (el) => {
+  if (!el) return;
+  const rect = el.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  if (rect.top >= 80 && rect.bottom <= windowHeight - 140) return;
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
 export const stopAllAudio = () => {
   if (typeof window === 'undefined') return;
   if (currentActiveAudio) {
