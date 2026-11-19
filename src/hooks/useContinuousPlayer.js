@@ -128,8 +128,17 @@ export const useContinuousPlayer = () => {
 
     if (item.audioUrl) {
       try {
-        const audio = new Audio(item.audioUrl);
-        audioRef.current = audio;
+        let audio = audioRef.current;
+        if (!audio) {
+          audio = new Audio();
+          audioRef.current = audio;
+        } else {
+          try {
+            audio.pause();
+          } catch (e) {}
+        }
+        audio.src = item.audioUrl;
+        audio.currentTime = 0;
 
         let isAborted = false;
         let loadTimer = setTimeout(() => {
@@ -147,7 +156,6 @@ export const useContinuousPlayer = () => {
         audio.onended = () => {
           clearTimeout(loadTimer);
           if (isAborted) return;
-          if (audioRef.current === audio) audioRef.current = null;
           onAudioEnded();
         };
 
@@ -180,6 +188,21 @@ export const useContinuousPlayer = () => {
 
   const start = useCallback((items, startIndex = 0, initialMode = null) => {
     if (!items || items.length === 0) return;
+
+    // 关键优化：在用户手势点击的同步调用栈内，提前激活单例 Audio 实例与 Web Audio 上下文，打通 iOS Safari 后续连续播放权限
+    if (!audioRef.current) {
+      audioRef.current = new Audio();
+    }
+    try {
+      if (typeof window !== 'undefined' && (window.AudioContext || window.webkitAudioContext)) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!window._dd_audio_ctx) window._dd_audio_ctx = new AudioCtx();
+        if (window._dd_audio_ctx.state === 'suspended') {
+          window._dd_audio_ctx.resume();
+        }
+      }
+    } catch (e) {}
+
     const validStart = Math.max(0, Math.min(startIndex, items.length - 1));
     const targetMode = initialMode || stateRef.current.mode || 'listen';
     setMode(targetMode);
