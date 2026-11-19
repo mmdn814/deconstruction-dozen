@@ -92,7 +92,7 @@ const HEAD_TONES = {
 };
 
 // 音标 / 字母发音表：直接用「发音与辨音」里已有的数据
-const SoundsBlock = ({ lang }) => {
+const SoundsBlock = ({ lang, activeId = null }) => {
   const cats = (zeroToOneDataByLang[lang] || {}).phoneticCategories || [];
   return cats.map((cat, ci) => (
     <React.Fragment key={cat.id}>
@@ -100,9 +100,17 @@ const SoundsBlock = ({ lang }) => {
       <div className="grid grid-cols-2 sm:grid-cols-3 border-t border-l border-dashed border-emerald-200">
         {cat.items.map((it, itemIdx) => {
           const key = it.char.startsWith('/') ? it.char.split(' ')[0] : it.char;
+          const soundId = `map-sound-${lang}-${cat.id}-${itemIdx}`;
+          const isCurrentActive = activeId === soundId;
           const phonemeAudio = lang === 'en' ? null : `/audio/phonemes/${lang}/${cat.id}_${itemIdx}.mp3`;
           return (
-            <div key={it.char} className="flex items-center gap-1.5 px-1 py-1 border-b border-r border-dashed border-emerald-200">
+            <div
+              key={it.char}
+              id={soundId}
+              className={`flex items-center gap-1.5 px-1 py-1 border-b border-r border-dashed border-emerald-200 transition-all ${
+                isCurrentActive ? 'bg-amber-100 ring-2 ring-amber-400 font-extrabold shadow-sm' : ''
+              }`}
+            >
               <button
                 type="button"
                 onClick={() => (slowMode ? speakText(it.sound, 0.45, 1.0, null, lang, phonemeAudio) : playPurePhoneme(key, it.sound, lang, null, false, phonemeAudio))}
@@ -282,7 +290,7 @@ const UsageBlock = ({ items, lang = 'en' }) => (
 const Block = ({ b, lang = 'en', activeId = null }) => {
   if (b.t === 'sub') return <SubTitle>{b.text}</SubTitle>;
   if (b.t === 'note') return <p className="text-xs text-slate-700 leading-relaxed mt-1.5">{b.text}</p>;
-  if (b.t === 'sounds') return <SoundsBlock lang={b.lang || lang} />;
+  if (b.t === 'sounds') return <SoundsBlock lang={b.lang || lang} activeId={activeId} />;
   if (b.t === 'table') return <TableBlock {...b} lang={lang} />;
   if (b.t === 'ladder') return <LadderBlock {...b} lang={lang} activeId={activeId} />;
   if (b.t === 'usage') return <UsageBlock {...b} lang={lang} />;

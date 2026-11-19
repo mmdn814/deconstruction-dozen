@@ -3,7 +3,8 @@ import { Headphones, Mic } from 'lucide-react';
 import { say, SlowToggle, WholeLine, Poster, SubTitle, DataMap } from './mapKit.jsx';
 import { MAP_EN } from '../data/langMapEn.js';
 import { MAP_ES } from '../data/langMapEs.js';
-import { LANGUAGE_CONFIG } from '../lib/core.js';
+import { LANGUAGE_CONFIG, KANA_AUDIO_MAP, IPA_AUDIO_MAP, getIpaAudioUrl, getWordAudioUrl } from '../lib/core.js';
+import { zeroToOneDataByLang } from '../data/zeroToOne.js';
 import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
 import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 import {
@@ -58,44 +59,56 @@ const Ruby = ({ w, r }) => {
 };
 
 // --- 1. 五十音图 ---
-const KanaCell = ({ cell, first }) =>
-  cell ? (
+const KanaCell = ({ cell, first, activeId = null }) => {
+  if (!cell) return <div className="border-b border-r border-dashed border-emerald-200" />;
+  const cellId = `map-kana-${cell.k}`;
+  const isCurrentActive = activeId === cellId;
+  return (
     <button
+      id={cellId}
       type="button"
       onClick={() => say(cell.k, 0.8, 'ja')}
-      className="flex items-baseline justify-center gap-1 py-1 border-b border-r border-dashed border-emerald-200 active:bg-emerald-50"
+      className={`flex items-baseline justify-center gap-1 py-1 border-b border-r border-dashed border-emerald-200 transition-all active:bg-emerald-50 ${
+        isCurrentActive ? 'bg-amber-100 ring-2 ring-amber-400 font-extrabold shadow-sm' : ''
+      }`}
     >
       <span className={`text-2xl font-black leading-none ${first ? 'text-slate-900' : 'text-rose-600'}`}>{cell.k}</span>
       <span className="text-xs font-bold text-slate-400 leading-none">{toKatakana(cell.k)}</span>
       <span className="text-[11px] text-slate-600 leading-none">{cell.r}</span>
     </button>
-  ) : (
-    <div className="border-b border-r border-dashed border-emerald-200" />
   );
+};
 
-const KanaPoster = () => (
+const KanaPoster = ({ activeId = null }) => (
   <Poster title="日语五十音图" note="大字是平假名，小灰字是片假名，读音一样。点一下就读。">
     {KANA_TABLES.map((table, ti) => (
       <React.Fragment key={table.id}>
         {ti > 0 && <SubTitle>浊音 · 半浊音</SubTitle>}
         <div className="grid grid-cols-5 border-t border-l border-dashed border-emerald-200">
-          {table.rows.map((r, ri) => r.map((cell, ci) => <KanaCell key={`${ri}-${ci}`} cell={cell} first={ci === 0} />))}
+          {table.rows.map((r, ri) => r.map((cell, ci) => <KanaCell key={`${ri}-${ci}`} cell={cell} first={ci === 0} activeId={activeId} />))}
         </div>
       </React.Fragment>
     ))}
     <SubTitle>拗音（两个假名读成一个音）</SubTitle>
     <div className="grid grid-cols-3 border-t border-l border-dashed border-emerald-200">
-      {YOON_ROWS.flatMap((r) => [0, 2, 4].map((i) => ({ k: r[i], r: r[i + 1] }))).map((cell, i) => (
-        <button
-          key={cell.k}
-          type="button"
-          onClick={() => say(cell.k, 0.8, 'ja')}
-          className="flex items-baseline justify-center gap-1.5 py-1 border-b border-r border-dashed border-emerald-200 active:bg-emerald-50"
-        >
-          <span className={`text-lg font-black leading-none ${i % 3 === 0 ? 'text-slate-900' : 'text-rose-600'}`}>{cell.k}</span>
-          <span className="text-[11px] text-slate-600 leading-none">{cell.r}</span>
-        </button>
-      ))}
+      {YOON_ROWS.flatMap((r) => [0, 2, 4].map((i) => ({ k: r[i], r: r[i + 1] }))).map((cell, i) => {
+        const yoonId = `map-kana-${cell.k}`;
+        const isCurrentActive = activeId === yoonId;
+        return (
+          <button
+            key={cell.k}
+            id={yoonId}
+            type="button"
+            onClick={() => say(cell.k, 0.8, 'ja')}
+            className={`flex items-baseline justify-center gap-1.5 py-1 border-b border-r border-dashed border-emerald-200 transition-all active:bg-emerald-50 ${
+              isCurrentActive ? 'bg-amber-100 ring-2 ring-amber-400 font-extrabold shadow-sm' : ''
+            }`}
+          >
+            <span className={`text-lg font-black leading-none ${i % 3 === 0 ? 'text-slate-900' : 'text-rose-600'}`}>{cell.k}</span>
+            <span className="text-[11px] text-slate-600 leading-none">{cell.r}</span>
+          </button>
+        );
+      })}
     </div>
   </Poster>
 );
@@ -362,35 +375,109 @@ export const TabMap = ({ targetLang }) => {
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
   const player = useContinuousPlayer();
 
-  const ladderPlaylist = useMemo(() => {
+  // 语言地图全景贯通播放列表：严格从头（第 1 张海报：五十音 / 发音表）开始依次连读，再进入长句阶梯
+  const mapPlaylist = useMemo(() => {
+    const list = [];
+
+    // --- 1. 日语：严格从「五十音图（清音 46 + 浊音 25 + 拗音 33）」从头开始读 ---
     if (targetLang === 'ja') {
-      return STAGES.map((stage, si) => {
+      // 1.1 清音 (46个) + 浊音/半浊音 (25个)
+      KANA_TABLES.forEach((table) => {
+        table.rows.forEach((r) => {
+          r.forEach((cell) => {
+            if (cell && cell.k) {
+              list.push({
+                id: `map-kana-${cell.k}`,
+                text: cell.k,
+                displayText: `${cell.k} (${toKatakana(cell.k)})`,
+                subText: cell.r,
+                cn: `${table.title} · ${cell.r}`,
+                audioUrl: KANA_AUDIO_MAP[cell.k] || null,
+                speechLang: 'ja-JP'
+              });
+            }
+          });
+        });
+      });
+
+      // 1.2 拗音 (33个)
+      YOON_ROWS.forEach((r) => {
+        [0, 2, 4].forEach((i) => {
+          const k = r[i];
+          const rom = r[i + 1];
+          if (k) {
+            list.push({
+              id: `map-kana-${k}`,
+              text: k,
+              displayText: k,
+              subText: rom,
+              cn: `日语拗音 · ${rom}`,
+              audioUrl: KANA_AUDIO_MAP[k] || null,
+              speechLang: 'ja-JP'
+            });
+          }
+        });
+      });
+
+      // 1.3 一分钟看懂日语句子 (7 阶)
+      STAGES.forEach((stage, si) => {
         const parts = stage.ids.map((id) => SENTENCE_PARTS.find((p) => p.id === id));
         const text = parts.map((p) => p.w + p.p).join('') + '。';
-        return {
+        list.push({
           id: `map-ladder-${si}`,
           text,
           displayText: text,
           cn: `一分钟日语句子 · 第 ${si + 1} 阶 (${stage.cn})`,
           audioUrl: `/audio/map/ja/ladder_${si}.mp3`,
           speechLang: 'ja-JP'
-        };
+        });
       });
+
+      return list;
     }
+
+    // --- 2. 英语 / 西语：从第 1 张海报「发音表」从头开始读 ---
+    const soundCats = (zeroToOneDataByLang[targetLang] || {}).phoneticCategories || [];
+    soundCats.forEach((cat) => {
+      cat.items.forEach((it, itemIdx) => {
+        const key = it.char.startsWith('/') ? it.char.split(' ')[0] : it.char;
+        const cleanKey = it.char.replace(/\s*[\(（].*$/, '').replace(/\s*(清|浊).*$/, '').trim();
+        const slashKey = `/${cleanKey.replace(/^\/+|\/+$/g, '')}/`;
+        const enFile = targetLang === 'en' ? (IPA_AUDIO_MAP[it.char] || IPA_AUDIO_MAP[cleanKey] || IPA_AUDIO_MAP[slashKey]) : null;
+        const audioUrl = targetLang === 'en'
+          ? (enFile ? getIpaAudioUrl(enFile) : getWordAudioUrl(it.sample, 'en'))
+          : `/audio/phonemes/es/${cat.id}_${itemIdx}.mp3`;
+
+        list.push({
+          id: `map-sound-${targetLang}-${cat.id}-${itemIdx}`,
+          text: it.sound || cleanKey,
+          displayText: `${key} · 例: ${it.sample}`,
+          subText: it.sub,
+          cn: `${cat.name.split('(')[0].trim()} · ${it.sample} (${it.sampleCn || ''})`,
+          audioUrl,
+          speechLang: langConfig.speechLang
+        });
+      });
+    });
+
+    // 2.2 一分钟看懂句子 (5 阶)
     const spec = targetLang === 'es' ? MAP_ES : MAP_EN;
     const ladderBlock = spec.posters.flatMap((p) => p.blocks).find((b) => b.t === 'ladder');
-    if (!ladderBlock) return [];
-    return ladderBlock.lines.map((line, li) => {
-      const fullSentence = line.parts.map((p) => p[1]).join(' ');
-      return {
-        id: `map-ladder-${li}`,
-        text: fullSentence,
-        displayText: fullSentence,
-        cn: `一分钟长句 · 第 ${li + 1} 阶 (${line.cn})`,
-        audioUrl: `/audio/map/${targetLang}/ladder_${li}.mp3`,
-        speechLang: langConfig.speechLang
-      };
-    });
+    if (ladderBlock) {
+      ladderBlock.lines.forEach((line, li) => {
+        const fullSentence = line.parts.map((p) => p[1]).join(' ');
+        list.push({
+          id: `map-ladder-${li}`,
+          text: fullSentence,
+          displayText: fullSentence,
+          cn: `一分钟长句 · 第 ${li + 1} 阶 (${line.cn})`,
+          audioUrl: `/audio/map/${targetLang}/ladder_${li}.mp3`,
+          speechLang: langConfig.speechLang
+        });
+      });
+    }
+
+    return list;
   }, [targetLang, langConfig.speechLang]);
 
   useEffect(() => {
@@ -422,7 +509,7 @@ export const TabMap = ({ targetLang }) => {
             </h2>
           </div>
           <p className="text-[11px] text-slate-600 mt-1">
-            点哪里读哪里，认清句子生长逻辑与语法小零件。支持全句阶梯自动连读训练！
+            点哪里读哪里，认清发音规律、语法小零件与长句生长逻辑。支持全景从头连读训练！
           </p>
         </div>
 
@@ -431,13 +518,13 @@ export const TabMap = ({ targetLang }) => {
           <div className="flex items-center gap-1.5">
             <button
               type="button"
-              onClick={() => player.startOrToggle(ladderPlaylist, 0, 'listen')}
+              onClick={() => player.startOrToggle(mapPlaylist, 0, 'listen')}
               className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
                 player.isPlaying && player.mode === 'listen'
                   ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
                   : 'bg-white hover:bg-blue-50 text-blue-700 border border-blue-200'
               }`}
-              title="自动连续播放长句阶梯：单句停顿 1.2 秒"
+              title="自动从头连续播放整张地图：单音/单句停顿 1.2 秒"
             >
               <Headphones className="w-3.5 h-3.5" />
               <span>
@@ -449,13 +536,13 @@ export const TabMap = ({ targetLang }) => {
 
             <button
               type="button"
-              onClick={() => player.startOrToggle(ladderPlaylist, 0, 'shadow')}
+              onClick={() => player.startOrToggle(mapPlaylist, 0, 'shadow')}
               className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-2xs ${
                 player.isPlaying && player.mode === 'shadow'
                   ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200'
                   : 'bg-white hover:bg-purple-50 text-purple-700 border border-purple-200'
               }`}
-              title="自动连续播放长句阶梯：单句停顿 3.0 秒留足跟读时间"
+              title="自动从头连续播放整张地图：单音/单句停顿 3.0 秒留足跟读时间"
             >
               <Mic className="w-3.5 h-3.5" />
               <span>
@@ -475,7 +562,7 @@ export const TabMap = ({ targetLang }) => {
       {targetLang === 'es' && <DataMap spec={MAP_ES} activeId={player.currentItem?.id} />}
       {targetLang === 'ja' && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
-          <KanaPoster />
+          <KanaPoster activeId={player.currentItem?.id} />
           <div className="space-y-3">
             <SentencePoster activeId={player.currentItem?.id} />
             <TensePoster />
@@ -488,8 +575,8 @@ export const TabMap = ({ targetLang }) => {
       {/* Floating Bottom Mini Player */}
       <ContinuousPlayerBar
         player={player}
-        title="语言地图 · 一分钟长句阶梯"
-        progressText={`第 ${player.currentIndex + 1} / ${ladderPlaylist.length} 阶`}
+        title={`语言地图 · ${langConfig.name}全景体系`}
+        progressText={`第 ${player.currentIndex + 1} / ${mapPlaylist.length} 项 · ${player.currentItem?.displayText || ''}`}
       />
     </div>
   );
