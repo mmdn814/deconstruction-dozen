@@ -9,6 +9,7 @@ import {
   ChevronUp,
   Layers,
   Headphones,
+  Mic,
   Pause,
   Volume2
 } from 'lucide-react';
@@ -474,12 +475,7 @@ export const TabWords = ({ targetLang }) => {
         )}
       </div>
 
-      {loadingTheme ? (
-        <div className="flex items-center gap-2 text-sm text-slate-500 p-6 justify-center">
-          <Loader2 className="w-4 h-4 animate-spin" />
-          <span>正在打开这个主题舱…</span>
-        </div>
-      ) : words.length === 0 ? (
+      {words.length === 0 ? (
         <div className="text-sm text-slate-500 text-center p-6 border border-dashed border-slate-300 rounded-xl">
           这个主题舱还没有内置词，可以用下面的按钮让 AI 先生成一批。
         </div>
