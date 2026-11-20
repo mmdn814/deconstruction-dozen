@@ -14,7 +14,7 @@ import {
   Play,
   Pause
 } from 'lucide-react';
-import { LANGUAGE_CONFIG, speakText, scrollIntoViewComfortably } from '../lib/core.js';
+import { LANGUAGE_CONFIG, speakText, scrollIntoViewComfortably, resolveAssetUrl } from '../lib/core.js';
 import { PICTURE_STAGES, SceneArt } from '../data/pictures.jsx';
 import { RICHARDS_BOOK1_PAGES } from '../data/richardsBook1Data.js';
 import { PronunciationEvaluator } from './PronunciationEvaluator.jsx';
@@ -371,7 +371,7 @@ export const TabPictures = ({
                     {/* 原稿手绘插画图片 */}
                     <div className="relative rounded-lg overflow-hidden border border-slate-100 bg-slate-50/80 flex items-center justify-center p-2 min-h-[170px]">
                       <img
-                        src={panel.img}
+                        src={resolveAssetUrl(panel.img)}
                         alt={currentSentence}
                         className="max-h-44 w-auto object-contain select-none transition-transform hover:scale-102"
                         loading="lazy"
@@ -558,7 +558,7 @@ export const TabPictures = ({
             </div>
             <div className="p-3 overflow-y-auto flex items-center justify-center bg-slate-100">
               <img
-                src={currentPageData.img}
+                src={resolveAssetUrl(currentPageData.img)}
                 alt={`Richards Page ${bookPage}`}
                 className="max-h-[75vh] w-auto rounded-lg shadow-md border border-slate-200 bg-white"
               />

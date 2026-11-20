@@ -123,11 +123,11 @@ export const IPA_AUDIO_MAP = {
   'RR rr': 'rr_isolation.mp3'
 };
 
-// 智能多端音频资源路径解析器（完美适配 GitHub Pages 子路径部署、本地开发与独立域名）
-export const resolveAudioUrl = (url) => {
-  if (!url) return null;
+// 智能多端资源（图片、音频）路径解析器（完美适配 GitHub Pages 子路径部署、本地开发与独立域名）
+export const resolveAssetUrl = (url) => {
+  if (!url) return '';
   const str = String(url).trim();
-  if (!str) return null;
+  if (!str) return '';
   // 已经是网络完整协议、Blob 或 Data URI，直接使用
   if (/^(https?:|blob:|data:|\/\/)/i.test(str)) {
     return str;
@@ -146,6 +146,8 @@ export const resolveAudioUrl = (url) => {
   const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
   return `${base.replace(/\/+$/, '')}/${cleanPath}`;
 };
+
+export const resolveAudioUrl = resolveAssetUrl;
 
 export const getIpaAudioUrl = (filename) => {
   return resolveAudioUrl(`audio/ipa/${filename}`);
