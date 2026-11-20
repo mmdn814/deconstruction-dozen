@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Volume2, ChevronDown, ChevronUp, ChevronsUpDown, Headphones, Mic, Pause } from 'lucide-react';
+import { Volume2, ChevronDown, ChevronUp, Headphones, Mic } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText, scrollIntoViewComfortably } from '../lib/core.js';
 import { sentencesByLang } from '../data/sentences.js';
 import { MiniSentenceVisualizer, WordWithTooltip } from './SentenceVisualizer.jsx';
@@ -7,11 +7,10 @@ import { useContinuousPlayer } from '../hooks/useContinuousPlayer.js';
 import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 
 // --- TAB 2: 12 Sentences Deconstruction (2-Column Grid with Expandable Trap & Workplace) ---
-export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSentence }) => {
+export const TabDeconstruction = ({ targetLang }) => {
   const sentences = sentencesByLang[targetLang] || sentencesByLang.en;
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
   const [expandedMap, setExpandedMap] = useState({});
-  const [allExpanded, setAllExpanded] = useState(true);
 
   const player = useContinuousPlayer();
 
@@ -42,42 +41,24 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
     player.stop();
   }, [targetLang]);
 
-  const handleToggleAutoPlay = () => {
-    if (player.isPlaying) {
-      player.togglePlay();
-      return;
-    }
-    player.start(playlist, 0);
-  };
-
   const toggleExpand = (id) => {
     setExpandedMap((prev) => ({
       ...prev,
-      [id]: prev[id] === undefined ? !allExpanded : !prev[id]
+      [id]: !prev[id]
     }));
-  };
-
-  const toggleAll = () => {
-    const next = !allExpanded;
-    setAllExpanded(next);
-    const updated = {};
-    sentences.forEach((s) => {
-      updated[s.id] = next;
-    });
-    setExpandedMap(updated);
   };
 
   return (
     <div className="space-y-3">
       {/* Top Controller Bar */}
-      <div className="bg-slate-50 border border-slate-200/90 rounded-xl p-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div className="bg-stone-50/80 border border-stone-200/90 rounded-xl p-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-2xs">
         <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-0.5">
-          <span className="text-[11px] font-bold text-slate-500 shrink-0 mr-1">快速跳转:</span>
+          <span className="text-[11px] font-bold text-stone-500 shrink-0 mr-1">快速跳转:</span>
           {sentences.map((s) => (
             <a
               key={s.id}
               href={`#sentence-${s.id}`}
-              className="px-2 py-0.5 rounded-md bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-600 text-xs font-bold border border-slate-200 shrink-0 transition-colors shadow-2xs"
+              className="px-2 py-0.5 rounded-md bg-white hover:bg-stone-100 text-stone-700 hover:text-blue-600 text-xs font-bold border border-stone-200 shrink-0 transition-colors shadow-2xs"
             >
               #{s.id}
             </a>
@@ -121,15 +102,6 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                 : '🗣️ 跟读留白连读'}
             </span>
           </button>
-
-          <button
-            type="button"
-            onClick={toggleAll}
-            className="px-2.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 flex items-center gap-1 transition-colors shadow-2xs"
-          >
-            <ChevronsUpDown className="w-3.5 h-3.5 text-blue-600" />
-            <span>{allExpanded ? '收起所有解析' : '展开所有解析'}</span>
-          </button>
         </div>
       </div>
 
@@ -138,8 +110,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
         {sentences.map((item) => {
           const fullCoreSentence = targetLang === 'ja' ? item.en.join('') : item.en.join(' ');
           const workplaceWords = item.workplace.split(' ');
-          const saved = isSentenceSaved(item.workplace);
-          const isExpanded = expandedMap[item.id] !== undefined ? expandedMap[item.id] : allExpanded;
+          const isExpanded = !!expandedMap[item.id];
           const coreAudioUrl = `/audio/core/${targetLang}/core_${item.id}.mp3`;
           const workplaceAudioUrl = `/audio/core/${targetLang}/workplace_${item.id}.mp3`;
           const isCurrentActive = player.isPlaying && player.currentItem?.id === item.id;
@@ -151,7 +122,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
               className={`rounded-xl border transition-all p-3.5 flex flex-col justify-between space-y-2.5 shadow-2xs ${
                 isCurrentActive
                   ? 'bg-blue-50/20 border-blue-500 ring-2 ring-blue-400/90 shadow-md'
-                  : 'bg-white border-slate-200/90 hover:border-blue-300'
+                  : 'bg-white border-stone-200/90 hover:border-stone-300'
               }`}
             >
               {/* Top Area: Number Badge + 3-Layer Colored Line Visualizer + Normal/Slow Audio */}
@@ -162,7 +133,7 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 mb-1">
-                    <span className="text-[10.5px] font-semibold text-slate-400 truncate">
+                    <span className="text-[10.5px] font-semibold text-stone-400 truncate">
                       悬停单词看释义 · 点击发音
                     </span>
                     <div className="flex items-center gap-1 shrink-0">
@@ -196,12 +167,12 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
               </div>
 
               {/* Bottom Area: Toggleable Trap & Workplace Example */}
-              <div className="pt-2 border-t border-slate-100 space-y-1.5 text-xs">
+              <div className="pt-2 border-t border-stone-100 space-y-1.5 text-xs">
                 <div className="flex items-center justify-between">
                   <button
                     type="button"
                     onClick={() => toggleExpand(item.id)}
-                    className="text-[11px] font-bold text-slate-500 hover:text-slate-800 flex items-center gap-1 transition-colors"
+                    className="text-[11px] font-bold text-stone-500 hover:text-stone-800 flex items-center gap-1 transition-colors"
                   >
                     <span>{isExpanded ? '收起避坑与职场演进' : '查看避坑雷区与职场演进'}</span>
                     {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -214,10 +185,10 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                       <span className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200/70 font-bold text-[10.5px] shrink-0 mt-0.5">
                         陷阱
                       </span>
-                      <p className="text-slate-600 leading-relaxed text-[11.5px]">{item.trap}</p>
+                      <p className="text-stone-600 leading-relaxed text-[11.5px]">{item.trap}</p>
                     </div>
 
-                    <div className="bg-slate-50/80 rounded-lg p-2 border border-slate-200/60 space-y-1.5">
+                    <div className="bg-stone-50/80 rounded-lg p-2 border border-stone-200/60 space-y-1.5">
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center flex-wrap gap-1 min-w-0">
                           <span className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200/70 font-bold text-[10.5px] shrink-0 mr-1">
@@ -242,33 +213,14 @@ export const TabDeconstruction = ({ targetLang, isSentenceSaved, onToggleSaveSen
                             🐢 慢速
                           </button>
                         </div>
-
-                        <button
-                          type="button"
-                          onClick={() =>
-                            onToggleSaveSentence({
-                              en: item.workplace,
-                              cn: item.workplaceCn || `对应第 ${item.id} 句职场高频表达`,
-                              skeletonId: item.id,
-                              tag: '职场例句'
-                            })
-                          }
-                          className={`px-2 py-0.5 rounded-md text-[10.5px] font-bold border shrink-0 transition-all ${
-                            saved
-                              ? 'bg-amber-50 text-amber-700 border-amber-300'
-                              : 'bg-white hover:bg-slate-100 text-slate-500 border-slate-200'
-                          }`}
-                        >
-                          {saved ? '★ 已收藏' : '☆ 收藏'}
-                        </button>
                       </div>
 
                       {item.workplaceCn && (
-                        <div className="text-xs text-slate-600 flex items-center gap-2 border-t border-slate-200/60 pt-1.5 mt-1">
+                        <div className="text-xs text-stone-600 flex items-center gap-2 border-t border-stone-200/60 pt-1.5 mt-1">
                           <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 px-1.5 py-0.5 rounded shrink-0">
                             释义
                           </span>
-                          <span className="text-slate-700 font-medium">{item.workplaceCn}</span>
+                          <span className="text-stone-700 font-medium">{item.workplaceCn}</span>
                         </div>
                       )}
                     </div>

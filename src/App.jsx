@@ -27,16 +27,13 @@ import { TabPictures } from './components/TabPictures.jsx';
 import { TabDeconstruction } from './components/TabDeconstruction.jsx';
 import { TabSubstitution } from './components/TabSubstitution.jsx';
 import { TabScenario } from './components/TabScenario.jsx';
-import { TabNotebook } from './components/TabNotebook.jsx';
 import { ApiSettingsModal } from './components/ApiSettingsModal.jsx';
 
 // --- Main App Component ---
 export default function App() {
   const [targetLang, setTargetLang] = useState(() => loadFromStorage(STORAGE_KEYS.LANG, 'en'));
   const [activeTab, setActiveTab] = useState('map');
-  const [jumpSkeletonId, setJumpSkeletonId] = useState(11);
 
-  const [notebook, setNotebook] = useState(() => loadFromStorage(STORAGE_KEYS.NOTEBOOK, []));
   const [readCounts, setReadCounts] = useState(() => loadFromStorage(STORAGE_KEYS.PROGRESS, {}));
 
   const [showApiModal, setShowApiModal] = useState(false);
@@ -46,10 +43,6 @@ export default function App() {
     setSpeechLang((LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en).speechLang);
     saveToStorage(STORAGE_KEYS.LANG, targetLang);
   }, [targetLang]);
-
-  useEffect(() => {
-    saveToStorage(STORAGE_KEYS.NOTEBOOK, notebook);
-  }, [notebook]);
 
   useEffect(() => {
     saveToStorage(STORAGE_KEYS.PROGRESS, readCounts);
@@ -65,27 +58,6 @@ export default function App() {
     }));
   };
 
-  const isSentenceSaved = (enStr) => notebook.some((item) => item.en === enStr);
-
-  const handleToggleSaveSentence = (sentenceObj) => {
-    setNotebook((prev) => {
-      const exists = prev.some((item) => item.en === sentenceObj.en);
-      if (exists) {
-        return prev.filter((item) => item.en !== sentenceObj.en);
-      }
-      return [{ ...sentenceObj, savedAt: Date.now() }, ...prev];
-    });
-  };
-
-  const handleRemoveSentence = (enStr) => {
-    setNotebook((prev) => prev.filter((item) => item.en !== enStr));
-  };
-
-  const handleJumpToPracticeWithSkeleton = (skeletonId) => {
-    setJumpSkeletonId(skeletonId || 11);
-    setActiveTab('substitution');
-  };
-
   const tabs = [
     { id: 'map', label: '0. 🗺️ 语言地图', icon: MapIcon },
     { id: 'zero', label: '1. 🗣️ 发音与辨音', icon: Volume2 },
@@ -93,15 +65,14 @@ export default function App() {
     { id: 'pictures', label: '3. 🚶 看图小人短句', icon: PersonStanding },
     { id: 'deconstruction', label: '4. 📖 12句拆解', icon: BookOpen },
     { id: 'substitution', label: '5. 🧩 句型替换与拼句', icon: RefreshCw },
-    { id: 'scenario', label: '6. 💬 场景实战', icon: MessageSquare },
-    { id: 'notebook', label: `7. 📒 金句本 (${notebook.length})`, icon: Bookmark }
+    { id: 'scenario', label: '6. 💬 场景实战', icon: MessageSquare }
   ];
 
   const totalMastered = Object.values(readCounts).filter((c) => c >= 20).length;
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-800 font-sans p-2 md:p-3">
+    <div className="min-h-screen bg-[#F9F9FB] text-stone-800 font-sans p-2 md:p-3 pb-24">
       <div className="max-w-7xl mx-auto space-y-2.5">
         {/* Compact Header */}
         <header className="bg-white rounded-2xl shadow-2xs border border-slate-200/90 px-3.5 py-2.5 flex flex-col lg:flex-row lg:items-center justify-between gap-2.5">
@@ -139,7 +110,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setShowApiModal(true)}
-              className="lg:hidden px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-bold flex items-center gap-1"
+              className="lg:hidden px-2.5 py-1 rounded-lg bg-stone-100 text-stone-700 text-xs font-bold flex items-center gap-1"
             >
               <Settings className="w-3.5 h-3.5" />
               <span>API</span>
@@ -148,7 +119,7 @@ export default function App() {
 
           {/* Navigation Tabs + Settings */}
           <div className="flex items-center gap-1.5 w-full lg:w-auto overflow-hidden">
-            <nav className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200/80 overflow-x-auto max-w-full scrollbar-none">
+            <nav className="flex items-center gap-1 bg-stone-100 p-1 rounded-xl border border-stone-200/80 overflow-x-auto max-w-full scrollbar-none">
               {tabs.map((t) => {
                 const Icon = t.icon;
                 const active = activeTab === t.id;
@@ -160,7 +131,7 @@ export default function App() {
                     className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
                       active
                         ? 'bg-blue-600 text-white shadow-2xs'
-                        : 'text-slate-600 hover:bg-white/70 hover:text-slate-900'
+                        : 'text-stone-600 hover:bg-white/80 hover:text-stone-900'
                     }`}
                   >
                     <Icon className="w-3.5 h-3.5 shrink-0" />
@@ -173,7 +144,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setShowApiModal(true)}
-              className="hidden lg:flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-200/80"
+              className="hidden lg:flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold border border-stone-200/80"
               title="配置自定义 API Key (BYOK)"
             >
               <KeyRound className="w-3.5 h-3.5 text-blue-600" />
@@ -183,13 +154,12 @@ export default function App() {
         </header>
 
         {/* Main Content Container */}
-        <main className="bg-white rounded-2xl shadow-2xs border border-slate-200 p-2.5 md:p-4">
+        <main className="bg-white rounded-2xl shadow-xs border border-stone-200/90 p-2.5 md:p-4">
           {activeTab === 'zero' && (
             <TabZeroToOne
               targetLang={targetLang}
               getReadCount={getReadCount}
               onIncrementReadCount={handleIncrementReadCount}
-              onJumpToPracticeWithSkeleton={handleJumpToPracticeWithSkeleton}
             />
           )}
           {activeTab === 'map' && <TabMap targetLang={targetLang} />}
@@ -199,41 +169,22 @@ export default function App() {
               targetLang={targetLang}
               getReadCount={getReadCount}
               onIncrementReadCount={handleIncrementReadCount}
-              isSentenceSaved={isSentenceSaved}
-              onToggleSaveSentence={handleToggleSaveSentence}
             />
           )}
           {activeTab === 'deconstruction' && (
             <TabDeconstruction
               targetLang={targetLang}
-              isSentenceSaved={isSentenceSaved}
-              onToggleSaveSentence={handleToggleSaveSentence}
             />
           )}
           {activeTab === 'substitution' && (
             <TabSubstitution
               targetLang={targetLang}
-              initialSkeletonId={jumpSkeletonId}
               getReadCount={getReadCount}
               onIncrementReadCount={handleIncrementReadCount}
-              isSentenceSaved={isSentenceSaved}
-              onToggleSaveSentence={handleToggleSaveSentence}
             />
           )}
           {activeTab === 'scenario' && (
             <TabScenario
-              targetLang={targetLang}
-              isSentenceSaved={isSentenceSaved}
-              onToggleSaveSentence={handleToggleSaveSentence}
-            />
-          )}
-          {activeTab === 'notebook' && (
-            <TabNotebook
-              notebook={notebook}
-              onRemoveSentence={handleRemoveSentence}
-              onImportNotebook={(list) => setNotebook(list)}
-              getReadCount={getReadCount}
-              onIncrementReadCount={handleIncrementReadCount}
               targetLang={targetLang}
             />
           )}

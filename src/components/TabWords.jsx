@@ -343,20 +343,20 @@ export const TabWords = ({ targetLang }) => {
 
   return (
     <div className="space-y-3.5">
-      <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-sky-50 border border-emerald-200/80 rounded-xl p-3 space-y-2">
+      <div className="bg-stone-50/80 border border-stone-200/90 rounded-xl p-3 space-y-2 shadow-2xs">
         <div className="flex flex-wrap items-center gap-1.5">
-          <span className="px-2 py-0.5 rounded-md bg-emerald-600 text-white text-[10.5px] font-extrabold">
+          <span className="px-2 py-0.5 rounded-md bg-emerald-600 text-white text-[10.5px] font-extrabold shadow-2xs">
             STEP 2 · 3000词拼读靶场
           </span>
-          <h2 className="text-sm font-black text-slate-900">
+          <h2 className="text-sm font-black text-stone-900">
             {langConfig.flag} {langConfig.name} · 只求读出声，不用背
           </h2>
-          <span className="ml-auto text-xs font-bold text-slate-600">
+          <span className="ml-auto text-xs font-bold text-stone-600">
             已拼读 <strong className="text-emerald-600">{totalRead}</strong>
             {builtInTotal > 0 && <> / {builtInTotal + coreWords.length}</>}
           </span>
         </div>
-        <p className="text-[11px] text-slate-600">
+        <p className="text-[11px] text-stone-500">
           点卡片听整个词；下面一排小格是拼读过程，红色是重读，点「▶ 拼读」会一格一格读完再连起来。先过第 0 关的 36 个核心词砖，再按生活主题一舱一舱扫过去。
         </p>
         {builtInTotal === 0 && (

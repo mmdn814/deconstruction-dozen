@@ -3,7 +3,7 @@ import { Volume2, Send, Loader2 } from 'lucide-react';
 import { LANGUAGE_CONFIG, speakText, callGemini } from '../lib/core.js';
 import { personasByLang } from '../data/personas.js';
 
-export const TabScenario = ({ targetLang, isSentenceSaved, onToggleSaveSentence }) => {
+export const TabScenario = ({ targetLang }) => {
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
 
   const personas = personasByLang[targetLang] || personasByLang.en;
@@ -253,20 +253,6 @@ export const TabScenario = ({ targetLang, isSentenceSaved, onToggleSaveSentence 
                         className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 text-[10px] font-bold"
                       >
                         🐢 慢速
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() =>
-                          onToggleSaveSentence({
-                            en: msg.upgraded,
-                            cn: '场景实战地道升级句',
-                            skeletonId: 1,
-                            tag: '实战好句'
-                          })
-                        }
-                        className="px-1.5 py-0.5 rounded bg-white text-slate-600 border border-slate-200 text-[10px] font-bold"
-                      >
-                        {isSentenceSaved(msg.upgraded) ? '★ 已收藏' : '☆ 收藏'}
                       </button>
                     </div>
                   </div>

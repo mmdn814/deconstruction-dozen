@@ -10,9 +10,7 @@ export const TabSubstitution = ({
   targetLang,
   initialSkeletonId = 11,
   getReadCount,
-  onIncrementReadCount,
-  isSentenceSaved,
-  onToggleSaveSentence
+  onIncrementReadCount
 }) => {
   const sentences = sentencesByLang[targetLang] || sentencesByLang.en;
   const langConfig = LANGUAGE_CONFIG[targetLang] || LANGUAGE_CONFIG.en;
@@ -488,38 +486,19 @@ export const TabSubstitution = ({
           {/* Standard Skeleton Match Sentence */}
           {(() => {
             const syncedStd = getSyncedSentenceData(diagnosisResult.standardSentence);
-            const saved = isSentenceSaved(syncedStd.fullSentence);
             return (
-              <div className="border border-slate-200 rounded-xl p-3 space-y-2">
+              <div className="border border-stone-200/90 rounded-xl p-3 space-y-2 bg-stone-50/50 shadow-2xs">
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-xs font-extrabold text-emerald-700">
                     ✅ 标准骨架造句 (Standard Skeleton Match)
                   </span>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      onToggleSaveSentence({
-                        en: syncedStd.fullSentence,
-                        cn: activeChineseTarget,
-                        skeletonId: currentSkeleton.id,
-                        tag: '标准骨架句'
-                      })
-                    }
-                    className={`px-2 py-0.5 rounded text-[11px] font-bold border ${
-                      saved
-                        ? 'bg-amber-50 text-amber-700 border-amber-300'
-                        : 'bg-white text-slate-600 border-slate-200'
-                    }`}
-                  >
-                    {saved ? '★ 已收藏金句' : '☆ 收藏到金句本'}
-                  </button>
                 </div>
 
                 <div className="flex items-center flex-wrap gap-1.5">
                   <button
                     type="button"
                     onClick={() => speakText(syncedStd.fullSentence, 0.95, 1.0, null, langConfig.speechLang)}
-                    className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600"
+                    className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
                   >
                     <Volume2 className="w-4 h-4" />
                   </button>
@@ -529,7 +508,7 @@ export const TabSubstitution = ({
                   <button
                     type="button"
                     onClick={() => speakText(syncedStd.fullSentence, 0.62, 1.0, null, langConfig.speechLang)}
-                    className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold"
+                    className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold transition-colors"
                   >
                     🐢 慢速
                   </button>
@@ -547,24 +526,23 @@ export const TabSubstitution = ({
 
           {/* Native Alternatives with Grammar & Register Comparison */}
           <div className="space-y-2.5">
-            <h4 className="text-xs font-extrabold text-slate-800">
+            <h4 className="text-xs font-extrabold text-stone-800">
               🌟 母语者高频同义替换句 (Native Alternatives & 语法对比)
             </h4>
 
             {(diagnosisResult.alternatives || []).map((alt, idx) => {
               const syncedAlt = getSyncedSentenceData(alt.sentence);
-              const saved = isSentenceSaved(syncedAlt.fullSentence);
               return (
                 <div
                   key={idx}
-                  className="border border-slate-200/90 rounded-xl p-3 space-y-2 bg-slate-50/40"
+                  className="border border-stone-200/90 rounded-xl p-3 space-y-2 bg-stone-50/40 shadow-2xs"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div className="flex items-center flex-wrap gap-1.5">
                       <button
                         type="button"
                         onClick={() => speakText(syncedAlt.fullSentence, 0.95, 1.0, null, langConfig.speechLang)}
-                        className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600"
+                        className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
                       >
                         <Volume2 className="w-4 h-4" />
                       </button>
@@ -574,7 +552,7 @@ export const TabSubstitution = ({
                       <button
                         type="button"
                         onClick={() => speakText(syncedAlt.fullSentence, 0.62, 1.0, null, langConfig.speechLang)}
-                        className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold"
+                        className="px-2 py-0.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-[10.5px] font-bold transition-colors"
                       >
                         🐢 慢速
                       </button>
@@ -584,29 +562,10 @@ export const TabSubstitution = ({
                         </span>
                       )}
                     </div>
-
-                    <button
-                      type="button"
-                      onClick={() =>
-                        onToggleSaveSentence({
-                          en: syncedAlt.fullSentence,
-                          cn: activeChineseTarget,
-                          skeletonId: currentSkeleton.id,
-                          tag: alt.register || '母语替换句'
-                        })
-                      }
-                      className={`px-2 py-0.5 rounded text-[11px] font-bold border ${
-                        saved
-                          ? 'bg-amber-50 text-amber-700 border-amber-300'
-                          : 'bg-white text-slate-600 border-slate-200'
-                      }`}
-                    >
-                      {saved ? '★ 已收藏' : '☆ 收藏'}
-                    </button>
                   </div>
 
                   {alt.grammarCompare && (
-                    <div className="bg-amber-50/70 border border-amber-200/70 rounded-lg p-2 text-[11px] text-slate-700 leading-relaxed">
+                    <div className="bg-amber-50/70 border border-amber-200/70 rounded-lg p-2 text-[11px] text-stone-700 leading-relaxed">
                       💡 <strong>语法与例句对比解析：</strong>
                       {alt.grammarCompare}
                     </div>

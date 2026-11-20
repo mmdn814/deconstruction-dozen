@@ -10,8 +10,7 @@ import { ContinuousPlayerBar } from './ContinuousPlayerBar.jsx';
 export const TabZeroToOne = ({
   targetLang,
   getReadCount,
-  onIncrementReadCount,
-  onJumpToPracticeWithSkeleton
+  onIncrementReadCount
 }) => {
   const [subStage, setSubStage] = useState('decoder'); // 'decoder' | 'pairs' | 'clusters'
   const [activePhoneticCatIdx, setActivePhoneticCatIdx] = useState(0);
@@ -196,37 +195,37 @@ export const TabZeroToOne = ({
   return (
     <div className="space-y-3.5">
       {/* Top Banner + 3 Sub-Stages Switcher */}
-      <div className="bg-gradient-to-r from-indigo-50 via-blue-50 to-emerald-50 border border-blue-200/80 rounded-xl p-3 flex flex-col lg:flex-row lg:items-center justify-between gap-2.5">
+      <div className="bg-stone-50/80 border border-stone-200/90 rounded-xl p-3 flex flex-col lg:flex-row lg:items-center justify-between gap-2.5">
         <div>
           <div className="flex items-center gap-1.5">
             <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10.5px] font-extrabold">
               STEP 1 · 发音与辨音训练营
             </span>
-            <h2 className="text-sm font-black text-slate-900">
+            <h2 className="text-sm font-black text-stone-900">
               {langConfig.flag} {langConfig.name} · {data.subtitle}
             </h2>
           </div>
-          <p className="text-[11px] text-slate-600 mt-1">
-            先认全所有基础音素与拼读铁律，再通过「10组易混音+同句绕口实战」与「8大同音词族串烧」，边听边录彻底调校耳朵和舌头！
+          <p className="text-[11px] text-stone-500 mt-1">
+            先认全所有基础音素与拼读铁律，再通过「易混音对决」与「同音词族串烧」，边听边录彻底调校耳朵和舌头！
           </p>
         </div>
 
         {/* 3 Sub-stage Switcher Buttons + 2 Continuous Play Buttons */}
         <div className="flex flex-wrap items-center gap-2 shrink-0">
-          <div className="flex items-center gap-1.5 bg-white/90 p-1 rounded-xl border border-blue-200/80 overflow-x-auto scrollbar-none max-w-full">
+          <div className="flex items-center gap-1 bg-stone-100 p-0.5 rounded-xl border border-stone-200 overflow-x-auto scrollbar-none max-w-full">
             {[
-              { id: 'decoder', label: '① 全景发音表与密码' },
-              { id: 'pairs', label: `② 易混相似音对决 (${data.minimalPairs.length}组)` },
-              { id: 'clusters', label: `③ 同音词族串串烧 (${data.soundClusters.length}族)` }
+              { id: 'decoder', label: '① 全景发音表' },
+              { id: 'pairs', label: `② 易混音对决 (${data.minimalPairs.length}组)` },
+              { id: 'clusters', label: `③ 词族串串烧 (${data.soundClusters.length}族)` }
             ].map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setSubStage(tab.id)}
-                className={`px-2.5 py-1.5 rounded-lg text-xs font-extrabold transition-all whitespace-nowrap shrink-0 ${
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all whitespace-nowrap shrink-0 ${
                   subStage === tab.id
-                    ? 'bg-blue-600 text-white shadow-2xs'
-                    : 'text-slate-600 hover:bg-slate-100'
+                    ? 'bg-white text-stone-900 shadow-xs'
+                    : 'text-stone-600 hover:text-stone-900'
                 }`}
               >
                 {tab.label}
@@ -553,7 +552,11 @@ export const TabZeroToOne = ({
                       <button
                         type="button"
                         onClick={() => startEarQuiz(pair, idx)}
-                        className="px-2.5 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-[11px] font-bold transition-colors"
+                        className={`px-2.5 py-1.5 rounded-lg border text-[11px] font-bold transition-colors ${
+                          isQuizActive
+                            ? 'bg-rose-600 text-white border-rose-600'
+                            : 'bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-200'
+                        }`}
                       >
                         👂 盲听测耳力
                       </button>
@@ -576,6 +579,77 @@ export const TabZeroToOne = ({
                       </button>
                     </div>
                   </div>
+
+                  {/* 就地闭环测耳力区：紧跟词汇下方，听、猜、看结果一气呵成 */}
+                  {isQuizActive && (
+                    <div className="p-2.5 rounded-lg bg-indigo-50/90 border border-indigo-200 flex flex-wrap items-center justify-between gap-2 text-xs animate-in fade-in duration-150">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <button
+                          type="button"
+                          onClick={() => speakText(earQuiz.word, 0.92, 1.0, null, langConfig.speechLang, getWordAudioUrl(earQuiz.word, targetLang))}
+                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1 shadow-2xs"
+                        >
+                          <Volume2 className="w-3.5 h-3.5" />
+                          <span>再听一遍谜题</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => speakText(earQuiz.word, 0.6, 1.0, null, langConfig.speechLang, getWordAudioUrl(earQuiz.word, targetLang))}
+                          className="bg-amber-500 hover:bg-amber-600 text-white px-2 py-1 rounded-lg font-bold text-[11px]"
+                        >
+                          🐢 慢速
+                        </button>
+                        <span className="text-indigo-950 font-semibold ml-1">刚刚读的是哪一个？</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <button
+                          type="button"
+                          onClick={() => handleGuessEarQuiz(1)}
+                          className={`px-2.5 py-1 rounded-lg font-bold border text-[11px] transition-colors ${
+                            earQuiz.guessed === 1
+                              ? earQuiz.targetSide === 1
+                                ? 'bg-emerald-600 text-white border-emerald-600'
+                                : 'bg-rose-600 text-white border-rose-600'
+                              : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
+                          }`}
+                        >
+                          猜 A: {pair.w1}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleGuessEarQuiz(2)}
+                          className={`px-2.5 py-1 rounded-lg font-bold border text-[11px] transition-colors ${
+                            earQuiz.guessed === 2
+                              ? earQuiz.targetSide === 2
+                                ? 'bg-emerald-600 text-white border-emerald-600'
+                                : 'bg-rose-600 text-white border-rose-600'
+                              : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
+                          }`}
+                        >
+                          猜 B: {pair.w2}
+                        </button>
+                        {earQuiz.guessed !== null && (
+                          <span
+                            className={`font-extrabold text-[11px] ml-1 ${
+                              earQuiz.guessed === earQuiz.targetSide ? 'text-emerald-700' : 'text-rose-600'
+                            }`}
+                          >
+                            {earQuiz.guessed === earQuiz.targetSide
+                              ? '🎉 耳力超准！'
+                              : `💡 正确是 ${earQuiz.targetSide === 1 ? 'A' : 'B'}，再对比听听！`}
+                          </span>
+                        )}
+                        <button
+                          type="button"
+                          onClick={() => setEarQuiz(null)}
+                          className="p-1 text-slate-400 hover:text-slate-600 rounded ml-1"
+                          title="收起测耳力"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Row 2: Same-Sentence Contrast Box (Contains Both Confusing Words!) */}
                   {pair.sentence && (() => {
@@ -621,8 +695,8 @@ export const TabZeroToOne = ({
                             onClick={() =>
                               setActivePairPractice((prev) =>
                                 prev && prev.idx === idx && prev.mode === 'sentence'
-                                  ? null
-                                  : { idx, mode: 'sentence' }
+                              ? null
+                              : { idx, mode: 'sentence' }
                               )
                             }
                             className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-colors ${
@@ -637,69 +711,6 @@ export const TabZeroToOne = ({
                       </div>
                     );
                   })()}
-
-                  {/* Interactive Blind Ear Quiz Box */}
-                  {isQuizActive && (
-                    <div className="p-2.5 rounded-lg bg-indigo-50/90 border border-indigo-200 flex flex-wrap items-center justify-between gap-2 text-xs">
-                      <div className="flex items-center gap-2">
-                        <button
-                          type="button"
-                          onClick={() => speakText(earQuiz.word, 0.92, 1.0, null, langConfig.speechLang, getWordAudioUrl(earQuiz.word, targetLang))}
-                          className="bg-indigo-600 text-white px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1"
-                        >
-                          <Volume2 className="w-3.5 h-3.5" />
-                          <span>再听一遍谜题音</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => speakText(earQuiz.word, 0.6, 1.0, null, langConfig.speechLang, getWordAudioUrl(earQuiz.word, targetLang))}
-                          className="bg-amber-500 text-white px-2 py-1 rounded-lg font-bold text-[11px]"
-                        >
-                          🐢 慢速听谜题
-                        </button>
-                        <span className="text-indigo-950 font-semibold">刚刚系统读的是哪一个？</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button
-                          type="button"
-                          onClick={() => handleGuessEarQuiz(1)}
-                          className={`px-2.5 py-1 rounded-lg font-bold border text-[11px] ${
-                            earQuiz.guessed === 1
-                              ? earQuiz.targetSide === 1
-                                ? 'bg-emerald-600 text-white border-emerald-600'
-                                : 'bg-rose-600 text-white border-rose-600'
-                              : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
-                          }`}
-                        >
-                          猜 A ({pair.w1})
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => handleGuessEarQuiz(2)}
-                          className={`px-2.5 py-1 rounded-lg font-bold border text-[11px] ${
-                            earQuiz.guessed === 2
-                              ? earQuiz.targetSide === 2
-                                ? 'bg-emerald-600 text-white border-emerald-600'
-                                : 'bg-rose-600 text-white border-rose-600'
-                              : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
-                          }`}
-                        >
-                          猜 B ({pair.w2})
-                        </button>
-                        {earQuiz.guessed !== null && (
-                          <span
-                            className={`font-extrabold text-[11px] ${
-                              earQuiz.guessed === earQuiz.targetSide ? 'text-emerald-700' : 'text-rose-600'
-                            }`}
-                          >
-                            {earQuiz.guessed === earQuiz.targetSide
-                              ? '🎉 耳力超准！'
-                              : `💡 其实是 ${earQuiz.targetSide === 1 ? 'A' : 'B'}，再点慢速对比听听！`}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  )}
 
                   {/* Recording & AI Pronunciation Evaluation Drawer for Either Word Pair or Full Contrast Sentence */}
                   {(isPracticingWords || isPracticingSentence) && (

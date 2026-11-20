@@ -8,7 +8,6 @@ import {
   ChevronRight,
   BookOpen,
   Layers,
-  Star,
   FileText,
   X,
   Headphones,
@@ -51,9 +50,7 @@ const CHAPTER_JUMPS = [
 export const TabPictures = ({
   targetLang,
   getReadCount,
-  onIncrementReadCount,
-  isSentenceSaved,
-  onToggleSaveSentence
+  onIncrementReadCount
 }) => {
   // 浏览模式：'book' (原著逐页翻页点读) | 'stages' (13阶精选提炼)
   const [viewMode, setViewMode] = useState('book');
@@ -356,7 +353,6 @@ export const TabPictures = ({
               else if (targetLang === 'es') currentSentence = panel.es || panel.en;
 
               const currentSpeechLang = langConfig.speechLang || 'en-US';
-              const isSaved = isSentenceSaved ? isSentenceSaved(currentSentence) : false;
               const audioUrl = `/audio/richards/${targetLang}/${panel.id}.mp3`;
               const enAudioUrl = `/audio/richards/en/${panel.id}.mp3`;
               const isCurrentActive = player.isPlaying && player.currentItem?.id === panel.id;
@@ -384,35 +380,12 @@ export const TabPictures = ({
                         {panel.label}
                       </span>
 
-                      {/* 连读中高亮状态徽章 */}
+                      {/* 连读中高亮状态徽座 */}
                       {isCurrentActive && (
                         <span className="absolute bottom-1.5 right-1.5 px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10px] font-black shadow-md flex items-center gap-1 animate-pulse">
                           <Volume2 className="w-3 h-3" />
                           <span>连读中</span>
                         </span>
-                      )}
-
-                      {/* 收藏按钮 */}
-                      {onToggleSaveSentence && currentSentence && (
-                        <button
-                          type="button"
-                          onClick={() =>
-                            onToggleSaveSentence({
-                              en: currentSentence,
-                              cn: panel.cn || `《看图学${langConfig.name}》第 ${bookPage} 课`,
-                              skeletonId: bookPage,
-                              tag: `${langConfig.name}原著看图`
-                            })
-                          }
-                          className={`absolute top-1.5 right-1.5 px-2 py-0.5 rounded-md text-[10.5px] font-bold border transition-all shadow-2xs ${
-                            isSaved
-                              ? 'bg-amber-50 text-amber-700 border-amber-300'
-                              : 'bg-white/90 hover:bg-white text-slate-500 border-slate-200'
-                          }`}
-                        >
-                          <Star className={`w-3 h-3 inline mr-0.5 ${isSaved ? 'fill-amber-500 text-amber-500' : ''}`} />
-                          <span>{isSaved ? '已收藏' : '收藏'}</span>
-                        </button>
                       )}
                     </div>
 

@@ -498,17 +498,17 @@ export const TabMap = ({ targetLang }) => {
   return (
     <div className="space-y-3">
       {/* Top Header & Continuous Play Toolbar */}
-      <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-emerald-50 border border-blue-200/80 rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+      <div className="bg-stone-50/80 border border-stone-200/90 rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 shadow-2xs">
         <div>
           <div className="flex items-center gap-1.5">
-            <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10.5px] font-extrabold">
+            <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white text-[10.5px] font-extrabold shadow-2xs">
               STEP 0 · 语言全景地图
             </span>
-            <h2 className="text-sm font-black text-slate-900">
+            <h2 className="text-sm font-black text-stone-900">
               {langConfig.flag} {langConfig.name} · 一眼看清语言脉络
             </h2>
           </div>
-          <p className="text-[11px] text-slate-600 mt-1">
+          <p className="text-[11px] text-stone-500 mt-1">
             点哪里读哪里，认清发音规律、语法小零件与长句生长逻辑。支持全景从头连读训练！
           </p>
         </div>
